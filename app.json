@@ -1,0 +1,73 @@
+{
+	"id": "hk.com.remotec",
+	"name": {
+		"en": "Remotec Technology",
+		"nl": "Remotec Technology"
+	},
+	"version": "0.0.1",
+	"compatibility": ">=1.0.5",
+	"author": {
+		"name": "Ted Tolboom",
+		"email": "dTNL.Homey@gmail.com"
+	},
+	"contributors": {
+		"developers": [
+			{
+				"name": "Ted Tolboom",
+				"email": "dTNL.Homey@gmail.com"
+			}
+		]
+	},
+	"category": [
+		"other"
+	],
+	"description": {
+		"en": "Drivers for Remotec Technology devices",
+		"nl": "Drivers voor Remotec Technology apparaten"
+	},
+	"images": {
+		"large": "/assets/images/large.jpg",
+		"small": "/assets/images/small.jpg"
+	},
+	"drivers": [
+		{
+			"id": "ZRC-90",
+			"name": {
+				"en": "Remotec Scene Master",
+				"nl": "Remotec Scene Master"
+			},
+			"icon": "/drivers/ZRC-90/assets/icon.svg",
+			"images": {
+				"large": "/drivers/ZRC-90/assets/images/large.jpg",
+				"small": "/drivers/ZRC-90/assets/images/small.jpg"
+			},
+			"class": "zwavecontroller",
+			"capabilities": [
+				"measure_battery"
+			],
+			"zwave": {
+				"manufacturerId": 21076,
+				"productTypeId": 1,
+				"productId": 34064,
+				"learnmode": {
+					"image": "/drivers/ZRC-90/assets/learnmode.svg",
+					"instruction": {
+						"en": "Press “L+R” buttons simultaneously until LED light up to add the device into ZRC-90 Z-Wave network.",
+						"nl": "Press “L+R” buttons simultaneously until LED light up to add the device into ZRC-90 Z-Wave network."
+					}
+				},
+				"associationGroups": [
+					1
+				],
+				"associationGroupsOptions": {
+					"1": {
+						"hint": {
+							"en": "Z-Wave Plus Lifeline: Association Group-1 will be a default status report channel in ZWave+ lifeline requirement. Only one node can be assigned to this association group.",
+							"nl": "Z-Wave Plus Lifeline: Association Group-1 will be a default status report channel in ZWave+ lifeline requirement. Only one node can be assigned to this association group."
+						}
+					}
+				}
+			}
+		}
+	]
+}
