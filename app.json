@@ -49,11 +49,21 @@
 				"manufacturerId": 21076,
 				"productTypeId": 1,
 				"productId": 34064,
+				"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1584/F-BW8510xx (ZRC-90xx) User Manual_V1.01_20151030.pdf",
+				"pid": 1584,
+				"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-15120001",
 				"learnmode": {
 					"image": "/drivers/ZRC-90/assets/learnmode.svg",
 					"instruction": {
-						"en": "Press “L+R” buttons simultaneously until LED light up to add the device into ZRC-90 Z-Wave network.",
-						"nl": "Press “L+R” buttons simultaneously until LED light up to add the device into ZRC-90 Z-Wave network."
+						"en": "Press “L” button until LED light up to add the device into ZRC-90 Z-Wave network.",
+						"nl": "Press “L” button until LED light up to add the device into ZRC-90 Z-Wave network."
+					}
+				},
+				"unlearnmode": {
+					"image": "/drivers/ZRC-90/assets/learnmode.svg",
+					"instruction": {
+						"en": "Press “L” button until LED light up to remove the device into ZRC-90 Z-Wave network.",
+						"nl": "Press “L” button until LED light up to remove the device into ZRC-90 Z-Wave network."
 					}
 				},
 				"associationGroups": [
