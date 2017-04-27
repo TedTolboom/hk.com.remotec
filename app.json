@@ -29,6 +29,120 @@
 		"large": "/assets/images/large.jpg",
 		"small": "/assets/images/small.jpg"
 	},
+	"flow": {
+		"triggers": [
+			{
+				"id": "ZRC-90_scene",
+				"title": {
+					"en": "Scene is activated",
+					"nl": "Scene is geactiveerd"
+				},
+				"args": [
+					{
+						"name": "device",
+						"type": "device",
+						"filter": "driver_id=ZRC-90"
+					},
+					{
+						"name": "button",
+						"type": "dropdown",
+						"values": [
+							{
+								"id": "1",
+								"label": {
+									"en": "Button 1",
+									"nl": "Knop 1"
+								}
+	            },
+							{
+								"id": "2",
+								"label": {
+									"en": "Button 2",
+									"nl": "Knop 2"
+								}
+	            },
+							{
+								"id": "3",
+								"label": {
+									"en": "Button 3",
+									"nl": "Knop 3"
+								}
+	            },
+							{
+								"id": "4",
+								"label": {
+									"en": "Button 4",
+									"nl": "Knop 4"
+								}
+	            },
+							{
+								"id": "5",
+								"label": {
+									"en": "Button 5",
+									"nl": "Knop 5"
+								}
+							},
+							{
+								"id": "6",
+								"label": {
+									"en": "Button 6",
+									"nl": "Knop 6"
+								}
+							},
+							{
+								"id": "7",
+								"label": {
+									"en": "Button 7",
+									"nl": "Knop 7"
+								}
+							},
+							{
+								"id": "8",
+								"label": {
+									"en": "Button 8",
+									"nl": "Knop 8"
+								}
+							}
+						]
+	          },
+					{
+						"name": "scene",
+						"type": "dropdown",
+						"values": [
+							{
+								"id": "Key Pressed 1 time",
+								"label": {
+									"en": "Pressed 1x",
+									"nl": "1x ingedrukt"
+								}
+	              },
+							{
+								"id": "Key Pressed 2 time",
+								"label": {
+									"en": "Pressed 2x",
+									"nl": "2x ingedrukt"
+								}
+	              },
+							{
+								"id": "Key Held Down",
+								"label": {
+									"en": "Hold press (5x a second)",
+									"nl": "Lang drukken (5x per seconde)"
+								}
+	              },
+							{
+								"id": "Key Released",
+								"label": {
+									"en": "Press released",
+									"nl": "Drukken losgelaten"
+								}
+	              }
+	            ]
+	          }
+	        ]
+	      }
+			],
+	},
 	"drivers": [
 		{
 			"id": "ZRC-90",
@@ -43,7 +157,8 @@
 			},
 			"class": "zwavecontroller",
 			"capabilities": [
-				"measure_battery"
+				"measure_battery",
+				"alarm_battery"
 			],
 			"zwave": {
 				"manufacturerId": 21076,
