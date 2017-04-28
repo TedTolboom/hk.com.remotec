@@ -126,22 +126,22 @@
 							{
 								"id": "Key Held Down",
 								"label": {
-									"en": "Hold press (5x a second)",
-									"nl": "Lang drukken (5x per seconde)"
+									"en": "Held Down (5x a second)",
+									"nl": "Lang ingedrukt (5x per seconde)"
 								}
 	              },
 							{
 								"id": "Key Released",
 								"label": {
-									"en": "Press released",
-									"nl": "Drukken losgelaten"
+									"en": "Released",
+									"nl": "Losgelaten"
 								}
 	              }
 	            ]
 	          }
 	        ]
 	      }
-			],
+			]
 	},
 	"drivers": [
 		{
@@ -170,15 +170,15 @@
 				"learnmode": {
 					"image": "/drivers/ZRC-90/assets/learnmode.svg",
 					"instruction": {
-						"en": "Press “L” button until LED light up to add the device into ZRC-90 Z-Wave network.",
-						"nl": "Press “L” button until LED light up to add the device into ZRC-90 Z-Wave network."
+						"en": "Press the “L” button at the rear side of the Scene Master until the LED light up to add the device into the Z-Wave network.",
+						"nl": "Druk de “L” knop aan de achterzijde van de Scene Master in totdat de LED oplicht om het apparaat toe te voegen aan het Z-wave netwerk."
 					}
 				},
 				"unlearnmode": {
 					"image": "/drivers/ZRC-90/assets/learnmode.svg",
 					"instruction": {
-						"en": "Press “L” button until LED light up to remove the device into ZRC-90 Z-Wave network.",
-						"nl": "Press “L” button until LED light up to remove the device into ZRC-90 Z-Wave network."
+						"en": "Press the “L” button, at the rear side of the Scene Master, until the LED light up to remove the device from the Z-Wave network.",
+						"nl": "Druk de “L” knop, aan de achterzijde van de Scene Master, in totdat de LED oplicht om het apparaat te verwijderen uit het Z-wave netwerk."
 					}
 				},
 				"associationGroups": [
@@ -187,8 +187,8 @@
 				"associationGroupsOptions": {
 					"1": {
 						"hint": {
-							"en": "Z-Wave Plus Lifeline: Association Group-1 will be a default status report channel in ZWave+ lifeline requirement. Only one node can be assigned to this association group.",
-							"nl": "Z-Wave Plus Lifeline: Association Group-1 will be a default status report channel in ZWave+ lifeline requirement. Only one node can be assigned to this association group."
+							"en": "Z-Wave Plus Lifeline: Association Group 1 will be a default scene report channel. Only one node can be assigned to this association group. \nDefault: 1 (Homey's ID)",
+							"nl": "Z-Wave Plus Lifeline: Association Groep 1 wordt gebruikt om scene rapportages door te geven. Slechts een node kan toegevoegd worden aan deze associatie groep. \nStandaard: 1 (Homey's ID)"
 						}
 					}
 				}
