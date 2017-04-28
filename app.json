@@ -19,7 +19,9 @@
 		]
 	},
 	"category": [
-		"other"
+		"appliances",
+    "lights",
+    "security"
 	],
 	"description": {
 		"en": "Drivers for Remotec Technology devices",
