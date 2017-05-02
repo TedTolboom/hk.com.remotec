@@ -6,11 +6,11 @@ Athom Apps link:    [Remotec Technology Athom apps](https://apps.athom.com/app/h
 Github repository:  [Remotec Technology app repository](https://github.com/TedTolboom/hk.com.remotec)   
 
 ## Supported devices:
-### Remotec Scene Master ZRC-90 (BW8510) [untested]
-With the Remotec Scene Master ZRC-90 it is possible control any other devices (including non-Zwave) or set states / variables via Homey's flows.  
+### Remotec Scene Master ZRC-90 (BW8510)
 <a href="https://github.com/TedTolboom/hk.com.remotec">
   <img src="https://rawgit.com/TedTolboom/hk.com.remotec/master/drivers/ZRC-90/assets/icon.svg" width="25%" height="25%">
 </a>  
+With the Remotec Scene Master ZRC-90 it is possible control any other devices (including non-Zwave) or set states / variables via Homey's flows.  
 The following triggers are supported:   
 * Button Pressed 1x   
 * Button Pressed 2x     
