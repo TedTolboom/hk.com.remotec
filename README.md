@@ -5,7 +5,7 @@ This app adds support for devices made by [Remotec Technology](http://www.remote
 ## Links:
 [Remotec Technology Athom apps](https://apps.athom.com/app/hk.com.remotec)   
 **Note:** NOT in app store yet (pending solution in 1.3.x for [inclusion issue](https://github.com/athombv/homey/issues/1492))                     
-Github repository:  [Remotec Technology app repository](https://github.com/TedTolboom/hk.com.remotec)   
+[Remotec Technology Github repository](https://github.com/TedTolboom/hk.com.remotec)   
 
 ## Supported devices:
 ### Remotec Scene Master ZRC-90 (BW8510)
