@@ -1,22 +1,26 @@
 # Remotec Technology
-
-This app adds support for devices made by [Remotec Technology](http://www.remotec.com.hk).    
-Athom App store link: NOT in app store yet (pending solution for [inclusion issue](https://github.com/athombv/homey/issues/1492))   
-Github repository:    [Remotec Technology app repository](https://github.com/TedTolboom/hk.com.remotec)   
+This app adds support for devices made by [Remotec Technology](http://www.remotec.com.hk).  
+![Remotec Technology App](https://github.com/TedTolboom/hk.com.remotec/blob/master/assets/images/small.jpg "Remotec Technology app")   
+Athom Apps link:  [Remotec Technology Athom apps](https://apps.athom.com/app/hk.com.remotec)
+                  **Note:** NOT in app store yet (pending solution in 1.3.x for [inclusion issue](https://github.com/athombv/homey/issues/1492))                     
+Github repository:[Remotec Technology app repository](https://github.com/TedTolboom/hk.com.remotec)   
 
 ## Supported devices:
-* Remotec Scene Master ZRC-90 (BW8510) [untested]
+### Remotec Scene Master ZRC-90 (BW8510) [untested]
+With the Remotec Scene Master ZRC-90 it is possible control any other devices (including non-Zwave) or set states / variables via Homey's flows.  
+<a href="https://github.com/TedTolboom/hk.com.remotec">
+  <img src="https://github.com/TedTolboom/hk.com.remotec/blob/master/drivers/ZRC-90/assets/icon.svg" width="100%" height="144">
+</a>   
+The following triggers are supported:   
+* Button Pressed 1x   
+* Button Pressed 2x     
+* Button held down     
+* Button released    
+**Note:** All commands will be send to Homey. With this device it's not possible to associate buttons to other devices to control them directly (without Homey).   
 
 ## Supported Languages:
 * English   
 * Dutch    
-
-## Remotec Scene Master features:
-Supported for the Remotec Scene Master ZRC-90 are the following features:
-* Button Pressed 1x   
-* Button Pressed 2x   
-* Button held down   
-* Button released    
 
 ## Feedback:
 Any requests please post them in the [Remotec app topic on the Athom Forum](https://forum.athom.com/discussion/3113/) or contact me on [Slack](https://athomcommunity.slack.com/team/tedtolboom)    
