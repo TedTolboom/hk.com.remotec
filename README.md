@@ -1,9 +1,9 @@
 # Remotec Technology
 This app adds support for devices made by [Remotec Technology](http://www.remotec.com.hk).  
 ![Remotec Technology App](https://github.com/TedTolboom/hk.com.remotec/blob/master/assets/images/small.jpg "Remotec Technology app")   
-Athom Apps link:  [Remotec Technology Athom apps](https://apps.athom.com/app/hk.com.remotec)
-                  **Note:** NOT in app store yet (pending solution in 1.3.x for [inclusion issue](https://github.com/athombv/homey/issues/1492))                     
-Github repository:[Remotec Technology app repository](https://github.com/TedTolboom/hk.com.remotec)   
+Athom Apps link:    [Remotec Technology Athom apps](https://apps.athom.com/app/hk.com.remotec)   
+                    **Note:** NOT in app store yet (pending solution in 1.3.x for [inclusion issue](https://github.com/athombv/homey/issues/1492))                     
+Github repository:  [Remotec Technology app repository](https://github.com/TedTolboom/hk.com.remotec)   
 
 ## Supported devices:
 ### Remotec Scene Master ZRC-90 (BW8510) [untested]
@@ -11,12 +11,12 @@ With the Remotec Scene Master ZRC-90 it is possible control any other devices (i
 <a href="https://github.com/TedTolboom/hk.com.remotec">
   <img src="https://rawgit.com/TedTolboom/hk.com.remotec/master/drivers/ZRC-90/assets/icon.svg" width="25%" height="25%">
 </a>  
-
 The following triggers are supported:   
 * Button Pressed 1x   
 * Button Pressed 2x     
 * Button held down     
 * Button released    
+
 **Note:** All commands will be send to Homey. With this device it's not possible to associate buttons to other devices to control them directly (without Homey).   
 
 ## Supported Languages:
