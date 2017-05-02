@@ -11,6 +11,9 @@ With the Remotec Scene Master ZRC-90 it is possible control any other devices (i
 <a href="https://github.com/TedTolboom/hk.com.remotec">
   <img src="https://github.com/TedTolboom/hk.com.remotec/blob/master/drivers/ZRC-90/assets/icon.svg" width="100%" height="144">
 </a>   
+![Alt text](https://rawgit.com/TedTolboom/hk.com.remotec/master/drivers/ZRC-90/assets/icon.svg)
+<img src="https://rawgit.com/TedTolboom/hk.com.remotec/master/drivers/ZRC-90/assets/icon.svg">
+
 The following triggers are supported:   
 * Button Pressed 1x   
 * Button Pressed 2x     
