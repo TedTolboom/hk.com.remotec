@@ -3,8 +3,7 @@ This app adds support for devices made by [Remotec Technology](http://www.remote
 ![Remotec Technology App](https://github.com/TedTolboom/hk.com.remotec/blob/master/assets/images/small.jpg "Remotec Technology app")   
 
 ## Links:
-[Remotec Technology Athom apps](https://apps.athom.com/app/hk.com.remotec)   
-**Note:** NOT in app store yet (pending solution in 1.3.x for [inclusion issue](https://github.com/athombv/homey/issues/1492))                     
+[Remotec Technology Athom apps](https://apps.athom.com/app/hk.com.remotec)                    
 [Remotec Technology Github repository](https://github.com/TedTolboom/hk.com.remotec)   
 
 ## Supported devices:
@@ -35,6 +34,11 @@ If you like the app, consider a donation to support development
 [![Paypal Donate](https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5JCN4Q3XSBTBJ&lc=NL&item_name=Athom%20Homey%20apps&item_number=Remotec%20Technologies%20app&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
 ## Changelog:
+### v1.0.0
+**update:**      
+* ZRC-90 Qualified on 1.3.0-RC5: app store ready
+**fixed:**
+* ZRC-90 Button Pressed 2x does not trigger
 
 ### v0.0.2
 **update:**      
@@ -42,3 +46,6 @@ If you like the app, consider a donation to support development
 
 ### v0.0.1    
 * ZRC-90 Initial build of driver and app [untested]   
+
+## Future work:
+* Add generic trigger card for 'A button has been pressed' together with tokens   
