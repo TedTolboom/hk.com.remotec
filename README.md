@@ -38,7 +38,7 @@ If you like the app, consider a donation to support development
 
 ### v0.0.2
 **update:**      
-* ZRC-90 add battery measure and alarm icons to mobile card [untested]
+* ZRC-90 add icon, battery measure and alarm icons to mobile card [untested]
 
 ### v0.0.1    
 * ZRC-90 Initial build of driver and app [untested]   
