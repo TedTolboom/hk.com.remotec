@@ -4,7 +4,7 @@
 		"en": "Remotec Technology",
 		"nl": "Remotec Technology"
 	},
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"compatibility": ">=1.0.5",
 	"author": {
 		"name": "Ted Tolboom",
@@ -162,6 +162,34 @@
 				"measure_battery",
 				"alarm_battery"
 			],
+			"mobile": {
+				"components": [
+					{
+						"id": "battery",
+						"capabilities": [
+							"measure_battery"
+						],
+						"options": {
+							"showTitle": true
+						}
+					},
+					{
+						"id": "sensor",
+						"capabilities": [
+							"alarm_battery"
+						],
+						"options": {
+							"icons": {
+								"Battery_Alarm": "/drivers/ZRC-90/assets/images/alarm_battery.svg"
+							},
+							"Battery_Alarm": {
+								"noblink": false,
+								"invert": false
+							}
+						}
+					}
+				]
+			},
 			"zwave": {
 				"manufacturerId": 21076,
 				"productTypeId": 1,
