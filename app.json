@@ -164,6 +164,9 @@
 			],
 			"mobile": {
 				"components": [
+		            {
+						"id": "icon"
+					},
 					{
 						"id": "battery",
 						"capabilities": [
