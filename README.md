@@ -36,9 +36,10 @@ If you like the app, consider a donation to support development
 ## Changelog:
 ### v1.0.0
 **update:**      
-* ZRC-90 Qualified on 1.3.0-RC5: app store ready
+* ZRC-90 Qualified on 1.3.0-RC5: app store ready   
+
 **fixed:**
-* ZRC-90 Button Pressed 2x does not trigger
+* ZRC-90 Button Pressed 2x does not trigger   
 
 ### v0.0.2
 **update:**      
