@@ -16,7 +16,8 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 				if (report &&
 					report.hasOwnProperty('Battery Level') &&
 					report['Battery Level'] === 'battery low warning') {
-					if (node && node.hasOwnProperty('state') && (!node.state.hasOwnProperty('alarm_battery') || node.state.alarm_battery !== true)) {
+					if (node && node.hasOwnProperty('state') &&
+						(!node.state.hasOwnProperty('alarm_battery') || node.state.alarm_battery !== true)) {
 						node.state.alarm_battery = true;
 						module.exports.realtime(node.device_data, 'alarm_battery', true);
 					}
@@ -42,6 +43,7 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 
 module.exports.on('initNode', token => {
 	const node = module.exports.nodes[token];
+	let debouncer = 0;
 
 	if (node && typeof node.instance.CommandClass.COMMAND_CLASS_CENTRAL_SCENE !== 'undefined') {
 		node.instance.CommandClass.COMMAND_CLASS_CENTRAL_SCENE.on('report', (command, report) => {
@@ -52,9 +54,15 @@ module.exports.on('initNode', token => {
 				report.hasOwnProperty('Scene Number')) {
 				const remoteValue = {
 					button: report['Scene Number'].toString(),
-					scene: report.Properties1['Key Attributes']
+					scene: report.Properties1['Key Attributes'],
+				};
+				if (debouncer === 0) {
+					Homey.manager('flow').triggerDevice('ZRC-90_scene', null, remoteValue, node.deviceData);
+
+					// Use debouncer to avoid duplicate scene reports and button held down reports (1000ms timeout)
+					debouncer++;
+					setTimeout(() => debouncer = 0, 1000);
 				}
-				Homey.manager('flow').triggerDevice('ZRC-90_scene', null, remoteValue, node.deviceData);
 			}
 		});
 	}
