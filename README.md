@@ -34,6 +34,10 @@ If you like the app, consider a donation to support development
 [![Paypal Donate](https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5JCN4Q3XSBTBJ&lc=NL&item_name=Athom%20Homey%20apps&item_number=Remotec%20Technologies%20app&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
 ## Changelog:
+### v1.0.1
+**fixed:**      
+* ZRC-90 add timeout (1s) to prevent re-triggering when button held down  
+
 ### v1.0.0
 **update:**      
 * ZRC-90 Qualified on 1.3.0-RC5: app store ready   
