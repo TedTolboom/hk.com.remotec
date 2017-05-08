@@ -1,6 +1,8 @@
 # Remotec Technology - Scene Master remote
 This app adds support for devices made by [Remotec Technology](http://www.remotec.com.hk).  
-![Remotec Technology App](https://github.com/TedTolboom/hk.com.remotec/blob/master/assets/images/small.jpg "Remotec Technology app")   
+<a href="https://github.com/TedTolboom/hk.com.remotec">
+  <img src="https://github.com/TedTolboom/hk.com.remotec/blob/master/assets/images/small.jpg">
+</a>  
 
 ## Links:
 [Remotec Technology Athom apps](https://apps.athom.com/app/hk.com.remotec)                    
