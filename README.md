@@ -11,7 +11,7 @@ This app adds support for devices made by [Remotec Technology](http://www.remote
 ## Supported devices:
 ### Remotec Scene Master ZRC-90 (BW8510)
 <a href="https://github.com/TedTolboom/hk.com.remotec">
-  <img src="https://raw.githubusercontent.com/TedTolboom/hk.com.remotec/master/drivers/ZRC-90/assets/icon.svg" width="25%" height="25%">
+  <img src="https://rawgit.com/TedTolboom/hk.com.remotec/master/drivers/ZRC-90/assets/icon.svg" width="25%" height="25%">
 </a>  
 
 With the Remotec Scene Master ZRC-90 it is possible control any other devices (including non-Zwave) or set states / variables via Homey's flows. The following triggers are supported:  
