@@ -6,7 +6,7 @@ const ZwaveDriver = require('homey-zwavedriver');
 // http://products.z-wavealliance.org/products/1584
 
 module.exports = new ZwaveDriver(path.basename(__dirname), {
-	debug: true,
+	debug: false,
 	capabilities: {
 		measure_battery: {
 			command_class: 'COMMAND_CLASS_BATTERY',
@@ -57,8 +57,11 @@ module.exports.on('initNode', token => {
 					scene: report.Properties1['Key Attributes'],
 				};
 				if (debouncer === 0) {
-					Homey.manager('flow').triggerDevice('ZRC-90_scene', null, remoteValue, node.deviceData);
+					// Trigger the trigger card with 2 dropdown options
+					Homey.manager('flow').triggerDevice('ZRC-90_scene', null, remoteValue, node.device_data);
 
+					// Trigger the trigger card with tokens
+					Homey.manager('flow').triggerDevice('ZRC-90_button', remoteValue, null, node.device_data);
 					// Use debouncer to avoid duplicate scene reports and button held down reports (1000ms timeout)
 					debouncer++;
 					setTimeout(() => debouncer = 0, 1000);
@@ -81,4 +84,14 @@ Homey.manager('flow').on('trigger.ZRC-90_scene', (callback, args, state) => {
 		return callback(null, true);
 	}
 	return callback('unknown_error', false);
+});
+
+Homey.manager('flow').on('condition.ZRC-90_low_battery', (callback, args) => {
+	const node = module.exports.nodes[args.device.token];
+
+	if (node &&
+		node.hasOwnProperty('state') &&
+		node.state.hasOwnProperty('alarm_battery')) {
+		callback(null, node.state.alarm_battery);
+	}
 });
