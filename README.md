@@ -9,7 +9,7 @@ This app adds support for devices made by [Remotec Technology](http://www.remote
 [Remotec Technology Github repository](https://github.com/TedTolboom/hk.com.remotec)   
 
 ## Supported devices:
-### Remotec Scene Master ZRC-90 (BW8510)
+### Remotec Scene Master ZRC-90 (BW8510) (Homey ≥ 1.3.0 required)   
 <a href="https://github.com/TedTolboom/hk.com.remotec">
   <img src="https://rawgit.com/TedTolboom/hk.com.remotec/master/drivers/ZRC-90/assets/icon.svg" width="25%" height="25%">
 </a>  
