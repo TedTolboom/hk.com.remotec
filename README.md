@@ -46,6 +46,7 @@ If you like the app, consider a donation to support development
 ### v1.0.2
 **fixed:**      
 * ZRC-90 Fixed issue with not flow card triggering when multiple scene masters are used   
+
 **added:**   
 * ZRC-90 add 'A button has been pressed' trigger and battery condition card     
 
@@ -56,6 +57,7 @@ If you like the app, consider a donation to support development
 ### v1.0.0
 **update:**      
 * ZRC-90 Qualified on 1.3.0-RC5: app store ready   
+
 **fixed:**   
 * ZRC-90 Button Pressed 2x does not trigger     
 
