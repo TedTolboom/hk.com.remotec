@@ -43,7 +43,9 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 
 module.exports.on('initNode', token => {
 	const node = module.exports.nodes[token];
-	let debouncer = 0;
+	// let debouncer = 0;
+	// let debouncerRel = 0;
+	let PreviousSequenceNo = 'empty';
 
 	if (node && typeof node.instance.CommandClass.COMMAND_CLASS_CENTRAL_SCENE !== 'undefined') {
 		node.instance.CommandClass.COMMAND_CLASS_CENTRAL_SCENE.on('report', (command, report) => {
@@ -51,20 +53,18 @@ module.exports.on('initNode', token => {
 				report &&
 				report.hasOwnProperty('Properties1') &&
 				report.Properties1.hasOwnProperty('Key Attributes') &&
-				report.hasOwnProperty('Scene Number')) {
-				const remoteValue = {
-					button: report['Scene Number'].toString(),
-					scene: report.Properties1['Key Attributes'],
-				};
-				if (debouncer === 0) {
+				report.hasOwnProperty('Scene Number') &&
+				report.hasOwnProperty('Sequence Number')) {
+				if (report['Sequence Number'] !== PreviousSequenceNo) {
+					const remoteValue = {
+						button: report['Scene Number'].toString(),
+						scene: report.Properties1['Key Attributes'],
+					};
+					PreviousSequenceNo = report['Sequence Number'];
 					// Trigger the trigger card with 2 dropdown options
 					Homey.manager('flow').triggerDevice('ZRC-90_scene', null, remoteValue, node.device_data);
-
 					// Trigger the trigger card with tokens
 					Homey.manager('flow').triggerDevice('ZRC-90_button', remoteValue, null, node.device_data);
-					// Use debouncer to avoid duplicate scene reports and button held down reports (1000ms timeout)
-					debouncer++;
-					setTimeout(() => debouncer = 0, 1000);
 				}
 			}
 		});
