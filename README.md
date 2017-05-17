@@ -1,4 +1,4 @@
-# Remotec Technology - Scene Master remote
+# Remotec Technology
 This app adds support for devices made by [Remotec Technology](http://www.remotec.com.hk).  
 <a href="https://github.com/TedTolboom/hk.com.remotec">
   <img src="https://raw.githubusercontent.com/TedTolboom/hk.com.remotec/master/assets/images/small.jpg">
@@ -20,13 +20,13 @@ The following triggers are supported:
 
 * Button Pressed 1x   
 * Button Pressed 2x     
-* Button held down     
+* Button held down (5x per second report)     
 * Button released    
 * Any button pressed (including tokens)   
 
 The following conditions are supported:
 
-* Battery alarm activated | Battery in healty condition    
+* Battery alarm activated | Battery in healthy condition    
 
 **Note:** All commands will be send to Homey. With this device it's not possible to associate buttons to other devices to control them directly (without Homey).   
 
@@ -43,6 +43,10 @@ If you like the app, consider a donation to support development
 [![Paypal Donate](https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5JCN4Q3XSBTBJ&lc=NL&item_name=Athom%20Homey%20apps&item_number=Remotec%20Technologies%20app&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
 ## Changelog:
+### v1.0.3
+**fixed:**      
+* ZRC-90 Removed echo reports by sequence number > fixing "key released" being suppressed        
+
 ### v1.0.2
 **fixed:**      
 * ZRC-90 Fixed issue with not flow card triggering when multiple scene masters are used   
@@ -64,3 +68,4 @@ If you like the app, consider a donation to support development
 ## Future work:
 * <del>Add generic trigger card for 'A button has been pressed' together with tokens</del>     
 * add ZXT-120 Z-Wave-to-AC IR Extender   
+* add ZXT-600 Z-Wave-to-AC IR Extender   

@@ -1,6 +1,6 @@
 {
 	"name": "hk.com.remotec",
-	"version": "1.0.0",
+	"version": "1.0.3",
 	"description": "This app adds support for devices made by [Remotec Technology LTD](http://www.remotec.com.hk).",
 	"main": "app.js",
 	"dependencies": {

@@ -4,7 +4,7 @@
 		"en": "Remotec Technology",
 		"nl": "Remotec Technology"
 	},
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"compatibility": ">=1.3.0",
 	"author": {
 		"name": "Ted Tolboom",
@@ -23,6 +23,21 @@
     "lights",
     "security"
 	],
+	"tags": {
+		"en": [
+			"scene master",
+			"remote",
+			"remote control",
+			"central scene",
+			"scenes"
+		],
+		"nl": [
+			"scene master",
+			"afstandsbediening",
+			"central scene",
+			"scenes"
+		]
+	},
 	"description": {
 		"en": "Drivers for Remotec Technology devices",
 		"nl": "Drivers voor Remotec Technology apparaten"
