@@ -67,5 +67,6 @@ If you like the app, consider a donation to support development
 
 ## Future work:
 * <del>Add generic trigger card for 'A button has been pressed' together with tokens</del>     
+* ZRC-90 add option to disable re-triggering when a button is held    
 * add ZXT-120 Z-Wave-to-AC IR Extender   
 * add ZXT-600 Z-Wave-to-AC IR Extender   
