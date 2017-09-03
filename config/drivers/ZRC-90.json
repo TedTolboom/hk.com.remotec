@@ -1,0 +1,81 @@
+{
+	"id": "ZRC-90",
+	"name": {
+		"en": "Remotec Scene Master",
+		"nl": "Remotec Scene Master"
+	},
+	"icon": "/drivers/ZRC-90/assets/icon.svg",
+	"images": {
+		"large": "/drivers/ZRC-90/assets/images/large.jpg",
+		"small": "/drivers/ZRC-90/assets/images/small.jpg"
+	},
+	"class": "zwavecontroller",
+	"capabilities": [
+				"measure_battery",
+				"alarm_battery"
+			],
+	"mobile": {
+		"components": [
+			{
+				"id": "icon"
+					},
+			{
+				"id": "battery",
+				"capabilities": [
+							"measure_battery"
+						],
+				"options": {
+					"showTitle": true
+				}
+					},
+			{
+				"id": "sensor",
+				"capabilities": [
+							"alarm_battery"
+						],
+				"options": {
+					"icons": {
+						"Battery_Alarm": "/drivers/ZRC-90/assets/images/alarm_battery.svg"
+					},
+					"Battery_Alarm": {
+						"noblink": false,
+						"invert": false
+					}
+				}
+					}
+				]
+	},
+	"zwave": {
+		"manufacturerId": 21076,
+		"productTypeId": 1,
+		"productId": 34064,
+		"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1584/F-BW8510xx (ZRC-90xx) User Manual_V1.01_20151030.pdf",
+		"pid": 1584,
+		"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-15120001",
+		"learnmode": {
+			"image": "/drivers/ZRC-90/assets/learnmode.svg",
+			"instruction": {
+				"en": "Press the “L” button at the rear side of the Scene Master until the LED light up to add the device into the Z-Wave network.",
+				"nl": "Druk de “L” knop aan de achterzijde van de Scene Master in totdat de LED oplicht om het apparaat toe te voegen aan het Z-wave netwerk."
+			}
+		},
+		"unlearnmode": {
+			"image": "/drivers/ZRC-90/assets/learnmode.svg",
+			"instruction": {
+				"en": "Press the “L” button, at the rear side of the Scene Master, until the LED light up to remove the device from the Z-Wave network.",
+				"nl": "Druk de “L” knop, aan de achterzijde van de Scene Master, in totdat de LED oplicht om het apparaat te verwijderen uit het Z-wave netwerk."
+			}
+		},
+		"associationGroups": [
+					1
+				],
+		"associationGroupsOptions": {
+			"1": {
+				"hint": {
+					"en": "Z-Wave Plus Lifeline: Association Group 1 will be a default scene report channel. Only one node can be assigned to this association group. \nDefault: 1 (Homey's ID)",
+					"nl": "Z-Wave Plus Lifeline: Association Groep 1 wordt gebruikt om scene rapportages door te geven. Slechts een node kan toegevoegd worden aan deze associatie groep. \nStandaard: 1 (Homey's ID)"
+				}
+			}
+		}
+	}
+}

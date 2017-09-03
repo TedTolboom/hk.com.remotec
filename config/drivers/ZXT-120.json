@@ -1,0 +1,37 @@
+{
+	"id": "ZXT-120",
+	"class": "thermostat",
+	"name": {
+		"en": "Remotec ZXT-120EU AC Extender"
+	},
+	"capabilities": [
+		"measure_temperature",
+		"target_temperature"
+	],
+	"images": {
+		"large": "/drivers/ZXT-120/assets/images/large.png",
+		"small": "/drivers/ZXT-120/assets/images/small.png"
+	},
+	"zwave": {
+		"manufacturerId": [
+			21076
+		],
+		"productTypeId": [
+			257
+		],
+		"productId": [
+			33655
+		],
+		"wakeUpInterval": 3600,
+		"learnmode": {
+			"instruction": {
+				"en": ""
+			}
+		},
+		"zwaveAllianceProductId": 715,
+		"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC08-12090012",
+		"associationGroups": [],
+		"associationGroupsOptions": {}
+	},
+	"settings": []
+}
