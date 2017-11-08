@@ -1,11 +1,12 @@
 {
 	"name": "hk.com.remotec",
-	"version": "1.0.3",
+	"version": "2.0.0",
 	"description": "This app adds support for devices made by [Remotec Technology LTD](http://www.remotec.com.hk).",
 	"main": "app.js",
+	"requires": true,
 	"dependencies": {
 		"homey-log": "^1.0.1",
-		"homey-zwavedriver": "git+https://github.com/athombv/node-homey-zwavedriver.git"
+		"homey-meshdriver": "git+https://github.com/athombv/node-homey-meshdriver.git"
 	},
 	"devDependencies": {},
 	"scripts": {

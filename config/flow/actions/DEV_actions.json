@@ -1,0 +1,11 @@
+[{
+	"id": "DEV_actions",
+	"title": {
+		"en": "Development card"
+	},
+	"args": [{
+		"name": "device",
+		"type": "device",
+		"filter": "driver_id=ZXT-120|ZXT-600"
+	}]
+}]
