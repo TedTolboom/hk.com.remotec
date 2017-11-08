@@ -9,7 +9,7 @@
 		"large": "/drivers/ZRC-90/assets/images/large.jpg",
 		"small": "/drivers/ZRC-90/assets/images/small.jpg"
 	},
-	"class": "zwavecontroller",
+	"class": "sensor",
 	"capabilities": [
 				"measure_battery",
 				"alarm_battery"

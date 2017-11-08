@@ -24,7 +24,6 @@ class SceneMaster_ZRC90 extends ZwaveDevice {
 		triggerZRC90_scene
 			.register()
 			.registerRunListener((args, state) => {
-				this.log(args, state);
 				return Promise.resolve(args.button === state.button && args.scene === state.scene);
 			});
 
@@ -34,23 +33,17 @@ class SceneMaster_ZRC90 extends ZwaveDevice {
 
 		// register a report listener (SDK2 style not yet operational)
 		this.registerReportListener('CENTRAL_SCENE', 'CENTRAL_SCENE_NOTIFICATION', (rawReport, parsedReport) => {
-			this.log('registerReportListener', rawReport, parsedReport);
-		});
-
-		// OLD API reportListener used since new registerReportListener is not active without capability
-		this.node.CommandClass['COMMAND_CLASS_CENTRAL_SCENE'].on('report', (command, report) => {
-			if (command.name === 'CENTRAL_SCENE_NOTIFICATION' &&
-				report &&
-				report.hasOwnProperty('Properties1') &&
-				report.Properties1.hasOwnProperty('Key Attributes') &&
-				report.hasOwnProperty('Scene Number') &&
-				report.hasOwnProperty('Sequence Number')) {
-				if (report['Sequence Number'] !== PreviousSequenceNo) {
+			if (rawReport.hasOwnProperty('Properties1') &&
+				rawReport.Properties1.hasOwnProperty('Key Attributes') &&
+				rawReport.hasOwnProperty('Scene Number') &&
+				rawReport.hasOwnProperty('Sequence Number')) {
+				if (rawReport['Sequence Number'] !== PreviousSequenceNo) {
 					const remoteValue = {
-						button: report['Scene Number'].toString(),
-						scene: report.Properties1['Key Attributes'],
+						button: rawReport['Scene Number'].toString(),
+						scene: rawReport.Properties1['Key Attributes'],
 					};
-					PreviousSequenceNo = report['Sequence Number'];
+					PreviousSequenceNo = rawReport['Sequence Number'];
+					this.log('Triggering sequence:', PreviousSequenceNo, 'remoteValue', remoteValue);
 					// Trigger the trigger card with 2 dropdown options
 					triggerZRC90_scene.trigger(this, triggerZRC90_scene.getArgumentValues, remoteValue);
 					// Trigger the trigger card with tokens
@@ -64,11 +57,9 @@ class SceneMaster_ZRC90 extends ZwaveDevice {
 			.register()
 			.registerRunListener((args, state) => {
 				this.log('args.device', args.device.__state.alarm_battery);
-				this.log('getCapabilityValue', this.getCapabilityValue('alarm_battery'));
 				let alarmBattery = args.device.__state.alarm_battery; // true or false
 				return Promise.resolve(alarmBattery);
-			})
-
+			});
 
 	}
 }
