@@ -12,11 +12,19 @@
     "security",
     "appliances"
   ],
-  "version": "2.0.0",
+  "version": "2.0.1",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "Ted Tolboom",
     "email": "ttolboom@gmail.com"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "email": "dtnl.homey@gmail.com",
+        "currency": "EUR"
+      }
+    }
   },
   "tags": {
     "en": [
@@ -99,28 +107,21 @@
           }
         },
         {
-          "id": "Fan only",
+          "id": "Fan Only",
           "title": {
             "en": "Fan only",
             "nl": "Ventilator"
           }
         },
         {
-          "id": "Dry air",
+          "id": "Dry Air",
           "title": {
             "en": "Dry air",
             "nl": "Droge lucht"
           }
         },
         {
-          "id": "Auto changeover",
-          "title": {
-            "en": "Auto changeover",
-            "nl": "Auto overgang"
-          }
-        },
-        {
-          "id": "Away",
+          "id": "AWAY",
           "title": {
             "en": "Away",
             "nl": "Afwezig"
@@ -130,11 +131,11 @@
       "getable": true,
       "setable": true
     },
-    "Thermostat_FAN_mode": {
+    "FAN_mode": {
       "type": "enum",
       "title": {
-        "en": "Thermostat Fan mode",
-        "nl": "Thermostaat Fan modus"
+        "en": "Fan mode",
+        "nl": "Fan modus"
       },
       "desc": {
         "en": "Fan mode",
@@ -361,15 +362,77 @@
     ],
     "actions": [
       {
-        "id": "DEV_actions",
+        "id": "setmode",
         "title": {
-          "en": "Development card"
+          "en": "Set Mode"
         },
         "args": [
           {
             "name": "device",
             "type": "device",
             "filter": "driver_id=ZXT-120|ZXT-600"
+          },
+          {
+            "name": "mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Off",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit"
+                }
+              },
+              {
+                "id": "Heat",
+                "label": {
+                  "en": "Heat",
+                  "nl": "Verwarm"
+                }
+              },
+              {
+                "id": "Cool",
+                "label": {
+                  "en": "Cool",
+                  "nl": "Koel"
+                }
+              },
+              {
+                "id": "Auto",
+                "label": {
+                  "en": "Auto",
+                  "nl": "Auto"
+                }
+              },
+              {
+                "id": "Resume",
+                "label": {
+                  "en": "Resume",
+                  "nl": "Hervatten"
+                }
+              },
+              {
+                "id": "Fan Only",
+                "label": {
+                  "en": "Fan only",
+                  "nl": "Ventilator"
+                }
+              },
+              {
+                "id": "Dry Air",
+                "label": {
+                  "en": "Dry air",
+                  "nl": "Droge lucht"
+                }
+              },
+              {
+                "id": "AWAY",
+                "label": {
+                  "en": "Away",
+                  "nl": "Afwezig"
+                }
+              }
+            ]
           }
         ]
       }
@@ -387,7 +450,7 @@
         "large": "/drivers/ZRC-90/assets/images/large.jpg",
         "small": "/drivers/ZRC-90/assets/images/small.jpg"
       },
-      "class": "zwavecontroller",
+      "class": "sensor",
       "capabilities": [
         "measure_battery",
         "alarm_battery"
@@ -465,11 +528,43 @@
       },
       "capabilities": [
         "measure_temperature",
-        "target_temperature"
+        "target_temperature",
+        "AC_mode",
+        "measure_battery",
+        "alarm_battery"
       ],
       "images": {
         "large": "/drivers/ZXT-120/assets/images/large.png",
         "small": "/drivers/ZXT-120/assets/images/small.png"
+      },
+      "mobile": {
+        "components": [
+          {
+            "id": "battery",
+            "capabilities": [
+              "measure_battery"
+            ]
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_temperature",
+              "alarm_battery"
+            ]
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "AC_mode"
+            ]
+          },
+          {
+            "id": "thermostat",
+            "capabilities": [
+              "target_temperature"
+            ]
+          }
+        ]
       },
       "zwave": {
         "manufacturerId": [
@@ -484,7 +579,7 @@
         "wakeUpInterval": 3600,
         "learnmode": {
           "instruction": {
-            "en": ""
+            "en": "Triple click the button on the ZXT-120"
           }
         },
         "zwaveAllianceProductId": 715,
@@ -492,7 +587,27 @@
         "associationGroups": [],
         "associationGroupsOptions": {}
       },
-      "settings": []
+      "settings": [
+        {
+          "id": "IR_code_number",
+          "value": 857,
+          "label": {
+            "en": "Set IR Code Number from built-in code library"
+          },
+          "hint": {
+            "en": "Refer to Code Finder Webpage"
+          },
+          "zwave": {
+            "index": 27,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 65535
+          },
+          "type": "number"
+        }
+      ]
     },
     {
       "id": "ZXT-600",
@@ -505,7 +620,7 @@
         "target_temperature",
         "AC_onoff",
         "AC_mode",
-        "Thermostat_FAN_mode",
+        "FAN_mode",
         "measure_battery",
         "alarm_battery"
       ],
@@ -549,7 +664,7 @@
           {
             "id": "picker",
             "capabilities": [
-              "Thermostat_FAN_mode"
+              "FAN_mode"
             ],
             "options": {
               "showTitle": true

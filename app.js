@@ -9,7 +9,6 @@ class RemotecZwave extends Homey.App {
 		this.log('Remotec Z-wave app is running...');
 
 	}
-
 }
 
 module.exports = RemotecZwave;
