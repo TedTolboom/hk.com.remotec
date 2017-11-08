@@ -9,7 +9,7 @@
 		"target_temperature",
 		"AC_onoff",
 		"AC_mode",
-		"Thermostat_FAN_mode",
+		"FAN_mode",
 		"measure_battery",
 		"alarm_battery"
 	],
@@ -53,7 +53,7 @@
 			{
 				"id": "picker",
 				"capabilities": [
-					"Thermostat_FAN_mode"
+					"FAN_mode"
 				],
 				"options": {
 					"showTitle": true
