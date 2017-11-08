@@ -1,5 +1,6 @@
 {
 	"id": "ZXT-120",
+	"branch": "development",
 	"class": "thermostat",
 	"name": {
 		"en": "Remotec ZXT-120EU AC Extender"
