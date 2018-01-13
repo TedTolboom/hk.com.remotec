@@ -38,6 +38,14 @@ class SceneMaster_ZRC90 extends ZwaveDevice {
 				rawReport.hasOwnProperty('Scene Number') &&
 				rawReport.hasOwnProperty('Sequence Number')) {
 				if (rawReport['Sequence Number'] !== PreviousSequenceNo) {
+					if (typeof rawReport.Properties1['Key Attributes'] === 'number') {
+						switch(rawReport.Properties1['Key Attributes']) {
+							case 0: rawReport.Properties1['Key Attributes'] = 'Key Pressed 1 time'; break;
+							case 1: rawReport.Properties1['Key Attributes'] = 'Key Released'; break;
+							case 2: rawReport.Properties1['Key Attributes'] = 'Key Held Down'; break;
+							case 3: rawReport.Properties1['Key Attributes'] = 'Key Pressed 2 times'; break;
+						}
+					}
 					const remoteValue = {
 						button: rawReport['Scene Number'].toString(),
 						scene: rawReport.Properties1['Key Attributes'],
