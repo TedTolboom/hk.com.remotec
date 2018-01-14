@@ -12,7 +12,7 @@
     "security",
     "appliances"
   ],
-  "version": "2.0.1",
+  "version": "2.0.2",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "Ted Tolboom",
@@ -21,7 +21,7 @@
   "contributing": {
     "donate": {
       "paypal": {
-        "email": "dtnl.homey@gmail.com",
+        "username": "TedTolboom",
         "currency": "EUR"
       }
     }
