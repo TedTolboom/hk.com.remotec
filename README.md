@@ -39,6 +39,12 @@ Any requests please post them in the [Remotec app topic on the Athom Forum](http
 If possible, please report issues at the [issues section on Github](https://github.com/TedTolboom/hk.com.remotec/issues) otherwise in the above mentioned topic.     
 
 ## Changelog:
+### v2.0.3
+**update:**    
+* ZRC-90 fix app crash issue with battery alarm condition card: reverted back to default cards (re-inclusion might be needed)  
+* ZRC-90 driver clean-up based on meshdriver 1.2.7        
+* Update Homey meshdriver to 1.2.7
+
 ### v2.0.2
 **update:**    
 * ZRC-90 fix issue where scenes are reported in numbers   
