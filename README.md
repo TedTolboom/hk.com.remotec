@@ -30,6 +30,11 @@ The following conditions are supported:
 
 **Note:** All commands will be send to Homey. With this device it's not possible to associate buttons to other devices to control them directly (without Homey).   
 
+### Remotec ZXT-120 Z-Wave-to-AC IR Extender (BW8366)   
+<a href="https://github.com/TedTolboom/hk.com.remotec">
+  <img src="https://rawgit.com/TedTolboom/hk.com.remotec/master/drivers/ZXT-120/assets/icon.svg" width="25%" height="25%">
+</a>  
+
 ## Supported Languages:
 * English   
 * Dutch    
@@ -39,6 +44,12 @@ Any requests please post them in the [Remotec app topic on the Athom Forum](http
 If possible, please report issues at the [issues section on Github](https://github.com/TedTolboom/hk.com.remotec/issues) otherwise in the above mentioned topic.     
 
 ## Changelog:
+
+### v2.1.0
+* Add support for the ZXT-120 Z-Wave-to-AC IR Extender (temperature and mode control)
+**update:**   
+* Update Homey meshdriver to 1.2.8   
+* Add link to Homey community forum topic   
 
 ### v2.0.3
 **update:**    
