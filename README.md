@@ -35,6 +35,13 @@ The following conditions are supported:
   <img src="https://rawgit.com/TedTolboom/hk.com.remotec/master/drivers/ZXT-120/assets/icon.svg" width="25%" height="25%">
 </a>  
 
+The following capabilities are supported:
+
+* Temperature measurement    
+* Target Temperature   
+* Airconditioning mode    
+* Battery capabilities (measure and alarm)    
+
 ## Supported Languages:
 * English   
 * Dutch    
