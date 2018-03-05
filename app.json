@@ -12,8 +12,9 @@
     "security",
     "appliances"
   ],
-  "version": "2.0.1",
+  "version": "2.0.4",
   "compatibility": ">=1.5.0",
+  "athomForumDiscussionId": 3113,
   "author": {
     "name": "Ted Tolboom",
     "email": "ttolboom@gmail.com"
@@ -21,8 +22,8 @@
   "contributing": {
     "donate": {
       "paypal": {
-        "email": "dtnl.homey@gmail.com",
-        "currency": "EUR"
+
+        "username": "TedTolboom"
       }
     }
   },
@@ -344,22 +345,7 @@
         ]
       }
     ],
-    "conditions": [
-      {
-        "id": "ZRC-90_low_battery",
-        "title": {
-          "en": "Battery !{{alarm activated|in healthy condition}}",
-          "nl": "Batterij !{{alarm geactiveerd|in gezonde toestand}}"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=ZRC-90"
-          }
-        ]
-      }
-    ],
+    "conditions": [],
     "actions": [
       {
         "id": "setmode",

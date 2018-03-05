@@ -39,6 +39,17 @@ Any requests please post them in the [Remotec app topic on the Athom Forum](http
 If possible, please report issues at the [issues section on Github](https://github.com/TedTolboom/hk.com.remotec/issues) otherwise in the above mentioned topic.     
 
 ## Changelog:
+
+### v2.0.3
+**update:**    
+* ZRC-90 fix app crash issue with battery alarm condition card: reverted back to default cards (re-inclusion might be needed)  
+* ZRC-90 driver clean-up based on meshdriver 1.2.7        
+* Update Homey meshdriver to 1.2.7
+
+### v2.0.2
+**update:**    
+* ZRC-90 fix issue where scenes are reported in numbers   
+
 ### v2.0.1
 **update:**    
 * Update ZRC-90 to full SDK2   
@@ -48,25 +59,6 @@ If possible, please report issues at the [issues section on Github](https://gith
 **update:**    
 * Updated app and drivers to SDK2 and new Homey meshdriver   
 * Starting to add support for the AC masters (ZXT-120 and ZXT-600): both NOT in a working condition      
-
-### v1.0.3
-**fixed:**      
-* ZRC-90 Removed echo reports by sequence number > fixing "key released" being suppressed        
-
-### v1.0.2
-**fixed:**      
-* ZRC-90 Fixed issue with not flow card triggering when multiple scene masters are used   
-
-**added:**   
-* ZRC-90 add 'A button has been pressed' trigger and battery condition card     
-
-### v1.0.1
-**fixed:**      
-* ZRC-90 add timeout (1s) to prevent re-triggering when button held down  
-
-### v1.0.0
-**update:**      
-* ZRC-90 Qualified on 1.3.0-RC5: app store ready   
 
 **fixed:**   
 * ZRC-90 Button Pressed 2x does not trigger     

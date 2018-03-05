@@ -7,13 +7,13 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class SceneMaster_ZRC90 extends ZwaveDevice {
 	onMeshInit() {
-		let PreviousSequenceNo = 'empty';
+		// let PreviousSequenceNo = 'empty';
 
 		// enable debugging
-		// this.enableDebug();
+		this.enableDebug();
 
 		// print the node's info to the console
-		// this.printNode();
+		this.printNode();
 
 		// register device capabilities
 		this.registerCapability('alarm_battery', 'BATTERY');
@@ -37,7 +37,34 @@ class SceneMaster_ZRC90 extends ZwaveDevice {
 				rawReport.Properties1.hasOwnProperty('Key Attributes') &&
 				rawReport.hasOwnProperty('Scene Number') &&
 				rawReport.hasOwnProperty('Sequence Number')) {
+				const remoteValue = {
+					button: rawReport['Scene Number'].toString(),
+					scene: rawReport.Properties1['Key Attributes'],
+				};
+				this.log('Triggering sequence:', rawReport['Sequence Number'], 'remoteValue', remoteValue);
+				// Trigger the trigger card with 2 dropdown options
+				triggerZRC90_scene.trigger(this, triggerZRC90_scene.getArgumentValues, remoteValue);
+				// Trigger the trigger card with tokens
+				triggerZRC90_button.trigger(this, remoteValue, null);
+
+				/*
 				if (rawReport['Sequence Number'] !== PreviousSequenceNo) {
+					if (typeof rawReport.Properties1['Key Attributes'] === 'number') {
+						switch (rawReport.Properties1['Key Attributes']) {
+						case 0:
+							rawReport.Properties1['Key Attributes'] = 'Key Pressed 1 time';
+							break;
+						case 1:
+							rawReport.Properties1['Key Attributes'] = 'Key Released';
+							break;
+						case 2:
+							rawReport.Properties1['Key Attributes'] = 'Key Held Down';
+							break;
+						case 3:
+							rawReport.Properties1['Key Attributes'] = 'Key Pressed 2 times';
+							break;
+						}
+					}
 					const remoteValue = {
 						button: rawReport['Scene Number'].toString(),
 						scene: rawReport.Properties1['Key Attributes'],
@@ -48,18 +75,9 @@ class SceneMaster_ZRC90 extends ZwaveDevice {
 					triggerZRC90_scene.trigger(this, triggerZRC90_scene.getArgumentValues, remoteValue);
 					// Trigger the trigger card with tokens
 					triggerZRC90_button.trigger(this, remoteValue, null);
-				}
+				} */
 			}
 		});
-
-		let conditionLowBattery = new Homey.FlowCardCondition('ZRC-90_low_battery');
-		conditionLowBattery
-			.register()
-			.registerRunListener((args, state) => {
-				this.log('args.device', args.device.__state.alarm_battery);
-				let alarmBattery = args.device.__state.alarm_battery; // true or false
-				return Promise.resolve(alarmBattery);
-			});
 
 	}
 }
