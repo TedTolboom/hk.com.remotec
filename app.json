@@ -531,8 +531,8 @@
         "alarm_battery"
       ],
       "images": {
-        "large": "/drivers/ZXT-120/assets/images/large.png",
-        "small": "/drivers/ZXT-120/assets/images/small.png"
+        "large": "/drivers/ZXT-120/assets/images/large.jpg",
+        "small": "/drivers/ZXT-120/assets/images/small.jpg"
       },
       "mobile": {
         "components": [
