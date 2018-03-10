@@ -7,11 +7,43 @@
 	},
 	"capabilities": [
 		"measure_temperature",
-		"target_temperature"
+		"target_temperature",
+		"AC_mode",
+		"measure_battery",
+		"alarm_battery"
 	],
 	"images": {
 		"large": "/drivers/ZXT-120/assets/images/large.png",
 		"small": "/drivers/ZXT-120/assets/images/small.png"
+	},
+	"mobile": {
+		"components": [
+			{
+				"id": "battery",
+				"capabilities": [
+					"measure_battery"
+				]
+			},
+			{
+				"id": "sensor",
+				"capabilities": [
+					"measure_temperature",
+					"alarm_battery"
+				]
+			},
+			{
+				"id": "picker",
+				"capabilities": [
+					"AC_mode"
+				]
+			},
+			{
+				"id": "thermostat",
+				"capabilities": [
+					"target_temperature"
+				]
+			}
+		]
 	},
 	"zwave": {
 		"manufacturerId": [
@@ -26,7 +58,7 @@
 		"wakeUpInterval": 3600,
 		"learnmode": {
 			"instruction": {
-				"en": ""
+				"en": "Triple click the button on the ZXT-120"
 			}
 		},
 		"zwaveAllianceProductId": 715,
@@ -34,5 +66,25 @@
 		"associationGroups": [],
 		"associationGroupsOptions": {}
 	},
-	"settings": []
+	"settings": [
+		{
+			"id": "IR_code_number",
+			"value": 857,
+			"label": {
+				"en": "Set IR Code Number from built-in code library"
+			},
+			"hint": {
+				"en": "Refer to Code Finder Webpage"
+			},
+			"zwave": {
+				"index": 27,
+				"size": 2
+			},
+			"attr": {
+				"min": 0,
+				"max": 65535
+			},
+			"type": "number"
+		}
+	]
 }
