@@ -39,8 +39,10 @@ The following capabilities are supported:
 
 * Temperature measurement    
 * Target Temperature   
-* Airconditioning mode    
-* Battery capabilities (measure and alarm)    
+* Airco mode    
+* Battery capabilities (measure and alarm)  
+
+**Note:** Fan mode will be added in a later app update  
 
 ## Supported Languages:
 * English   
@@ -53,7 +55,9 @@ If possible, please report issues at the [issues section on Github](https://gith
 ## Changelog:
 
 ### v2.1.0
-* Add support for the ZXT-120 Z-Wave-to-AC IR Extender (temperature and mode control)
+* Add initial support for the ZXT-120 Z-Wave-to-AC IR Extender (temperature and mode control)
+**fix**
+* Fix issue where the battery alarm condition card cause the app to crash (flow rebuilding required)   
 **update:**   
 * Update Homey meshdriver to 1.2.8   
 * Add link to Homey community forum topic   

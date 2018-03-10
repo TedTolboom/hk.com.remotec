@@ -1,620 +1,618 @@
 {
-	"id": "hk.com.remotec",
-	"sdk": 2,
-	"name": {
-		"en": "Remotec Technologies"
-	},
-	"description": {
-		"en": "Adds support for Remotec Technologies Z-wave devices"
-	},
-	"category": [
+  "id": "hk.com.remotec",
+  "sdk": 2,
+  "name": {
+    "en": "Remotec Technologies"
+  },
+  "description": {
+    "en": "Adds support for Remotec Technologies Z-wave devices"
+  },
+  "category": [
     "lights",
     "security",
     "appliances"
   ],
-	"version": "2.0.4",
-	"compatibility": ">=1.5.0",
-	"athomForumDiscussionId": 3113,
-	"author": {
-		"name": "Ted Tolboom",
-		"email": "ttolboom@gmail.com"
-	},
-	"contributors": {
-		"developers": [
-			{
-				"name": "Mike Lim (Automate Asia)",
-				"email": "mike.lim@automate.asia"
+  "version": "2.0.4",
+  "compatibility": ">=1.5.0",
+  "athomForumDiscussionId": 3113,
+  "author": {
+    "name": "Ted Tolboom",
+    "email": "ttolboom@gmail.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Mike Lim (Automate Asia)",
+        "email": "mike.lim@automate.asia"
       },
-			{
-				"name": "Ted Tolboom",
-				"email": "dTNL.Homey@gmail.com"
+      {
+        "name": "Ted Tolboom",
+        "email": "dTNL.Homey@gmail.com"
       }
     ]
-	},
-	"contributing": {
-		"donate": {
-			"paypal": {
-
-				"username": "TedTolboom"
-			}
-		}
-	},
-
-	"tags": {
-		"en": [
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "TedTolboom"
+      }
+    }
+  },
+  "tags": {
+    "en": [
       "scene master",
       "remote",
       "remote control",
       "central scene",
       "scenes"
     ],
-		"nl": [
+    "nl": [
       "scene master",
       "afstandsbediening",
       "central scene",
       "scenes"
     ]
-	},
-	"images": {
-		"large": "/assets/images/large.jpg",
-		"small": "/assets/images/small.jpg"
-	},
-	"capabilities": {
-		"AC_onoff": {
-			"type": "boolean",
-			"title": {
-				"en": "State",
-				"nl": "Status"
-			},
-			"desc": {
-				"en": "State of the thermostat",
-				"nl": "Status van de thermostaat"
-			},
-			"getable": true,
-			"setable": false,
-			"greyout": true
-		},
-		"AC_mode": {
-			"type": "enum",
-			"title": {
-				"en": "Thermostat mode",
-				"nl": "Thermostaat modus"
-			},
-			"desc": {
-				"en": "Mode of the thermostat",
-				"nl": "Modus van de thermostaat"
-			},
-			"values": [
-				{
-					"id": "Off",
-					"title": {
-						"en": "Off",
-						"nl": "Uit"
-					}
+  },
+  "images": {
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
+  },
+  "capabilities": {
+    "AC_onoff": {
+      "type": "boolean",
+      "title": {
+        "en": "State",
+        "nl": "Status"
+      },
+      "desc": {
+        "en": "State of the thermostat",
+        "nl": "Status van de thermostaat"
+      },
+      "getable": true,
+      "setable": false,
+      "greyout": true
+    },
+    "AC_mode": {
+      "type": "enum",
+      "title": {
+        "en": "Thermostat mode",
+        "nl": "Thermostaat modus"
+      },
+      "desc": {
+        "en": "Mode of the thermostat",
+        "nl": "Modus van de thermostaat"
+      },
+      "values": [
+        {
+          "id": "Off",
+          "title": {
+            "en": "Off",
+            "nl": "Uit"
+          }
         },
-				{
-					"id": "Heat",
-					"title": {
-						"en": "Heat",
-						"nl": "Verwarm"
-					}
+        {
+          "id": "Heat",
+          "title": {
+            "en": "Heat",
+            "nl": "Verwarm"
+          }
         },
-				{
-					"id": "Cool",
-					"title": {
-						"en": "Cool",
-						"nl": "Koel"
-					}
+        {
+          "id": "Cool",
+          "title": {
+            "en": "Cool",
+            "nl": "Koel"
+          }
         },
-				{
-					"id": "Auto",
-					"title": {
-						"en": "Auto",
-						"nl": "Auto"
-					}
+        {
+          "id": "Auto",
+          "title": {
+            "en": "Auto",
+            "nl": "Auto"
+          }
         },
-				{
-					"id": "Resume",
-					"title": {
-						"en": "Resume",
-						"nl": "Hervatten"
-					}
+        {
+          "id": "Resume",
+          "title": {
+            "en": "Resume",
+            "nl": "Hervatten"
+          }
         },
-				{
-					"id": "Fan Only",
-					"title": {
-						"en": "Fan only",
-						"nl": "Ventilator"
-					}
+        {
+          "id": "Fan Only",
+          "title": {
+            "en": "Fan only",
+            "nl": "Ventilator"
+          }
         },
-				{
-					"id": "Dry Air",
-					"title": {
-						"en": "Dry air",
-						"nl": "Droge lucht"
-					}
+        {
+          "id": "Dry Air",
+          "title": {
+            "en": "Dry air",
+            "nl": "Droge lucht"
+          }
         },
-				{
-					"id": "AWAY",
-					"title": {
-						"en": "Away",
-						"nl": "Afwezig"
-					}
+        {
+          "id": "AWAY",
+          "title": {
+            "en": "Away",
+            "nl": "Afwezig"
+          }
         }
       ],
-			"getable": true,
-			"setable": true
-		},
-		"FAN_mode": {
-			"type": "enum",
-			"title": {
-				"en": "Fan mode",
-				"nl": "Fan modus"
-			},
-			"desc": {
-				"en": "Fan mode",
-				"nl": "Ventilator modus"
-			},
-			"values": [
-				{
-					"id": "Auto Low",
-					"title": {
-						"en": "Auto (Low)",
-						"nl": "Auto (Laag)"
-					}
+      "getable": true,
+      "setable": true
+    },
+    "FAN_mode": {
+      "type": "enum",
+      "title": {
+        "en": "Fan mode",
+        "nl": "Fan modus"
+      },
+      "desc": {
+        "en": "Fan mode",
+        "nl": "Ventilator modus"
+      },
+      "values": [
+        {
+          "id": "Auto Low",
+          "title": {
+            "en": "Auto (Low)",
+            "nl": "Auto (Laag)"
+          }
         },
-				{
-					"id": "Auto Medium",
-					"title": {
-						"en": "Auto (Medium)",
-						"nl": "Auto (Gemiddeld)"
-					}
+        {
+          "id": "Auto Medium",
+          "title": {
+            "en": "Auto (Medium)",
+            "nl": "Auto (Gemiddeld)"
+          }
         },
-				{
-					"id": "Auto High",
-					"title": {
-						"en": "Auto (High)",
-						"nl": "Auto (Hoog)"
-					}
+        {
+          "id": "Auto High",
+          "title": {
+            "en": "Auto (High)",
+            "nl": "Auto (Hoog)"
+          }
         },
-				{
-					"id": "Low",
-					"title": {
-						"en": "Low",
-						"nl": "Laag"
-					}
+        {
+          "id": "Low",
+          "title": {
+            "en": "Low",
+            "nl": "Laag"
+          }
         },
-				{
-					"id": "Medium",
-					"title": {
-						"en": "Medium",
-						"nl": "Gemiddeld"
-					}
+        {
+          "id": "Medium",
+          "title": {
+            "en": "Medium",
+            "nl": "Gemiddeld"
+          }
         },
-				{
-					"id": "High",
-					"title": {
-						"en": "High",
-						"nl": "Hoog"
-					}
+        {
+          "id": "High",
+          "title": {
+            "en": "High",
+            "nl": "Hoog"
+          }
         }
       ],
-			"getable": true,
-			"setable": true
-		}
-	},
-	"flow": {
-		"triggers": [
-			{
-				"id": "ZRC-90_scene",
-				"title": {
-					"en": "Scene is activated",
-					"nl": "Scene is geactiveerd"
-				},
-				"hint": {
-					"en": "This card will only get triggered if the button and scene match the state of the dropdown fields.",
-					"nl": "Deze kaart wordt alleen geactiveerd wanneer de knop en scene overeenkomen met de toestand van de gekozen opties."
-				},
-				"args": [
-					{
-						"name": "device",
-						"type": "device",
-						"filter": "driver_id=ZRC-90"
+      "getable": true,
+      "setable": true
+    }
+  },
+  "flow": {
+    "triggers": [
+      {
+        "id": "ZRC-90_scene",
+        "title": {
+          "en": "Scene is activated",
+          "nl": "Scene is geactiveerd"
+        },
+        "hint": {
+          "en": "This card will only get triggered if the button and scene match the state of the dropdown fields.",
+          "nl": "Deze kaart wordt alleen geactiveerd wanneer de knop en scene overeenkomen met de toestand van de gekozen opties."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ZRC-90"
           },
-					{
-						"name": "button",
-						"type": "dropdown",
-						"values": [
-							{
-								"id": "1",
-								"label": {
-									"en": "Button 1",
-									"nl": "Knop 1"
-								}
+          {
+            "name": "button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Button 1",
+                  "nl": "Knop 1"
+                }
               },
-							{
-								"id": "2",
-								"label": {
-									"en": "Button 2",
-									"nl": "Knop 2"
-								}
+              {
+                "id": "2",
+                "label": {
+                  "en": "Button 2",
+                  "nl": "Knop 2"
+                }
               },
-							{
-								"id": "3",
-								"label": {
-									"en": "Button 3",
-									"nl": "Knop 3"
-								}
+              {
+                "id": "3",
+                "label": {
+                  "en": "Button 3",
+                  "nl": "Knop 3"
+                }
               },
-							{
-								"id": "4",
-								"label": {
-									"en": "Button 4",
-									"nl": "Knop 4"
-								}
+              {
+                "id": "4",
+                "label": {
+                  "en": "Button 4",
+                  "nl": "Knop 4"
+                }
               },
-							{
-								"id": "5",
-								"label": {
-									"en": "Button 5",
-									"nl": "Knop 5"
-								}
+              {
+                "id": "5",
+                "label": {
+                  "en": "Button 5",
+                  "nl": "Knop 5"
+                }
               },
-							{
-								"id": "6",
-								"label": {
-									"en": "Button 6",
-									"nl": "Knop 6"
-								}
+              {
+                "id": "6",
+                "label": {
+                  "en": "Button 6",
+                  "nl": "Knop 6"
+                }
               },
-							{
-								"id": "7",
-								"label": {
-									"en": "Button 7",
-									"nl": "Knop 7"
-								}
+              {
+                "id": "7",
+                "label": {
+                  "en": "Button 7",
+                  "nl": "Knop 7"
+                }
               },
-							{
-								"id": "8",
-								"label": {
-									"en": "Button 8",
-									"nl": "Knop 8"
-								}
+              {
+                "id": "8",
+                "label": {
+                  "en": "Button 8",
+                  "nl": "Knop 8"
+                }
               }
             ]
           },
-					{
-						"name": "scene",
-						"type": "dropdown",
-						"values": [
-							{
-								"id": "Key Pressed 1 time",
-								"label": {
-									"en": "Pressed 1x",
-									"nl": "1x ingedrukt"
-								}
+          {
+            "name": "scene",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Key Pressed 1 time",
+                "label": {
+                  "en": "Pressed 1x",
+                  "nl": "1x ingedrukt"
+                }
               },
-							{
-								"id": "Key Pressed 2 times",
-								"label": {
-									"en": "Pressed 2x",
-									"nl": "2x ingedrukt"
-								}
+              {
+                "id": "Key Pressed 2 times",
+                "label": {
+                  "en": "Pressed 2x",
+                  "nl": "2x ingedrukt"
+                }
               },
-							{
-								"id": "Key Held Down",
-								"label": {
-									"en": "Held Down (5x a second)",
-									"nl": "Lang ingedrukt (5x per seconde)"
-								}
+              {
+                "id": "Key Held Down",
+                "label": {
+                  "en": "Held Down (5x a second)",
+                  "nl": "Lang ingedrukt (5x per seconde)"
+                }
               },
-							{
-								"id": "Key Released",
-								"label": {
-									"en": "Released",
-									"nl": "Losgelaten"
-								}
+              {
+                "id": "Key Released",
+                "label": {
+                  "en": "Released",
+                  "nl": "Losgelaten"
+                }
               }
             ]
           }
         ]
       },
-			{
-				"id": "ZRC-90_button",
-				"title": {
-					"en": "A button has been pressed",
-					"nl": "Een knop is ingedrukt"
-				},
-				"hint": {
-					"en": "This card will trigger on any button pressed and provides the button and scene tokens.",
-					"nl": "Deze kaart wordt geactiveerd bij iedere knop die ingedrukt wordt en biedt de knop en scene tokens aan."
-				},
-				"args": [
-					{
-						"name": "device",
-						"type": "device",
-						"filter": "driver_id=ZRC-90"
+      {
+        "id": "ZRC-90_button",
+        "title": {
+          "en": "A button has been pressed",
+          "nl": "Een knop is ingedrukt"
+        },
+        "hint": {
+          "en": "This card will trigger on any button pressed and provides the button and scene tokens.",
+          "nl": "Deze kaart wordt geactiveerd bij iedere knop die ingedrukt wordt en biedt de knop en scene tokens aan."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ZRC-90"
           }
         ],
-				"tokens": [
-					{
-						"name": "button",
-						"type": "string",
-						"title": {
-							"en": "button",
-							"nl": "knop"
-						},
-						"example": "0"
+        "tokens": [
+          {
+            "name": "button",
+            "type": "string",
+            "title": {
+              "en": "button",
+              "nl": "knop"
+            },
+            "example": "0"
           },
-					{
-						"name": "scene",
-						"type": "string",
-						"title": {
-							"en": "scene",
-							"nl": "scene"
-						},
-						"example": "Button pressed (test)"
+          {
+            "name": "scene",
+            "type": "string",
+            "title": {
+              "en": "scene",
+              "nl": "scene"
+            },
+            "example": "Button pressed (test)"
           }
         ]
       }
     ],
-		"conditions": [],
-		"actions": [
-			{
-				"id": "setmode",
-				"title": {
-					"en": "Set Mode"
-				},
-				"args": [
-					{
-						"name": "device",
-						"type": "device",
-						"filter": "driver_id=ZXT-120|ZXT-600"
+    "conditions": [],
+    "actions": [
+      {
+        "id": "setmode",
+        "title": {
+          "en": "Set Mode"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ZXT-120|ZXT-600"
           },
-					{
-						"name": "mode",
-						"type": "dropdown",
-						"values": [
-							{
-								"id": "Off",
-								"label": {
-									"en": "Off",
-									"nl": "Uit"
-								}
+          {
+            "name": "mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Off",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit"
+                }
               },
-							{
-								"id": "Heat",
-								"label": {
-									"en": "Heat",
-									"nl": "Verwarm"
-								}
+              {
+                "id": "Heat",
+                "label": {
+                  "en": "Heat",
+                  "nl": "Verwarm"
+                }
               },
-							{
-								"id": "Cool",
-								"label": {
-									"en": "Cool",
-									"nl": "Koel"
-								}
+              {
+                "id": "Cool",
+                "label": {
+                  "en": "Cool",
+                  "nl": "Koel"
+                }
               },
-							{
-								"id": "Auto",
-								"label": {
-									"en": "Auto",
-									"nl": "Auto"
-								}
+              {
+                "id": "Auto",
+                "label": {
+                  "en": "Auto",
+                  "nl": "Auto"
+                }
               },
-							{
-								"id": "Resume",
-								"label": {
-									"en": "Resume",
-									"nl": "Hervatten"
-								}
+              {
+                "id": "Resume",
+                "label": {
+                  "en": "Resume",
+                  "nl": "Hervatten"
+                }
               },
-							{
-								"id": "Fan Only",
-								"label": {
-									"en": "Fan only",
-									"nl": "Ventilator"
-								}
+              {
+                "id": "Fan Only",
+                "label": {
+                  "en": "Fan only",
+                  "nl": "Ventilator"
+                }
               },
-							{
-								"id": "Dry Air",
-								"label": {
-									"en": "Dry air",
-									"nl": "Droge lucht"
-								}
+              {
+                "id": "Dry Air",
+                "label": {
+                  "en": "Dry air",
+                  "nl": "Droge lucht"
+                }
               },
-							{
-								"id": "AWAY",
-								"label": {
-									"en": "Away",
-									"nl": "Afwezig"
-								}
+              {
+                "id": "AWAY",
+                "label": {
+                  "en": "Away",
+                  "nl": "Afwezig"
+                }
               }
             ]
           }
         ]
       }
     ]
-	},
-	"drivers": [
-		{
-			"id": "ZRC-90",
-			"name": {
-				"en": "Remotec Scene Master",
-				"nl": "Remotec Scene Master"
-			},
-			"icon": "/drivers/ZRC-90/assets/icon.svg",
-			"images": {
-				"large": "/drivers/ZRC-90/assets/images/large.jpg",
-				"small": "/drivers/ZRC-90/assets/images/small.jpg"
-			},
-			"class": "sensor",
-			"capabilities": [
+  },
+  "drivers": [
+    {
+      "id": "ZRC-90",
+      "name": {
+        "en": "Remotec Scene Master",
+        "nl": "Remotec Scene Master"
+      },
+      "icon": "/drivers/ZRC-90/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ZRC-90/assets/images/large.jpg",
+        "small": "/drivers/ZRC-90/assets/images/small.jpg"
+      },
+      "class": "sensor",
+      "capabilities": [
         "measure_battery",
         "alarm_battery"
       ],
-			"mobile": {
-				"components": [
-					{
-						"id": "icon"
+      "mobile": {
+        "components": [
+          {
+            "id": "icon"
           },
-					{
-						"id": "battery",
-						"capabilities": [
+          {
+            "id": "battery",
+            "capabilities": [
               "measure_battery"
             ],
-						"options": {
-							"showTitle": true
-						}
+            "options": {
+              "showTitle": true
+            }
           },
-					{
-						"id": "sensor",
-						"capabilities": [
+          {
+            "id": "sensor",
+            "capabilities": [
               "alarm_battery"
             ],
-						"options": {
-							"icons": {
-								"Battery_Alarm": "/drivers/ZRC-90/assets/images/alarm_battery.svg"
-							},
-							"Battery_Alarm": {
-								"noblink": false,
-								"invert": false
-							}
-						}
+            "options": {
+              "icons": {
+                "Battery_Alarm": "/drivers/ZRC-90/assets/images/alarm_battery.svg"
+              },
+              "Battery_Alarm": {
+                "noblink": false,
+                "invert": false
+              }
+            }
           }
         ]
-			},
-			"zwave": {
-				"manufacturerId": 21076,
-				"productTypeId": 1,
-				"productId": 34064,
-				"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1584/F-BW8510xx (ZRC-90xx) User Manual_V1.01_20151030.pdf",
-				"pid": 1584,
-				"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-15120001",
-				"learnmode": {
-					"image": "/drivers/ZRC-90/assets/learnmode.svg",
-					"instruction": {
-						"en": "Press the “L” button at the rear side of the Scene Master until the LED light up to add the device into the Z-Wave network.",
-						"nl": "Druk de “L” knop aan de achterzijde van de Scene Master in totdat de LED oplicht om het apparaat toe te voegen aan het Z-wave netwerk."
-					}
-				},
-				"unlearnmode": {
-					"image": "/drivers/ZRC-90/assets/learnmode.svg",
-					"instruction": {
-						"en": "Press the “L” button, at the rear side of the Scene Master, until the LED light up to remove the device from the Z-Wave network.",
-						"nl": "Druk de “L” knop, aan de achterzijde van de Scene Master, in totdat de LED oplicht om het apparaat te verwijderen uit het Z-wave netwerk."
-					}
-				},
-				"associationGroups": [
+      },
+      "zwave": {
+        "manufacturerId": 21076,
+        "productTypeId": 1,
+        "productId": 34064,
+        "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1584/F-BW8510xx (ZRC-90xx) User Manual_V1.01_20151030.pdf",
+        "pid": 1584,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-15120001",
+        "learnmode": {
+          "image": "/drivers/ZRC-90/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the “L” button at the rear side of the Scene Master until the LED light up to add the device into the Z-Wave network.",
+            "nl": "Druk de “L” knop aan de achterzijde van de Scene Master in totdat de LED oplicht om het apparaat toe te voegen aan het Z-wave netwerk."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/ZRC-90/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the “L” button, at the rear side of the Scene Master, until the LED light up to remove the device from the Z-Wave network.",
+            "nl": "Druk de “L” knop, aan de achterzijde van de Scene Master, in totdat de LED oplicht om het apparaat te verwijderen uit het Z-wave netwerk."
+          }
+        },
+        "associationGroups": [
           1
         ],
-				"associationGroupsOptions": {
-					"1": {
-						"hint": {
-							"en": "Z-Wave Plus Lifeline: Association Group 1 will be a default scene report channel. Only one node can be assigned to this association group. \nDefault: 1 (Homey's ID)",
-							"nl": "Z-Wave Plus Lifeline: Association Groep 1 wordt gebruikt om scene rapportages door te geven. Slechts een node kan toegevoegd worden aan deze associatie groep. \nStandaard: 1 (Homey's ID)"
-						}
-					}
-				}
-			}
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline: Association Group 1 will be a default scene report channel. Only one node can be assigned to this association group. \nDefault: 1 (Homey's ID)",
+              "nl": "Z-Wave Plus Lifeline: Association Groep 1 wordt gebruikt om scene rapportages door te geven. Slechts een node kan toegevoegd worden aan deze associatie groep. \nStandaard: 1 (Homey's ID)"
+            }
+          }
+        }
+      }
     },
-		{
-			"id": "ZXT-120",
-			"class": "thermostat",
-			"name": {
-				"en": "Remotec ZXT-120EU AC Extender"
-			},
-			"capabilities": [
+    {
+      "id": "ZXT-120",
+      "class": "thermostat",
+      "name": {
+        "en": "Remotec ZXT-120EU AC Extender"
+      },
+      "capabilities": [
         "measure_temperature",
         "target_temperature",
         "AC_mode",
         "measure_battery",
         "alarm_battery"
       ],
-			"images": {
-				"large": "/drivers/ZXT-120/assets/images/large.png",
-				"small": "/drivers/ZXT-120/assets/images/small.png"
-			},
-			"mobile": {
-				"components": [
-					{
-						"id": "battery",
-						"capabilities": [
+      "images": {
+        "large": "/drivers/ZXT-120/assets/images/large.png",
+        "small": "/drivers/ZXT-120/assets/images/small.png"
+      },
+      "mobile": {
+        "components": [
+          {
+            "id": "battery",
+            "capabilities": [
               "measure_battery"
             ]
           },
-					{
-						"id": "sensor",
-						"capabilities": [
+          {
+            "id": "sensor",
+            "capabilities": [
               "measure_temperature",
               "alarm_battery"
             ]
           },
-					{
-						"id": "picker",
-						"capabilities": [
+          {
+            "id": "picker",
+            "capabilities": [
               "AC_mode"
             ]
           },
-					{
-						"id": "thermostat",
-						"capabilities": [
+          {
+            "id": "thermostat",
+            "capabilities": [
               "target_temperature"
             ]
           }
         ]
-			},
-			"zwave": {
-				"manufacturerId": [
+      },
+      "zwave": {
+        "manufacturerId": [
           21076
         ],
-				"productTypeId": [
+        "productTypeId": [
           257
         ],
-				"productId": [
+        "productId": [
           33655
         ],
-				"wakeUpInterval": 3600,
-				"learnmode": {
-					"instruction": {
-						"en": "Triple click the button on the ZXT-120"
-					}
-				},
-				"zwaveAllianceProductId": 715,
-				"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC08-12090012",
-				"associationGroups": [],
-				"associationGroupsOptions": {}
-			},
-			"settings": [
-				{
-					"id": "IR_code_number",
-					"value": 857,
-					"label": {
-						"en": "Set IR Code Number from built-in code library"
-					},
-					"hint": {
-						"en": "Refer to Code Finder Webpage"
-					},
-					"zwave": {
-						"index": 27,
-						"size": 2
-					},
-					"attr": {
-						"min": 0,
-						"max": 65535
-					},
-					"type": "number"
+        "wakeUpInterval": 3600,
+        "learnmode": {
+          "instruction": {
+            "en": "Triple click the button on the ZXT-120"
+          }
+        },
+        "zwaveAllianceProductId": 715,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC08-12090012",
+        "associationGroups": [],
+        "associationGroupsOptions": {}
+      },
+      "settings": [
+        {
+          "id": "IR_code_number",
+          "value": 857,
+          "label": {
+            "en": "Set IR Code Number from built-in code library"
+          },
+          "hint": {
+            "en": "Refer to Code Finder Webpage"
+          },
+          "zwave": {
+            "index": 27,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 65535
+          },
+          "type": "number"
         }
       ]
     },
-		{
-			"id": "ZXT-600",
-			"class": "thermostat",
-			"name": {
-				"en": "AC MASTER"
-			},
-			"capabilities": [
+    {
+      "id": "ZXT-600",
+      "class": "thermostat",
+      "name": {
+        "en": "AC MASTER"
+      },
+      "capabilities": [
         "measure_temperature",
         "target_temperature",
         "AC_onoff",
@@ -623,417 +621,417 @@
         "measure_battery",
         "alarm_battery"
       ],
-			"images": {
-				"large": "/drivers/ZXT-600/assets/images/large.png",
-				"small": "/drivers/ZXT-600/assets/images/small.png"
-			},
-			"mobile": {
-				"components": [
-					{
-						"id": "battery",
-						"capabilities": [
+      "images": {
+        "large": "/drivers/ZXT-600/assets/images/large.png",
+        "small": "/drivers/ZXT-600/assets/images/small.png"
+      },
+      "mobile": {
+        "components": [
+          {
+            "id": "battery",
+            "capabilities": [
               "measure_battery"
             ]
           },
-					{
-						"id": "sensor",
-						"capabilities": [
+          {
+            "id": "sensor",
+            "capabilities": [
               "AC_onoff",
               "measure_temperature",
               "alarm_battery"
             ],
-						"options": {
-							"icons": {
-								"AC_onoff": "/drivers/ZXT-600/assets/AC_onoff.svg"
-							},
-							"AC_onoff": {
-								"noblink": false,
-								"greyout": true,
-								"label": {
-									"true": {
-										"en": "Active"
-									},
-									"false": {
-										"en": "Idle"
-									}
-								}
-							}
-						}
+            "options": {
+              "icons": {
+                "AC_onoff": "/drivers/ZXT-600/assets/AC_onoff.svg"
+              },
+              "AC_onoff": {
+                "noblink": false,
+                "greyout": true,
+                "label": {
+                  "true": {
+                    "en": "Active"
+                  },
+                  "false": {
+                    "en": "Idle"
+                  }
+                }
+              }
+            }
           },
-					{
-						"id": "picker",
-						"capabilities": [
+          {
+            "id": "picker",
+            "capabilities": [
               "FAN_mode"
             ],
-						"options": {
-							"showTitle": true
-						}
+            "options": {
+              "showTitle": true
+            }
           },
-					{
-						"id": "picker",
-						"capabilities": [
+          {
+            "id": "picker",
+            "capabilities": [
               "AC_mode"
             ]
           },
-					{
-						"id": "thermostat",
-						"capabilities": [
+          {
+            "id": "thermostat",
+            "capabilities": [
               "target_temperature"
             ]
           }
         ]
-			},
-			"zwave": {
-				"manufacturerId": [
+      },
+      "zwave": {
+        "manufacturerId": [
           21076
         ],
-				"productTypeId": [
+        "productTypeId": [
           256,
           257
         ],
-				"productId": [
+        "productId": [
           33936
         ],
-				"wakeUpInterval": 3600,
-				"learnmode": {
-					"instruction": {
-						"en": "note:\t ZXT-600 will detect upon inclusion the applied power source (battery or USB-powered) to decide what Z-Wave device role it will use (battery= sleeping device, USB power = always awake device)\n1.\tRefer to your primary controller to enter into the Inclusion Mode or Exclusion Mode\r\n2.\tWhen it is prompted to enter it, please triple click the “PROG” button within 1 second.\r\n3.\tGreen Indicator flashes TWICE then stay off"
-					}
-				},
-				"unlearnmode": {
-					"instruction": {
-						"en": "1.\tRefer to your primary controller to enter into the Inclusion Mode or Exclusion Mode\r\n2.\tWhen it is prompted to enter it, please triple click the “PROG” button within 1 second.\r\n3.\tGreen Indicator flashes TWICE then stay off"
-					}
-				},
-				"productDocumentation": "http://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2553/BW8490_Installation_Guide_201700807.pdf",
-				"zwaveAllianceProductId": 2553,
-				"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17085735",
-				"associationGroups": [
+        "wakeUpInterval": 3600,
+        "learnmode": {
+          "instruction": {
+            "en": "note:\t ZXT-600 will detect upon inclusion the applied power source (battery or USB-powered) to decide what Z-Wave device role it will use (battery= sleeping device, USB power = always awake device)\n1.\tRefer to your primary controller to enter into the Inclusion Mode or Exclusion Mode\r\n2.\tWhen it is prompted to enter it, please triple click the “PROG” button within 1 second.\r\n3.\tGreen Indicator flashes TWICE then stay off"
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "1.\tRefer to your primary controller to enter into the Inclusion Mode or Exclusion Mode\r\n2.\tWhen it is prompted to enter it, please triple click the “PROG” button within 1 second.\r\n3.\tGreen Indicator flashes TWICE then stay off"
+          }
+        },
+        "productDocumentation": "http://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2553/BW8490_Installation_Guide_201700807.pdf",
+        "zwaveAllianceProductId": 2553,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17085735",
+        "associationGroups": [
           1
         ],
-				"associationGroupsOptions": {
-					"1": {
-						"hint": {
-							"en": "Association Group #1 (max. 1 node) is default Z-wave lifeline group to associate with Homey for AC Master Status change report"
-						}
-					}
-				}
-			},
-			"settings": [
-				{
-					"id": "Learn IR Code",
-					"value": 0,
-					"label": {
-						"en": "Learn IR Code"
-					},
-					"hint": {
-						"en": "Learn IR Code, refer to 'IR Learning Mapping Table (Parameter Number 25)' table in the devices manual"
-					},
-					"zwave": {
-						"index": 25,
-						"size": 1
-					},
-					"attr": {
-						"min": 0,
-						"max": 32
-					},
-					"type": "number"
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Association Group #1 (max. 1 node) is default Z-wave lifeline group to associate with Homey for AC Master Status change report"
+            }
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "Learn IR Code",
+          "value": 0,
+          "label": {
+            "en": "Learn IR Code"
+          },
+          "hint": {
+            "en": "Learn IR Code, refer to 'IR Learning Mapping Table (Parameter Number 25)' table in the devices manual"
+          },
+          "zwave": {
+            "index": 25,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 32
+          },
+          "type": "number"
         },
-				{
-					"id": "IR_code_number",
-					"value": 857,
-					"label": {
-						"en": "Set IR Code Number from built-in code library"
-					},
-					"hint": {
-						"en": "Refer to Code Finder Webpage"
-					},
-					"zwave": {
-						"index": 27,
-						"size": 2
-					},
-					"attr": {
-						"min": 0,
-						"max": 65535
-					},
-					"type": "number"
+        {
+          "id": "IR_code_number",
+          "value": 857,
+          "label": {
+            "en": "Set IR Code Number from built-in code library"
+          },
+          "hint": {
+            "en": "Refer to Code Finder Webpage"
+          },
+          "zwave": {
+            "index": 27,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 65535
+          },
+          "type": "number"
         },
-				{
-					"id": "IR_emitter",
-					"value": "255",
-					"label": {
-						"en": "Set built-in IR Emitter Control"
-					},
-					"hint": {
-						"en": "If there have two or more Air Conditioners with the same code set that are used in the same room, user can disable the built-in IR emitter and use the external IR emitter cable to control each air conditioner individually\r\n0 or 255\r\n(0x00 or 0xFF)\r\n0(0x00): Disable\r\n255(0xFF): Enable (Default)\r\n"
-					},
-					"zwave": {
-						"index": 32,
-						"size": 1,
-						"signed": false
-					},
-					"type": "dropdown",
-					"values": [
-						{
-							"id": "0",
-							"label": {
-								"en": "Disabled"
-							}
+        {
+          "id": "IR_emitter",
+          "value": "255",
+          "label": {
+            "en": "Set built-in IR Emitter Control"
+          },
+          "hint": {
+            "en": "If there have two or more Air Conditioners with the same code set that are used in the same room, user can disable the built-in IR emitter and use the external IR emitter cable to control each air conditioner individually\r\n0 or 255\r\n(0x00 or 0xFF)\r\n0(0x00): Disable\r\n255(0xFF): Enable (Default)\r\n"
+          },
+          "zwave": {
+            "index": 32,
+            "size": 1,
+            "signed": false
+          },
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled"
+              }
             },
-						{
-							"id": "255",
-							"label": {
-								"en": "Enabled (default)"
-							}
+            {
+              "id": "255",
+              "label": {
+                "en": "Enabled (default)"
+              }
             }
           ]
         },
-				{
-					"id": "AC_swing",
-					"value": "1",
-					"label": {
-						"en": "Control AC SWING function"
-					},
-					"hint": {
-						"en": "Default: 0x01\r\nRange 0 to 1 (0x00 or 0x01)\r\n0(0x00) : Swing OFF\r\n1(0x01) : Swing Auto (Default)\r\n"
-					},
-					"zwave": {
-						"index": 33,
-						"size": 1
-					},
-					"type": "dropdown",
-					"values": [
-						{
-							"id": "0",
-							"label": {
-								"en": "Disabled"
-							}
+        {
+          "id": "AC_swing",
+          "value": "1",
+          "label": {
+            "en": "Control AC SWING function"
+          },
+          "hint": {
+            "en": "Default: 0x01\r\nRange 0 to 1 (0x00 or 0x01)\r\n0(0x00) : Swing OFF\r\n1(0x01) : Swing Auto (Default)\r\n"
+          },
+          "zwave": {
+            "index": 33,
+            "size": 1
+          },
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled"
+              }
             },
-						{
-							"id": "1",
-							"label": {
-								"en": "Enabled (default)"
-							}
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled (default)"
+              }
             }
           ]
         },
-				{
-					"id": "Report_threshold",
-					"value": "0",
-					"label": {
-						"en": "Condition report Temperature threshold"
-					},
-					"hint": {
-						"en": "0(0x00) = Disable (Default)\r\n(for saving battery life)\r\nAuto report if room temperature is different from last report.\r\n1(0x01) = 1°F (0.5°C)\r\n2(0x02) = 2°F (1°C) \r\n3(0x03) = 3°F (1.5°C)\r\n4(0x04) = 4°F (2°C)\r\n5(0x05) = 5°F (2.5°C)\r\n6(0x06) = 6°F (3°C)\r\n7(0x07) = 7°F (3.5°C)\r\n8(0x08) = 8°F (4°C)\r\n"
-					},
-					"zwave": {
-						"index": 30,
-						"size": 1
-					},
-					"type": "dropdown",
-					"values": [
-						{
-							"id": "0",
-							"label": {
-								"en": "Reporting disabled (Default)"
-							}
+        {
+          "id": "Report_threshold",
+          "value": "0",
+          "label": {
+            "en": "Condition report Temperature threshold"
+          },
+          "hint": {
+            "en": "0(0x00) = Disable (Default)\r\n(for saving battery life)\r\nAuto report if room temperature is different from last report.\r\n1(0x01) = 1°F (0.5°C)\r\n2(0x02) = 2°F (1°C) \r\n3(0x03) = 3°F (1.5°C)\r\n4(0x04) = 4°F (2°C)\r\n5(0x05) = 5°F (2.5°C)\r\n6(0x06) = 6°F (3°C)\r\n7(0x07) = 7°F (3.5°C)\r\n8(0x08) = 8°F (4°C)\r\n"
+          },
+          "zwave": {
+            "index": 30,
+            "size": 1
+          },
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Reporting disabled (Default)"
+              }
             },
-						{
-							"id": "1",
-							"label": {
-								"en": "Report by temp change of 0.5°C"
-							}
+            {
+              "id": "1",
+              "label": {
+                "en": "Report by temp change of 0.5°C"
+              }
             },
-						{
-							"id": "2",
-							"label": {
-								"en": "Report by temp change of 1.0°C"
-							}
+            {
+              "id": "2",
+              "label": {
+                "en": "Report by temp change of 1.0°C"
+              }
             },
-						{
-							"id": "3",
-							"label": {
-								"en": "Report by temp change of 1.5°C"
-							}
+            {
+              "id": "3",
+              "label": {
+                "en": "Report by temp change of 1.5°C"
+              }
             },
-						{
-							"id": "4",
-							"label": {
-								"en": "Report by temp change of 2.0°C"
-							}
+            {
+              "id": "4",
+              "label": {
+                "en": "Report by temp change of 2.0°C"
+              }
             },
-						{
-							"id": "5",
-							"label": {
-								"en": "Report by temp change of 2.5°C"
-							}
+            {
+              "id": "5",
+              "label": {
+                "en": "Report by temp change of 2.5°C"
+              }
             },
-						{
-							"id": "6",
-							"label": {
-								"en": "Report by temp change of 3.0°C"
-							}
+            {
+              "id": "6",
+              "label": {
+                "en": "Report by temp change of 3.0°C"
+              }
             },
-						{
-							"id": "7",
-							"label": {
-								"en": "Report by temp change of 3.5°C"
-							}
+            {
+              "id": "7",
+              "label": {
+                "en": "Report by temp change of 3.5°C"
+              }
             },
-						{
-							"id": "8",
-							"label": {
-								"en": "Report by temp change of 4.0°C"
-							}
+            {
+              "id": "8",
+              "label": {
+                "en": "Report by temp change of 4.0°C"
+              }
             }
           ]
         },
-				{
-					"id": "Report_interval",
-					"value": "8",
-					"label": {
-						"en": "Condition report Temperature interval"
-					},
-					"hint": {
-						"en": "Auto report by the following time interval.\r\n1(0x01) = 1 Hr\r\n2(0x02) = 2 Hrs\r\n3(0x03) = 3 Hrs\r\n4(0x04) = 4 Hrs\r\n5(0x05) = 5 Hrs\r\n6(0x06) = 6 Hrs\r\n7(0x07) = 7 Hrs\r\n8(0x08) = 8 Hrs   (Default)\r\n"
-					},
-					"zwave": {
-						"index": 34,
-						"size": 1
-					},
-					"type": "dropdown",
-					"values": [
-						{
-							"id": "1",
-							"label": {
-								"en": "Report interval of 1 hr"
-							}
+        {
+          "id": "Report_interval",
+          "value": "8",
+          "label": {
+            "en": "Condition report Temperature interval"
+          },
+          "hint": {
+            "en": "Auto report by the following time interval.\r\n1(0x01) = 1 Hr\r\n2(0x02) = 2 Hrs\r\n3(0x03) = 3 Hrs\r\n4(0x04) = 4 Hrs\r\n5(0x05) = 5 Hrs\r\n6(0x06) = 6 Hrs\r\n7(0x07) = 7 Hrs\r\n8(0x08) = 8 Hrs   (Default)\r\n"
+          },
+          "zwave": {
+            "index": 34,
+            "size": 1
+          },
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Report interval of 1 hr"
+              }
             },
-						{
-							"id": "2",
-							"label": {
-								"en": "Report interval of 2 hrs"
-							}
+            {
+              "id": "2",
+              "label": {
+                "en": "Report interval of 2 hrs"
+              }
             },
-						{
-							"id": "3",
-							"label": {
-								"en": "Report interval of 3 hrs"
-							}
+            {
+              "id": "3",
+              "label": {
+                "en": "Report interval of 3 hrs"
+              }
             },
-						{
-							"id": "4",
-							"label": {
-								"en": "Report interval of 4 hrs"
-							}
+            {
+              "id": "4",
+              "label": {
+                "en": "Report interval of 4 hrs"
+              }
             },
-						{
-							"id": "5",
-							"label": {
-								"en": "Report interval of 5 hrs"
-							}
+            {
+              "id": "5",
+              "label": {
+                "en": "Report interval of 5 hrs"
+              }
             },
-						{
-							"id": "6",
-							"label": {
-								"en": "Report interval of 6 hrs"
-							}
+            {
+              "id": "6",
+              "label": {
+                "en": "Report interval of 6 hrs"
+              }
             },
-						{
-							"id": "7",
-							"label": {
-								"en": "Report interval of 7 hrs"
-							}
+            {
+              "id": "7",
+              "label": {
+                "en": "Report interval of 7 hrs"
+              }
             },
-						{
-							"id": "8",
-							"label": {
-								"en": "Report interval of 8 hrs (default)"
-							}
+            {
+              "id": "8",
+              "label": {
+                "en": "Report interval of 8 hrs (default)"
+              }
             }
           ]
         },
-				{
-					"id": "Temperature_calibration",
-					"value": "0",
-					"label": {
-						"en": "Calibrate Temperature reading"
-					},
-					"hint": {
-						"en": "Temperature offset value.\r\n0(0x00) = 0°C (Default)\r\n1(0x01) = 1°C\r\n2(0x02) = 2°C\r\n3(0x03) = 3°C\r\n4(0x04) = 4°C\r\n5(0x05) = 5°C\r\n255(0xFF) = -1°C\r\n254(0xFE) = -2°C\r\n253(0xFD) = -3°C\r\n252(0xFC) = -4°C\r\n251(0xFB) = -5°C\r\n"
-					},
-					"zwave": {
-						"index": 37,
-						"size": 1,
-						"signed": false
-					},
-					"type": "dropdown",
-					"values": [
-						{
-							"id": "0",
-							"label": {
-								"en": "Measured temperature (default)"
-							}
+        {
+          "id": "Temperature_calibration",
+          "value": "0",
+          "label": {
+            "en": "Calibrate Temperature reading"
+          },
+          "hint": {
+            "en": "Temperature offset value.\r\n0(0x00) = 0°C (Default)\r\n1(0x01) = 1°C\r\n2(0x02) = 2°C\r\n3(0x03) = 3°C\r\n4(0x04) = 4°C\r\n5(0x05) = 5°C\r\n255(0xFF) = -1°C\r\n254(0xFE) = -2°C\r\n253(0xFD) = -3°C\r\n252(0xFC) = -4°C\r\n251(0xFB) = -5°C\r\n"
+          },
+          "zwave": {
+            "index": 37,
+            "size": 1,
+            "signed": false
+          },
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Measured temperature (default)"
+              }
             },
-						{
-							"id": "1",
-							"label": {
-								"en": "Measured temperature + 1.0°C"
-							}
+            {
+              "id": "1",
+              "label": {
+                "en": "Measured temperature + 1.0°C"
+              }
             },
-						{
-							"id": "2",
-							"label": {
-								"en": "Measured temperature + 2.0°C"
-							}
+            {
+              "id": "2",
+              "label": {
+                "en": "Measured temperature + 2.0°C"
+              }
             },
-						{
-							"id": "3",
-							"label": {
-								"en": "Measured temperature + 3.0°C"
-							}
+            {
+              "id": "3",
+              "label": {
+                "en": "Measured temperature + 3.0°C"
+              }
             },
-						{
-							"id": "4",
-							"label": {
-								"en": "Measured temperature + 4.0°C"
-							}
+            {
+              "id": "4",
+              "label": {
+                "en": "Measured temperature + 4.0°C"
+              }
             },
-						{
-							"id": "5",
-							"label": {
-								"en": "Measured temperature + 5.0°C"
-							}
+            {
+              "id": "5",
+              "label": {
+                "en": "Measured temperature + 5.0°C"
+              }
             },
-						{
-							"id": "255",
-							"label": {
-								"en": "Measured temperature - 1.0°C"
-							}
+            {
+              "id": "255",
+              "label": {
+                "en": "Measured temperature - 1.0°C"
+              }
             },
-						{
-							"id": "254",
-							"label": {
-								"en": "Measured temperature - 2.0°C"
-							}
+            {
+              "id": "254",
+              "label": {
+                "en": "Measured temperature - 2.0°C"
+              }
             },
-						{
-							"id": "253",
-							"label": {
-								"en": "Measured temperature - 3.0°C"
-							}
+            {
+              "id": "253",
+              "label": {
+                "en": "Measured temperature - 3.0°C"
+              }
             },
-						{
-							"id": "252",
-							"label": {
-								"en": "Measured temperature - 4.0°C"
-							}
+            {
+              "id": "252",
+              "label": {
+                "en": "Measured temperature - 4.0°C"
+              }
             },
-						{
-							"id": "251",
-							"label": {
-								"en": "Measured temperature - 5.0°C"
-							}
+            {
+              "id": "251",
+              "label": {
+                "en": "Measured temperature - 5.0°C"
+              }
             }
           ]
         }
