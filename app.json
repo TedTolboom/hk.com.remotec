@@ -12,17 +12,29 @@
     "security",
     "appliances"
   ],
-  "version": "2.0.3",
+  "version": "2.1.0",
   "compatibility": ">=1.5.0",
+  "athomForumDiscussionId": 3113,
   "author": {
     "name": "Ted Tolboom",
     "email": "ttolboom@gmail.com"
   },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Mike Lim (Automate Asia)",
+        "email": "mike.lim@automate.asia"
+      },
+      {
+        "name": "Ted Tolboom",
+        "email": "dTNL.Homey@gmail.com"
+      }
+    ]
+  },
   "contributing": {
     "donate": {
       "paypal": {
-        "username": "TedTolboom",
-        "currency": "EUR"
+        "username": "TedTolboom"
       }
     }
   },
@@ -347,15 +359,77 @@
     "conditions": [],
     "actions": [
       {
-        "id": "DEV_actions",
+        "id": "setmode",
         "title": {
-          "en": "Development card"
+          "en": "Set Mode"
         },
         "args": [
           {
             "name": "device",
             "type": "device",
             "filter": "driver_id=ZXT-120|ZXT-600"
+          },
+          {
+            "name": "mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Off",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit"
+                }
+              },
+              {
+                "id": "Heat",
+                "label": {
+                  "en": "Heat",
+                  "nl": "Verwarm"
+                }
+              },
+              {
+                "id": "Cool",
+                "label": {
+                  "en": "Cool",
+                  "nl": "Koel"
+                }
+              },
+              {
+                "id": "Auto",
+                "label": {
+                  "en": "Auto",
+                  "nl": "Auto"
+                }
+              },
+              {
+                "id": "Resume",
+                "label": {
+                  "en": "Resume",
+                  "nl": "Hervatten"
+                }
+              },
+              {
+                "id": "Fan Only",
+                "label": {
+                  "en": "Fan only",
+                  "nl": "Ventilator"
+                }
+              },
+              {
+                "id": "Dry Air",
+                "label": {
+                  "en": "Dry air",
+                  "nl": "Droge lucht"
+                }
+              },
+              {
+                "id": "AWAY",
+                "label": {
+                  "en": "Away",
+                  "nl": "Afwezig"
+                }
+              }
+            ]
           }
         ]
       }
@@ -442,6 +516,95 @@
           }
         }
       }
+    },
+    {
+      "id": "ZXT-120",
+      "class": "thermostat",
+      "name": {
+        "en": "Remotec ZXT-120EU AC Extender"
+      },
+      "capabilities": [
+        "measure_temperature",
+        "target_temperature",
+        "AC_mode",
+        "measure_battery",
+        "alarm_battery"
+      ],
+      "images": {
+        "large": "/drivers/ZXT-120/assets/images/large.jpg",
+        "small": "/drivers/ZXT-120/assets/images/small.jpg"
+      },
+      "mobile": {
+        "components": [
+          {
+            "id": "battery",
+            "capabilities": [
+              "measure_battery"
+            ]
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_temperature",
+              "alarm_battery"
+            ]
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "AC_mode"
+            ]
+          },
+          {
+            "id": "thermostat",
+            "capabilities": [
+              "target_temperature"
+            ]
+          }
+        ]
+      },
+      "zwave": {
+        "manufacturerId": [
+          21076
+        ],
+        "productTypeId": [
+          257
+        ],
+        "productId": [
+          33655
+        ],
+        "wakeUpInterval": 3600,
+        "learnmode": {
+          "instruction": {
+            "en": "Triple click the button on the ZXT-120"
+          }
+        },
+        "zwaveAllianceProductId": 715,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC08-12090012",
+        "associationGroups": [],
+        "associationGroupsOptions": {}
+      },
+      "settings": [
+        {
+          "id": "IR_code_number",
+          "value": 857,
+          "label": {
+            "en": "Set IR Code Number from built-in code library"
+          },
+          "hint": {
+            "en": "Refer to Code Finder Webpage"
+          },
+          "zwave": {
+            "index": 27,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 65535
+          },
+          "type": "number"
+        }
+      ]
     }
   ]
 }

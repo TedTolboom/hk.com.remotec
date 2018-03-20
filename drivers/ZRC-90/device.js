@@ -10,10 +10,10 @@ class SceneMaster_ZRC90 extends ZwaveDevice {
 		// let PreviousSequenceNo = 'empty';
 
 		// enable debugging
-		this.enableDebug();
+		// this.enableDebug();
 
 		// print the node's info to the console
-		this.printNode();
+		// this.printNode();
 
 		// register device capabilities
 		this.registerCapability('alarm_battery', 'BATTERY');
@@ -46,36 +46,6 @@ class SceneMaster_ZRC90 extends ZwaveDevice {
 				triggerZRC90_scene.trigger(this, triggerZRC90_scene.getArgumentValues, remoteValue);
 				// Trigger the trigger card with tokens
 				triggerZRC90_button.trigger(this, remoteValue, null);
-
-				/*
-				if (rawReport['Sequence Number'] !== PreviousSequenceNo) {
-					if (typeof rawReport.Properties1['Key Attributes'] === 'number') {
-						switch (rawReport.Properties1['Key Attributes']) {
-						case 0:
-							rawReport.Properties1['Key Attributes'] = 'Key Pressed 1 time';
-							break;
-						case 1:
-							rawReport.Properties1['Key Attributes'] = 'Key Released';
-							break;
-						case 2:
-							rawReport.Properties1['Key Attributes'] = 'Key Held Down';
-							break;
-						case 3:
-							rawReport.Properties1['Key Attributes'] = 'Key Pressed 2 times';
-							break;
-						}
-					}
-					const remoteValue = {
-						button: rawReport['Scene Number'].toString(),
-						scene: rawReport.Properties1['Key Attributes'],
-					};
-					PreviousSequenceNo = rawReport['Sequence Number'];
-					this.log('Triggering sequence:', PreviousSequenceNo, 'remoteValue', remoteValue);
-					// Trigger the trigger card with 2 dropdown options
-					triggerZRC90_scene.trigger(this, triggerZRC90_scene.getArgumentValues, remoteValue);
-					// Trigger the trigger card with tokens
-					triggerZRC90_button.trigger(this, remoteValue, null);
-				} */
 			}
 		});
 
