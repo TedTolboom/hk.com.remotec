@@ -1,32 +1,35 @@
 'use strict';
 
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
-
-// Documentation: undefined
+const Homey = require('homey');
 
 class ZXT120 extends ZwaveDevice {
 	onMeshInit() {
 
 		// enable debugging
-		// this.enableDebug();
+		//this.enableDebug();
 
 		// print the node's info to the console
-		// this.printNode();
+		//this.printNode();
+
+		new Homey.FlowCardAction('setmode')
+					.register()
+					.registerRunListener(this._onModeChange.bind(this));
 
 		this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL', {
 			getOpts: {
 				getOnStart: true, // get the initial value on app start
-			},
+			}
 		});
 		this.registerCapability('alarm_battery', 'BATTERY', {
 			report: 'BATTERY_REPORT',
 			getOpts: {
-				// getOnStart: true, // get the initial value on app start
-				// pollInterval: 'poll_interval' // maps to device settings
+				//getOnStart: true, // get the initial value on app start
+				//pollInterval: 'poll_interval' // maps to device settings
 			},
 			reportParser(report) {
 				return report['Battery Level'] === 'battery low warning';
-			},
+			}
 		});
 		this.registerCapability('AC_mode', 'THERMOSTAT_MODE', {
 			get: 'THERMOSTAT_MODE_GET',
@@ -34,19 +37,19 @@ class ZXT120 extends ZwaveDevice {
 				getOnStart: true,
 			},
 			set: 'THERMOSTAT_MODE_SET',
-			setParserV2: value => ({
-				Level: {
-					'No of Manufacturer Data fields': 0,
-					Mode: value,
-				},
-				'Manufacturer Data': new Buffer([0]),
-			}),
+			setParserV2: value =>({
+			    Level: {
+			        'No of Manufacturer Data fields': 0,
+			        Mode: value,
+			    },
+			    'Manufacturer Data': new Buffer([0]),
+			})
 		});
 		this.registerCapability('target_temperature', 'THERMOSTAT_SETPOINT', {
 			get: 'THERMOSTAT_SETPOINT_GET',
 			getOpts: {
-				// getOnStart: true,
-			},
+				//getOnStart: true,
+			}
 		});
 
 		// register a report listener
@@ -60,10 +63,14 @@ class ZXT120 extends ZwaveDevice {
 
 	}
 
-	setMode(data) {
+	setMode( data ) {
 		console.log(data);
 		this.triggerCapabilityListener('AC_mode', data);
 		return true;
+	}
+
+	_onModeChange(args) {
+		return args.device.setMode(args.mode);
 	}
 
 }
