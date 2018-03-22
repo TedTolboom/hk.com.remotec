@@ -54,6 +54,10 @@ If possible, please report issues at the [issues section on Github](https://gith
 
 ## Changelog:
 
+### v2.1.1
+**fix**
+* Fix issue with non-registered flow card of ZXT-120         
+
 ### v2.1.0
 * Add initial support for the ZXT-120 Z-Wave-to-AC IR Extender (temperature and mode control)   
 **fix**
