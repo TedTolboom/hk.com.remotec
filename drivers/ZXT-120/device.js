@@ -7,10 +7,10 @@ class ZXT120 extends ZwaveDevice {
 	onMeshInit() {
 
 		// enable debugging
-		this.enableDebug();
+		//this.enableDebug();
 
 		// print the node's info to the console
-		this.printNode();
+		//this.printNode();
 
 		new Homey.FlowCardAction('setmode')
 					.register()
@@ -34,7 +34,7 @@ class ZXT120 extends ZwaveDevice {
 		this.registerCapability('AC_mode', 'THERMOSTAT_MODE', {
 			get: 'THERMOSTAT_MODE_GET',
 			getOpts: {
-				//getOnStart: true,
+				getOnStart: true,
 			},
 			set: 'THERMOSTAT_MODE_SET',
 			setParserV2: value =>({
@@ -45,47 +45,12 @@ class ZXT120 extends ZwaveDevice {
 			    'Manufacturer Data': new Buffer([0]),
 			})
 		});
-
-		// this.registerCapability('FAN_mode', 'THERMOSTAT_FAN_MODE', {
-		// 	get: 'THERMOSTAT_FAN_MODE_GET',
-		// 	getOpts: {
-		// 		//getOnStart: true,
-		// 	},
-		// 	set: 'THERMOSTAT_FAN_MODE_SET',
-		// 	setParserV2: value =>({
-		// 				Off : 0,
-		// 				'Fan Mode': value,
-		// 				Reserved : 0,
-		// 	})
-		// });
-
 		this.registerCapability('target_temperature', 'THERMOSTAT_SETPOINT', {
 			get: 'THERMOSTAT_SETPOINT_GET',
 			getOpts: {
 				//getOnStart: true,
-			},
-			set: 'THERMOSTAT_SETPOINT_SET',
-			setParserV2: value =>{
-
-				// Create value buffer
-				const bufferValue = new Buffer(2);
-				bufferValue.writeUInt16BE((Math.round(value * 2) / 2 * 10).toFixed(0));
-
-				return{
-
-					Level: {
-						'Setpoint Type': 'Cooling 1',
-					},
-					Level2: {
-						Size: 2,
-						Scale: 0,
-						Precision: 1,
-					},
-					Value: bufferValue,
-				}
 			}
-		}
-	);
+		});
 
 		// register a report listener
 		this.registerReportListener('BATTERY', 'BATTERY_REPORT', (rawReport, parsedReport) => {
