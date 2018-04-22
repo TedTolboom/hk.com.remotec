@@ -54,6 +54,10 @@ If possible, please report issues at the [issues section on Github](https://gith
 
 ## Changelog:
 
+### v2.1.2
+**fix**
+* Fix temperature commands not responding on certain AC models   
+
 ### v2.1.1
 **fix**
 * Fix issue with non-registered flow card of ZXT-120         
