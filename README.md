@@ -39,10 +39,25 @@ The following capabilities are supported:
 
 * Temperature measurement    
 * Target Temperature   
-* Airco mode    
+* Aircon mode    
 * Battery capabilities (measure and alarm)  
 
 **Note:** Fan mode will be added in a later app update  
+
+
+### Remotec ZXT-600 Z-Wave-to-AC IR Extender (BW8366)   
+<a href="https://github.com/TedTolboom/hk.com.remotec">
+  <img src="https://rawgit.com/TedTolboom/hk.com.remotec/master/drivers/ZXT-600/assets/icon.svg" width="25%" height="25%">
+</a>  
+
+The following capabilities are supported:
+
+* Temperature measurement    
+* Target Temperature   
+* Aircon mode    
+* Battery capabilities (measure and alarm)  
+* Fan mode
+
 
 ## Supported Languages:
 * English   
