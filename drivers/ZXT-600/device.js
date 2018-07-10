@@ -14,6 +14,14 @@ class CustomZwaveDevice extends ZwaveDevice {
 		// print the node's info to the console
 		this.printNode();
 
+		new Homey.FlowCardAction('setmode')
+					.register()
+					.registerRunListener(this._onModeChange.bind(this));
+
+		new Homey.FlowCardAction('setfanspeed')
+					.register()
+					.registerRunListener(this._onFanSpeedChange.bind(this));
+
 		this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL', {
 			getOpts: {
 				// getOnOnline: true,
@@ -32,13 +40,13 @@ class CustomZwaveDevice extends ZwaveDevice {
 
 		this.registerCapability('target_temperature', 'THERMOSTAT_SETPOINT', {
 			getOpts: {
-				//getOnStart: true, // get the initial value on app start
+				getOnStart: true, // get the initial value on app start
 				//pollInterval: 'poll_interval_SET' // maps to device settings
 			},
 			get: 'THERMOSTAT_SETPOINT_GET',
 			getParserV3: () => ({
 				Level: {
-					'Setpoint Type': 'Heating 1',
+					'Setpoint Type': 'Cooling 1',
 				},
 			}),
 			set: 'THERMOSTAT_SETPOINT_SET',
@@ -47,10 +55,15 @@ class CustomZwaveDevice extends ZwaveDevice {
 				// Create value buffer
 				const bufferValue = new Buffer(2);
 				bufferValue.writeUInt16BE((Math.round(value * 2) / 2 * 10).toFixed(0));
+				let setPointType = 'Heating 1';
+				let UIMode = this.getCapabilityValue('AC_mode');
+				if (UIMode === "Cool")
+					setPointType = 'Cooling 1';
 
-				return {
+				return{
+
 					Level: {
-						'Setpoint Type': 'Heating 1',
+						'Setpoint Type': setPointType,
 					},
 					Level2: {
 						Size: 2,
@@ -145,7 +158,7 @@ class CustomZwaveDevice extends ZwaveDevice {
 				return null;
 			}
 		});
-		/*
+
 		this.registerCapability('alarm_battery', 'BATTERY', {
 			getOpts: {
 				getOnStart: true, // get the initial value on app start
@@ -156,7 +169,7 @@ class CustomZwaveDevice extends ZwaveDevice {
 				},
 			}
 		});
-		*/
+
 		// register a report listener
 		this.registerReportListener('BATTERY', 'BATTERY_REPORT', (rawReport, parsedReport) => {
 			console.log('registerReportListener', rawReport, parsedReport);
@@ -178,15 +191,36 @@ class CustomZwaveDevice extends ZwaveDevice {
 		*/
 
 		// DEVELOPMENT ACTION CARD
-		let DEV_run_listener = async(args) => {
-			let result = await args.device.node.CommandClass.COMMAND_CLASS_THERMOSTAT_SETPOINT.THERMOSTAT_SETPOINT_CAPABILITIES_GET({})
-			if (result !== 'TRANSMIT_COMPLETE_OK') throw new Error(result);
-		};
+		// let DEV_run_listener = async(args) => {
+		// 	let result = await args.device.node.CommandClass.COMMAND_CLASS_THERMOSTAT_SETPOINT.THERMOSTAT_SETPOINT_CAPABILITIES_GET({})
+		// 	if (result !== 'TRANSMIT_COMPLETE_OK') throw new Error(result);
+		// };
+		//
+		// let DEVactions = new Homey.FlowCardAction('DEV_actions');
+		// DEVactions
+		// 	.register()
+		// 	.registerRunListener(DEV_run_listener);
 
-		let DEVactions = new Homey.FlowCardAction('DEV_actions');
-		DEVactions
-			.register()
-			.registerRunListener(DEV_run_listener);
+	}
+
+	setMode( data ) {
+		console.log(data);
+		this.triggerCapabilityListener('AC_mode', data);
+		return true;
+	}
+
+	setFanSpeed( data ) {
+		console.log(data);
+		this.triggerCapabilityListener('FAN_mode', data);
+		return true;
+	}
+
+	_onModeChange(args) {
+		return args.device.setMode(args.mode);
+	}
+
+	_onFanSpeedChange(args) {
+		return args.device.setFanSpeed(args.fanspeed);
 	}
 }
 module.exports = CustomZwaveDevice;

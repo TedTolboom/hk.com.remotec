@@ -1,6 +1,6 @@
 {
 	"id": "ZXT-600",
-	"branch": "development",
+	"branch": "master",
 	"class": "thermostat",
 	"name": {
 		"en": "AC MASTER"
