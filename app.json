@@ -657,7 +657,8 @@
           },
           "zwave": {
             "index": 27,
-            "size": 2
+            "size": 2,
+            "signed": false
           },
           "attr": {
             "min": 0,
@@ -809,7 +810,8 @@
           },
           "zwave": {
             "index": 27,
-            "size": 2
+            "size": 2,
+            "signed": false
           },
           "attr": {
             "min": 0,
