@@ -73,4 +73,65 @@
 
 		}
 	]
+},{
+	"id": "setfanspeed",
+	"title": {
+		"en": "Set Fan Speed"
+	},
+	"args": [
+		{
+			"name": "device",
+			"type": "device",
+			"filter": "driver_id=ZXT-600"
+		},
+		{
+			"name": "fanspeed",
+			"type": "dropdown",
+			"values":[
+				{
+          "id": "Auto Low",
+          "label": {
+            "en": "Auto (Low)",
+            "nl": "Auto (Laag)"
+          }
+        },
+        {
+          "id": "Auto Medium",
+          "label": {
+            "en": "Auto (Medium)",
+            "nl": "Auto (Gemiddeld)"
+          }
+        },
+        {
+          "id": "Auto High",
+          "label": {
+            "en": "Auto (High)",
+            "nl": "Auto (Hoog)"
+          }
+        },
+        {
+          "id": "Low",
+          "label": {
+            "en": "Low",
+            "nl": "Laag"
+          }
+        },
+        {
+          "id": "Medium",
+          "label": {
+            "en": "Medium",
+            "nl": "Gemiddeld"
+          }
+        },
+        {
+          "id": "High",
+          "label": {
+            "en": "High",
+            "nl": "Hoog"
+          }
+        }
+			]
+
+		}
+	]
 }]
