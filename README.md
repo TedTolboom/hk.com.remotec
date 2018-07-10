@@ -71,6 +71,7 @@ If possible, please report issues at the [issues section on Github](https://gith
 
 ### v2.1.3
 * Added support for ZXT-600
+* Update Homey meshdriver to 1.2.19    
 
 ### v2.1.2
 **fix**
