@@ -5,7 +5,7 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 // Documentation: http://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2553/BW8490_Installation_Guide_201700807.pdf
 
-class CustomZwaveDevice extends ZwaveDevice {
+class ZXT600 extends ZwaveDevice {
 	onMeshInit() {
 
 		// enable debugging
@@ -15,12 +15,12 @@ class CustomZwaveDevice extends ZwaveDevice {
 		this.printNode();
 
 		new Homey.FlowCardAction('setmode')
-					.register()
-					.registerRunListener(this._onModeChange.bind(this));
+			.register()
+			.registerRunListener(this._onModeChange.bind(this));
 
 		new Homey.FlowCardAction('setfanspeed')
-					.register()
-					.registerRunListener(this._onFanSpeedChange.bind(this));
+			.register()
+			.registerRunListener(this._onFanSpeedChange.bind(this));
 
 		this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL', {
 			getOpts: {
@@ -60,7 +60,7 @@ class CustomZwaveDevice extends ZwaveDevice {
 				if (UIMode === "Cool")
 					setPointType = 'Cooling 1';
 
-				return{
+				return {
 
 					Level: {
 						'Setpoint Type': setPointType,
@@ -203,13 +203,13 @@ class CustomZwaveDevice extends ZwaveDevice {
 
 	}
 
-	setMode( data ) {
+	setMode(data) {
 		console.log(data);
 		this.triggerCapabilityListener('AC_mode', data);
 		return true;
 	}
 
-	setFanSpeed( data ) {
+	setFanSpeed(data) {
 		console.log(data);
 		this.triggerCapabilityListener('FAN_mode', data);
 		return true;
@@ -223,4 +223,4 @@ class CustomZwaveDevice extends ZwaveDevice {
 		return args.device.setFanSpeed(args.fanspeed);
 	}
 }
-module.exports = CustomZwaveDevice;
+module.exports = ZXT600;
