@@ -45,7 +45,7 @@ The following capabilities are supported:
 **Note:** Fan mode will be added in a later app update  
 
 
-### Remotec ZXT-600 Z-Wave-to-AC IR Extender (BW8366)   
+### Remotec ZXT-600 Z-Wave-to-AC IR Extender   
 <a href="https://github.com/TedTolboom/hk.com.remotec">
   <img src="https://rawgit.com/TedTolboom/hk.com.remotec/master/drivers/ZXT-600/assets/icon.svg" width="25%" height="25%">
 </a>  
@@ -68,6 +68,9 @@ Any requests please post them in the [Remotec app topic on the Athom Forum](http
 If possible, please report issues at the [issues section on Github](https://github.com/TedTolboom/hk.com.remotec/issues) otherwise in the above mentioned topic.     
 
 ## Changelog:
+
+### v2.1.3
+* Added support for ZXT-600
 
 ### v2.1.2
 **fix**
