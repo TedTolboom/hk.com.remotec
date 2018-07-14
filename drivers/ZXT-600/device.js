@@ -53,8 +53,8 @@ class ZXT600 extends ZwaveDevice {
 			setParserV3: value => {
 				this.log('Setting temp to:', value);
 				// Create value buffer
-				const bufferValue = new Buffer(2);
-				bufferValue.writeUInt16BE((Math.round(value * 2) / 2 * 10).toFixed(0));
+				const setPointValue = new Buffer(2);
+				setPointValue.writeUInt16BE((Math.round(value * 2) / 2 * 10).toFixed(0));
 				let setPointType = 'Heating 1';
 				let UIMode = this.getCapabilityValue('AC_mode');
 				if (UIMode === "Cool")
@@ -70,7 +70,7 @@ class ZXT600 extends ZwaveDevice {
 						Scale: 0,
 						Precision: 1,
 					},
-					Value: bufferValue,
+					Value: setPointValue,
 				};
 			},
 			report: 'THERMOSTAT_SETPOINT_REPORT',
