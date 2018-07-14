@@ -587,7 +587,9 @@
       "capabilities": [
         "measure_temperature",
         "target_temperature",
+        "AC_onoff",
         "AC_mode",
+        "FAN_mode",
         "measure_battery",
         "alarm_battery"
       ],
@@ -606,9 +608,36 @@
           {
             "id": "sensor",
             "capabilities": [
+              "AC_onoff",
               "measure_temperature",
               "alarm_battery"
-            ]
+            ],
+            "options": {
+              "icons": {
+                "AC_onoff": "/drivers/ZXT-120/assets/AC_onoff.svg"
+              },
+              "AC_onoff": {
+                "noblink": false,
+                "greyout": true,
+                "label": {
+                  "true": {
+                    "en": "Active"
+                  },
+                  "false": {
+                    "en": "Idle"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "FAN_mode"
+            ],
+            "options": {
+              "showTitle": true
+            }
           },
           {
             "id": "picker",
