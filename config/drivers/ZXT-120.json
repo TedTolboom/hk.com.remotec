@@ -115,6 +115,223 @@
 				"max": 65535
 			},
 			"type": "number"
+		},
+		{
+			"id": "IR_power_level",
+			"value": 255,
+			"label": {
+				"en": "Set IR transmission power level"
+			},
+			"hint": {
+				"en": "Range 0 (normal power mode) to 255 (high power mode (default))"
+			},
+			"zwave": {
+				"index": 28,
+				"size": 1,
+				"signed": false
+			},
+			"attr": {
+				"min": 0,
+				"max": 255
+			},
+			"type": "number"
+		},
+		{
+			"id": "IR_emitter_control",
+			"value": "255",
+			"type": "dropdown",
+			"label": {
+				"en": "Use built-in IR emitter"
+			},
+			"hint": {
+				"en": "Note: If more than one air conditioners with the same code set are used in the same room, user can disable the built-in IR emitter and use the external IR emitter cable to control each air conditioner individually"
+			},
+			"zwave": {
+				"index": 32,
+				"size": 1,
+				"signed": false
+			},
+			"values": [
+				{
+					"id": "255",
+					"label": {
+						"en": "Built-in IR emitter enabled (default)."
+					}
+				},
+				{
+					"id": "0",
+					"label": {
+						"en": "Built-in IR emitter disabled"
+					}
+				}
+			]
+		},
+		{
+			"id": "AC_swing_mode",
+			"value": "1",
+			"type": "dropdown",
+			"label": {
+				"en": "Air conditioner “SWING” control"
+			},
+			"hint": {
+				"en": "Define if air conditioner fan “SWING” mode should be enabled or not"
+			},
+			"zwave": {
+				"index": 33,
+				"size": 1
+			},
+			"values": [
+				{
+					"id": "1",
+					"label": {
+						"en": "Swing AUTO (default)"
+					}
+				},
+				{
+					"id": "0",
+					"label": {
+						"en": "Swing OFF"
+					}
+				}
+			]
+		},
+		{
+			"id": "Temperature_compensation",
+			"value": "0",
+			"type": "dropdown",
+			"label": {
+				"en": "Sensor temperature compensation"
+			},
+			"hint": {
+				"en": "This parameter is used to compensate the temperature error at temperature sensor"
+			},
+			"zwave": {
+				"index": 33,
+				"size": 1,
+				"signed": false
+			},
+			"values": [
+				{
+					"id": "0",
+					"label": {
+						"en": "0°C (default)"
+					}
+				},
+				{
+					"id": "1",
+					"label": {
+						"en": "+ 1°C compentation"
+					}
+				},
+				{
+					"id": "2",
+					"label": {
+						"en": "+ 2°C compentation"
+					}
+				},
+				{
+					"id": "3",
+					"label": {
+						"en": "+ 3°C compentation"
+					}
+				},
+				{
+					"id": "4",
+					"label": {
+						"en": "+ 4°C compentation"
+					}
+				},
+				{
+					"id": "5",
+					"label": {
+						"en": "+ 5°C compentation"
+					}
+				},
+				{
+					"id": "255",
+					"label": {
+						"en": "- 1°C compentation"
+					}
+				},
+				{
+					"id": "254",
+					"label": {
+						"en": "- 2°C compentation"
+					}
+				},
+				{
+					"id": "253",
+					"label": {
+						"en": "- 3°C compentation"
+					}
+				},
+				{
+					"id": "252",
+					"label": {
+						"en": "- 4°C compentation"
+					}
+				},
+				{
+					"id": "251",
+					"label": {
+						"en": "- 5°C compentation"
+					}
+				}
+			]
+		},
+		{
+			"type": "group",
+			"label": {
+				"en": "Set polling interval (minutes)"
+			},
+			"collapsed": false,
+			"children": [
+				{
+					"id": "poll_interval_THERMOSTAT_MODE",
+					"value": 120,
+					"label": {
+						"en": "Thermostat Mode"
+					},
+					"hint": {
+						"en": "Set polling interval Thermostat Mode (minutes), 0 = disabled, default = 120 minutes"
+					},
+					"attr": {
+						"min": 0,
+						"max": 1440
+					},
+					"type": "number"
+				},
+				{
+					"id": "poll_interval_THERMOSTAT_SETPOINT",
+					"value": 180,
+					"label": {
+						"en": "Thermostat Setpoint"
+					},
+					"hint": {
+						"en": "Set polling interval Thermostat Setpoint (minutes), 0 = disabled, default = 180 minutes"
+					},
+					"attr": {
+						"min": 0,
+						"max": 1440
+					},
+					"type": "number"
+				},
+				{
+					"id": "poll_interval_THERMOSTAT_FAN_MODE",
+					"value": 0,
+					"label": {
+						"en": "Thermostat Fan Mode"
+					},
+					"hint": {
+						"en": "Set polling interval Thermostat Fan Mode (minutes), 0 = disabled, default = 0"
+					},
+					"attr": {
+						"min": 0,
+						"max": 1440
+					},
+					"type": "number"
+				}
+			]
 		}
 	]
 }
