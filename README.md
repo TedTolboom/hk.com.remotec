@@ -70,9 +70,9 @@ If possible, please report issues at the [issues section on Github](https://gith
 
 ### v2.1.3
 * Major update for ZXT-120 driver / settings / polling intervals: re-inclusion of ZXT-120 is advised    
-* Preliminary support for ZXT-600
+* Preliminary support for ZXT-600    
 **fix**
-* Unable to set setpoint in cooling mode
+* Unable to set setpoint in cooling mode    
 **update:**   
 * Update Homey meshdriver to 1.2.22    
 
