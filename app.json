@@ -359,7 +359,7 @@
     "conditions": [],
     "actions": [
       {
-        "id": "setmode",
+        "id": "action_ZXT_SetMode",
         "title": {
           "en": "Set Mode"
         },
@@ -434,7 +434,7 @@
         ]
       },
       {
-        "id": "setfanspeed",
+        "id": "action_ZXT_SetFanSpeed",
         "title": {
           "en": "Set Fan Speed"
         },
@@ -442,7 +442,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=ZXT-600"
+            "filter": "driver_id=ZXT-120|ZXT-600"
           },
           {
             "name": "fanspeed",

@@ -46,8 +46,6 @@ for (const mode in MasterData) {
 	mapMode2Setpoint[MasterData[mode].Mode] = MasterData[mode].Setpoint;
 }
 
-console.log(mapMode2Setpoint);
-
 class ZXT120 extends ZwaveDevice {
 	onMeshInit() {
 
@@ -57,19 +55,13 @@ class ZXT120 extends ZwaveDevice {
 		// print the node's info to the console
 		this.printNode();
 
-		// make sure that this.thermostatSetpointType is defined
-		// if (!this.thermostatSetpointType) {
-		//	this.log('Setting this.thermostatSetpointType to Heating 1');
-		//	this.thermostatSetpointType = 'Heating 1';
-		//}
+		// new Homey.FlowCardAction('action_ZXT_SetMode')
+		//	.register()
+		//	.registerRunListener(this._onModeChange.bind(this));
 
-		new Homey.FlowCardAction('setmode')
-			.register()
-			.registerRunListener(this._onModeChange.bind(this));
-
-		new Homey.FlowCardAction('setfanspeed')
-			.register()
-			.registerRunListener(this._onFanSpeedChange.bind(this));
+		// new Homey.FlowCardAction('action_ZXT_SetFanSpeed')
+		//	.register()
+		//	.registerRunListener(this._onFanSpeedChange.bind(this));
 
 		this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL', {
 			getOpts: {
@@ -92,7 +84,6 @@ class ZXT120 extends ZwaveDevice {
 			set: 'THERMOSTAT_MODE_SET',
 			setParserV2: value => {
 				this.log('Setting mode to:', value);
-
 				// >>> Update thermostat setpoint based on matching thermostat mode
 				const setPointType = mapMode2Setpoint[value];
 				this.thermostatSetpointType = setPointType;
@@ -226,25 +217,24 @@ class ZXT120 extends ZwaveDevice {
 
 	}
 
-	setMode(data) {
-		this.log(data);
-		this.triggerCapabilityListener('AC_mode', data);
-		return true;
-	}
+	//setMode(data) {
+	//	this.log(data);
+	//	this.triggerCapabilityListener('AC_mode', data);
+	//	return true;
+	//}
 
-	setFanSpeed(data) {
-		this.log(data);
-		this.triggerCapabilityListener('FAN_mode', data);
-		return true;
-	}
+	//setFanSpeed(data) {
+	//	this.log(data);
+	//	this.triggerCapabilityListener('FAN_mode', data);
+	//	return true;
+	//}
 
-	_onModeChange(args) {
-		return args.device.setMode(args.mode);
-	}
+	//_onModeChange(args) {
+	//	return args.device.setMode(args.mode);
+	//}
 
-	_onFanSpeedChange(args) {
-		return args.device.setFanSpeed(args.fanspeed);
-	}
-
+	//_onFanSpeedChange(args) {
+	//	return args.device.setFanSpeed(args.fanspeed);
+	//}
 }
 module.exports = ZXT120;

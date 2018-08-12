@@ -1,5 +1,5 @@
 [{
-	"id": "setmode",
+	"id": "action_ZXT_SetMode",
 	"title": {
 		"en": "Set Mode"
 	},
@@ -12,7 +12,7 @@
 		{
 			"name": "mode",
 			"type": "dropdown",
-			"values":[
+			"values": [
 				{
 					"id": "Off",
 					"label": {
@@ -73,8 +73,8 @@
 
 		}
 	]
-},{
-	"id": "setfanspeed",
+}, {
+	"id": "action_ZXT_SetFanSpeed",
 	"title": {
 		"en": "Set Fan Speed"
 	},
@@ -82,53 +82,53 @@
 		{
 			"name": "device",
 			"type": "device",
-			"filter": "driver_id=ZXT-600"
+			"filter": "driver_id=ZXT-120|ZXT-600"
 		},
 		{
 			"name": "fanspeed",
 			"type": "dropdown",
-			"values":[
+			"values": [
 				{
-          "id": "Auto Low",
-          "label": {
-            "en": "Auto (Low)",
-            "nl": "Auto (Laag)"
-          }
+					"id": "Auto Low",
+					"label": {
+						"en": "Auto (Low)",
+						"nl": "Auto (Laag)"
+					}
         },
-        {
-          "id": "Auto Medium",
-          "label": {
-            "en": "Auto (Medium)",
-            "nl": "Auto (Gemiddeld)"
-          }
+				{
+					"id": "Auto Medium",
+					"label": {
+						"en": "Auto (Medium)",
+						"nl": "Auto (Gemiddeld)"
+					}
         },
-        {
-          "id": "Auto High",
-          "label": {
-            "en": "Auto (High)",
-            "nl": "Auto (Hoog)"
-          }
+				{
+					"id": "Auto High",
+					"label": {
+						"en": "Auto (High)",
+						"nl": "Auto (Hoog)"
+					}
         },
-        {
-          "id": "Low",
-          "label": {
-            "en": "Low",
-            "nl": "Laag"
-          }
+				{
+					"id": "Low",
+					"label": {
+						"en": "Low",
+						"nl": "Laag"
+					}
         },
-        {
-          "id": "Medium",
-          "label": {
-            "en": "Medium",
-            "nl": "Gemiddeld"
-          }
+				{
+					"id": "Medium",
+					"label": {
+						"en": "Medium",
+						"nl": "Gemiddeld"
+					}
         },
-        {
-          "id": "High",
-          "label": {
-            "en": "High",
-            "nl": "Hoog"
-          }
+				{
+					"id": "High",
+					"label": {
+						"en": "High",
+						"nl": "Hoog"
+					}
         }
 			]
 
