@@ -38,12 +38,11 @@ The following conditions are supported:
 The following capabilities are supported:
 
 * Temperature measurement    
-* Target Temperature   
-* Aircon mode    
+* Thermostat Mode   
+* Thermostat Target Temperature (setpoint)   
+* Thermostat Fan Mode   
+* Thermostate On-Off   
 * Battery capabilities (measure and alarm)  
-
-**Note:** Fan mode will be added in a later app update  
-
 
 ### Remotec ZXT-600 Z-Wave-to-AC IR Extender   
 <a href="https://github.com/TedTolboom/hk.com.remotec">
@@ -70,8 +69,12 @@ If possible, please report issues at the [issues section on Github](https://gith
 ## Changelog:
 
 ### v2.1.3
-* Added support for ZXT-600
-* Update Homey meshdriver to 1.2.21    
+* Major update for ZXT-120 driver / settings / polling intervals: re-inclusion of ZXT-120 is advised    
+* Preliminary support for ZXT-600
+**fix**
+* Unable to set setpoint in cooling mode
+**update:**   
+* Update Homey meshdriver to 1.2.22    
 
 ### v2.1.2
 **fix**
@@ -115,5 +118,5 @@ If possible, please report issues at the [issues section on Github](https://gith
 ## Future work:
 * <del>Add generic trigger card for 'A button has been pressed' together with tokens</del>     
 * ZRC-90 add option to disable re-triggering when a button is held    
-* add ZXT-120 Z-Wave-to-AC IR Extender   
+* ~ add ZXT-120 Z-Wave-to-AC IR Extender ~  
 * add ZXT-600 Z-Wave-to-AC IR Extender   
