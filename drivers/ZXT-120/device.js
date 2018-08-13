@@ -47,13 +47,18 @@ for (const mode in MasterData) {
 }
 
 class ZXT120 extends ZwaveDevice {
-	onMeshInit() {
+
+	async onMeshInit() {
 
 		// enable debugging
 		this.enableDebug();
 
 		// print the node's info to the console
 		this.printNode();
+
+		if (!this.thermostatSetpointValue) this.thermostatSetpointValue = {
+			'fixed': 25.0
+		};
 
 		// new Homey.FlowCardAction('action_ZXT_SetMode')
 		//	.register()
@@ -86,11 +91,11 @@ class ZXT120 extends ZwaveDevice {
 				this.log('Setting mode to:', value);
 				// >>> Update thermostat setpoint based on matching thermostat mode
 				const setPointType = mapMode2Setpoint[value];
-				this.thermostatSetpointType = setPointType;
 
 				// Update setPoint Value or trigger get command to retrieve setpoint
-				if (setPointType !== 'not supported') {
-					this.refreshCapabilityValue('target_temperature', 'THERMOSTAT_SETPOINT');
+				if (setPointType !== 'not supported' && this.thermostatSetpointValue.hasOwnProperty(setPointType)) {
+					this.setCapabilityValue('target_temperature', this.thermostatSetpointValue[setPointType]);
+					// this.refreshCapabilityValue('target_temperature', 'THERMOSTAT_SETPOINT');
 				}
 				else {
 					this.setCapabilityValue('target_temperature', null);
@@ -100,6 +105,7 @@ class ZXT120 extends ZwaveDevice {
 				this.setCapabilityValue('AC_onoff', value !== 'Off');
 
 				// Update thermostat mode
+				this.thermostatSetpointType = setPointType;
 				return {
 					Level: {
 						'No of Manufacturer Data fields': 0,
@@ -117,8 +123,9 @@ class ZXT120 extends ZwaveDevice {
 					const setPointType = mapMode2Setpoint[report.Level.Mode];
 					this.thermostatSetpointType = setPointType;
 					// Update setPoint Value or trigger get command to retrieve setpoint
-					if (setPointType !== 'not supported') {
-						this.refreshCapabilityValue('target_temperature', 'THERMOSTAT_SETPOINT');
+					if (setPointType !== 'not supported' && this.thermostatSetpointValue.hasOwnProperty(setPointType)) {
+						this.setCapabilityValue('target_temperature', this.thermostatSetpointValue[setPointType]);
+						// this.refreshCapabilityValue('target_temperature', 'THERMOSTAT_SETPOINT');
 					}
 					else {
 						this.setCapabilityValue('target_temperature', null);
@@ -149,6 +156,32 @@ class ZXT120 extends ZwaveDevice {
 					},
 				};
 			},
+			set: 'THERMOSTAT_SETPOINT_SET',
+			setParser(value) {
+
+				// Create value buffer
+				const bufferValue = new Buffer(2);
+				bufferValue.writeUInt16BE((Math.round(value * 2) / 2 * 10).toFixed(0));
+				const setPointType = this.thermostatSetpointType || 'Heating 1';
+
+				// Store the reported setpointValue if supported
+				if (mapMode2Setpoint.setPointType !== 'not supported') {
+					this.thermostatSetpointValue[setPointType] = setPointValue;
+					this.log('thermostatSetpointValue updated', this.thermostatSetpointValue);
+				}
+
+				return {
+					Level: {
+						'Setpoint Type': setPointType,
+					},
+					Level2: {
+						Size: 2,
+						Scale: 0,
+						Precision: 1,
+					},
+					Value: bufferValue,
+				};
+			},
 			report: 'THERMOSTAT_SETPOINT_REPORT',
 			reportParser: report => {
 				if (report && report.hasOwnProperty('Level2') &&
@@ -168,9 +201,14 @@ class ZXT120 extends ZwaveDevice {
 					if (typeof readValue !== 'undefined') {
 						const setPointValue = readValue / Math.pow(10, report.Level2.Precision);
 						const setPointType = report.Level['Setpoint Type'];
-						this.log('Setpoint Report received: Setpoint type', setPointType, ' Setpoint value', setPointValue);
-						this.thermostatSetpointType = setPointType;
 
+						this.log('Setpoint Report received: Setpoint type', setPointType, ' Setpoint value', setPointValue);
+
+						// Store the reported setpointValue if supported
+						if (mapMode2Setpoint.setPointType !== 'not supported') {
+							this.thermostatSetpointValue[setPointType] = setPointValue;
+							this.log('thermostatSetpointValue updated', this.thermostatSetpointValue);
+						}
 						// If setPointType === this.thermostatSetpointType, return the setPointValue to update the UI, else return nul
 						if (setPointType === this.thermostatSetpointType) {
 							this.log('Thermostat setpoint updated on UI to', setPointValue);
