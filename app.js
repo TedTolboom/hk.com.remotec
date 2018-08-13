@@ -24,6 +24,43 @@ class RemotecZwave extends Homey.App {
 				return args.device.triggerCapabilityListener('FAN_mode', args.fanspeed, {});
 			});
 
+		// Register actions for flows
+		this._actionZXTSetThermostatSetpoint = new Homey.FlowCardAction('action_ZXT_SetSetpoint')
+			.register()
+			.registerRunListener((args, state) => {
+				this.log('FlowCardAction triggered for ', args.device.getName(), 'to change setpoint value', args.setPointValue, 'for', args.setPointType);
+
+				if (!args.hasOwnProperty('setPointType')) return Promise.reject('setPointType_property_missing');
+				if (!args.hasOwnProperty('setPointValue')) return Promise.reject('setPointValue_property_missing');
+				if (typeof args.setPointValue !== 'number') return Promise.reject('setPointValue_is_not_a_number');
+
+				// Create value buffer
+				const bufferValue = new Buffer(2);
+				bufferValue.writeUInt16BE((Math.round(args.setPointValue * 2) / 2 * 10).toFixed(0));
+				const setPointType = args.setPointType;
+				const setPointValue = args.setPointValue;
+
+				// Store the reported setpointValue if supported
+
+				args.device.thermostatSetpointValue[setPointType] = setPointValue;
+				args.device.log('thermostatSetpointValue updated', args.device.thermostatSetpointValue);
+
+				if (args.device.node.CommandClass.COMMAND_CLASS_THERMOSTAT_SETPOINT) {
+					return args.device.node.CommandClass.COMMAND_CLASS_THERMOSTAT_SETPOINT.THERMOSTAT_SETPOINT_SET({
+						Level: {
+							'Setpoint Type': setPointType,
+						},
+						Level2: {
+							Size: 2,
+							Scale: 0,
+							Precision: 1,
+						},
+						Value: bufferValue,
+					});
+				}
+				return Promise.reject('unknown_error');
+			});
+
 	}
 }
 
