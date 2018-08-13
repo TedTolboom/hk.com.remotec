@@ -151,60 +151,60 @@
 			"type": "number"
 		},
 		{
-			"id": "IR_emitter",
+			"id": "IR_emitter_control",
 			"value": "255",
+			"type": "dropdown",
 			"label": {
-				"en": "Set built-in IR Emitter Control"
+				"en": "Use built-in IR emitter"
 			},
 			"hint": {
-				"en": "If there have two or more Air Conditioners with the same code set that are used in the same room, user can disable the built-in IR emitter and use the external IR emitter cable to control each air conditioner individually\r\n0 or 255\r\n(0x00 or 0xFF)\r\n0(0x00): Disable\r\n255(0xFF): Enable (Default)\r\n"
+				"en": "Note: If more than one air conditioners with the same code set are used in the same room, user can disable the built-in IR emitter and use the external IR emitter cable to control each air conditioner individually"
 			},
 			"zwave": {
 				"index": 32,
 				"size": 1,
 				"signed": false
 			},
-			"type": "dropdown",
 			"values": [
-				{
-					"id": "0",
-					"label": {
-						"en": "Disabled"
-					}
-				},
 				{
 					"id": "255",
 					"label": {
-						"en": "Enabled (default)"
+						"en": "Built-in IR emitter enabled (default)."
+					}
+				},
+				{
+					"id": "0",
+					"label": {
+						"en": "Built-in IR emitter disabled"
 					}
 				}
 			]
 		},
 		{
-			"id": "AC_swing",
+			"id": "AC_swing_mode",
 			"value": "1",
+			"type": "dropdown",
 			"label": {
-				"en": "Control AC SWING function"
+				"en": "Air conditioner “SWING” control"
 			},
 			"hint": {
-				"en": "Default: 0x01\r\nRange 0 to 1 (0x00 or 0x01)\r\n0(0x00) : Swing OFF\r\n1(0x01) : Swing Auto (Default)\r\n"
+				"en": "Define if air conditioner fan “SWING” mode should be enabled or not"
 			},
 			"zwave": {
 				"index": 33,
 				"size": 1
 			},
-			"type": "dropdown",
 			"values": [
-				{
-					"id": "0",
-					"label": {
-						"en": "Disabled"
-					}
-				},
 				{
 					"id": "1",
 					"label": {
-						"en": "Enabled (default)"
+						"en": "Swing AUTO (default)"
+					}
+				},
+				{
+					"id": "0",
+					"label": {
+						"en": "Swing OFF"
 					}
 				}
 			]
@@ -213,7 +213,7 @@
 			"id": "Report_threshold",
 			"value": "0",
 			"label": {
-				"en": "Condition report Temperature threshold"
+				"en": "Temperature reporting threshold"
 			},
 			"hint": {
 				"en": "0(0x00) = Disable (Default)\r\n(for saving battery life)\r\nAuto report if room temperature is different from last report.\r\n1(0x01) = 1°F (0.5°C)\r\n2(0x02) = 2°F (1°C) \r\n3(0x03) = 3°F (1.5°C)\r\n4(0x04) = 4°F (2°C)\r\n5(0x05) = 5°F (2.5°C)\r\n6(0x06) = 6°F (3°C)\r\n7(0x07) = 7°F (3.5°C)\r\n8(0x08) = 8°F (4°C)\r\n"
@@ -428,6 +428,60 @@
 					"label": {
 						"en": "Measured temperature - 5.0°C"
 					}
+				}
+			]
+		},
+		{
+			"type": "group",
+			"label": {
+				"en": "Set polling interval (minutes)"
+			},
+			"collapsed": false,
+			"children": [
+				{
+					"id": "poll_interval_THERMOSTAT_MODE",
+					"value": 120,
+					"label": {
+						"en": "Thermostat Mode"
+					},
+					"hint": {
+						"en": "Set polling interval Thermostat Mode (minutes), 0 = disabled, default = 120 minutes"
+					},
+					"attr": {
+						"min": 0,
+						"max": 1440
+					},
+					"type": "number"
+				},
+				{
+					"id": "poll_interval_THERMOSTAT_SETPOINT",
+					"value": 180,
+					"label": {
+						"en": "Thermostat Setpoint"
+					},
+					"hint": {
+						"en": "Set polling interval Thermostat Setpoint (minutes), 0 = disabled, default = 180 minutes"
+					},
+					"attr": {
+						"min": 0,
+						"max": 1440
+					},
+					"type": "number"
+				},
+				{
+					"id": "poll_interval_THERMOSTAT_FAN_MODE",
+					"value": 0,
+					"label": {
+						"en": "Thermostat Fan Mode"
+					},
+					"hint": {
+						"en": "Set polling interval Thermostat Fan Mode (minutes), 0 = disabled, default = 0"
+					},
+					"attr": {
+						"min": 0,
+						"max": 1440
+					},
+					"type": "number"
 				}
 			]
 		}

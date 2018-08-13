@@ -196,11 +196,11 @@
 			]
 		},
 		{
-			"id": "Temperature_compensation",
+			"id": "Temperature_calibration",
 			"value": "0",
 			"type": "dropdown",
 			"label": {
-				"en": "Sensor temperature compensation"
+				"en": "Calibrate Temperature reading"
 			},
 			"hint": {
 				"en": "This parameter is used to compensate the temperature error at temperature sensor"
@@ -214,67 +214,67 @@
 				{
 					"id": "0",
 					"label": {
-						"en": "0°C (default)"
+						"en": "Measured temperature (default)"
 					}
 				},
 				{
 					"id": "1",
 					"label": {
-						"en": "+ 1°C compentation"
+						"en": "Measured temperature + 1.0°C"
 					}
 				},
 				{
 					"id": "2",
 					"label": {
-						"en": "+ 2°C compentation"
+						"en": "Measured temperature + 2.0°C"
 					}
 				},
 				{
 					"id": "3",
 					"label": {
-						"en": "+ 3°C compentation"
+						"en": "Measured temperature + 3.0°C"
 					}
 				},
 				{
 					"id": "4",
 					"label": {
-						"en": "+ 4°C compentation"
+						"en": "Measured temperature + 4.0°C"
 					}
 				},
 				{
 					"id": "5",
 					"label": {
-						"en": "+ 5°C compentation"
+						"en": "Measured temperature + 5.0°C"
 					}
 				},
 				{
 					"id": "255",
 					"label": {
-						"en": "- 1°C compentation"
+						"en": "Measured temperature - 1.0°C"
 					}
 				},
 				{
 					"id": "254",
 					"label": {
-						"en": "- 2°C compentation"
+						"en": "Measured temperature - 2.0°C"
 					}
 				},
 				{
 					"id": "253",
 					"label": {
-						"en": "- 3°C compentation"
+						"en": "Measured temperature - 3.0°C"
 					}
 				},
 				{
 					"id": "252",
 					"label": {
-						"en": "- 4°C compentation"
+						"en": "Measured temperature - 4.0°C"
 					}
 				},
 				{
 					"id": "251",
 					"label": {
-						"en": "- 5°C compentation"
+						"en": "Measured temperature - 5.0°C"
 					}
 				}
 			]
