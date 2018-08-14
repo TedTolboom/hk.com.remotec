@@ -105,7 +105,7 @@
           }
         },
         {
-          "id": "Auto",
+          "id": "Auto Changeover",
           "title": {
             "en": "Auto",
             "nl": "Auto"
@@ -395,7 +395,7 @@
                 }
               },
               {
-                "id": "Auto",
+                "id": "Auto Changeover",
                 "label": {
                   "en": "Auto",
                   "nl": "Auto"

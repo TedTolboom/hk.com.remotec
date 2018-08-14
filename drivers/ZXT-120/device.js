@@ -1,4 +1,5 @@
 'use strict';
+// Add previous mode for RESUME Mode
 
 const Homey = require('homey');
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
@@ -14,8 +15,8 @@ const MasterData = {
 		Mode: 'Cool',
 		Setpoint: 'Cooling 1',
 	},
-	Auto: {
-		Mode: 'Auto',
+	'Auto Changeover': {
+		Mode: 'Auto Changeover',
 		Setpoint: 'Auto changeover',
 	},
 	'Dry Air': {
