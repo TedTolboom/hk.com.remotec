@@ -548,7 +548,7 @@
             "name": "setPointValue",
             "type": "range",
             "min": 16,
-            "max": 30,
+            "max": 31,
             "step": 0.5,
             "label": "°C",
             "labelDecimals": 1
@@ -643,7 +643,7 @@
       "id": "ZXT-120",
       "class": "thermostat",
       "name": {
-        "en": "Remotec ZXT-120EU AC Extender"
+        "en": "ZXT-120 AC Extender"
       },
       "capabilities": [
         "measure_temperature",
@@ -654,6 +654,12 @@
         "measure_battery",
         "alarm_battery"
       ],
+      "capabilitiesOptions": {
+        "target_temperature": {
+          "min": 16,
+          "max": 31
+        }
+      },
       "images": {
         "large": "/drivers/ZXT-120/assets/images/large.jpg",
         "small": "/drivers/ZXT-120/assets/images/small.jpg"
@@ -979,7 +985,7 @@
       "id": "ZXT-600",
       "class": "thermostat",
       "name": {
-        "en": "AC MASTER"
+        "en": "ZXT-600 AC Master"
       },
       "capabilities": [
         "measure_temperature",
@@ -990,6 +996,12 @@
         "measure_battery",
         "alarm_battery"
       ],
+      "capabilitiesOptions": {
+        "target_temperature": {
+          "min": 16,
+          "max": 31
+        }
+      },
       "images": {
         "large": "/drivers/ZXT-600/assets/images/large.jpg",
         "small": "/drivers/ZXT-600/assets/images/small.jpg"

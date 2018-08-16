@@ -189,7 +189,7 @@
 				"name": "setPointValue",
 				"type": "range",
 				"min": 16,
-				"max": 30,
+				"max": 31,
 				"step": 0.5,
 				"label": "°C",
 				"labelDecimals": 1

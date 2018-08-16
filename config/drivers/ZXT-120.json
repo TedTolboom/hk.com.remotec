@@ -3,7 +3,7 @@
 	"branch": "master",
 	"class": "thermostat",
 	"name": {
-		"en": "Remotec ZXT-120EU AC Extender"
+		"en": "ZXT-120 AC Extender"
 	},
 	"capabilities": [
 		"measure_temperature",
@@ -14,6 +14,12 @@
 		"measure_battery",
 		"alarm_battery"
 	],
+	"capabilitiesOptions": {
+		"target_temperature": {
+			"min": 16,
+			"max": 31
+		}
+	},
 	"images": {
 		"large": "/drivers/ZXT-120/assets/images/large.jpg",
 		"small": "/drivers/ZXT-120/assets/images/small.jpg"
