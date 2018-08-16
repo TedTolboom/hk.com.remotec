@@ -48,7 +48,6 @@ for (const mode in MasterData) {
 }
 
 class ZXT120 extends ZwaveDevice {
-
 	async onMeshInit() {
 
 		// enable debugging
@@ -56,18 +55,6 @@ class ZXT120 extends ZwaveDevice {
 
 		// print the node's info to the console
 		this.printNode();
-
-		if (!this.thermostatSetpointValue) this.thermostatSetpointValue = {
-			'fixed': 25.0
-		};
-
-		// new Homey.FlowCardAction('action_ZXT_SetMode')
-		//	.register()
-		//	.registerRunListener(this._onModeChange.bind(this));
-
-		// new Homey.FlowCardAction('action_ZXT_SetFanSpeed')
-		//	.register()
-		//	.registerRunListener(this._onFanSpeedChange.bind(this));
 
 		this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL', {
 			getOpts: {
@@ -94,9 +81,8 @@ class ZXT120 extends ZwaveDevice {
 				const setPointType = mapMode2Setpoint[value];
 
 				// Update setPoint Value or trigger get command to retrieve setpoint
-				if (setPointType !== 'not supported' && this.thermostatSetpointValue.hasOwnProperty(setPointType)) {
-					this.setCapabilityValue('target_temperature', this.thermostatSetpointValue[setPointType]);
-					// this.refreshCapabilityValue('target_temperature', 'THERMOSTAT_SETPOINT');
+				if (setPointType !== 'not supported') {
+					this.setCapabilityValue('target_temperature', this.getStoreValue(`thermostatSetpointValue.${setPointType}`) || null);
 				}
 				else {
 					this.setCapabilityValue('target_temperature', null);
@@ -106,7 +92,8 @@ class ZXT120 extends ZwaveDevice {
 				this.setCapabilityValue('AC_onoff', value !== 'Off');
 
 				// Update thermostat mode
-				this.thermostatSetpointType = setPointType;
+				this.setStoreValue(`thermostatSetpointType`, setPointType);
+
 				return {
 					Level: {
 						'No of Manufacturer Data fields': 0,
@@ -120,13 +107,13 @@ class ZXT120 extends ZwaveDevice {
 				if (!report) return null;
 				if (report.hasOwnProperty('Level') && report.Level.hasOwnProperty('Mode')) {
 					this.log('Mode Report received:', report.Level.Mode);
+
 					// Update thermostat setpoint based on matching thermostat mode
 					const setPointType = mapMode2Setpoint[report.Level.Mode];
-					this.thermostatSetpointType = setPointType;
+					this.setStoreValue(`thermostatSetpointType`, setPointType);
 					// Update setPoint Value or trigger get command to retrieve setpoint
-					if (setPointType !== 'not supported' && this.thermostatSetpointValue.hasOwnProperty(setPointType)) {
-						this.setCapabilityValue('target_temperature', this.thermostatSetpointValue[setPointType]);
-						// this.refreshCapabilityValue('target_temperature', 'THERMOSTAT_SETPOINT');
+					if (setPointType !== 'not supported') {
+						this.setCapabilityValue('target_temperature', this.getStoreValue(`thermostatSetpointValue.${setPointType}`) || null);
 					}
 					else {
 						this.setCapabilityValue('target_temperature', null);
@@ -150,7 +137,7 @@ class ZXT120 extends ZwaveDevice {
 				pollMultiplication: 60000,
 			},
 			getParser: () => {
-				const setPointType = (this.thermostatSetpointType !== 'not supported' ? this.thermostatSetpointType || 'Heating 1' : 'Heating 1')
+				const setPointType = (this.getStoreValue(`thermostatSetpointType`) !== 'not supported' ? this.getStoreValue(`thermostatSetpointType`) || 'Heating 1' : 'Heating 1')
 				return {
 					Level: {
 						'Setpoint Type': setPointType,
@@ -163,12 +150,11 @@ class ZXT120 extends ZwaveDevice {
 				// Create value buffer
 				const bufferValue = new Buffer(2);
 				bufferValue.writeUInt16BE((Math.round(value * 2) / 2 * 10).toFixed(0));
-				const setPointType = this.thermostatSetpointType || 'Heating 1';
+				const setPointType = this.getStoreValue(`thermostatSetpointType`) || 'Heating 1';
 
 				// Store the reported setpointValue if supported
 				if (mapMode2Setpoint.setPointType !== 'not supported') {
-					this.thermostatSetpointValue[setPointType] = setPointValue;
-					this.log('thermostatSetpointValue updated', this.thermostatSetpointValue);
+					this.setStoreValue(`thermostatSetpointValue.${setPointType}`, value);
 				}
 
 				return {
@@ -207,11 +193,10 @@ class ZXT120 extends ZwaveDevice {
 
 						// Store the reported setpointValue if supported
 						if (mapMode2Setpoint.setPointType !== 'not supported') {
-							this.thermostatSetpointValue[setPointType] = setPointValue;
-							this.log('thermostatSetpointValue updated', this.thermostatSetpointValue);
+							this.setStoreValue(`thermostatSetpointValue.${setPointType}`, setPointValue);
 						}
 						// If setPointType === this.thermostatSetpointType, return the setPointValue to update the UI, else return nul
-						if (setPointType === this.thermostatSetpointType) {
+						if (setPointType === this.getStoreValue('thermostatSetpointType')) {
 							this.log('Thermostat setpoint updated on UI to', setPointValue);
 							return setPointValue;
 						}
@@ -238,7 +223,6 @@ class ZXT120 extends ZwaveDevice {
 				return {
 					Level: {
 						'Fan Mode': value,
-						// 'Reserved':
 						Off: false,
 					},
 				};
@@ -255,25 +239,5 @@ class ZXT120 extends ZwaveDevice {
 		});
 
 	}
-
-	//setMode(data) {
-	//	this.log(data);
-	//	this.triggerCapabilityListener('AC_mode', data);
-	//	return true;
-	//}
-
-	//setFanSpeed(data) {
-	//	this.log(data);
-	//	this.triggerCapabilityListener('FAN_mode', data);
-	//	return true;
-	//}
-
-	//_onModeChange(args) {
-	//	return args.device.setMode(args.mode);
-	//}
-
-	//_onFanSpeedChange(args) {
-	//	return args.device.setFanSpeed(args.fanspeed);
-	//}
 }
 module.exports = ZXT120;
