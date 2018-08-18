@@ -1,4 +1,5 @@
 'use strict';
+// Add previous mode for RESUME Mode
 
 const Homey = require('homey');
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
@@ -14,9 +15,9 @@ const MasterData = {
 		Mode: 'Cool',
 		Setpoint: 'Cooling 1',
 	},
-	Auto: {
-		Mode: 'Auto',
-		Setpoint: 'Auto changeover',
+	'Auto Changeover': {
+		Mode: 'Auto Changeover',
+		Setpoint: 'not supported',
 	},
 	'Dry Air': {
 		Mode: 'Dry Air',
@@ -47,7 +48,7 @@ for (const mode in MasterData) {
 }
 
 class ZXT600 extends ZwaveDevice {
-	onMeshInit() {
+	async onMeshInit() {
 
 		// enable debugging
 		this.enableDebug();
@@ -55,13 +56,7 @@ class ZXT600 extends ZwaveDevice {
 		// print the node's info to the console
 		this.printNode();
 
-		// new Homey.FlowCardAction('setmode')
-		//	.register()
-		//	.registerRunListener(this._onModeChange.bind(this));
-
-		// new Homey.FlowCardAction('setfanspeed')
-		//	.register()
-		//	.registerRunListener(this._onFanSpeedChange.bind(this));
+		this.setStoreValue(`thermostatSetpointValue.fixed`, 25);
 
 		this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL', {
 			getOpts: {
@@ -86,11 +81,10 @@ class ZXT600 extends ZwaveDevice {
 				this.log('Setting mode to:', value);
 				// >>> Update thermostat setpoint based on matching thermostat mode
 				const setPointType = mapMode2Setpoint[value];
-				this.thermostatSetpointType = setPointType;
 
 				// Update setPoint Value or trigger get command to retrieve setpoint
 				if (setPointType !== 'not supported') {
-					this.refreshCapabilityValue('target_temperature', 'THERMOSTAT_SETPOINT');
+					this.setCapabilityValue('target_temperature', this.getStoreValue(`thermostatSetpointValue.${setPointType}`) || null);
 				}
 				else {
 					this.setCapabilityValue('target_temperature', null);
@@ -100,6 +94,8 @@ class ZXT600 extends ZwaveDevice {
 				this.setCapabilityValue('AC_onoff', value !== 'Off');
 
 				// Update thermostat mode
+				this.setStoreValue(`thermostatSetpointType`, setPointType);
+
 				return {
 					Level: {
 						'No of Manufacturer Data fields': 0,
@@ -113,12 +109,13 @@ class ZXT600 extends ZwaveDevice {
 				if (!report) return null;
 				if (report.hasOwnProperty('Level') && report.Level.hasOwnProperty('Mode')) {
 					this.log('Mode Report received:', report.Level.Mode);
+
 					// Update thermostat setpoint based on matching thermostat mode
 					const setPointType = mapMode2Setpoint[report.Level.Mode];
-					this.thermostatSetpointType = setPointType;
+					this.setStoreValue(`thermostatSetpointType`, setPointType);
 					// Update setPoint Value or trigger get command to retrieve setpoint
 					if (setPointType !== 'not supported') {
-						this.refreshCapabilityValue('target_temperature', 'THERMOSTAT_SETPOINT');
+						this.setCapabilityValue('target_temperature', this.getStoreValue(`thermostatSetpointValue.${setPointType}`) || null);
 					}
 					else {
 						this.setCapabilityValue('target_temperature', null);
@@ -142,11 +139,36 @@ class ZXT600 extends ZwaveDevice {
 				pollMultiplication: 60000,
 			},
 			getParser: () => {
-				const setPointType = (this.thermostatSetpointType !== 'not supported' ? this.thermostatSetpointType || 'Heating 1' : 'Heating 1')
+				const setPointType = (this.getStoreValue(`thermostatSetpointType`) !== 'not supported' ? this.getStoreValue(`thermostatSetpointType`) || 'Heating 1' : 'Heating 1')
 				return {
 					Level: {
 						'Setpoint Type': setPointType,
 					},
+				};
+			},
+			set: 'THERMOSTAT_SETPOINT_SET',
+			setParser(value) {
+
+				// Create value buffer
+				const bufferValue = new Buffer(2);
+				bufferValue.writeUInt16BE((Math.round(value * 2) / 2 * 10).toFixed(0));
+				const setPointType = this.getStoreValue(`thermostatSetpointType`) || 'Heating 1';
+
+				// Store the reported setpointValue if supported
+				if (mapMode2Setpoint.setPointType !== 'not supported') {
+					this.setStoreValue(`thermostatSetpointValue.${setPointType}`, value);
+				}
+
+				return {
+					Level: {
+						'Setpoint Type': setPointType,
+					},
+					Level2: {
+						Size: 2,
+						Scale: 0,
+						Precision: 1,
+					},
+					Value: bufferValue,
 				};
 			},
 			report: 'THERMOSTAT_SETPOINT_REPORT',
@@ -168,11 +190,15 @@ class ZXT600 extends ZwaveDevice {
 					if (typeof readValue !== 'undefined') {
 						const setPointValue = readValue / Math.pow(10, report.Level2.Precision);
 						const setPointType = report.Level['Setpoint Type'];
-						this.log('Setpoint Report received: Setpoint type', setPointType, ' Setpoint value', setPointValue);
-						this.thermostatSetpointType = setPointType;
 
+						this.log('Setpoint Report received: Setpoint type', setPointType, ' Setpoint value', setPointValue);
+
+						// Store the reported setpointValue if supported
+						if (mapMode2Setpoint.setPointType !== 'not supported') {
+							this.setStoreValue(`thermostatSetpointValue.${setPointType}`, setPointValue);
+						}
 						// If setPointType === this.thermostatSetpointType, return the setPointValue to update the UI, else return nul
-						if (setPointType === this.thermostatSetpointType) {
+						if (setPointType === this.getStoreValue('thermostatSetpointType')) {
 							this.log('Thermostat setpoint updated on UI to', setPointValue);
 							return setPointValue;
 						}
@@ -199,7 +225,6 @@ class ZXT600 extends ZwaveDevice {
 				return {
 					Properties1: {
 						'Fan Mode': value,
-						//'Reserved':
 						Off: false,
 					},
 				};
@@ -207,8 +232,8 @@ class ZXT600 extends ZwaveDevice {
 			report: 'THERMOSTAT_FAN_MODE_REPORT',
 			reportParserV4: report => {
 				if (!report) return null;
-				this.log('FAN Mode Report:', report);
 				if (report.hasOwnProperty('Level') && report.Level.hasOwnProperty('Mode')) {
+					this.log('FAN Mode Report received:', report.Level.Mode);
 					return report.Level.Mode;
 				}
 				return null;
@@ -217,24 +242,5 @@ class ZXT600 extends ZwaveDevice {
 
 	}
 
-	// setMode(data) {
-	//	this.log(data);
-	//	this.triggerCapabilityListener('AC_mode', data);
-	//	return true;
-	//}
-
-	//setFanSpeed(data) {
-	//	this.log(data);
-	//	this.triggerCapabilityListener('FAN_mode', data);
-	//	return true;
-	//}
-
-	//_onModeChange(args) {
-	//	return args.device.setMode(args.mode);
-	//}
-
-	//_onFanSpeedChange(args) {
-	//	return args.device.setFanSpeed(args.fanspeed);
-	//}
 }
 module.exports = ZXT600;
