@@ -71,13 +71,21 @@ class RemotecZwave extends Homey.App {
 	}
 
 	async _actionZXTSetFanSwingRunListener(args, state) {
-		if (!args.hasOwnProperty('mode')) return Promise.reject('mode_property_missing');
+		if (!args.hasOwnProperty('mode')) throw Error('mode_property_missing');
 
-		return await args.device.configurationSet({
-			id: 'AC_swing_mode'
-		}, args.mode);
-
-		return Promise.reject('unknown_error');
+		try {
+			let result = await args.device.configurationSet({
+				id: 'AC_swing_mode'
+			}, args.mode);
+			return args.device.setSettings({
+				'AC_swing_mode': args.mode
+			});
+		}
+		catch (error) {
+			args.device.log(error.message);
+			throw error;
+		}
+		throw Error('unknown_error');
 	}
 
 }
