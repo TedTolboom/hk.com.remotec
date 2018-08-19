@@ -1,0 +1,230 @@
+[{
+		"id": "action_ZXT_SetMode",
+		"title": {
+			"en": "Set Mode"
+		},
+		"args": [
+			{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=ZXT-120|ZXT-600"
+		},
+			{
+				"name": "mode",
+				"type": "dropdown",
+				"values": [
+					{
+						"id": "Off",
+						"label": {
+							"en": "Off",
+							"nl": "Uit"
+						}
+				},
+					{
+						"id": "Heat",
+						"label": {
+							"en": "Heat",
+							"nl": "Verwarm"
+						}
+				},
+					{
+						"id": "Cool",
+						"label": {
+							"en": "Cool",
+							"nl": "Koel"
+						}
+				},
+					{
+						"id": "Auto Changeover",
+						"label": {
+							"en": "Auto",
+							"nl": "Auto"
+						}
+				},
+					{
+						"id": "Resume",
+						"label": {
+							"en": "Resume",
+							"nl": "Hervatten"
+						}
+				},
+					{
+						"id": "Fan Only",
+						"label": {
+							"en": "Fan only",
+							"nl": "Ventilator"
+						}
+				},
+					{
+						"id": "Dry Air",
+						"label": {
+							"en": "Dry air",
+							"nl": "Droge lucht"
+						}
+				},
+					{
+						"id": "AWAY",
+						"label": {
+							"en": "Away",
+							"nl": "Afwezig"
+						}
+				}
+			]
+
+		}
+	]
+}, {
+		"id": "action_ZXT_SetFanSpeed",
+		"title": {
+			"en": "Set Fan Speed mode"
+		},
+		"args": [
+			{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=ZXT-120|ZXT-600"
+		},
+			{
+				"name": "fanspeed",
+				"type": "dropdown",
+				"values": [
+					{
+						"id": "Auto Low",
+						"label": {
+							"en": "Auto (Low)",
+							"nl": "Auto (Laag)"
+						}
+        },
+					{
+						"id": "Auto Medium",
+						"label": {
+							"en": "Auto (Medium)",
+							"nl": "Auto (Gemiddeld)"
+						}
+        },
+					{
+						"id": "Auto High",
+						"label": {
+							"en": "Auto (High)",
+							"nl": "Auto (Hoog)"
+						}
+        },
+					{
+						"id": "Low",
+						"label": {
+							"en": "Low",
+							"nl": "Laag"
+						}
+        },
+					{
+						"id": "Medium",
+						"label": {
+							"en": "Medium",
+							"nl": "Gemiddeld"
+						}
+        },
+					{
+						"id": "High",
+						"label": {
+							"en": "High",
+							"nl": "Hoog"
+						}
+        }
+			]
+
+		}
+	]
+},
+	{
+		"id": "action_ZXT_SetFanSwing",
+		"title": {
+			"en": "Set Fan “SWING” mode"
+		},
+		"args": [
+			{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=ZXT-120|ZXT-600"
+		},
+			{
+				"name": "mode",
+				"type": "dropdown",
+				"values": [
+					{
+						"id": "1",
+						"label": {
+							"en": "Swing AUTO (default)"
+						}
+					},
+					{
+						"id": "0",
+						"label": {
+							"en": "Swing OFF"
+						}
+					}
+				]
+		}
+	]
+},
+	{
+		"id": "action_ZXT_SetSetpoint",
+		"title": {
+			"en": "Set a setpoint of a thermostat mode",
+			"nl": "Stel de temperatuur in van een thermostaat modus"
+		},
+		"hint": {
+			"en": "Change the setpoint of a specific thermostat mode. Note: does NOT activate this mode",
+			"nl": "Stel de temperatuur in van een thermostaat modus. Let op: activeert deze modus niet"
+		},
+		"args": [
+			{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=ZXT-120|ZXT-600"
+		},
+			{
+				"name": "setPointType",
+				"type": "dropdown",
+				"values": [
+					{
+						"id": "Heating 1",
+						"label": {
+							"en": "Heat",
+							"nl": "Verwarm"
+						}
+        },
+					{
+						"id": "Cooling 1",
+						"label": {
+							"en": "Cool",
+							"nl": "Koel"
+						}
+        },
+					{
+						"id": "Auto changeover",
+						"label": {
+							"en": "Auto",
+							"nl": "Auto"
+						}
+        },
+					{
+						"id": "Dry Air",
+						"label": {
+							"en": "Dry air",
+							"nl": "Droge lucht"
+						}
+        }
+			]
+		},
+			{
+				"name": "setPointValue",
+				"type": "range",
+				"min": 16,
+				"max": 31,
+				"step": 0.5,
+				"label": "°C",
+				"labelDecimals": 1
+		}
+	]
+}
+]

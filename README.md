@@ -38,11 +38,28 @@ The following conditions are supported:
 The following capabilities are supported:
 
 * Temperature measurement    
-* Target Temperature   
-* Airco mode    
+* Thermostat Mode   
+* Thermostat Target Temperature (setpoint)   
+* Thermostat Fan Speed Mode   
+* Thermostat Fan Swing Mode   
+* Thermostat On-Off   
 * Battery capabilities (measure and alarm)  
 
-**Note:** Fan mode will be added in a later app update  
+### Remotec ZXT-600 AC Master (BW8490)   
+<a href="https://github.com/TedTolboom/hk.com.remotec">
+  <img src="https://rawgit.com/TedTolboom/hk.com.remotec/master/drivers/ZXT-600/assets/icon.svg" width="25%" height="25%">
+</a>  
+
+The following capabilities are supported:
+
+* Temperature measurement    
+* Thermostat Mode   
+* Thermostat Target Temperature (setpoint)   
+* Thermostat Fan Speed Mode   
+* Thermostat Fan Swing Mode   
+* Thermostat On-Off   
+* Battery capabilities (measure and alarm)
+
 
 ## Supported Languages:
 * English   
@@ -53,6 +70,16 @@ Any requests please post them in the [Remotec app topic on the Athom Forum](http
 If possible, please report issues at the [issues section on Github](https://github.com/TedTolboom/hk.com.remotec/issues) otherwise in the above mentioned topic.     
 
 ## Changelog:
+
+### v2.2.0
+* Add full support for ZXT-600    
+* Extended ZXT-120 implementation to full support (all options, including fan mode)    
+* Major update for ZXT-120 driver / settings / polling intervals: **re-inclusion of ZXT-120 is advised**
+* Add flow action cards supporting to set the Thermostat Mode, specific (mode based) Thermostat setpoints, Fan Speed Mode and Fan Swing mode         
+**fix**
+* Unable to set setpoint in cooling mode    
+**update:**   
+* Update Homey meshdriver to 1.2.23    
 
 ### v2.1.2
 **fix**
@@ -96,5 +123,5 @@ If possible, please report issues at the [issues section on Github](https://gith
 ## Future work:
 * <del>Add generic trigger card for 'A button has been pressed' together with tokens</del>     
 * ZRC-90 add option to disable re-triggering when a button is held    
-* add ZXT-120 Z-Wave-to-AC IR Extender   
-* add ZXT-600 Z-Wave-to-AC IR Extender   
+* ~ add ZXT-120 Z-Wave-to-AC IR Extender ~  
+* ~ add ZXT-600 Z-Wave-to-AC IR Extender ~  
