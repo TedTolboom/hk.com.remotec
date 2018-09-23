@@ -85,7 +85,7 @@
 			21076
 		],
 		"productTypeId": [
-			257
+			256, 257, 258, 263, 265, 267
 		],
 		"productId": [
 			33655
@@ -102,76 +102,6 @@
 		"associationGroupsOptions": {}
 	},
 	"settings": [
-		{
-			"id": "IR_code_number",
-			"value": 857,
-			"label": {
-				"en": "Set IR Code Number from built-in code library"
-			},
-			"hint": {
-				"en": "Refer to Code Finder Webpage"
-			},
-			"zwave": {
-				"index": 27,
-				"size": 2,
-				"signed": false
-			},
-			"attr": {
-				"min": 0,
-				"max": 65535
-			},
-			"type": "number"
-		},
-		{
-			"id": "IR_power_level",
-			"value": 255,
-			"label": {
-				"en": "Set IR transmission power level"
-			},
-			"hint": {
-				"en": "Range 0 (normal power mode) to 255 (high power mode (default))"
-			},
-			"zwave": {
-				"index": 28,
-				"size": 1,
-				"signed": false
-			},
-			"attr": {
-				"min": 0,
-				"max": 255
-			},
-			"type": "number"
-		},
-		{
-			"id": "IR_emitter_control",
-			"value": "255",
-			"type": "dropdown",
-			"label": {
-				"en": "Use built-in IR emitter"
-			},
-			"hint": {
-				"en": "Note: If more than one air conditioners with the same code set are used in the same room, user can disable the built-in IR emitter and use the external IR emitter cable to control each air conditioner individually"
-			},
-			"zwave": {
-				"index": 32,
-				"size": 1,
-				"signed": false
-			},
-			"values": [
-				{
-					"id": "255",
-					"label": {
-						"en": "Built-in IR emitter enabled (default)."
-					}
-				},
-				{
-					"id": "0",
-					"label": {
-						"en": "Built-in IR emitter disabled"
-					}
-				}
-			]
-		},
 		{
 			"id": "AC_swing_mode",
 			"value": "1",
@@ -202,95 +132,351 @@
 			]
 		},
 		{
-			"id": "Temperature_calibration",
-			"value": "0",
-			"type": "dropdown",
+			"type": "group",
 			"label": {
-				"en": "Calibrate Temperature reading"
+				"en": "Temperature"
 			},
-			"hint": {
-				"en": "This parameter is used to compensate the temperature error at temperature sensor"
-			},
-			"zwave": {
-				"index": 33,
-				"size": 1,
-				"signed": false
-			},
-			"values": [
+			"collapsed": false,
+			"children": [
 				{
-					"id": "0",
+					"id": "Temperature_calibration",
+					"value": "0",
+					"type": "dropdown",
 					"label": {
-						"en": "Measured temperature (default)"
-					}
-				},
-				{
-					"id": "1",
-					"label": {
-						"en": "Measured temperature + 1.0°C"
-					}
-				},
-				{
-					"id": "2",
-					"label": {
-						"en": "Measured temperature + 2.0°C"
-					}
-				},
-				{
-					"id": "3",
-					"label": {
-						"en": "Measured temperature + 3.0°C"
-					}
-				},
-				{
-					"id": "4",
-					"label": {
-						"en": "Measured temperature + 4.0°C"
-					}
-				},
-				{
-					"id": "5",
-					"label": {
-						"en": "Measured temperature + 5.0°C"
-					}
-				},
-				{
-					"id": "255",
-					"label": {
-						"en": "Measured temperature - 1.0°C"
-					}
-				},
-				{
-					"id": "254",
-					"label": {
-						"en": "Measured temperature - 2.0°C"
-					}
-				},
-				{
-					"id": "253",
-					"label": {
-						"en": "Measured temperature - 3.0°C"
-					}
-				},
-				{
-					"id": "252",
-					"label": {
-						"en": "Measured temperature - 4.0°C"
-					}
-				},
-				{
-					"id": "251",
-					"label": {
-						"en": "Measured temperature - 5.0°C"
-					}
+						"en": "Calibrate Temperature reading"
+					},
+					"hint": {
+						"en": "This parameter is used to compensate the temperature error at temperature sensor"
+					},
+					"zwave": {
+						"index": 37,
+						"size": 1,
+						"signed": false
+					},
+					"values": [
+						{
+							"id": "0",
+							"label": {
+								"en": "Measured temperature (default)"
+							}
+						},
+						{
+							"id": "1",
+							"label": {
+								"en": "Measured temperature + 1.0°C"
+							}
+						},
+						{
+							"id": "2",
+							"label": {
+								"en": "Measured temperature + 2.0°C"
+							}
+						},
+						{
+							"id": "3",
+							"label": {
+								"en": "Measured temperature + 3.0°C"
+							}
+						},
+						{
+							"id": "4",
+							"label": {
+								"en": "Measured temperature + 4.0°C"
+							}
+						},
+						{
+							"id": "5",
+							"label": {
+								"en": "Measured temperature + 5.0°C"
+							}
+						},
+						{
+							"id": "255",
+							"label": {
+								"en": "Measured temperature - 1.0°C"
+							}
+						},
+						{
+							"id": "254",
+							"label": {
+								"en": "Measured temperature - 2.0°C"
+							}
+						},
+						{
+							"id": "253",
+							"label": {
+								"en": "Measured temperature - 3.0°C"
+							}
+						},
+						{
+							"id": "252",
+							"label": {
+								"en": "Measured temperature - 4.0°C"
+							}
+						},
+						{
+							"id": "251",
+							"label": {
+								"en": "Measured temperature - 5.0°C"
+							}
+						}
+					]
 				}
-			]
+				]
 		},
+		{
+			"type": "group",
+			"label": {
+				"en": "IR function"
+			},
+			"collapsed": true,
+			"children": [
+				{
+					"id": "IR_code_number",
+					"value": 857,
+					"label": {
+						"en": "Set IR Code Number from built-in code library"
+					},
+					"hint": {
+						"en": "Refer to Code Finder Webpage"
+					},
+					"zwave": {
+						"index": 27,
+						"size": 2,
+						"signed": false
+					},
+					"attr": {
+						"min": 0,
+						"max": 65535
+					},
+					"type": "number"
+				},
+				{
+					"id": "IR_power_level",
+					"value": 255,
+					"label": {
+						"en": "Set IR transmission power level"
+					},
+					"hint": {
+						"en": "Range 0 (normal power mode) to 255 (high power mode (default))"
+					},
+					"zwave": {
+						"index": 28,
+						"size": 1,
+						"signed": false
+					},
+					"attr": {
+						"min": 0,
+						"max": 255
+					},
+					"type": "number"
+				},
+				{
+					"id": "IR_emitter_control",
+					"value": "255",
+					"type": "dropdown",
+					"label": {
+						"en": "Use built-in IR emitter"
+					},
+					"hint": {
+						"en": "Note: If more than one air conditioners with the same code set are used in the same room, user can disable the built-in IR emitter and use the external IR emitter cable to control each air conditioner individually"
+					},
+					"zwave": {
+						"index": 32,
+						"size": 1,
+						"signed": false
+					},
+					"values": [
+						{
+							"id": "255",
+							"label": {
+								"en": "Built-in IR emitter enabled (default)."
+							}
+				},
+						{
+							"id": "0",
+							"label": {
+								"en": "Built-in IR emitter disabled"
+							}
+				}]
+				},
+				{
+					"id": "IR_code_learning",
+					"value": "0",
+					"type": "dropdown",
+					"label": {
+						"en": "IR code learning - command ID"
+					},
+					"hint": {
+						"en": "This parameter (25) is during the process to learning non-standard IR codes. Follow the steps as mentioned in the manual. If you need to learn another command, select the command from the dropdown list, press save and learn the command (press the button on the remote)"
+					},
+					"zwave": {
+						"index": 25,
+						"size": 1
+					},
+					"values": [
+						{
+							"id": "0",
+							"label": {
+								"en": "OFF"
+							}
+						},
+						{
+							"id": "1",
+							"label": {
+								"en": "ON (RESUME)"
+							}
+						},
+						{
+							"id": "2",
+							"label": {
+								"en": "19°C / 67°F COOL"
+							}
+						},
+						{
+							"id": "3",
+							"label": {
+								"en": "20°C / 68°F or 69°F COOL"
+							}
+						},
+						{
+							"id": "4",
+							"label": {
+								"en": "21°C / 70°F or 71°F COOL"
+							}
+						},
+						{
+							"id": "5",
+							"label": {
+								"en": "22°C / 72°F or 73°F COOL"
+							}
+						},
+						{
+							"id": "6",
+							"label": {
+								"en": "23°C / 74°F or 75°F COOL"
+							}
+						},
+						{
+							"id": "7",
+							"label": {
+								"en": "24°C / 76°F COOL"
+							}
+						},
+						{
+							"id": "8",
+							"label": {
+								"en": "25°C / 77°F or 78°F COOL"
+							}
+						},
+						{
+							"id": "9",
+							"label": {
+								"en": "26°C / 79°F or 80°F COOL"
+							}
+						},
+						{
+							"id": "10",
+							"label": {
+								"en": "27°C / 81°F or 82°F COOL"
+							}
+						},
+						{
+							"id": "11",
+							"label": {
+								"en": "28°C / 83°F or 84°F COOL"
+							}
+						},
+						{
+							"id": "12",
+							"label": {
+								"en": "19°C / 66°F or 67°F HEAT"
+							}
+						},
+						{
+							"id": "13",
+							"label": {
+								"en": "20°C / 68°F or 69°F HEAT"
+							}
+						},
+						{
+							"id": "14",
+							"label": {
+								"en": "21°C / 70°F or 71°F HEAT"
+							}
+						},
+						{
+							"id": "15",
+							"label": {
+								"en": "22°C HEAT / 72°F or 73°F HEAT"
+							}
+						},
+						{
+							"id": "16",
+							"label": {
+								"en": "23°C / 74°F or 75°F HEAT"
+							}
+						},
+						{
+							"id": "17",
+							"label": {
+								"en": "24°C / 76°F HEAT"
+							}
+						},
+						{
+							"id": "18",
+							"label": {
+								"en": "25°C / 77°F or 78°F HEAT"
+							}
+						},
+						{
+							"id": "19",
+							"label": {
+								"en": "26°C / 79°F or 80°F HEAT"
+							}
+						},
+						{
+							"id": "20",
+							"label": {
+								"en": "27°C / 81°F or 82°F HEAT"
+							}
+						},
+						{
+							"id": "21",
+							"label": {
+								"en": "28°C / 83°F or 84°F HEAT"
+							}
+						},
+						{
+							"id": "22",
+							"label": {
+								"en": "DRY MODE"
+							}
+						}
+					]
+				},
+				{
+					"id": "IR_code_learning_status",
+					"value": "not provided",
+					"type": "label",
+					"label": {
+						"en": "IR code learning status"
+					},
+					"hint": {
+						"en": "IR code learning status of manually learned codes."
+					},
+					"zwave": {
+						"index": 26,
+						"size": 1
+					}
+}]
+				},
 		{
 			"type": "group",
 			"label": {
 				"en": "Set polling interval (minutes)"
 			},
-			"collapsed": false,
+			"collapsed": true,
 			"children": [
 				{
 					"id": "poll_interval_THERMOSTAT_MODE",
@@ -306,7 +492,7 @@
 						"max": 1440
 					},
 					"type": "number"
-				},
+						},
 				{
 					"id": "poll_interval_THERMOSTAT_SETPOINT",
 					"value": 180,
@@ -321,7 +507,7 @@
 						"max": 1440
 					},
 					"type": "number"
-				},
+						},
 				{
 					"id": "poll_interval_THERMOSTAT_FAN_MODE",
 					"value": 0,
@@ -336,8 +522,38 @@
 						"max": 1440
 					},
 					"type": "number"
-				}
-			]
-		}
-	]
+				},
+				{
+					"id": "poll_interval_TEMPERATURE",
+					"value": 0,
+					"label": {
+						"en": "Temperature"
+					},
+					"hint": {
+						"en": "Set polling interval Temperature measurements (minutes), 0 = disabled, default = 0 minutes (disabled)"
+					},
+					"attr": {
+						"min": 0,
+						"max": 1440
+					},
+					"type": "number"
+						}
+					]
+				},
+		{
+			"id": "Library_version",
+			"value": "not provided",
+			"label": {
+				"en": "Library and Firmware version"
+			},
+			"hint": {
+				"en": "Byte 1, Model suffix, Byte 2, Reserved, Byte 3 & 4 : Library Version"
+			},
+			"zwave": {
+				"index": 36,
+				"size": 4,
+				"signed": false
+			},
+			"type": "label"
+}]
 }

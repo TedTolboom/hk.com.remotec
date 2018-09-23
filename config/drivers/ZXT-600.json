@@ -86,7 +86,7 @@
 			21076
 		],
 		"productTypeId": [
-			256, 257
+			256, 257, 258, 263, 265, 267
 		],
 		"productId": [
 			33936
@@ -118,75 +118,6 @@
 	},
 	"settings": [
 		{
-			"id": "Learn IR Code",
-			"value": 0,
-			"label": {
-				"en": "Learn IR Code"
-			},
-			"hint": {
-				"en": "Learn IR Code, refer to 'IR Learning Mapping Table (Parameter Number 25)' table in the devices manual"
-			},
-			"zwave": {
-				"index": 25,
-				"size": 1
-			},
-			"attr": {
-				"min": 0,
-				"max": 32
-			},
-			"type": "number"
-		},
-		{
-			"id": "IR_code_number",
-			"value": 857,
-			"label": {
-				"en": "Set IR Code Number from built-in code library"
-			},
-			"hint": {
-				"en": "Refer to Code Finder Webpage"
-			},
-			"zwave": {
-				"index": 27,
-				"size": 2,
-				"signed": false
-			},
-			"attr": {
-				"min": 0,
-				"max": 65535
-			},
-			"type": "number"
-		},
-		{
-			"id": "IR_emitter_control",
-			"value": "255",
-			"type": "dropdown",
-			"label": {
-				"en": "Use built-in IR emitter"
-			},
-			"hint": {
-				"en": "Note: If more than one air conditioners with the same code set are used in the same room, user can disable the built-in IR emitter and use the external IR emitter cable to control each air conditioner individually"
-			},
-			"zwave": {
-				"index": 32,
-				"size": 1,
-				"signed": false
-			},
-			"values": [
-				{
-					"id": "255",
-					"label": {
-						"en": "Built-in IR emitter enabled (default)."
-					}
-				},
-				{
-					"id": "0",
-					"label": {
-						"en": "Built-in IR emitter disabled"
-					}
-				}
-			]
-		},
-		{
 			"id": "AC_swing_mode",
 			"value": "1",
 			"type": "dropdown",
@@ -216,233 +147,530 @@
 			]
 		},
 		{
-			"id": "Report_threshold",
-			"value": "0",
+			"type": "group",
 			"label": {
-				"en": "Temperature reporting threshold"
+				"en": "Temperature"
 			},
-			"hint": {
-				"en": "0(0x00) = Disable (Default)\r\n(for saving battery life)\r\nAuto report if room temperature is different from last report.\r\n1(0x01) = 1°F (0.5°C)\r\n2(0x02) = 2°F (1°C) \r\n3(0x03) = 3°F (1.5°C)\r\n4(0x04) = 4°F (2°C)\r\n5(0x05) = 5°F (2.5°C)\r\n6(0x06) = 6°F (3°C)\r\n7(0x07) = 7°F (3.5°C)\r\n8(0x08) = 8°F (4°C)\r\n"
-			},
-			"zwave": {
-				"index": 30,
-				"size": 1
-			},
-			"type": "dropdown",
-			"values": [
+			"collapsed": false,
+			"children": [
 				{
-					"id": "0",
+					"id": "Report_threshold",
+					"value": "0",
 					"label": {
-						"en": "Reporting disabled (Default)"
-					}
+						"en": "Temperature reporting threshold"
+					},
+					"hint": {
+						"en": "0(0x00) = Disable (Default)\r\n(for saving battery life)\r\nAuto report if room temperature is different from last report.\r\n1(0x01) = 1°F (0.5°C)\r\n2(0x02) = 2°F (1°C) \r\n3(0x03) = 3°F (1.5°C)\r\n4(0x04) = 4°F (2°C)\r\n5(0x05) = 5°F (2.5°C)\r\n6(0x06) = 6°F (3°C)\r\n7(0x07) = 7°F (3.5°C)\r\n8(0x08) = 8°F (4°C)\r\n"
+					},
+					"zwave": {
+						"index": 30,
+						"size": 1
+					},
+					"type": "dropdown",
+					"values": [
+						{
+							"id": "0",
+							"label": {
+								"en": "Reporting disabled (Default)"
+							}
 				},
-				{
-					"id": "1",
-					"label": {
-						"en": "Report by temp change of 0.5°C"
-					}
+						{
+							"id": "1",
+							"label": {
+								"en": "Report by temp change of 0.5°C"
+							}
 				},
-				{
-					"id": "2",
-					"label": {
-						"en": "Report by temp change of 1.0°C"
-					}
+						{
+							"id": "2",
+							"label": {
+								"en": "Report by temp change of 1.0°C"
+							}
 				},
-				{
-					"id": "3",
-					"label": {
-						"en": "Report by temp change of 1.5°C"
-					}
+						{
+							"id": "3",
+							"label": {
+								"en": "Report by temp change of 1.5°C"
+							}
 				},
-				{
-					"id": "4",
-					"label": {
-						"en": "Report by temp change of 2.0°C"
-					}
+						{
+							"id": "4",
+							"label": {
+								"en": "Report by temp change of 2.0°C"
+							}
 				},
-				{
-					"id": "5",
-					"label": {
-						"en": "Report by temp change of 2.5°C"
-					}
+						{
+							"id": "5",
+							"label": {
+								"en": "Report by temp change of 2.5°C"
+							}
 				},
-				{
-					"id": "6",
-					"label": {
-						"en": "Report by temp change of 3.0°C"
-					}
+						{
+							"id": "6",
+							"label": {
+								"en": "Report by temp change of 3.0°C"
+							}
 				},
-				{
-					"id": "7",
-					"label": {
-						"en": "Report by temp change of 3.5°C"
-					}
+						{
+							"id": "7",
+							"label": {
+								"en": "Report by temp change of 3.5°C"
+							}
 				},
-				{
-					"id": "8",
-					"label": {
-						"en": "Report by temp change of 4.0°C"
-					}
+						{
+							"id": "8",
+							"label": {
+								"en": "Report by temp change of 4.0°C"
+							}
 				}
 
 			]
 		},
-		{
-			"id": "Report_interval",
-			"value": "8",
-			"label": {
-				"en": "Condition report Temperature interval"
-			},
-			"hint": {
-				"en": "Auto report by the following time interval.\r\n1(0x01) = 1 Hr\r\n2(0x02) = 2 Hrs\r\n3(0x03) = 3 Hrs\r\n4(0x04) = 4 Hrs\r\n5(0x05) = 5 Hrs\r\n6(0x06) = 6 Hrs\r\n7(0x07) = 7 Hrs\r\n8(0x08) = 8 Hrs   (Default)\r\n"
-			},
-			"zwave": {
-				"index": 34,
-				"size": 1
-			},
-			"type": "dropdown",
-			"values": [
 				{
-					"id": "1",
+					"id": "Report_interval",
+					"value": "8",
 					"label": {
-						"en": "Report interval of 1 hr"
-					}
+						"en": "Condition report Temperature interval"
+					},
+					"hint": {
+						"en": "Auto report by the following time interval.\r\n1(0x01) = 1 Hr\r\n2(0x02) = 2 Hrs\r\n3(0x03) = 3 Hrs\r\n4(0x04) = 4 Hrs\r\n5(0x05) = 5 Hrs\r\n6(0x06) = 6 Hrs\r\n7(0x07) = 7 Hrs\r\n8(0x08) = 8 Hrs   (Default)\r\n"
+					},
+					"zwave": {
+						"index": 34,
+						"size": 1
+					},
+					"type": "dropdown",
+					"values": [
+						{
+							"id": "1",
+							"label": {
+								"en": "Report interval of 1 hr"
+							}
 				},
-				{
-					"id": "2",
-					"label": {
-						"en": "Report interval of 2 hrs"
-					}
+						{
+							"id": "2",
+							"label": {
+								"en": "Report interval of 2 hrs"
+							}
 				},
-				{
-					"id": "3",
-					"label": {
-						"en": "Report interval of 3 hrs"
-					}
+						{
+							"id": "3",
+							"label": {
+								"en": "Report interval of 3 hrs"
+							}
 				},
-				{
-					"id": "4",
-					"label": {
-						"en": "Report interval of 4 hrs"
-					}
+						{
+							"id": "4",
+							"label": {
+								"en": "Report interval of 4 hrs"
+							}
 				},
-				{
-					"id": "5",
-					"label": {
-						"en": "Report interval of 5 hrs"
-					}
+						{
+							"id": "5",
+							"label": {
+								"en": "Report interval of 5 hrs"
+							}
 				},
-				{
-					"id": "6",
-					"label": {
-						"en": "Report interval of 6 hrs"
-					}
+						{
+							"id": "6",
+							"label": {
+								"en": "Report interval of 6 hrs"
+							}
 				},
-				{
-					"id": "7",
-					"label": {
-						"en": "Report interval of 7 hrs"
-					}
+						{
+							"id": "7",
+							"label": {
+								"en": "Report interval of 7 hrs"
+							}
 				},
-				{
-					"id": "8",
-					"label": {
-						"en": "Report interval of 8 hrs (default)"
-					}
+						{
+							"id": "8",
+							"label": {
+								"en": "Report interval of 8 hrs (default)"
+							}
 				}
 
 			]
 		},
-		{
-			"id": "Temperature_calibration",
-			"value": "0",
-			"label": {
-				"en": "Calibrate Temperature reading"
-			},
-			"hint": {
-				"en": "Temperature offset value.\r\n0(0x00) = 0°C (Default)\r\n1(0x01) = 1°C\r\n2(0x02) = 2°C\r\n3(0x03) = 3°C\r\n4(0x04) = 4°C\r\n5(0x05) = 5°C\r\n255(0xFF) = -1°C\r\n254(0xFE) = -2°C\r\n253(0xFD) = -3°C\r\n252(0xFC) = -4°C\r\n251(0xFB) = -5°C\r\n"
-			},
-			"zwave": {
-				"index": 37,
-				"size": 1,
-				"signed": false
-			},
-			"type": "dropdown",
-			"values": [
 				{
-					"id": "0",
+					"id": "Temperature_calibration",
+					"value": "0",
 					"label": {
-						"en": "Measured temperature (default)"
-					}
+						"en": "Calibrate Temperature reading"
+					},
+					"hint": {
+						"en": "Temperature offset value.\r\n0(0x00) = 0°C (Default)\r\n1(0x01) = 1°C\r\n2(0x02) = 2°C\r\n3(0x03) = 3°C\r\n4(0x04) = 4°C\r\n5(0x05) = 5°C\r\n255(0xFF) = -1°C\r\n254(0xFE) = -2°C\r\n253(0xFD) = -3°C\r\n252(0xFC) = -4°C\r\n251(0xFB) = -5°C\r\n"
+					},
+					"zwave": {
+						"index": 37,
+						"size": 1,
+						"signed": false
+					},
+					"type": "dropdown",
+					"values": [
+						{
+							"id": "0",
+							"label": {
+								"en": "Measured temperature (default)"
+							}
 				},
-				{
-					"id": "1",
-					"label": {
-						"en": "Measured temperature + 1.0°C"
-					}
+						{
+							"id": "1",
+							"label": {
+								"en": "Measured temperature + 1.0°C"
+							}
 				},
-				{
-					"id": "2",
-					"label": {
-						"en": "Measured temperature + 2.0°C"
-					}
+						{
+							"id": "2",
+							"label": {
+								"en": "Measured temperature + 2.0°C"
+							}
 				},
-				{
-					"id": "3",
-					"label": {
-						"en": "Measured temperature + 3.0°C"
-					}
+						{
+							"id": "3",
+							"label": {
+								"en": "Measured temperature + 3.0°C"
+							}
 				},
-				{
-					"id": "4",
-					"label": {
-						"en": "Measured temperature + 4.0°C"
-					}
+						{
+							"id": "4",
+							"label": {
+								"en": "Measured temperature + 4.0°C"
+							}
 				},
-				{
-					"id": "5",
-					"label": {
-						"en": "Measured temperature + 5.0°C"
-					}
+						{
+							"id": "5",
+							"label": {
+								"en": "Measured temperature + 5.0°C"
+							}
 				},
-				{
-					"id": "255",
-					"label": {
-						"en": "Measured temperature - 1.0°C"
-					}
+						{
+							"id": "255",
+							"label": {
+								"en": "Measured temperature - 1.0°C"
+							}
 				},
-				{
-					"id": "254",
-					"label": {
-						"en": "Measured temperature - 2.0°C"
-					}
+						{
+							"id": "254",
+							"label": {
+								"en": "Measured temperature - 2.0°C"
+							}
 				},
-				{
-					"id": "253",
-					"label": {
-						"en": "Measured temperature - 3.0°C"
-					}
+						{
+							"id": "253",
+							"label": {
+								"en": "Measured temperature - 3.0°C"
+							}
 				},
-				{
-					"id": "252",
-					"label": {
-						"en": "Measured temperature - 4.0°C"
-					}
+						{
+							"id": "252",
+							"label": {
+								"en": "Measured temperature - 4.0°C"
+							}
 				},
-				{
-					"id": "251",
-					"label": {
-						"en": "Measured temperature - 5.0°C"
-					}
+						{
+							"id": "251",
+							"label": {
+								"en": "Measured temperature - 5.0°C"
+							}
 				}
 			]
+		}]
 		},
 		{
 			"type": "group",
 			"label": {
-				"en": "Set polling interval (minutes)"
+				"en": "IR function"
 			},
-			"collapsed": false,
+			"collapsed": true,
+			"children": [
+				{
+					"id": "IR_code_number",
+					"value": 857,
+					"label": {
+						"en": "Set IR Code Number from built-in code library"
+					},
+					"hint": {
+						"en": "Refer to Code Finder Webpage"
+					},
+					"zwave": {
+						"index": 27,
+						"size": 2,
+						"signed": false
+					},
+					"attr": {
+						"min": 0,
+						"max": 65535
+					},
+					"type": "number"
+		},
+				{
+					"id": "IR_emitter_control",
+					"value": "255",
+					"type": "dropdown",
+					"label": {
+						"en": "Use built-in IR emitter"
+					},
+					"hint": {
+						"en": "Note: If more than one air conditioners with the same code set are used in the same room, user can disable the built-in IR emitter and use the external IR emitter cable to control each air conditioner individually"
+					},
+					"zwave": {
+						"index": 32,
+						"size": 1,
+						"signed": false
+					},
+					"values": [
+						{
+							"id": "255",
+							"label": {
+								"en": "Built-in IR emitter enabled (default)."
+							}
+				},
+						{
+							"id": "0",
+							"label": {
+								"en": "Built-in IR emitter disabled"
+							}
+				}
+			]
+		},
+				{
+					"id": "IR_code_learning",
+					"value": "0",
+					"type": "dropdown",
+					"label": {
+						"en": "IR code learning - command ID"
+					},
+					"hint": {
+						"en": "This parameter (25) is during the process to learning non-standard IR codes. Follow the steps as mentioned in the manual. If you need to learn another command, select the command from the dropdown list, press save and learn the command (press the button on the remote)"
+					},
+					"zwave": {
+						"index": 25,
+						"size": 2
+					},
+					"values": [
+						{
+							"id": "0",
+							"label": {
+								"en": "OFF"
+							}
+				},
+						{
+							"id": "1",
+							"label": {
+								"en": "ON (RESUME)"
+							}
+				},
+						{
+							"id": "2",
+							"label": {
+								"en": "17°C / 63°F COOL"
+							}
+				},
+						{
+							"id": "3",
+							"label": {
+								"en": "18°C / 64°F COOL"
+							}
+				},
+						{
+							"id": "4",
+							"label": {
+								"en": "19°C / 66°F or 67°F COOL"
+							}
+				},
+						{
+							"id": "5",
+							"label": {
+								"en": "20°C / 68°F or 69°F COOL"
+							}
+				},
+						{
+							"id": "6",
+							"label": {
+								"en": "21°C / 70°F or 71°F COOL"
+							}
+				},
+						{
+							"id": "7",
+							"label": {
+								"en": "22°C / 72°F or 73°F COOL"
+							}
+				},
+						{
+							"id": "8",
+							"label": {
+								"en": "23°C / 74°F or 75°F COOL"
+							}
+				},
+						{
+							"id": "9",
+							"label": {
+								"en": "24°C / 76°F COOL"
+							}
+				},
+						{
+							"id": "10",
+							"label": {
+								"en": "25°C / 77°F or 78°F COOL"
+							}
+				},
+						{
+							"id": "11",
+							"label": {
+								"en": "26°C / 79°F or 80°F COOL"
+							}
+				},
+						{
+							"id": "12",
+							"label": {
+								"en": "27°C / 81°F or 82°F COOL"
+							}
+				},
+						{
+							"id": "13",
+							"label": {
+								"en": "28°C / 83°F or 84°F COOL"
+							}
+				},
+						{
+							"id": "14",
+							"label": {
+								"en": "29°C / 85°F COOL"
+							}
+				},
+						{
+							"id": "15",
+							"label": {
+								"en": "30°C / 86°F COOL"
+							}
+				},
+						{
+							"id": "16",
+							"label": {
+								"en": "17°C / 63°F HEAT"
+							}
+				},
+						{
+							"id": "17",
+							"label": {
+								"en": "18°C / 64°F HEAT"
+							}
+				},
+						{
+							"id": "18",
+							"label": {
+								"en": "19°C / 66°F or 67°F HEAT"
+							}
+				},
+						{
+							"id": "19",
+							"label": {
+								"en": "20°C / 68°F or 69°F HEAT"
+							}
+				},
+						{
+							"id": "20",
+							"label": {
+								"en": "21°C / 70°F or 71°F HEAT"
+							}
+				},
+						{
+							"id": "21",
+							"label": {
+								"en": "22°C HEAT / 72°F or 73°F HEAT"
+							}
+				},
+						{
+							"id": "22",
+							"label": {
+								"en": "23°C / 74°F or 75°F HEAT"
+							}
+				},
+						{
+							"id": "23",
+							"label": {
+								"en": "24°C / 76°F HEAT"
+							}
+				},
+						{
+							"id": "24",
+							"label": {
+								"en": "25°C / 77°F or 78°F HEAT"
+							}
+				},
+						{
+							"id": "25",
+							"label": {
+								"en": "26°C / 79°F or 80°F HEAT"
+							}
+				},
+						{
+							"id": "26",
+							"label": {
+								"en": "27°C / 81°F or 82°F HEAT"
+							}
+				},
+						{
+							"id": "27",
+							"label": {
+								"en": "28°C / 83°F or 84°F HEAT"
+							}
+				},
+						{
+							"id": "28",
+							"label": {
+								"en": "29°C / 85°F HEAT"
+							}
+				},
+						{
+							"id": "29",
+							"label": {
+								"en": "30°C / 86°F HEAT"
+							}
+				},
+						{
+							"id": "30",
+							"label": {
+								"en": "DRY MODE"
+							}
+				},
+						{
+							"id": "31",
+							"label": {
+								"en": "AUTO MODE"
+							}
+				},
+						{
+							"id": "32",
+							"label": {
+								"en": "FAN MODE"
+							}
+				}
+			]
+		},
+				{
+					"id": "IR_code_learning_status",
+					"value": "not provided",
+					"type": "label",
+					"label": {
+						"en": "IR code learning status"
+					},
+					"hint": {
+						"en": "IR code learning status of manually learned codes."
+					},
+					"zwave": {
+						"index": 26,
+						"size": 1
+					}
+}
+				]
+		},
+		{
+			"type": "group",
+			"label": {
+				"en": "Polling intervals"
+			},
+			"collapsed": true,
 			"children": [
 				{
 					"id": "poll_interval_THERMOSTAT_MODE",
@@ -490,6 +718,22 @@
 					"type": "number"
 				}
 			]
-		}
+		},
+		{
+			"id": "Library_version",
+			"value": "not provided",
+			"label": {
+				"en": "Library and Firmware version"
+			},
+			"hint": {
+				"en": "Byte 1, Model suffix, Byte 2, Reserved, Byte 3 & 4 : Library Version (read only)"
+			},
+			"zwave": {
+				"index": 36,
+				"size": 4,
+				"signed": false
+			},
+			"type": "label"
+}
 	]
 }

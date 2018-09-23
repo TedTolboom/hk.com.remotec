@@ -60,6 +60,8 @@ class ZXT120 extends ZwaveDevice {
 			getOpts: {
 				getOnOnline: true,
 				getOnStart: true, // get the initial value on app start
+				pollInterval: 'poll_interval_TEMPERATURE', // maps to device settings
+				pollMultiplication: 60000,
 			},
 		});
 
