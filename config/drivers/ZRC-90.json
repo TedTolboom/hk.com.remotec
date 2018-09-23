@@ -48,7 +48,7 @@
 	},
 	"zwave": {
 		"manufacturerId": 21076,
-		"productTypeId": 1,
+		"productTypeId": [0, 1, 2, 7, 9, 11],
 		"productId": 34064,
 		"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1584/F-BW8510xx (ZRC-90xx) User Manual_V1.01_20151030.pdf",
 		"pid": 1584,
@@ -56,15 +56,15 @@
 		"learnmode": {
 			"image": "/drivers/ZRC-90/assets/learnmode.svg",
 			"instruction": {
-				"en": "Press the “L” button at the rear side of the Scene Master until the LED light up to add the device into the Z-Wave network.",
-				"nl": "Druk de “L” knop aan de achterzijde van de Scene Master in totdat de LED oplicht om het apparaat toe te voegen aan het Z-wave netwerk."
+				"en": "Press the “L” button at the rear side of the Scene Master to add the device into the Z-Wave network.",
+				"nl": "Druk de “L” knop aan de achterzijde van de Scene Master in om het apparaat toe te voegen aan het Z-wave netwerk."
 			}
 		},
 		"unlearnmode": {
 			"image": "/drivers/ZRC-90/assets/learnmode.svg",
 			"instruction": {
-				"en": "Press the “L” button, at the rear side of the Scene Master, until the LED light up to remove the device from the Z-Wave network.",
-				"nl": "Druk de “L” knop, aan de achterzijde van de Scene Master, in totdat de LED oplicht om het apparaat te verwijderen uit het Z-wave netwerk."
+				"en": "Press the “L” button, at the rear side of the Scene Master, to remove the device from the Z-Wave network.",
+				"nl": "Druk de “L” knop, aan de achterzijde van de Scene Master, in om het apparaat te verwijderen uit het Z-wave netwerk."
 			}
 		},
 		"associationGroups": [
