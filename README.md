@@ -66,10 +66,21 @@ The following capabilities are supported:
 * Dutch    
 
 ## Feedback:
-Any requests please post them in the [Remotec app topic on the Athom Forum](https://forum.athom.com/discussion/3113/) or contact me on [Slack](https://athomcommunity.slack.com/team/tedtolboom)    
+Any requests please post them in the [Remotec app topic on the Athom Community Forum](https://community.athom.com/t/155) or contact me on [Slack](https://athomcommunity.slack.com/team/tedtolboom)    
 If possible, please report issues at the [issues section on Github](https://github.com/TedTolboom/hk.com.remotec/issues) otherwise in the above mentioned topic.     
 
 ## Changelog:
+
+### v2.2.1
+* Add support (productTypeID's) for all devices for the following regions: US, EU, AU, IL, JP, CN   
+* Add link to [Remotec app topic](https://community.athom.com/t/155) on community.athoms.com   
+* Add polling interval setting for temperature measurements for ZXT-120   
+* Restructure device settings ZXT-120 and ZXT-600   
+**fix**
+* Fix issue with ZXT-120 temperature correction parameter number   
+* Improve inclusion instructions for ZRC-90   
+**update:**   
+* Update Homey meshdriver to 1.2.25    
 
 ### v2.2.0
 * Add full support for ZXT-600    
@@ -96,29 +107,6 @@ If possible, please report issues at the [issues section on Github](https://gith
 **update:**   
 * Update Homey meshdriver to 1.2.8   
 * Add link to Homey community forum topic   
-
-### v2.0.3
-**update:**    
-* ZRC-90 fix app crash issue with battery alarm condition card: reverted back to default cards (re-inclusion might be needed)  
-* ZRC-90 driver clean-up based on meshdriver 1.2.7        
-* Update Homey meshdriver to 1.2.7
-
-### v2.0.2
-**update:**    
-* ZRC-90 fix issue where scenes are reported in numbers   
-
-### v2.0.1
-**update:**    
-* Update ZRC-90 to full SDK2   
-* Update meshdriver to 1.2.4   
-
-### v2.0.0
-**update:**    
-* Updated app and drivers to SDK2 and new Homey meshdriver   
-* Starting to add support for the AC masters (ZXT-120 and ZXT-600): both NOT in a working condition      
-
-**fixed:**   
-* ZRC-90 Button Pressed 2x does not trigger     
 
 ## Future work:
 * <del>Add generic trigger card for 'A button has been pressed' together with tokens</del>     
