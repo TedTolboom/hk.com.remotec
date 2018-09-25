@@ -12,7 +12,7 @@
     "security",
     "appliances"
   ],
-  "version": "2.2.1",
+  "version": "2.2.2",
   "compatibility": ">=1.5.0",
   "athomForumDiscussionId": 3113,
   "homeyCommunityTopicId": 155,
@@ -1149,10 +1149,6 @@
               },
               "hint": {
                 "en": "IR code learning status of manually learned codes."
-              },
-              "zwave": {
-                "index": 26,
-                "size": 1
               }
             }
           ]
@@ -1234,11 +1230,6 @@
           },
           "hint": {
             "en": "Byte 1, Model suffix, Byte 2, Reserved, Byte 3 & 4 : Library Version"
-          },
-          "zwave": {
-            "index": 36,
-            "size": 4,
-            "signed": false
           },
           "type": "label"
         }
@@ -1905,10 +1896,6 @@
               },
               "hint": {
                 "en": "IR code learning status of manually learned codes."
-              },
-              "zwave": {
-                "index": 26,
-                "size": 1
               }
             }
           ]
@@ -1975,11 +1962,6 @@
           },
           "hint": {
             "en": "Byte 1, Model suffix, Byte 2, Reserved, Byte 3 & 4 : Library Version (read only)"
-          },
-          "zwave": {
-            "index": 36,
-            "size": 4,
-            "signed": false
           },
           "type": "label"
         }

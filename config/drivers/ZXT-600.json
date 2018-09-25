@@ -657,10 +657,6 @@
 					},
 					"hint": {
 						"en": "IR code learning status of manually learned codes."
-					},
-					"zwave": {
-						"index": 26,
-						"size": 1
 					}
 }
 				]
@@ -727,11 +723,6 @@
 			},
 			"hint": {
 				"en": "Byte 1, Model suffix, Byte 2, Reserved, Byte 3 & 4 : Library Version (read only)"
-			},
-			"zwave": {
-				"index": 36,
-				"size": 4,
-				"signed": false
 			},
 			"type": "label"
 }

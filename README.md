@@ -71,6 +71,10 @@ If possible, please report issues at the [issues section on Github](https://gith
 
 ## Changelog:
 
+### v2.2.2   
+**fix**
+* Fix issue with ZXT-120 and ZXT-600 blocking settings to be updated   
+
 ### v2.2.1
 * Add support (productTypeID's) for all devices for the following regions: US, EU, AU, IL, JP, CN   
 * Add link to [Remotec app topic](https://community.athom.com/t/155) on community.athoms.com   
