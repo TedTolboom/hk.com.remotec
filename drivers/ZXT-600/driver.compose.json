@@ -1,0 +1,119 @@
+{
+	"id": "ZXT-600",
+	"branch": "master",
+	"class": "thermostat",
+	"name": {
+		"en": "ZXT-600 AC Master"
+	},
+	"capabilities": [
+		"measure_temperature",
+		"target_temperature",
+		"AC_onoff",
+		"AC_mode",
+		"FAN_mode",
+		"measure_battery",
+		"alarm_battery"
+	],
+	"capabilitiesOptions": {
+		"target_temperature": {
+			"min": 16,
+			"max": 31
+		}
+	},
+	"images": {
+		"large": "{{driverAssetsPath}}/images/large.jpg",
+		"small": "{{driverAssetsPath}}/images/small.jpg"
+	},
+	"mobile": {
+		"components": [
+			{
+				"id": "battery",
+				"capabilities": [
+					"measure_battery"
+				]
+			},
+			{
+				"id": "sensor",
+				"capabilities": [
+					"AC_onoff",
+					"measure_temperature",
+					"alarm_battery"
+				],
+				"options": {
+					"icons": {
+						"AC_onoff": "{{driverAssetsPath}}/AC_onoff.svg"
+					},
+					"AC_onoff": {
+						"noblink": false,
+						"greyout": true,
+						"label": {
+							"true": {
+								"en": "Active"
+							},
+							"false": {
+								"en": "Idle"
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "picker",
+				"capabilities": [
+					"FAN_mode"
+				],
+				"options": {
+					"showTitle": true
+				}
+			},
+			{
+				"id": "picker",
+				"capabilities": [
+					"AC_mode"
+				]
+			},
+			{
+				"id": "thermostat",
+				"capabilities": [
+					"target_temperature"
+				]
+			}
+		]
+	},
+
+	"zwave": {
+		"manufacturerId": [
+			21076
+		],
+		"productTypeId": [
+			256, 257, 258, 263, 265, 267
+		],
+		"productId": [
+			33936
+		],
+		"wakeUpInterval": 3600,
+		"learnmode": {
+			"instruction": {
+				"en": "note:\t ZXT-600 will detect upon inclusion the applied power source (battery or USB-powered) to decide what Z-Wave device role it will use (battery= sleeping device, USB power = always awake device)\n1.\tRefer to your primary controller to enter into the Inclusion Mode or Exclusion Mode\r\n2.\tWhen it is prompted to enter it, please triple click the “PROG” button within 1 second.\r\n3.\tGreen Indicator flashes TWICE then stay off"
+			}
+		},
+		"unlearnmode": {
+			"instruction": {
+				"en": "1.\tRefer to your primary controller to enter into the Inclusion Mode or Exclusion Mode\r\n2.\tWhen it is prompted to enter it, please triple click the “PROG” button within 1 second.\r\n3.\tGreen Indicator flashes TWICE then stay off"
+			}
+		},
+		"productDocumentation": "http://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2553/BW8490_Installation_Guide_201700807.pdf",
+		"zwaveAllianceProductId": 2553,
+		"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17085735",
+		"associationGroups": [
+			1
+		],
+		"associationGroupsOptions": {
+			"1": {
+				"hint": {
+					"en": "Association Group #1 (max. 1 node) is default Z-wave lifeline group to associate with Homey for AC Master Status change report"
+				}
+			}
+		}
+	}
+}

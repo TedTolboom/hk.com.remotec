@@ -1,0 +1,24 @@
+{
+	"type": "boolean",
+	"uiComponent": "sensor",
+	"icon": "/assets/AC_onoff.svg",
+	"label": {
+		"true": {
+			"en": "Active"
+		},
+		"false": {
+			"en": "Idle"
+		}
+	},
+	"title": {
+		"en": "State",
+		"nl": "Status"
+	},
+	"desc": {
+		"en": "State of the thermostat",
+		"nl": "Status van de thermostaat"
+	},
+	"getable": true,
+	"setable": false,
+	"greyout": true
+}
