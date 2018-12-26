@@ -71,6 +71,15 @@ If possible, please report issues at the [issues section on Github](https://gith
 
 ## Changelog:
 
+### v2.2.3   
+**fix**
+* Fix issue where custom icons are not shown in Homey v2.0.0   
+* Migrated to Homeycompose funtion (DEV only)      
+**update:**   
+* Update Homey meshdriver to 1.2.28   
+**open issues:**   
+* Only 1 picker (Thermostat mode) is shown in Homey v2.0.0, Fan mode is not shown      
+
 ### v2.2.2   
 **fix**
 * Fix issue with ZXT-120 and ZXT-600 blocking settings to be updated   
