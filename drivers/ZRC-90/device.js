@@ -10,7 +10,7 @@ class SceneMaster_ZRC90 extends ZwaveDevice {
 		// let PreviousSequenceNo = 'empty';
 
 		// enable debugging
-		// this.enableDebug();
+		this.enableDebug();
 
 		// print the node's info to the console
 		// this.printNode();

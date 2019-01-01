@@ -4,6 +4,7 @@
   "name": {
     "en": "Remotec Technologies"
   },
+  "brandColor": "#cc3333",
   "description": {
     "en": "Adds support for Remotec Technologies Z-wave devices"
   },
@@ -12,7 +13,7 @@
     "security",
     "appliances"
   ],
-  "version": "2.2.2",
+  "version": "2.2.3",
   "compatibility": ">=1.5.0",
   "athomForumDiscussionId": 3113,
   "homeyCommunityTopicId": 155,
@@ -58,152 +59,46 @@
     "large": "/assets/images/large.jpg",
     "small": "/assets/images/small.jpg"
   },
-  "capabilities": {
-    "AC_onoff": {
-      "type": "boolean",
-      "title": {
-        "en": "State",
-        "nl": "Status"
-      },
-      "desc": {
-        "en": "State of the thermostat",
-        "nl": "Status van de thermostaat"
-      },
-      "getable": true,
-      "setable": false,
-      "greyout": true
-    },
-    "AC_mode": {
-      "type": "enum",
-      "title": {
-        "en": "Thermostat mode",
-        "nl": "Thermostaat modus"
-      },
-      "desc": {
-        "en": "Mode of the thermostat",
-        "nl": "Modus van de thermostaat"
-      },
-      "values": [
-        {
-          "id": "Off",
-          "title": {
-            "en": "Off",
-            "nl": "Uit"
-          }
-        },
-        {
-          "id": "Heat",
-          "title": {
-            "en": "Heat",
-            "nl": "Verwarm"
-          }
-        },
-        {
-          "id": "Cool",
-          "title": {
-            "en": "Cool",
-            "nl": "Koel"
-          }
-        },
-        {
-          "id": "Auto Changeover",
-          "title": {
-            "en": "Auto",
-            "nl": "Auto"
-          }
-        },
-        {
-          "id": "Resume",
-          "title": {
-            "en": "Resume",
-            "nl": "Hervatten"
-          }
-        },
-        {
-          "id": "Fan Only",
-          "title": {
-            "en": "Fan only",
-            "nl": "Ventilator"
-          }
-        },
-        {
-          "id": "Dry Air",
-          "title": {
-            "en": "Dry air",
-            "nl": "Droge lucht"
-          }
-        },
-        {
-          "id": "AWAY",
-          "title": {
-            "en": "Away",
-            "nl": "Afwezig"
-          }
-        }
-      ],
-      "getable": true,
-      "setable": true
-    },
-    "FAN_mode": {
-      "type": "enum",
-      "title": {
-        "en": "Fan mode",
-        "nl": "Fan modus"
-      },
-      "desc": {
-        "en": "Fan mode",
-        "nl": "Ventilator modus"
-      },
-      "values": [
-        {
-          "id": "Auto Low",
-          "title": {
-            "en": "Auto (Low)",
-            "nl": "Auto (Laag)"
-          }
-        },
-        {
-          "id": "Auto Medium",
-          "title": {
-            "en": "Auto (Medium)",
-            "nl": "Auto (Gemiddeld)"
-          }
-        },
-        {
-          "id": "Auto High",
-          "title": {
-            "en": "Auto (High)",
-            "nl": "Auto (Hoog)"
-          }
-        },
-        {
-          "id": "Low",
-          "title": {
-            "en": "Low",
-            "nl": "Laag"
-          }
-        },
-        {
-          "id": "Medium",
-          "title": {
-            "en": "Medium",
-            "nl": "Gemiddeld"
-          }
-        },
-        {
-          "id": "High",
-          "title": {
-            "en": "High",
-            "nl": "Hoog"
-          }
-        }
-      ],
-      "getable": true,
-      "setable": true
-    }
-  },
   "flow": {
     "triggers": [
+      {
+        "id": "ZRC-90_button",
+        "title": {
+          "en": "A button has been pressed",
+          "nl": "Een knop is ingedrukt"
+        },
+        "hint": {
+          "en": "This card will trigger on any button pressed and provides the button and scene tokens.",
+          "nl": "Deze kaart wordt geactiveerd bij iedere knop die ingedrukt wordt en biedt de knop en scene tokens aan."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ZRC-90"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "button",
+            "type": "string",
+            "title": {
+              "en": "button",
+              "nl": "knop"
+            },
+            "example": "0"
+          },
+          {
+            "name": "scene",
+            "type": "string",
+            "title": {
+              "en": "scene",
+              "nl": "scene"
+            },
+            "example": "Button pressed (test)"
+          }
+        ]
+      },
       {
         "id": "ZRC-90_scene",
         "title": {
@@ -317,48 +212,70 @@
             ]
           }
         ]
-      },
+      }
+    ],
+    "actions": [
       {
-        "id": "ZRC-90_button",
+        "id": "action_ZXT_SetFanSpeed",
         "title": {
-          "en": "A button has been pressed",
-          "nl": "Een knop is ingedrukt"
-        },
-        "hint": {
-          "en": "This card will trigger on any button pressed and provides the button and scene tokens.",
-          "nl": "Deze kaart wordt geactiveerd bij iedere knop die ingedrukt wordt en biedt de knop en scene tokens aan."
+          "en": "Set Fan Speed mode"
         },
         "args": [
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=ZRC-90"
-          }
-        ],
-        "tokens": [
-          {
-            "name": "button",
-            "type": "string",
-            "title": {
-              "en": "button",
-              "nl": "knop"
-            },
-            "example": "0"
+            "filter": "driver_id=ZXT-120|ZXT-600"
           },
           {
-            "name": "scene",
-            "type": "string",
-            "title": {
-              "en": "scene",
-              "nl": "scene"
-            },
-            "example": "Button pressed (test)"
+            "name": "fanspeed",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Auto Low",
+                "label": {
+                  "en": "Auto (Low)",
+                  "nl": "Auto (Laag)"
+                }
+              },
+              {
+                "id": "Auto Medium",
+                "label": {
+                  "en": "Auto (Medium)",
+                  "nl": "Auto (Gemiddeld)"
+                }
+              },
+              {
+                "id": "Auto High",
+                "label": {
+                  "en": "Auto (High)",
+                  "nl": "Auto (Hoog)"
+                }
+              },
+              {
+                "id": "Low",
+                "label": {
+                  "en": "Low",
+                  "nl": "Laag"
+                }
+              },
+              {
+                "id": "Medium",
+                "label": {
+                  "en": "Medium",
+                  "nl": "Gemiddeld"
+                }
+              },
+              {
+                "id": "High",
+                "label": {
+                  "en": "High",
+                  "nl": "Hoog"
+                }
+              }
+            ]
           }
         ]
-      }
-    ],
-    "conditions": [],
-    "actions": [
+      },
       {
         "id": "action_ZXT_SetMode",
         "title": {
@@ -435,98 +352,6 @@
         ]
       },
       {
-        "id": "action_ZXT_SetFanSpeed",
-        "title": {
-          "en": "Set Fan Speed mode"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=ZXT-120|ZXT-600"
-          },
-          {
-            "name": "fanspeed",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "Auto Low",
-                "label": {
-                  "en": "Auto (Low)",
-                  "nl": "Auto (Laag)"
-                }
-              },
-              {
-                "id": "Auto Medium",
-                "label": {
-                  "en": "Auto (Medium)",
-                  "nl": "Auto (Gemiddeld)"
-                }
-              },
-              {
-                "id": "Auto High",
-                "label": {
-                  "en": "Auto (High)",
-                  "nl": "Auto (Hoog)"
-                }
-              },
-              {
-                "id": "Low",
-                "label": {
-                  "en": "Low",
-                  "nl": "Laag"
-                }
-              },
-              {
-                "id": "Medium",
-                "label": {
-                  "en": "Medium",
-                  "nl": "Gemiddeld"
-                }
-              },
-              {
-                "id": "High",
-                "label": {
-                  "en": "High",
-                  "nl": "Hoog"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "action_ZXT_SetFanSwing",
-        "title": {
-          "en": "Set Fan “SWING” mode"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=ZXT-120|ZXT-600"
-          },
-          {
-            "name": "mode",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Swing AUTO (default)"
-                }
-              },
-              {
-                "id": "0",
-                "label": {
-                  "en": "Swing OFF"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
         "id": "action_ZXT_SetSetpoint",
         "title": {
           "en": "Set a setpoint of a thermostat mode",
@@ -592,6 +417,7 @@
   "drivers": [
     {
       "id": "ZRC-90",
+      "branch": "master",
       "name": {
         "en": "Remotec Scene Master",
         "nl": "Remotec Scene Master"
@@ -680,6 +506,7 @@
     },
     {
       "id": "ZXT-120",
+      "branch": "master",
       "class": "thermostat",
       "name": {
         "en": "ZXT-120 AC Extender"
@@ -1237,6 +1064,7 @@
     },
     {
       "id": "ZXT-600",
+      "branch": "master",
       "class": "thermostat",
       "name": {
         "en": "ZXT-600 AC Master"
@@ -1967,5 +1795,161 @@
         }
       ]
     }
-  ]
+  ],
+  "capabilities": {
+    "AC_mode": {
+      "type": "enum",
+      "uiComponent": "picker",
+      "title": {
+        "en": "Thermostat mode",
+        "nl": "Thermostaat modus"
+      },
+      "desc": {
+        "en": "Mode of the thermostat",
+        "nl": "Modus van de thermostaat"
+      },
+      "values": [
+        {
+          "id": "Off",
+          "title": {
+            "en": "Off",
+            "nl": "Uit"
+          }
+        },
+        {
+          "id": "Heat",
+          "title": {
+            "en": "Heat",
+            "nl": "Verwarm"
+          }
+        },
+        {
+          "id": "Cool",
+          "title": {
+            "en": "Cool",
+            "nl": "Koel"
+          }
+        },
+        {
+          "id": "Auto Changeover",
+          "title": {
+            "en": "Auto",
+            "nl": "Auto"
+          }
+        },
+        {
+          "id": "Resume",
+          "title": {
+            "en": "Resume",
+            "nl": "Hervatten"
+          }
+        },
+        {
+          "id": "Fan Only",
+          "title": {
+            "en": "Fan only",
+            "nl": "Ventilator"
+          }
+        },
+        {
+          "id": "Dry Air",
+          "title": {
+            "en": "Dry air",
+            "nl": "Droge lucht"
+          }
+        },
+        {
+          "id": "AWAY",
+          "title": {
+            "en": "Away",
+            "nl": "Afwezig"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": true
+    },
+    "AC_onoff": {
+      "type": "boolean",
+      "uiComponent": "sensor",
+      "icon": "/assets/AC_onoff.svg",
+      "label": {
+        "true": {
+          "en": "Active"
+        },
+        "false": {
+          "en": "Idle"
+        }
+      },
+      "title": {
+        "en": "State",
+        "nl": "Status"
+      },
+      "desc": {
+        "en": "State of the thermostat",
+        "nl": "Status van de thermostaat"
+      },
+      "getable": true,
+      "setable": false,
+      "greyout": true
+    },
+    "FAN_mode": {
+      "type": "enum",
+      "uiComponent": "picker",
+      "title": {
+        "en": "Fan mode",
+        "nl": "Fan modus"
+      },
+      "desc": {
+        "en": "Fan mode",
+        "nl": "Ventilator modus"
+      },
+      "values": [
+        {
+          "id": "Auto Low",
+          "title": {
+            "en": "Auto (Low)",
+            "nl": "Auto (Laag)"
+          }
+        },
+        {
+          "id": "Auto Medium",
+          "title": {
+            "en": "Auto (Medium)",
+            "nl": "Auto (Gemiddeld)"
+          }
+        },
+        {
+          "id": "Auto High",
+          "title": {
+            "en": "Auto (High)",
+            "nl": "Auto (Hoog)"
+          }
+        },
+        {
+          "id": "Low",
+          "title": {
+            "en": "Low",
+            "nl": "Laag"
+          }
+        },
+        {
+          "id": "Medium",
+          "title": {
+            "en": "Medium",
+            "nl": "Gemiddeld"
+          }
+        },
+        {
+          "id": "High",
+          "title": {
+            "en": "High",
+            "nl": "Hoog"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": true
+    }
+  }
 }
