@@ -524,6 +524,15 @@
         "target_temperature": {
           "min": 16,
           "max": 31
+        },
+        "AC_onoff": {
+          "greyout": true,
+          "titleTrue": {
+            "en": "Active"
+          },
+          "titleFalse": {
+            "en": "Idle"
+          }
         }
       },
       "images": {
@@ -1082,6 +1091,15 @@
         "target_temperature": {
           "min": 16,
           "max": 31
+        },
+        "AC_onoff": {
+          "greyout": true,
+          "titleTrue": {
+            "en": "Active"
+          },
+          "titleFalse": {
+            "en": "Idle"
+          }
         }
       },
       "images": {
