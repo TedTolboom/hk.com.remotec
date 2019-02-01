@@ -13,7 +13,7 @@
     "security",
     "appliances"
   ],
-  "version": "2.2.3",
+  "version": "2.2.4",
   "compatibility": ">=1.5.0",
   "athomForumDiscussionId": 3113,
   "homeyCommunityTopicId": 155,
@@ -270,6 +270,37 @@
                 "label": {
                   "en": "High",
                   "nl": "Hoog"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "action_ZXT_SetFanSwing",
+        "title": {
+          "en": "Set Fan “SWING” mode"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ZXT-120|ZXT-600"
+          },
+          {
+            "name": "mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Swing AUTO (default)"
+                }
+              },
+              {
+                "id": "0",
+                "label": {
+                  "en": "Swing OFF"
                 }
               }
             ]

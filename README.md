@@ -71,6 +71,11 @@ If possible, please report issues at the [issues section on Github](https://gith
 
 ## Changelog:
 
+### v2.2.4   
+**fix**
+* Fix issue app crashing while using the 'Set Fan “SWING” mode' action card   
+* Update Homey meshdriver to 1.2.30   
+
 ### v2.2.3   
 **fix**
 * Fix issue where custom icons are not shown in Homey v2.0.0   
