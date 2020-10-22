@@ -29,67 +29,13 @@
 			}
 		}
 	},
+	"energy": {
+    "batteries": [ "AA", "AA"]
+  },
 	"images": {
 		"large": "{{driverAssetsPath}}/images/large.jpg",
 		"small": "{{driverAssetsPath}}/images/small.jpg"
 	},
-	"mobile": {
-		"components": [
-			{
-				"id": "battery",
-				"capabilities": [
-					"measure_battery"
-				]
-			},
-			{
-				"id": "sensor",
-				"capabilities": [
-					"AC_onoff",
-					"measure_temperature",
-					"alarm_battery"
-				],
-				"options": {
-					"icons": {
-						"AC_onoff": "{{driverAssetsPath}}/AC_onoff.svg"
-					},
-					"AC_onoff": {
-						"noblink": false,
-						"greyout": true,
-						"label": {
-							"true": {
-								"en": "Active"
-							},
-							"false": {
-								"en": "Idle"
-							}
-						}
-					}
-				}
-			},
-			{
-				"id": "picker",
-				"capabilities": [
-					"FAN_mode"
-				],
-				"options": {
-					"showTitle": true
-				}
-			},
-			{
-				"id": "picker",
-				"capabilities": [
-					"AC_mode"
-				]
-			},
-			{
-				"id": "thermostat",
-				"capabilities": [
-					"target_temperature"
-				]
-			}
-		]
-	},
-
 	"zwave": {
 		"manufacturerId": [
 			21076

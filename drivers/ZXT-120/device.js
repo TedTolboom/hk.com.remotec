@@ -58,7 +58,6 @@ class ZXT120 extends ZwaveDevice {
 
 		this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL', {
 			getOpts: {
-				getOnOnline: true,
 				getOnStart: true, // get the initial value on app start
 				pollInterval: 'poll_interval_TEMPERATURE', // maps to device settings
 				pollMultiplication: 60000,
@@ -70,7 +69,6 @@ class ZXT120 extends ZwaveDevice {
 
 		this.registerCapability('AC_mode', 'THERMOSTAT_MODE', {
 			getOpts: {
-				getOnOnline: true,
 				getOnStart: true, // get the initial value on app start
 				pollInterval: 'poll_interval_THERMOSTAT_MODE', // maps to device settings
 				pollMultiplication: 60000,
