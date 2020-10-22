@@ -5,12 +5,12 @@
 	"main": "app.js",
 	"requires": true,
 	"dependencies": {
-		"eslint-config-athom": "^1.0.0",
-		"git-branch": "^1.0.0",
-		"homey-log": "^1.0.1",
-		"homey-meshdriver": "^1.2.30"
+		"homey-meshdriver": "^2.0.1"
 	},
-	"devDependencies": {},
+	"devDependencies": {
+		"eslint": "^6.8.0",
+		"eslint-config-athom": "^2.1.0"
+	},
 	"scripts": {
 		"run": "homeyConfig compose && athom project --run",
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -18,6 +18,9 @@
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/TedTolboom/hk.com.remotec.git"
+	},
+	"engines": {
+		"node": ">=12.16.1"
 	},
 	"author": "Ted Tolboom",
 	"license": "ISC",
