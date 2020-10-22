@@ -1,0 +1,62 @@
+{
+  "id": "hk.com.remotec",
+  "sdk": 2,
+  "name": {
+    "en": "Remotec Technologies"
+  },
+  "brandColor": "#cc3333",
+  "description": {
+    "en": "Adds support for Remotec Technologies Z-wave devices"
+  },
+  "category": [
+    "lights",
+    "security",
+    "appliances"
+  ],
+  "version": "2.3.0",
+  "compatibility": ">=4.0.0",
+  "athomForumDiscussionId": 3113,
+  "homeyCommunityTopicId": 155,
+  "author": {
+    "name": "Ted Tolboom",
+    "email": "ttolboom@gmail.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Mike Lim (Automate Asia)",
+        "email": "mike.lim@automate.asia"
+      },
+      {
+        "name": "Ted Tolboom",
+        "email": "dTNL.Homey@gmail.com"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "TedTolboom"
+      }
+    }
+  },
+  "tags": {
+    "en": [
+      "scene master",
+      "remote",
+      "remote control",
+      "central scene",
+      "scenes"
+    ],
+    "nl": [
+      "scene master",
+      "afstandsbediening",
+      "central scene",
+      "scenes"
+    ]
+  },
+  "images": {
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
+  }
+}

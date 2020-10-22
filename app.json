@@ -1,4 +1,5 @@
 {
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "hk.com.remotec",
   "sdk": 2,
   "name": {
@@ -13,8 +14,8 @@
     "security",
     "appliances"
   ],
-  "version": "2.2.4",
-  "compatibility": ">=1.5.0",
+  "version": "2.3.0",
+  "compatibility": ">=4.0.0",
   "athomForumDiscussionId": 3113,
   "homeyCommunityTopicId": 155,
   "author": {
@@ -463,35 +464,10 @@
         "measure_battery",
         "alarm_battery"
       ],
-      "mobile": {
-        "components": [
-          {
-            "id": "icon"
-          },
-          {
-            "id": "battery",
-            "capabilities": [
-              "measure_battery"
-            ],
-            "options": {
-              "showTitle": true
-            }
-          },
-          {
-            "id": "sensor",
-            "capabilities": [
-              "alarm_battery"
-            ],
-            "options": {
-              "icons": {
-                "Battery_Alarm": "/drivers/ZRC-90/assets/images/alarm_battery.svg"
-              },
-              "Battery_Alarm": {
-                "noblink": false,
-                "invert": false
-              }
-            }
-          }
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA"
         ]
       },
       "zwave": {
@@ -566,65 +542,16 @@
           }
         }
       },
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA",
+          "AAA"
+        ]
+      },
       "images": {
         "large": "/drivers/ZXT-120/assets/images/large.jpg",
         "small": "/drivers/ZXT-120/assets/images/small.jpg"
-      },
-      "mobile": {
-        "components": [
-          {
-            "id": "battery",
-            "capabilities": [
-              "measure_battery"
-            ]
-          },
-          {
-            "id": "sensor",
-            "capabilities": [
-              "AC_onoff",
-              "measure_temperature",
-              "alarm_battery"
-            ],
-            "options": {
-              "icons": {
-                "AC_onoff": "/drivers/ZXT-120/assets/AC_onoff.svg"
-              },
-              "AC_onoff": {
-                "noblink": false,
-                "greyout": true,
-                "label": {
-                  "true": {
-                    "en": "Active"
-                  },
-                  "false": {
-                    "en": "Idle"
-                  }
-                }
-              }
-            }
-          },
-          {
-            "id": "picker",
-            "capabilities": [
-              "FAN_mode"
-            ],
-            "options": {
-              "showTitle": true
-            }
-          },
-          {
-            "id": "picker",
-            "capabilities": [
-              "AC_mode"
-            ]
-          },
-          {
-            "id": "thermostat",
-            "capabilities": [
-              "target_temperature"
-            ]
-          }
-        ]
       },
       "zwave": {
         "manufacturerId": [
@@ -1133,65 +1060,15 @@
           }
         }
       },
+      "energy": {
+        "batteries": [
+          "AA",
+          "AA"
+        ]
+      },
       "images": {
         "large": "/drivers/ZXT-600/assets/images/large.jpg",
         "small": "/drivers/ZXT-600/assets/images/small.jpg"
-      },
-      "mobile": {
-        "components": [
-          {
-            "id": "battery",
-            "capabilities": [
-              "measure_battery"
-            ]
-          },
-          {
-            "id": "sensor",
-            "capabilities": [
-              "AC_onoff",
-              "measure_temperature",
-              "alarm_battery"
-            ],
-            "options": {
-              "icons": {
-                "AC_onoff": "/drivers/ZXT-600/assets/AC_onoff.svg"
-              },
-              "AC_onoff": {
-                "noblink": false,
-                "greyout": true,
-                "label": {
-                  "true": {
-                    "en": "Active"
-                  },
-                  "false": {
-                    "en": "Idle"
-                  }
-                }
-              }
-            }
-          },
-          {
-            "id": "picker",
-            "capabilities": [
-              "FAN_mode"
-            ],
-            "options": {
-              "showTitle": true
-            }
-          },
-          {
-            "id": "picker",
-            "capabilities": [
-              "AC_mode"
-            ]
-          },
-          {
-            "id": "thermostat",
-            "capabilities": [
-              "target_temperature"
-            ]
-          }
-        ]
       },
       "zwave": {
         "manufacturerId": [
