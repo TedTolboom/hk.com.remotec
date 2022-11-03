@@ -1,6 +1,7 @@
 {
   "id": "hk.com.remotec",
-  "sdk": 2,
+  "sdk": 3,
+  "platforms": ["local"],
   "name": {
     "en": "Remotec Technologies"
   },
@@ -13,10 +14,11 @@
     "security",
     "appliances"
   ],
-  "version": "2.3.1",
-  "compatibility": ">=4.0.0",
+  "version": "2.4.0",
+  "compatibility": ">=5.0.0",
   "athomForumDiscussionId": 3113,
   "homeyCommunityTopicId": 155,
+  "support": "https://homey.app/a/hk.com.remotec/",
   "author": {
     "name": "Ted Tolboom",
     "email": "ttolboom@gmail.com"

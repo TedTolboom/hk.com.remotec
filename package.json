@@ -4,9 +4,6 @@
 	"description": "This app adds support for devices made by [Remotec Technology LTD](http://www.remotec.com.hk).",
 	"main": "app.js",
 	"requires": true,
-	"dependencies": {
-		"homey-meshdriver": "^2.0.1"
-	},
 	"devDependencies": {
 		"eslint": "^6.8.0",
 		"eslint-config-athom": "^2.1.0"
@@ -27,5 +24,8 @@
 	"bugs": {
 		"url": "https://github.com/TedTolboom/hk.com.remotec/issues"
 	},
-	"homepage": "https://github.com/TedTolboom/hk.com.remotec.git#readme"
+	"homepage": "https://github.com/TedTolboom/hk.com.remotec.git#readme",
+	"dependencies": {
+		"homey-zwavedriver": "^2.1.10"
+	}
 }

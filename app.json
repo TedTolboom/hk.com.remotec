@@ -1,7 +1,10 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "hk.com.remotec",
-  "sdk": 2,
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
   "name": {
     "en": "Remotec Technologies"
   },
@@ -14,10 +17,11 @@
     "security",
     "appliances"
   ],
-  "version": "2.3.1",
-  "compatibility": ">=4.0.0",
+  "version": "2.4.0",
+  "compatibility": ">=5.0.0",
   "athomForumDiscussionId": 3113,
   "homeyCommunityTopicId": 155,
+  "support": "https://homey.app/a/hk.com.remotec/",
   "author": {
     "name": "Ted Tolboom",
     "email": "ttolboom@gmail.com"
@@ -64,6 +68,9 @@
     "triggers": [
       {
         "id": "ZRC-90_button",
+        "platforms": [
+          "local"
+        ],
         "title": {
           "en": "A button has been pressed",
           "nl": "Een knop is ingedrukt"
@@ -102,9 +109,16 @@
       },
       {
         "id": "ZRC-90_scene",
+        "platforms": [
+          "local"
+        ],
         "title": {
           "en": "Scene is activated",
           "nl": "Scene is geactiveerd"
+        },
+        "titleFormatted": {
+          "en": "A scene ([[scene]]) has been activated with [[button]]",
+          "nl": "Een scene ([[scene]]) is geactiveerd met [[button]]"
         },
         "hint": {
           "en": "This card will only get triggered if the button and scene match the state of the dropdown fields.",
@@ -119,6 +133,10 @@
           {
             "name": "button",
             "type": "dropdown",
+            "title": {
+              "en": "button",
+              "nl": "knop"
+            },
             "values": [
               {
                 "id": "1",
@@ -181,6 +199,10 @@
           {
             "name": "scene",
             "type": "dropdown",
+            "title": {
+              "en": "scene",
+              "nl": "scene"
+            },
             "values": [
               {
                 "id": "Key Pressed 1 time",
@@ -218,8 +240,15 @@
     "actions": [
       {
         "id": "action_ZXT_SetFanSpeed",
+        "platforms": [
+          "local"
+        ],
         "title": {
           "en": "Set Fan Speed mode"
+        },
+        "titleFormatted": {
+          "en": "Set Fan Speed mode to [[fanspeed]]",
+          "nl": "Stel de ventilator snelheid in op [[fanspeed]]"
         },
         "args": [
           {
@@ -230,6 +259,10 @@
           {
             "name": "fanspeed",
             "type": "dropdown",
+            "title": {
+              "en": "Fanspeed",
+              "nl": "Ventilatorsnelheid"
+            },
             "values": [
               {
                 "id": "Auto Low",
@@ -279,8 +312,15 @@
       },
       {
         "id": "action_ZXT_SetFanSwing",
+        "platforms": [
+          "local"
+        ],
         "title": {
           "en": "Set Fan “SWING” mode"
+        },
+        "titleFormatted": {
+          "en": "Set Fan swing mode to [[mode]]",
+          "nl": "Stel de ventilator kantel modus in op [[mode]]"
         },
         "args": [
           {
@@ -291,6 +331,10 @@
           {
             "name": "mode",
             "type": "dropdown",
+            "title": {
+              "en": "Mode",
+              "nl": "Modus"
+            },
             "values": [
               {
                 "id": "1",
@@ -310,8 +354,15 @@
       },
       {
         "id": "action_ZXT_SetMode",
+        "platforms": [
+          "local"
+        ],
         "title": {
           "en": "Set Mode"
+        },
+        "titleFormatted": {
+          "en": "Set mode to [[mode]]",
+          "nl": "Stel de modus in op [[mode]]"
         },
         "args": [
           {
@@ -322,6 +373,10 @@
           {
             "name": "mode",
             "type": "dropdown",
+            "title": {
+              "en": "Mode",
+              "nl": "Modus"
+            },
             "values": [
               {
                 "id": "Off",
@@ -385,9 +440,16 @@
       },
       {
         "id": "action_ZXT_SetSetpoint",
+        "platforms": [
+          "local"
+        ],
         "title": {
           "en": "Set a setpoint of a thermostat mode",
           "nl": "Stel de temperatuur in van een thermostaat modus"
+        },
+        "titleFormatted": {
+          "en": "Set the setpoint of thermostat mode [[setPointType]] to [[setPointValue]]°C",
+          "nl": "Stel de temperatuur van thermostaat modus [[setPointType]] in op [[setPointValue]]°C"
         },
         "hint": {
           "en": "Change the setpoint of a specific thermostat mode. Note: does NOT activate this mode",
@@ -402,6 +464,10 @@
           {
             "name": "setPointType",
             "type": "dropdown",
+            "title": {
+              "en": "Thermostat mode",
+              "nl": "Thermostaat modus"
+            },
             "values": [
               {
                 "id": "Heating 1",
@@ -435,6 +501,10 @@
           },
           {
             "name": "setPointValue",
+            "title": {
+              "en": "Temperature",
+              "nl": "Temperatuur"
+            },
             "type": "range",
             "min": 16,
             "max": 31,
@@ -449,6 +519,12 @@
   "drivers": [
     {
       "id": "ZRC-90",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "branch": "master",
       "name": {
         "en": "Remotec Scene Master",
@@ -513,6 +589,12 @@
     },
     {
       "id": "ZXT-120",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "branch": "master",
       "class": "thermostat",
       "name": {
@@ -1031,6 +1113,12 @@
     },
     {
       "id": "ZXT-600",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "branch": "master",
       "class": "thermostat",
       "name": {
