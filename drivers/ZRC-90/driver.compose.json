@@ -1,5 +1,7 @@
 {
 	"id": "ZRC-90",
+	"platforms": ["local"],
+	"connectivity": [ "zwave" ],
 	"branch": "master",
 	"name": {
 		"en": "Remotec Scene Master",

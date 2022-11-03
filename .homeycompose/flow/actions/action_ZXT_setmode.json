@@ -1,7 +1,12 @@
 {
 	"id": "action_ZXT_SetMode",
+	"platforms": [ "local"],
 	"title": {
 		"en": "Set Mode"
+	},
+	"titleFormatted": {
+		"en": "Set mode to [[mode]]",
+		"nl": "Stel de modus in op [[mode]]"
 	},
 	"args": [
 		{
@@ -12,6 +17,10 @@
 		{
 			"name": "mode",
 			"type": "dropdown",
+			"title": {
+				"en": "Mode",
+				"nl": "Modus"
+			},
 			"values": [
 				{
 					"id": "Off",

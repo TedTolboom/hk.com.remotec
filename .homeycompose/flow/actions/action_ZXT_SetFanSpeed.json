@@ -1,7 +1,12 @@
 {
 	"id": "action_ZXT_SetFanSpeed",
+	"platforms": [ "local"],
 	"title": {
 		"en": "Set Fan Speed mode"
+	},
+	"titleFormatted": {
+		"en": "Set Fan Speed mode to [[fanspeed]]",
+		"nl": "Stel de ventilator snelheid in op [[fanspeed]]"
 	},
 	"args": [
 		{
@@ -12,6 +17,10 @@
 		{
 			"name": "fanspeed",
 			"type": "dropdown",
+			"title": {
+				"en": "Fanspeed",
+				"nl": "Ventilatorsnelheid"
+			},
 			"values": [
 				{
 					"id": "Auto Low",

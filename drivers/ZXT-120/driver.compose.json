@@ -1,5 +1,7 @@
 {
 	"id": "ZXT-120",
+	"platforms": ["local"],
+	"connectivity": [ "zwave" ],
 	"branch": "master",
 	"class": "thermostat",
 	"name": {

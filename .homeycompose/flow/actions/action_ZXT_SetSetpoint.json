@@ -1,8 +1,13 @@
 {
 	"id": "action_ZXT_SetSetpoint",
+	"platforms": [ "local"],
 	"title": {
 		"en": "Set a setpoint of a thermostat mode",
 		"nl": "Stel de temperatuur in van een thermostaat modus"
+	},
+	"titleFormatted": {
+		"en": "Set the setpoint of thermostat mode [[setPointType]] to [[setPointValue]]°C",
+		"nl": "Stel de temperatuur van thermostaat modus [[setPointType]] in op [[setPointValue]]°C"
 	},
 	"hint": {
 		"en": "Change the setpoint of a specific thermostat mode. Note: does NOT activate this mode",
@@ -17,6 +22,10 @@
 		{
 			"name": "setPointType",
 			"type": "dropdown",
+			"title": {
+				"en": "Thermostat mode",
+				"nl": "Thermostaat modus"
+			},
 			"values": [
 				{
 					"id": "Heating 1",
@@ -50,6 +59,10 @@
   },
 		{
 			"name": "setPointValue",
+			"title": {
+				"en": "Temperature",
+				"nl": "Temperatuur"
+			},
 			"type": "range",
 			"min": 16,
 			"max": 31,
