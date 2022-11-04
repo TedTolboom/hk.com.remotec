@@ -8,25 +8,29 @@ class RemotecZwave extends Homey.App {
     this.log('Remotec Z-wave app is running...');
 
     // Register actions for flows
-    this._actionZXTThermostatMode = this.getActionCard('action_ZXT_SetMode')
+    this._actionZXTThermostatMode = this.homey.flow
+      .getActionCard('action_ZXT_SetMode')
       .registerRunListener((args, state) => {
         this.log('FlowCardAction triggered for ', args.device.getName(), 'to change Thermostat mode to', args.mode);
         return args.device.triggerCapabilityListener('AC_mode', args.mode, {});
       });
 
     // Register actions for flows
-    this._actionZXTSetFanSpeed = this.getActionCard('action_ZXT_SetFanSpeed')
+    this._actionZXTSetFanSpeed = this.homey.flow
+      .getActionCard('action_ZXT_SetFanSpeed')
       .registerRunListener((args, state) => {
         this.log('FlowCardAction triggered for ', args.device.getName(), 'to change Fan Speed to', args.fanspeed);
         return args.device.triggerCapabilityListener('FAN_mode', args.fanspeed, {});
       });
 
     // Register actions for flows
-    this._actionZXTSetFanSwing = this.getActionCard('action_ZXT_SetFanSwing')
+    this._actionZXTSetFanSwing = this.homey.flow
+      .getActionCard('action_ZXT_SetFanSwing')
       .registerRunListener(this._actionZXTSetFanSwingRunListener.bind(this));
 
     // Register actions for flows
-    this._actionZXTSetThermostatSetpoint = this.getActionCard('action_ZXT_SetSetpoint')
+    this._actionZXTSetThermostatSetpoint = this.homey.flow
+      .getActionCard('action_ZXT_SetSetpoint')
       .registerRunListener(this._actionZXTSetThermostatSetpointRunListener.bind(this));
   }
 
