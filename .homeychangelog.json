@@ -7,5 +7,11 @@
   },
   "2.4.0": {
     "en": "Update to SDK3 to enable support for Homey Pro (Early 2023)"
+  },
+  "2.4.1": {
+    "en": "Update to SDK3 to enable support for Homey Pro (Early 2023)"
+  },
+  "2.4.2": {
+    "en": "Update to SDK3 for Homey Pro (Early 2023)"
   }
 }
