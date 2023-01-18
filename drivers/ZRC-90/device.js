@@ -7,7 +7,7 @@ const { ZwaveDevice } = require('homey-zwavedriver');
 
 class SceneMaster_ZRC90 extends ZwaveDevice {
 
-  async onNodeInit() {
+  async onNodeInit({ node }) {
     // let PreviousSequenceNo = 'empty';
 
     // enable debugging

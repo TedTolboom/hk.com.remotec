@@ -50,7 +50,7 @@ for (const mode in MasterData) {
 
 class ZXT120 extends ZwaveDevice {
 
-  async onNodeInit() {
+  async onNodeInit({ node }) {
     // enable debugging
     // this.enableDebug();
 
