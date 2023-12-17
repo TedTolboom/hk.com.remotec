@@ -14,8 +14,8 @@
     "security",
     "appliances"
   ],
-  "version": "2.4.2",
-  "compatibility": ">=5.0.0",
+  "version": "2.4.3",
+  "compatibility": ">=10.0.0",
   "athomForumDiscussionId": 3113,
   "homeyCommunityTopicId": 155,
   "support": "https://homey.app/a/hk.com.remotec/",
