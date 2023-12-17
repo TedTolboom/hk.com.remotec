@@ -38,8 +38,8 @@
 		"unlearnmode": {
 			"image": "{{driverAssetsPath}}/learnmode.svg",
 			"instruction": {
-				"en": "Press the “L” button, at the rear side of the Scene Master, to remove the device from the Z-Wave network.",
-				"nl": "Druk de “L” knop, aan de achterzijde van de Scene Master, in om het apparaat te verwijderen uit het Z-wave netwerk."
+				"en": "First reset the device. \nPress and holder the “R” button. After a few seconds the LED will light up. \nWait until the LED switches off and release “R” button. \nTriple press the “R” button within 2 seconds. \n The LED will light up again. Wait until the LED flashes twice. \nNow remove the device. \nRemove the device from the Z-wave network by pressing the “L” button.",
+				"nl": "Reset eerst het apparaat. \nHoud de “R”-knop ingedrukt. Na enkele seconden gaat de LED branden. \nWacht tot de LED uitgaat en laat vervolgens de “R”-knop los. \nDruk vervolgens binnen 2 seconden drie keer op de “R”-knop. \nDe LED gaat weer branden. Wacht totdat de LED twee keer knippert. \nVerwijder nu het apparaat door op “L”-knop te drukken."
 			}
 		},
 		"associationGroups": [
