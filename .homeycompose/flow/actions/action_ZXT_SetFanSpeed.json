@@ -1,58 +1,76 @@
 {
 	"id": "action_ZXT_SetFanSpeed",
+	"platforms": [ "local"],
 	"title": {
-		"en": "Set Fan Speed mode"
+		"en": "Set Fan Speed mode",
+		"de": "Lüftergeschwindigkeit einstellen"
+	},
+	"titleFormatted": {
+		"en": "Set Fan Speed mode to [[fanspeed]]",
+		"nl": "Stel de ventilator snelheid in op [[fanspeed]]",
+		"de": "Stellen Sie den Modus Lüftergeschwindigkeit auf [[fanspeed]]"
 	},
 	"args": [
 		{
 			"name": "device",
 			"type": "device",
-			"filter": "driver_id=ZXT-120|ZXT-600"
+			"filter": "driver_id=ZXT-120|ZXT-600|ZXT-800"
 		},
 		{
 			"name": "fanspeed",
 			"type": "dropdown",
+			"title": {
+				"en": "Fanspeed",
+				"nl": "Ventilatorsnelheid",
+				"de": "Ventilatorgeschwindigkeit"
+			},
 			"values": [
 				{
 					"id": "Auto Low",
 					"label": {
 						"en": "Auto (Low)",
-						"nl": "Auto (Laag)"
+						"nl": "Auto (Laag)",
+						"de": "Automatik (gering)"
 					}
         },
 				{
 					"id": "Auto Medium",
 					"label": {
 						"en": "Auto (Medium)",
-						"nl": "Auto (Gemiddeld)"
+						"nl": "Auto (Gemiddeld)",
+						"de": "Automatik (mittel)"
 					}
         },
 				{
 					"id": "Auto High",
 					"label": {
 						"en": "Auto (High)",
-						"nl": "Auto (Hoog)"
+						"nl": "Auto (Hoog)",
+						"de": "Automatik (stark)"
 					}
         },
 				{
 					"id": "Low",
 					"label": {
 						"en": "Low",
-						"nl": "Laag"
+						"nl": "Laag",
+						"de": "gering"
 					}
         },
 				{
 					"id": "Medium",
 					"label": {
 						"en": "Medium",
-						"nl": "Gemiddeld"
+						"nl": "Gemiddeld",
+						"de": "mittel"
 					}
         },
 				{
 					"id": "High",
 					"label": {
 						"en": "High",
-						"nl": "Hoog"
+						"nl": "Hoog",
+						"de": "stark"
 					}
         }
 			]

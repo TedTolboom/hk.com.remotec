@@ -1,5 +1,6 @@
 {
 	"id": "ZRC-90_button",
+	"platforms": [ "local"],
 	"title": {
 		"en": "A button has been pressed",
 		"nl": "Een knop is ingedrukt"
@@ -24,7 +25,7 @@
 				"nl": "knop"
 			},
 			"example": "0"
-          },
+    },
 		{
 			"name": "scene",
 			"type": "string",
@@ -33,6 +34,6 @@
 				"nl": "scene"
 			},
 			"example": "Button pressed (test)"
-          }
-        ]
+    }
+  ]
 }

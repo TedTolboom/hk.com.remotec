@@ -1,72 +1,92 @@
 {
 	"id": "action_ZXT_SetMode",
+	"platforms": [ "local"],
 	"title": {
-		"en": "Set Mode"
+		"en": "Set Mode",
+		"de": "Modus einstellen"
+	},
+	"titleFormatted": {
+		"en": "Set mode to [[mode]]",
+		"nl": "Stel de modus in op [[mode]]",
+		"de": "Modus einstellen auf [[mode]]"
 	},
 	"args": [
 		{
 			"name": "device",
 			"type": "device",
-			"filter": "driver_id=ZXT-120|ZXT-600"
+			"filter": "driver_id=ZXT-120|ZXT-600|ZXT-800"
 		},
 		{
 			"name": "mode",
 			"type": "dropdown",
+			"title": {
+				"en": "Mode",
+				"nl": "Modus",
+				"de": "Modus"
+			},
 			"values": [
 				{
 					"id": "Off",
 					"label": {
 						"en": "Off",
-						"nl": "Uit"
+						"nl": "Uit",
+						"de": "aus"
 					}
 				},
 				{
 					"id": "Heat",
 					"label": {
 						"en": "Heat",
-						"nl": "Verwarm"
+						"nl": "Verwarm",
+						"de": "Heizen"
 					}
 				},
 				{
 					"id": "Cool",
 					"label": {
 						"en": "Cool",
-						"nl": "Koel"
+						"nl": "Koel",
+						"de": "Kühlen"
 					}
 				},
 				{
 					"id": "Auto Changeover",
 					"label": {
 						"en": "Auto",
-						"nl": "Auto"
+						"nl": "Auto",
+						"de": "Automatik"
 					}
 				},
 				{
 					"id": "Resume",
 					"label": {
 						"en": "Resume",
-						"nl": "Hervatten"
+						"nl": "Hervatten",
+						"de": "fortsetzen"
 					}
 				},
 				{
 					"id": "Fan Only",
 					"label": {
 						"en": "Fan only",
-						"nl": "Ventilator"
+						"nl": "Ventilator",
+						"de": "Ventilation"
 					}
 				},
 				{
 					"id": "Dry Air",
 					"label": {
 						"en": "Dry air",
-						"nl": "Droge lucht"
+						"nl": "Droge lucht",
+						"de": "Luft trocknen"
 					}
 				},
 				{
 					"id": "AWAY",
 					"label": {
 						"en": "Away",
-						"nl": "Afwezig"
+						"nl": "Afwezig",
+						"de": "Abwesend"
 					}
 				}
 			]

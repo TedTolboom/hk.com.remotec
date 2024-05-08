@@ -1,7 +1,10 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "hk.com.remotec",
-  "sdk": 2,
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
   "name": {
     "en": "Remotec Technologies"
   },
@@ -14,10 +17,11 @@
     "security",
     "appliances"
   ],
-  "version": "2.3.1",
-  "compatibility": ">=4.0.0",
+  "version": "2.4.5",
+  "compatibility": ">=10.0.0",
   "athomForumDiscussionId": 3113,
   "homeyCommunityTopicId": 155,
+  "support": "https://homey.app/a/hk.com.remotec/",
   "author": {
     "name": "Ted Tolboom",
     "email": "ttolboom@gmail.com"
@@ -31,6 +35,10 @@
       {
         "name": "Ted Tolboom",
         "email": "dTNL.Homey@gmail.com"
+      },
+      {
+        "name": "Jan Kneuper",
+        "email": "homey@kneuper-it.de"
       }
     ]
   },
@@ -64,6 +72,9 @@
     "triggers": [
       {
         "id": "ZRC-90_button",
+        "platforms": [
+          "local"
+        ],
         "title": {
           "en": "A button has been pressed",
           "nl": "Een knop is ingedrukt"
@@ -102,9 +113,16 @@
       },
       {
         "id": "ZRC-90_scene",
+        "platforms": [
+          "local"
+        ],
         "title": {
           "en": "Scene is activated",
           "nl": "Scene is geactiveerd"
+        },
+        "titleFormatted": {
+          "en": "A scene ([[scene]]) has been activated with [[button]]",
+          "nl": "Een scene ([[scene]]) is geactiveerd met [[button]]"
         },
         "hint": {
           "en": "This card will only get triggered if the button and scene match the state of the dropdown fields.",
@@ -119,6 +137,10 @@
           {
             "name": "button",
             "type": "dropdown",
+            "title": {
+              "en": "button",
+              "nl": "knop"
+            },
             "values": [
               {
                 "id": "1",
@@ -181,6 +203,10 @@
           {
             "name": "scene",
             "type": "dropdown",
+            "title": {
+              "en": "scene",
+              "nl": "scene"
+            },
             "values": [
               {
                 "id": "Key Pressed 1 time",
@@ -218,59 +244,79 @@
     "actions": [
       {
         "id": "action_ZXT_SetFanSpeed",
+        "platforms": [
+          "local"
+        ],
         "title": {
-          "en": "Set Fan Speed mode"
+          "en": "Set Fan Speed mode",
+          "de": "Lüftergeschwindigkeit einstellen"
+        },
+        "titleFormatted": {
+          "en": "Set Fan Speed mode to [[fanspeed]]",
+          "nl": "Stel de ventilator snelheid in op [[fanspeed]]",
+          "de": "Stellen Sie den Modus Lüftergeschwindigkeit auf [[fanspeed]]"
         },
         "args": [
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=ZXT-120|ZXT-600"
+            "filter": "driver_id=ZXT-120|ZXT-600|ZXT-800"
           },
           {
             "name": "fanspeed",
             "type": "dropdown",
+            "title": {
+              "en": "Fanspeed",
+              "nl": "Ventilatorsnelheid",
+              "de": "Ventilatorgeschwindigkeit"
+            },
             "values": [
               {
                 "id": "Auto Low",
                 "label": {
                   "en": "Auto (Low)",
-                  "nl": "Auto (Laag)"
+                  "nl": "Auto (Laag)",
+                  "de": "Automatik (gering)"
                 }
               },
               {
                 "id": "Auto Medium",
                 "label": {
                   "en": "Auto (Medium)",
-                  "nl": "Auto (Gemiddeld)"
+                  "nl": "Auto (Gemiddeld)",
+                  "de": "Automatik (mittel)"
                 }
               },
               {
                 "id": "Auto High",
                 "label": {
                   "en": "Auto (High)",
-                  "nl": "Auto (Hoog)"
+                  "nl": "Auto (Hoog)",
+                  "de": "Automatik (stark)"
                 }
               },
               {
                 "id": "Low",
                 "label": {
                   "en": "Low",
-                  "nl": "Laag"
+                  "nl": "Laag",
+                  "de": "gering"
                 }
               },
               {
                 "id": "Medium",
                 "label": {
                   "en": "Medium",
-                  "nl": "Gemiddeld"
+                  "nl": "Gemiddeld",
+                  "de": "mittel"
                 }
               },
               {
                 "id": "High",
                 "label": {
                   "en": "High",
-                  "nl": "Hoog"
+                  "nl": "Hoog",
+                  "de": "stark"
                 }
               }
             ]
@@ -279,29 +325,44 @@
       },
       {
         "id": "action_ZXT_SetFanSwing",
+        "platforms": [
+          "local"
+        ],
         "title": {
-          "en": "Set Fan “SWING” mode"
+          "en": "Set Fan “SWING” mode",
+          "de": "Gebläsemodus “Schwingen” einstellen"
+        },
+        "titleFormatted": {
+          "en": "Set Fan swing mode to [[mode]]",
+          "nl": "Stel de ventilator kantel modus in op [[mode]]",
+          "de": "Stellen Sie den Ventilatorschwenkmodus auf [[mode]]"
         },
         "args": [
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=ZXT-120|ZXT-600"
+            "filter": "driver_id=ZXT-120|ZXT-600|ZXT-800"
           },
           {
             "name": "mode",
             "type": "dropdown",
+            "title": {
+              "en": "Mode",
+              "nl": "Modus"
+            },
             "values": [
               {
                 "id": "1",
                 "label": {
-                  "en": "Swing AUTO (default)"
+                  "en": "Swing AUTO (default)",
+                  "de": "Schwingen AUTO (Standard)"
                 }
               },
               {
                 "id": "0",
                 "label": {
-                  "en": "Swing OFF"
+                  "en": "Swing OFF",
+                  "de": "Schwingen AUS"
                 }
               }
             ]
@@ -310,73 +371,95 @@
       },
       {
         "id": "action_ZXT_SetMode",
+        "platforms": [
+          "local"
+        ],
         "title": {
-          "en": "Set Mode"
+          "en": "Set Mode",
+          "de": "Modus einstellen"
+        },
+        "titleFormatted": {
+          "en": "Set mode to [[mode]]",
+          "nl": "Stel de modus in op [[mode]]",
+          "de": "Modus einstellen auf [[mode]]"
         },
         "args": [
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=ZXT-120|ZXT-600"
+            "filter": "driver_id=ZXT-120|ZXT-600|ZXT-800"
           },
           {
             "name": "mode",
             "type": "dropdown",
+            "title": {
+              "en": "Mode",
+              "nl": "Modus",
+              "de": "Modus"
+            },
             "values": [
               {
                 "id": "Off",
                 "label": {
                   "en": "Off",
-                  "nl": "Uit"
+                  "nl": "Uit",
+                  "de": "aus"
                 }
               },
               {
                 "id": "Heat",
                 "label": {
                   "en": "Heat",
-                  "nl": "Verwarm"
+                  "nl": "Verwarm",
+                  "de": "Heizen"
                 }
               },
               {
                 "id": "Cool",
                 "label": {
                   "en": "Cool",
-                  "nl": "Koel"
+                  "nl": "Koel",
+                  "de": "Kühlen"
                 }
               },
               {
                 "id": "Auto Changeover",
                 "label": {
                   "en": "Auto",
-                  "nl": "Auto"
+                  "nl": "Auto",
+                  "de": "Automatik"
                 }
               },
               {
                 "id": "Resume",
                 "label": {
                   "en": "Resume",
-                  "nl": "Hervatten"
+                  "nl": "Hervatten",
+                  "de": "fortsetzen"
                 }
               },
               {
                 "id": "Fan Only",
                 "label": {
                   "en": "Fan only",
-                  "nl": "Ventilator"
+                  "nl": "Ventilator",
+                  "de": "Ventilation"
                 }
               },
               {
                 "id": "Dry Air",
                 "label": {
                   "en": "Dry air",
-                  "nl": "Droge lucht"
+                  "nl": "Droge lucht",
+                  "de": "Luft trocknen"
                 }
               },
               {
                 "id": "AWAY",
                 "label": {
                   "en": "Away",
-                  "nl": "Afwezig"
+                  "nl": "Afwezig",
+                  "de": "Abwesend"
                 }
               }
             ]
@@ -385,59 +468,83 @@
       },
       {
         "id": "action_ZXT_SetSetpoint",
+        "platforms": [
+          "local"
+        ],
         "title": {
           "en": "Set a setpoint of a thermostat mode",
-          "nl": "Stel de temperatuur in van een thermostaat modus"
+          "nl": "Stel de temperatuur in van een thermostaat modus",
+          "de": "Einstellen eines Sollwerts für einen Thermostatmodus"
+        },
+        "titleFormatted": {
+          "en": "Set the setpoint of thermostat mode [[setPointType]] to [[setPointValue]]°C",
+          "nl": "Stel de temperatuur van thermostaat modus [[setPointType]] in op [[setPointValue]]°C",
+          "de": "Setzen Sie den Sollwert des Thermostatmodus [[setPointType]] auf [[setPointValue]]°C"
         },
         "hint": {
           "en": "Change the setpoint of a specific thermostat mode. Note: does NOT activate this mode",
-          "nl": "Stel de temperatuur in van een thermostaat modus. Let op: activeert deze modus niet"
+          "nl": "Stel de temperatuur in van een thermostaat modus. Let op: activeert deze modus niet",
+          "de": "Ändern Sie den Sollwert eines bestimmten Thermostatmodus. Hinweis: Aktiviert diesen Modus NICHT"
         },
         "args": [
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=ZXT-120|ZXT-600"
+            "filter": "driver_id=ZXT-120|ZXT-600|ZXT-800"
           },
           {
             "name": "setPointType",
             "type": "dropdown",
+            "title": {
+              "en": "Thermostat mode",
+              "nl": "Thermostaat modus",
+              "de": "Thermostat-Modus"
+            },
             "values": [
               {
                 "id": "Heating 1",
                 "label": {
                   "en": "Heat",
-                  "nl": "Verwarm"
+                  "nl": "Verwarm",
+                  "de": "Heizen"
                 }
               },
               {
                 "id": "Cooling 1",
                 "label": {
                   "en": "Cool",
-                  "nl": "Koel"
+                  "nl": "Koel",
+                  "de": "Kühlen"
                 }
               },
               {
                 "id": "Auto changeover",
                 "label": {
                   "en": "Auto",
-                  "nl": "Auto"
+                  "nl": "Auto",
+                  "de": "Automatik"
                 }
               },
               {
                 "id": "Dry Air",
                 "label": {
                   "en": "Dry air",
-                  "nl": "Droge lucht"
+                  "nl": "Droge lucht",
+                  "de": "Luft trocknen"
                 }
               }
             ]
           },
           {
             "name": "setPointValue",
+            "title": {
+              "en": "Temperature",
+              "nl": "Temperatuur",
+              "de": "Temperature"
+            },
             "type": "range",
             "min": 16,
-            "max": 31,
+            "max": 30,
             "step": 0.5,
             "label": "°C",
             "labelDecimals": 1
@@ -449,6 +556,12 @@
   "drivers": [
     {
       "id": "ZRC-90",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "branch": "master",
       "name": {
         "en": "Remotec Scene Master",
@@ -481,6 +594,7 @@
           11
         ],
         "productId": 34064,
+        "includeSecure": false,
         "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1584/F-BW8510xx (ZRC-90xx) User Manual_V1.01_20151030.pdf",
         "pid": 1584,
         "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-15120001",
@@ -494,8 +608,8 @@
         "unlearnmode": {
           "image": "/drivers/ZRC-90/assets/learnmode.svg",
           "instruction": {
-            "en": "Press the “L” button, at the rear side of the Scene Master, to remove the device from the Z-Wave network.",
-            "nl": "Druk de “L” knop, aan de achterzijde van de Scene Master, in om het apparaat te verwijderen uit het Z-wave netwerk."
+            "en": "First reset the device. \nPress and holder the “R” button. After a few seconds the LED will light up. \nWait until the LED switches off and release “R” button. \nTriple press the “R” button within 2 seconds. \n The LED will light up again. Wait until the LED flashes twice. \nNow remove the device. \nRemove the device from the Z-wave network by pressing the “L” button.",
+            "nl": "Reset eerst het apparaat. \nHoud de “R”-knop ingedrukt. Na enkele seconden gaat de LED branden. \nWacht tot de LED uitgaat en laat vervolgens de “R”-knop los. \nDruk vervolgens binnen 2 seconden drie keer op de “R”-knop. \nDe LED gaat weer branden. Wacht totdat de LED twee keer knippert. \nVerwijder nu het apparaat door op “L”-knop te drukken."
           }
         },
         "associationGroups": [
@@ -513,6 +627,12 @@
     },
     {
       "id": "ZXT-120",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "branch": "master",
       "class": "thermostat",
       "name": {
@@ -1031,6 +1151,12 @@
     },
     {
       "id": "ZXT-600",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "branch": "master",
       "class": "thermostat",
       "name": {
@@ -1439,6 +1565,700 @@
               "zwave": {
                 "index": 25,
                 "size": 2
+              },
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "OFF"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "ON (RESUME)"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "17°C / 63°F COOL"
+                  }
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "en": "18°C / 64°F COOL"
+                  }
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "19°C / 66°F or 67°F COOL"
+                  }
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "en": "20°C / 68°F or 69°F COOL"
+                  }
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "en": "21°C / 70°F or 71°F COOL"
+                  }
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "en": "22°C / 72°F or 73°F COOL"
+                  }
+                },
+                {
+                  "id": "8",
+                  "label": {
+                    "en": "23°C / 74°F or 75°F COOL"
+                  }
+                },
+                {
+                  "id": "9",
+                  "label": {
+                    "en": "24°C / 76°F COOL"
+                  }
+                },
+                {
+                  "id": "10",
+                  "label": {
+                    "en": "25°C / 77°F or 78°F COOL"
+                  }
+                },
+                {
+                  "id": "11",
+                  "label": {
+                    "en": "26°C / 79°F or 80°F COOL"
+                  }
+                },
+                {
+                  "id": "12",
+                  "label": {
+                    "en": "27°C / 81°F or 82°F COOL"
+                  }
+                },
+                {
+                  "id": "13",
+                  "label": {
+                    "en": "28°C / 83°F or 84°F COOL"
+                  }
+                },
+                {
+                  "id": "14",
+                  "label": {
+                    "en": "29°C / 85°F COOL"
+                  }
+                },
+                {
+                  "id": "15",
+                  "label": {
+                    "en": "30°C / 86°F COOL"
+                  }
+                },
+                {
+                  "id": "16",
+                  "label": {
+                    "en": "17°C / 63°F HEAT"
+                  }
+                },
+                {
+                  "id": "17",
+                  "label": {
+                    "en": "18°C / 64°F HEAT"
+                  }
+                },
+                {
+                  "id": "18",
+                  "label": {
+                    "en": "19°C / 66°F or 67°F HEAT"
+                  }
+                },
+                {
+                  "id": "19",
+                  "label": {
+                    "en": "20°C / 68°F or 69°F HEAT"
+                  }
+                },
+                {
+                  "id": "20",
+                  "label": {
+                    "en": "21°C / 70°F or 71°F HEAT"
+                  }
+                },
+                {
+                  "id": "21",
+                  "label": {
+                    "en": "22°C HEAT / 72°F or 73°F HEAT"
+                  }
+                },
+                {
+                  "id": "22",
+                  "label": {
+                    "en": "23°C / 74°F or 75°F HEAT"
+                  }
+                },
+                {
+                  "id": "23",
+                  "label": {
+                    "en": "24°C / 76°F HEAT"
+                  }
+                },
+                {
+                  "id": "24",
+                  "label": {
+                    "en": "25°C / 77°F or 78°F HEAT"
+                  }
+                },
+                {
+                  "id": "25",
+                  "label": {
+                    "en": "26°C / 79°F or 80°F HEAT"
+                  }
+                },
+                {
+                  "id": "26",
+                  "label": {
+                    "en": "27°C / 81°F or 82°F HEAT"
+                  }
+                },
+                {
+                  "id": "27",
+                  "label": {
+                    "en": "28°C / 83°F or 84°F HEAT"
+                  }
+                },
+                {
+                  "id": "28",
+                  "label": {
+                    "en": "29°C / 85°F HEAT"
+                  }
+                },
+                {
+                  "id": "29",
+                  "label": {
+                    "en": "30°C / 86°F HEAT"
+                  }
+                },
+                {
+                  "id": "30",
+                  "label": {
+                    "en": "DRY MODE"
+                  }
+                },
+                {
+                  "id": "31",
+                  "label": {
+                    "en": "AUTO MODE"
+                  }
+                },
+                {
+                  "id": "32",
+                  "label": {
+                    "en": "FAN MODE"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "IR_code_learning_status",
+              "value": "not provided",
+              "type": "label",
+              "label": {
+                "en": "IR code learning status"
+              },
+              "hint": {
+                "en": "IR code learning status of manually learned codes."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling intervals"
+          },
+          "collapsed": true,
+          "children": [
+            {
+              "id": "poll_interval_THERMOSTAT_MODE",
+              "value": 120,
+              "label": {
+                "en": "Thermostat Mode"
+              },
+              "hint": {
+                "en": "Set polling interval Thermostat Mode (minutes), 0 = disabled, default = 120 minutes"
+              },
+              "attr": {
+                "min": 0,
+                "max": 1440
+              },
+              "type": "number"
+            },
+            {
+              "id": "poll_interval_THERMOSTAT_SETPOINT",
+              "value": 180,
+              "label": {
+                "en": "Thermostat Setpoint"
+              },
+              "hint": {
+                "en": "Set polling interval Thermostat Setpoint (minutes), 0 = disabled, default = 180 minutes"
+              },
+              "attr": {
+                "min": 0,
+                "max": 1440
+              },
+              "type": "number"
+            },
+            {
+              "id": "poll_interval_THERMOSTAT_FAN_MODE",
+              "value": 0,
+              "label": {
+                "en": "Thermostat Fan Mode"
+              },
+              "hint": {
+                "en": "Set polling interval Thermostat Fan Mode (minutes), 0 = disabled, default = 0"
+              },
+              "attr": {
+                "min": 0,
+                "max": 1440
+              },
+              "type": "number"
+            }
+          ]
+        },
+        {
+          "id": "Library_version",
+          "value": "not provided",
+          "label": {
+            "en": "Library and Firmware version"
+          },
+          "hint": {
+            "en": "Byte 1, Model suffix, Byte 2, Reserved, Byte 3 & 4 : Library Version (read only)"
+          },
+          "type": "label"
+        }
+      ]
+    },
+    {
+      "id": "ZXT-800",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
+      "branch": "master",
+      "class": "thermostat",
+      "name": {
+        "en": "ZXT-800 AC/AV MASTER"
+      },
+      "capabilities": [
+        "measure_temperature",
+        "target_temperature",
+        "AC_onoff",
+        "AC_mode",
+        "FAN_mode",
+        "measure_battery",
+        "alarm_battery"
+      ],
+      "capabilitiesOptions": {
+        "target_temperature": {
+          "min": 17,
+          "max": 30
+        },
+        "AC_onoff": {
+          "greyout": true,
+          "titleTrue": {
+            "en": "Active"
+          },
+          "titleFalse": {
+            "en": "Idle"
+          }
+        }
+      },
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA",
+          "AAA"
+        ]
+      },
+      "images": {
+        "large": "/drivers/ZXT-800/assets/images/large.jpg",
+        "small": "/drivers/ZXT-800/assets/images/small.jpg"
+      },
+      "zwave": {
+        "manufacturerId": [
+          21076
+        ],
+        "productTypeId": [
+          4
+        ],
+        "productId": [
+          33938
+        ],
+        "wakeUpInterval": 3600,
+        "learnmode": {
+          "instruction": {
+            "en": "Press Prog Button once, the light will blink blue."
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "Press Prog Button once, the light will blink blue."
+          }
+        },
+        "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=cert_portal/certs/693/BW8493usermanual.pdf",
+        "zwaveAllianceProductId": 4791,
+        "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/ProductImage?prod=4791&which=10",
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Association Group #1 (max. 1 node) is default Z-wave lifeline group to associate with Homey for AC Master Status change report"
+            }
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "AC_swing_mode",
+          "value": "1",
+          "type": "dropdown",
+          "label": {
+            "en": "Air conditioner “SWING” control"
+          },
+          "hint": {
+            "en": "Define if air conditioner fan “SWING” mode should be enabled or not"
+          },
+          "zwave": {
+            "index": 33,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Swing AUTO (default)"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Swing OFF"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Temperature"
+          },
+          "collapsed": false,
+          "children": [
+            {
+              "id": "Report_threshold",
+              "value": "0",
+              "label": {
+                "en": "Temperature reporting threshold"
+              },
+              "hint": {
+                "en": "0(0x00) = Disable (Default)\r\n(for saving battery life)\r\nAuto report if room temperature is different from last report.\r\n1(0x01) = 1°F (0.5°C)\r\n2(0x02) = 2°F (1°C) \r\n3(0x03) = 3°F (1.5°C)\r\n4(0x04) = 4°F (2°C)\r\n5(0x05) = 5°F (2.5°C)\r\n6(0x06) = 6°F (3°C)\r\n7(0x07) = 7°F (3.5°C)\r\n8(0x08) = 8°F (4°C)\r\n"
+              },
+              "zwave": {
+                "index": 30,
+                "size": 1
+              },
+              "type": "dropdown",
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Reporting disabled (Default)"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "Report by temp change of 0.5°C"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "Report by temp change of 1.0°C"
+                  }
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "en": "Report by temp change of 1.5°C"
+                  }
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "Report by temp change of 2.0°C"
+                  }
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "en": "Report by temp change of 2.5°C"
+                  }
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "en": "Report by temp change of 3.0°C"
+                  }
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "en": "Report by temp change of 3.5°C"
+                  }
+                },
+                {
+                  "id": "8",
+                  "label": {
+                    "en": "Report by temp change of 4.0°C"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Report_interval",
+              "value": "8",
+              "label": {
+                "en": "Condition report Temperature interval"
+              },
+              "hint": {
+                "en": "Auto report by the following time interval.\r\n1(0x01) = 1 Hr\r\n2(0x02) = 2 Hrs\r\n3(0x03) = 3 Hrs\r\n4(0x04) = 4 Hrs\r\n5(0x05) = 5 Hrs\r\n6(0x06) = 6 Hrs\r\n7(0x07) = 7 Hrs\r\n8(0x08) = 8 Hrs   (Default)\r\n"
+              },
+              "zwave": {
+                "index": 34,
+                "size": 1
+              },
+              "type": "dropdown",
+              "values": [
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "Report interval of 1 hr"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "Report interval of 2 hrs"
+                  }
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "en": "Report interval of 3 hrs"
+                  }
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "Report interval of 4 hrs"
+                  }
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "en": "Report interval of 5 hrs"
+                  }
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "en": "Report interval of 6 hrs"
+                  }
+                },
+                {
+                  "id": "7",
+                  "label": {
+                    "en": "Report interval of 7 hrs"
+                  }
+                },
+                {
+                  "id": "8",
+                  "label": {
+                    "en": "Report interval of 8 hrs (default)"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Temperature_calibration",
+              "value": "0",
+              "label": {
+                "en": "Calibrate Temperature reading"
+              },
+              "hint": {
+                "en": "Temperature offset value.\r\n0(0x00) = 0°C (Default)\r\n1(0x01) = 1°C\r\n2(0x02) = 2°C\r\n3(0x03) = 3°C\r\n4(0x04) = 4°C\r\n5(0x05) = 5°C\r\n255(0xFF) = -1°C\r\n254(0xFE) = -2°C\r\n253(0xFD) = -3°C\r\n252(0xFC) = -4°C\r\n251(0xFB) = -5°C\r\n"
+              },
+              "zwave": {
+                "index": 37,
+                "size": 1,
+                "signed": false
+              },
+              "type": "dropdown",
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Measured temperature (default)"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "Measured temperature + 1.0°C"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "Measured temperature + 2.0°C"
+                  }
+                },
+                {
+                  "id": "3",
+                  "label": {
+                    "en": "Measured temperature + 3.0°C"
+                  }
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "Measured temperature + 4.0°C"
+                  }
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "en": "Measured temperature + 5.0°C"
+                  }
+                },
+                {
+                  "id": "255",
+                  "label": {
+                    "en": "Measured temperature - 1.0°C"
+                  }
+                },
+                {
+                  "id": "254",
+                  "label": {
+                    "en": "Measured temperature - 2.0°C"
+                  }
+                },
+                {
+                  "id": "253",
+                  "label": {
+                    "en": "Measured temperature - 3.0°C"
+                  }
+                },
+                {
+                  "id": "252",
+                  "label": {
+                    "en": "Measured temperature - 4.0°C"
+                  }
+                },
+                {
+                  "id": "251",
+                  "label": {
+                    "en": "Measured temperature - 5.0°C"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "IR function"
+          },
+          "collapsed": true,
+          "children": [
+            {
+              "id": "IR_code_number",
+              "value": 857,
+              "label": {
+                "en": "Set IR Code Number from built-in code library"
+              },
+              "hint": {
+                "en": "Refer to Code Finder Webpage"
+              },
+              "zwave": {
+                "index": 27,
+                "size": 2,
+                "signed": false
+              },
+              "attr": {
+                "min": 0,
+                "max": 65535
+              },
+              "type": "number"
+            },
+            {
+              "id": "IR_emitter_control",
+              "value": "255",
+              "type": "dropdown",
+              "label": {
+                "en": "Use built-in IR emitter"
+              },
+              "hint": {
+                "en": "Note: If more than one air conditioners with the same code set are used in the same room, user can disable the built-in IR emitter and use the external IR emitter cable to control each air conditioner individually"
+              },
+              "zwave": {
+                "index": 32,
+                "size": 1,
+                "signed": false
+              },
+              "values": [
+                {
+                  "id": "255",
+                  "label": {
+                    "en": "Built-in IR emitter enabled (default)."
+                  }
+                },
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Built-in IR emitter disabled"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "IR_code_learning",
+              "value": "0",
+              "type": "dropdown",
+              "label": {
+                "en": "IR code learning - command ID"
+              },
+              "hint": {
+                "en": "This parameter (25) is during the process to learning non-standard IR codes. Follow the steps as mentioned in the manual. If you need to learn another command, select the command from the dropdown list, press save and learn the command (press the button on the remote)"
+              },
+              "zwave": {
+                "index": 25,
+                "size": 1
               },
               "values": [
                 {

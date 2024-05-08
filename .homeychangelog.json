@@ -4,5 +4,23 @@
   },
   "2.3.1": {
     "en": "Update homey-meshdriver and add battery icons"
+  },
+  "2.4.0": {
+    "en": "Update to SDK3 to enable support for Homey Pro (Early 2023)"
+  },
+  "2.4.1": {
+    "en": "Update to SDK3 to enable support for Homey Pro (Early 2023)"
+  },
+  "2.4.2": {
+    "en": "Update to SDK3 for Homey Pro (Early 2023)"
+  },
+  "2.4.3": {
+    "en": "Updated inclusion instructions for the Scene Master (ZRC-90)"
+  },
+  "2.4.4": {
+    "en": "Added ZXT-800 and German"
+  },
+  "2.4.5": {
+    "en": "Added Device ZXT-800 and German translations"
   }
 }

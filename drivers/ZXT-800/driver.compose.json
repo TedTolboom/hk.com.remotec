@@ -1,0 +1,76 @@
+{
+	"id": "ZXT-800",
+	"platforms": ["local"],
+	"connectivity": [ "zwave" ],
+	"branch": "master",
+	"class": "thermostat",
+	"name": {
+		"en": "ZXT-800 AC/AV MASTER"
+	},
+	"capabilities": [
+		"measure_temperature",
+		"target_temperature",
+		"AC_onoff",
+		"AC_mode",
+		"FAN_mode",
+		"measure_battery",
+		"alarm_battery"
+	],
+	"capabilitiesOptions": {
+		"target_temperature": {
+			"min": 17,
+			"max": 30
+		},
+		"AC_onoff": {
+			"greyout": true,
+			"titleTrue": {
+				"en": "Active"
+			},
+			"titleFalse": {
+				"en": "Idle"
+			}
+		}
+	},
+	"energy": {
+    "batteries": [ "AAA", "AAA", "AAA"]
+  },
+	"images": {
+		"large": "{{driverAssetsPath}}/images/large.jpg",
+		"small": "{{driverAssetsPath}}/images/small.jpg"
+	},
+	"zwave": {
+		"manufacturerId": [
+			21076
+		],
+		"productTypeId": [
+			4
+		],
+		"productId": [
+			33938
+		],
+		"wakeUpInterval": 3600,
+		"learnmode": {
+			"instruction": {
+				"en": "Press Prog Button once, the light will blink blue."
+			}
+		},
+		"unlearnmode": {
+			"instruction": {
+				"en": "Press Prog Button once, the light will blink blue."
+			}
+		},
+		"productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=cert_portal/certs/693/BW8493usermanual.pdf",
+		"zwaveAllianceProductId": 4791,
+		"imageRemotePath": "https://products.z-wavealliance.org/ProductImages/ProductImage?prod=4791&which=10",
+		"associationGroups": [
+			1
+		],
+		"associationGroupsOptions": {
+			"1": {
+				"hint": {
+					"en": "Association Group #1 (max. 1 node) is default Z-wave lifeline group to associate with Homey for AC Master Status change report"
+				}
+			}
+		}
+	}
+}

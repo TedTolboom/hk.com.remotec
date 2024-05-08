@@ -1,28 +1,41 @@
 {
 	"id": "action_ZXT_SetFanSwing",
+	"platforms": [ "local"],
 	"title": {
-		"en": "Set Fan “SWING” mode"
+		"en": "Set Fan “SWING” mode",
+		"de": "Gebläsemodus “Schwingen” einstellen"
+	},
+	"titleFormatted": {
+		"en": "Set Fan swing mode to [[mode]]",
+		"nl": "Stel de ventilator kantel modus in op [[mode]]",
+		"de": "Stellen Sie den Ventilatorschwenkmodus auf [[mode]]"
 	},
 	"args": [
 		{
 			"name": "device",
 			"type": "device",
-			"filter": "driver_id=ZXT-120|ZXT-600"
+			"filter": "driver_id=ZXT-120|ZXT-600|ZXT-800"
 		},
 		{
 			"name": "mode",
 			"type": "dropdown",
+			"title": {
+				"en": "Mode",
+				"nl": "Modus"
+			},
 			"values": [
 				{
 					"id": "1",
 					"label": {
-						"en": "Swing AUTO (default)"
+						"en": "Swing AUTO (default)",
+						"de": "Schwingen AUTO (Standard)"
 					}
 					},
 				{
 					"id": "0",
 					"label": {
-						"en": "Swing OFF"
+						"en": "Swing OFF",
+						"de": "Schwingen AUS"
 					}
 					}
 				]
