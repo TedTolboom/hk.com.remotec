@@ -37,35 +37,36 @@ class RemotecZwave extends Homey.App {
   async _actionZXTSetThermostatSetpointRunListener(args, state) {
     this.log('FlowCardAction triggered for ', args.device.getName(), 'to change setpoint value', args.setPointValue, 'for', args.setPointType);
 
-    if (!args.hasOwnProperty('setPointType')) return Promise.reject(new Error('setPointType_property_missing'));
-    if (!args.hasOwnProperty('setPointValue')) return Promise.reject(new Error('setPointValue_property_missing'));
-    if (typeof args.setPointValue !== 'number') return Promise.reject(new Error('setPointValue_is_not_a_number'));
+    const { device, setPointType, setPointValue } = args;
+    if (typeof setPointType !== 'string') throw new Error('setPointType_property_missing');
+    if (typeof setPointValue !== 'number') throw new Error('setPointValue_is_not_a_number');
 
-    // Create value buffer
-    const bufferValue = new Buffer(2);
-    bufferValue.writeUInt16BE((Math.round(args.setPointValue * 2) / 2 * 10).toFixed(0));
-    const { setPointType } = args;
-    const { setPointValue } = args;
+    const commandClass = device.node && device.node.CommandClass.COMMAND_CLASS_THERMOSTAT_SETPOINT;
+    if (!commandClass) throw new Error('Thermostat setpoint is not supported by this device');
 
-    // Store the reported setpointValue if supported
+    // Round to 0.5 °C and send with precision 1 (value in 0.1 °C)
+    const roundedValue = Math.round(setPointValue * 2) / 2;
+    const bufferValue = Buffer.alloc(2);
+    bufferValue.writeUInt16BE(Math.round(roundedValue * 10));
 
-    args.device.thermostatSetpointValue[setPointType] = setPointValue;
-    args.device.log('thermostatSetpointValue updated', args.device.thermostatSetpointValue);
+    await commandClass.THERMOSTAT_SETPOINT_SET({
+      Level: {
+        'Setpoint Type': setPointType,
+      },
+      Level2: {
+        Size: 2,
+        Scale: 0,
+        Precision: 1,
+      },
+      Value: bufferValue,
+    });
 
-    if (args.device.node.CommandClass.COMMAND_CLASS_THERMOSTAT_SETPOINT) {
-      return await args.device.node.CommandClass.COMMAND_CLASS_THERMOSTAT_SETPOINT.THERMOSTAT_SETPOINT_SET({
-        Level: {
-          'Setpoint Type': setPointType,
-        },
-        Level2: {
-          Size: 2,
-          Scale: 0,
-          Precision: 1,
-        },
-        Value: bufferValue,
-      });
+    // Store the setpoint of this mode, and show it when the mode is the active one
+    await device.setStoreValue(`thermostatSetpointValue.${setPointType}`, roundedValue);
+    if (device.getStoreValue('thermostatSetpointType') === setPointType) {
+      await device.setCapabilityValue('target_temperature', roundedValue);
     }
-    return Promise.reject(new Error('unknown_error'));
+    return true;
   }
 
   async _actionZXTSetFanSwingRunListener(args, state) {
