@@ -37,7 +37,7 @@ Legend: ✅ done, 🚧 in progress, ❗ GitHub issue, 💡 feature request, 🔍
 `homey-zwavedriver` 2.2.0 → 2.2.6: `lib/` is identical in all versions; only `engines.node >=22`, an `.nvmrc`,
 `require()` paths without `.js` and dev dependencies changed. Low risk, no behaviour change.
 
-## Release 1 — v2.5.0: fixes, correct instructions, Node.js 22
+## Release 1 — v2.5.0: fixes, correct instructions, Node.js 22 (✅ ready, 2026-11-18)
 
 No device needed: every item follows from the code or the manuals.
 
@@ -45,39 +45,39 @@ No device needed: every item follows from the code or the manuals.
 
 | Item | Status | Notes |
 | --- | --- | --- |
-| Flow card "Set the setpoint of thermostat mode" always fails | open | `app.js:52` writes to `args.device.thermostatSetpointValue[...]`, which is never defined (also not on SDK2): TypeError before the command is sent. Use the device store (`thermostatSetpointValue.<type>`) and update `target_temperature` when the type is the active one |
-| Setpoint sent with type "not supported" | open | in Off / Resume / Fan only / Away (ZXT-600 also Auto) `target_temperature` sends `THERMOSTAT_SETPOINT_SET` with an invalid type. Use the type of the last heat / cool mode or reject with a clear message |
-| `mapMode2Setpoint.setPointType` typo | open | the "not supported" guard never works; values are stored under `thermostatSetpointValue.not supported` (3 × per driver) |
-| Missing `.catch()` | open | ZXT-120 mode report parser (`setStoreValue`, `setCapabilityValue`), ZRC-90 both `trigger()` calls; an unhandled rejection can stop the app on Node 22 |
-| `new Buffer()` | open | `Buffer.alloc(2)` (app.js, 2 × per AC driver) |
-| Dead code and legacy keys | open | ZXT-600 stores `thermostatSetpointValue.fixed = 25` at every start (never read); `"branch": "master"` in the driver composes; `pid` in ZRC-90 (`zwaveAllianceProductId`) |
+| Flow card "Set the setpoint of thermostat mode" always fails | ✅ | `app.js:52` writes to `args.device.thermostatSetpointValue[...]`, which is never defined (also not on SDK2): TypeError before the command is sent. Use the device store (`thermostatSetpointValue.<type>`) and update `target_temperature` when the type is the active one |
+| Setpoint sent with type "not supported" | ✅ | in Off / Resume / Fan only / Away (ZXT-600 also Auto) `target_temperature` sends `THERMOSTAT_SETPOINT_SET` with an invalid type. Use the type of the last heat / cool mode or reject with a clear message. **Done:** rejected with a clear message |
+| `mapMode2Setpoint.setPointType` typo | ✅ | the "not supported" guard never works; values are stored under `thermostatSetpointValue.not supported` (3 × per driver) |
+| Missing `.catch()` | ✅ | ZXT-120 mode report parser (`setStoreValue`, `setCapabilityValue`), ZRC-90 both `trigger()` calls; an unhandled rejection can stop the app on Node 22 |
+| `new Buffer()` | ✅ | `Buffer.alloc(2)` (app.js, 2 × per AC driver) |
+| Dead code and legacy keys | ✅ | ZXT-600 stores `thermostatSetpointValue.fixed = 25` at every start (never read); `"branch": "master"` in the driver composes; `pid` in ZRC-90 (`zwaveAllianceProductId`) |
 
 ### 1b. Pairing and settings texts per the manuals
 
 | Item | Status | Notes |
 | --- | --- | --- |
-| ZXT-120 inclusion ❗ #22 | open | app: "triple click"; manual: click PROG **once** (hold 5 s + 3 clicks switches the listening mode). Add `unlearnmode` (PROG once) |
-| ZXT-120 listening mode ❗ #42 | open | default FLiRS, also on USB; for Always Listening hold PROG 5 s, release, 3 clicks (LED 4 ×) **before** inclusion; only changeable after exclusion. In the pairing text; drop `wakeUpInterval` (a FLiRS node has no Wake Up) |
-| ZXT-600 power source | open | the first power source decides the role (already in the text); add the factory reset (hold PROG 3 s until green flashes twice) |
-| ZRC-90 pairing text | open | **keep the factory reset** before inclusion: per the manual Learn mode ("L" once) is enough, but newer units from Robbshop only pair after a reset (forum #86, #99; v2.4.3). Clarify: repeat the reset until the LED flashes twice (#99); a unit that ends as "Unknown Z-Wave device" with ids 0000 was not reset (#89, #92). Mention "W" (wake up, 30 s) |
-| ZXT-120 external emitter power | open | parameter 28 has only 0 / 255: dropdown instead of a number (same setting id) |
-| ZXT-600 report interval | open | parameter 34 also has 0 = off (manual); add the value. Forum #112: a user expected reports "every minute" and saw no update for 3 days: the hint must say that 34 is in hours and that 30 (on change) is off by default |
-| Temperature on the AC units | open | the ZXT-120 has no report interval (it reports with a command, forum #8) and its temperature polling is off by default; the ZXT-600 has no polling setting. Forum #45, #112: temperature "stuck". Hint per role; default polling for always-listening (USB) nodes only |
-| Hint "Set the setpoint of thermostat mode" | open | forum #45: users mix it up with "Set the temperature". Explain: sets the stored setpoint of a mode without activating it |
-| Community first post | open | `docs/community_first_post.md` as the DoorBird app: ZXT-120 is BW8377 (post says BW8366), Homey version, ZXT-800, supported functions, IR learning steps, ZRC-90 reset procedure, known limitations (state unknown when the original remote is used, forum #107) |
-| Factory reset in the hints | open | ZRC-90 (hold R 10 s, triple click), ZXT-120 (hold PROG 10 s), ZXT-600 (hold PROG 3 s) |
+| ZXT-120 inclusion ❗ #22 | ✅ | app: "triple click"; manual: click PROG **once** (hold 5 s + 3 clicks switches the listening mode). Add `unlearnmode` (PROG once) |
+| ZXT-120 listening mode ❗ #42 | ✅ | default FLiRS, also on USB; for Always Listening hold PROG 5 s, release, 3 clicks (LED 4 ×) **before** inclusion; only changeable after exclusion. In the pairing text; drop `wakeUpInterval` (a FLiRS node has no Wake Up). **Done:** `wakeUpInterval` kept: Homey only applies it to a node with Wake Up, so it is harmless |
+| ZXT-600 power source | ✅ | the first power source decides the role (already in the text); add the factory reset (hold PROG 3 s until green flashes twice) |
+| ZRC-90 pairing text | ✅ | **keep the factory reset** before inclusion: per the manual Learn mode ("L" once) is enough, but newer units from Robbshop only pair after a reset (forum #86, #99; v2.4.3). Clarify: repeat the reset until the LED flashes twice (#99); a unit that ends as "Unknown Z-Wave device" with ids 0000 was not reset (#89, #92). Mention "W" (wake up, 30 s). **Done:** "W" (wake up) moves to release 2, together with the battery read on wake-up |
+| ZXT-120 external emitter power | ✅ | parameter 28 has only 0 / 255: dropdown instead of a number (same setting id). **Done:** a hint instead of a dropdown: changing the setting type can show an empty value on existing devices |
+| ZXT-600 report interval | ✅ | parameter 34 also has 0 = off (manual); add the value. Forum #112: a user expected reports "every minute" and saw no update for 3 days: the hint must say that 34 is in hours and that 30 (on change) is off by default |
+| Temperature on the AC units | ✅ | the ZXT-120 has no report interval (it reports with a command, forum #8) and its temperature polling is off by default; the ZXT-600 has no polling setting. Forum #45, #112: temperature "stuck". Hint per role; default polling for always-listening (USB) nodes only. **Done:** hints done; default polling for always-listening nodes moves to release 2 (needs `node.battery`) |
+| Hint "Set the setpoint of thermostat mode" | ✅ | forum #45: users mix it up with "Set the temperature". Explain: sets the stored setpoint of a mode without activating it |
+| Community first post | ✅ | `docs/community_first_post.md` as the DoorBird app: ZXT-120 is BW8377 (post says BW8366), Homey version, ZXT-800, supported functions, IR learning steps, ZRC-90 reset procedure, known limitations (state unknown when the original remote is used, forum #107) |
+| Factory reset in the hints | ✅ | ZRC-90 (hold R 10 s, triple click), ZXT-120 (hold PROG 10 s), ZXT-600 (hold PROG 3 s). **Done:** in the removal instructions of each driver |
 
 ### 1c. Dependencies and tooling
 
 | Item | Status | Notes |
 | --- | --- | --- |
-| `homey-zwavedriver` 2.2.0 → 2.2.6 | open | no lib changes |
-| Node.js 22 | open | `compatibility >=12.9.0`, `engines.node >=22` (as DoorBird 3.4.0); excludes Homey below 12.9.0 |
-| `package.json` | open | version in sync, `lint` and `start` scripts as the Aqara app, `homey-apps-sdk-v3-types` for types |
-| Lint clean | open | `.eslintrc.json` rules as the Aqara app, then fix the rest |
-| Dependabot PRs | open | close #40 – #52 after the lockfile refresh; `npm audit` |
-| Translations | open | all Homey languages (da, de, es, fr, it, ko, nl, no, pl, ru, sv); German from PR #55 as a start |
-| Changelog | open | concise, model numbers BW8510 / BW8377 / BW8490 |
+| `homey-zwavedriver` 2.2.0 → 2.2.6 | ✅ | no lib changes |
+| Node.js 22 | ✅ | `compatibility >=12.9.0`, `engines.node >=22` (as DoorBird 3.4.0); excludes Homey below 12.9.0 |
+| `package.json` | ✅ | version in sync, `lint` and `start` scripts as the Aqara app, `homey-apps-sdk-v3-types` for types. **Done:** `homey-apps-sdk-v3-types` not added (no type checking yet); license MIT as the LICENSE file |
+| Lint clean | ✅ | `.eslintrc.json` rules as the Aqara app, then fix the rest |
+| Dependabot PRs | 🚧 | `npm audit fix` done (app: 0 vulnerabilities; 7 left in eslint 6). Close #40 – #52 when 2.5.0 is pushed |
+| Translations | ✅ | all Homey languages (da, de, es, fr, it, ko, nl, no, pl, ru, sv); German from PR #55 as a start. **Done:** 12 languages besides English, incl. Arabic as DoorBird; README.txt per language (App Store guideline) |
+| Changelog | ✅ | concise, model numbers BW8510 / BW8377 / BW8490. **Done:** `.homeychangelog.json` and `docs/changelog_v2.5.0_community.md` |
 
 ## Release 2 — v2.6.0: robustness
 
@@ -97,6 +97,8 @@ Needs at least one AC device and the ZRC-90 on Homey for the 🔍 items.
 | ZRC-90 run listener | open | `registerRunListener` of `ZRC-90_scene` runs in every `onNodeInit`; move to the driver `onInit` (same card id) |
 | Battery level ❗ #39 🔍 | open | the devices only report the battery at a low battery warning. FLiRS AC nodes: `BATTERY_GET` once a day (they answer within 1 – 2 s); ZRC-90: on wake-up ("W"). Always-listening (USB) nodes: remove `measure_battery` or leave it empty |
 | Gets on FLiRS vs USB nodes | open | `getOnStart` is skipped for battery nodes ("do not use getOnStart for battery devices"); choose per `node.battery` and check that polling works on FLiRS |
+| Default temperature polling on USB (from release 1) | open | ZXT-120 on Always Listening: poll the temperature by default (e.g. 15 min); not on FLiRS (battery) |
+| ZRC-90 wake-up (from release 1) | open | mention "W" (wake up, 30 s) in the hint; read the battery on wake-up |
 | Flow actions on a sleeping node | open | if a command is queued, resolve and log instead of timing out the flow |
 | Learning status and version labels | open | read parameter 26 after a learn command (0 idle, 1 OK, 2 learning, 3 full, 4 failed) into `IR_code_learning_status`; fill `Library_version` from the Version CC, or remove both labels |
 | ZXT-600 parameter 25 🔍 ❗ #53 | open | app size 2 / 0 – 32, manual size 2 / 1 – 6 + 201 – 228 (inconsistent table), Z-Wave JS size 1 / 0 – 32. Read it back on a device before changing |
