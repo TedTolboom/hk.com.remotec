@@ -2,7 +2,6 @@
 
 // Add previous mode for RESUME Mode
 
-const Homey = require('homey');
 const { ZwaveDevice } = require('homey-zwavedriver');
 
 // Documentation:
@@ -44,9 +43,9 @@ const MasterData = {
 
 // Create Mode2Setpoint array based on MasterData array
 const mapMode2Setpoint = {};
-for (const mode in MasterData) {
-  mapMode2Setpoint[MasterData[mode].Mode] = MasterData[mode].Setpoint;
-}
+Object.values(MasterData).forEach(({ Mode, Setpoint }) => {
+  mapMode2Setpoint[Mode] = Setpoint;
+});
 
 class ZXT120 extends ZwaveDevice {
 
@@ -105,7 +104,7 @@ class ZXT120 extends ZwaveDevice {
       report: 'THERMOSTAT_MODE_REPORT',
       reportParserV2: report => {
         if (!report) return null;
-        if (report.hasOwnProperty('Level') && report.Level.hasOwnProperty('Mode')) {
+        if (Object.prototype.hasOwnProperty.call(report, 'Level') && Object.prototype.hasOwnProperty.call(report.Level, 'Mode')) {
           this.log('Mode Report received:', report.Level.Mode);
 
           // Update thermostat setpoint based on matching thermostat mode
@@ -172,11 +171,11 @@ class ZXT120 extends ZwaveDevice {
       },
       report: 'THERMOSTAT_SETPOINT_REPORT',
       reportParser: report => {
-        if (report && report.hasOwnProperty('Level2')
-					&& report.Level2.hasOwnProperty('Scale')
-					&& report.Level2.hasOwnProperty('Precision')
-					&& report.Level2.Scale === 0
-					&& typeof report.Level2.Size !== 'undefined') {
+        if (report && Object.prototype.hasOwnProperty.call(report, 'Level2')
+          && Object.prototype.hasOwnProperty.call(report.Level2, 'Scale')
+          && Object.prototype.hasOwnProperty.call(report.Level2, 'Precision')
+          && report.Level2.Scale === 0
+          && typeof report.Level2.Size !== 'undefined') {
           let readValue;
           try {
             readValue = report.Value.readUIntBE(0, report.Level2.Size);
@@ -185,7 +184,7 @@ class ZXT120 extends ZwaveDevice {
           }
 
           if (typeof readValue !== 'undefined') {
-            const setPointValue = readValue / Math.pow(10, report.Level2.Precision);
+            const setPointValue = readValue / 10 ** report.Level2.Precision;
             const setPointType = report.Level['Setpoint Type'];
 
             this.log('Setpoint Report received: Setpoint type', setPointType, ' Setpoint value', setPointValue);
@@ -227,7 +226,7 @@ class ZXT120 extends ZwaveDevice {
       report: 'THERMOSTAT_FAN_MODE_REPORT',
       reportParserV2: report => {
         if (!report) return null;
-        if (report.hasOwnProperty('Level') && report.Level.hasOwnProperty('Fan Mode')) {
+        if (Object.prototype.hasOwnProperty.call(report, 'Level') && Object.prototype.hasOwnProperty.call(report.Level, 'Fan Mode')) {
           this.log('FAN Mode Report received:', report.Level['Fan Mode']);
           return report.Level['Fan Mode'];
         }
