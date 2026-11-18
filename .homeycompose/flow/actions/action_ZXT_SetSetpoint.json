@@ -10,8 +10,8 @@
 		"nl": "Stel de temperatuur van thermostaat modus [[setPointType]] in op [[setPointValue]]°C"
 	},
 	"hint": {
-		"en": "Change the setpoint of a specific thermostat mode. Note: does NOT activate this mode",
-		"nl": "Stel de temperatuur in van een thermostaat modus. Let op: activeert deze modus niet"
+		"en": "Stores the setpoint of a thermostat mode in the AC unit, without activating that mode. It is used the next time the mode is selected. To change the temperature of the current mode, use \"Set the temperature\".",
+		"nl": "Slaat de temperatuur van een thermostaatmodus op in de airco, zonder die modus te activeren. Die wordt gebruikt zodra de modus wordt gekozen. Gebruik \"Stel de temperatuur in\" om de temperatuur van de huidige modus te wijzigen."
 	},
 	"args": [
 		{
