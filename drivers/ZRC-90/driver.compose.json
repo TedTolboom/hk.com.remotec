@@ -37,8 +37,8 @@
 		"unlearnmode": {
 			"image": "{{driverAssetsPath}}/learnmode.svg",
 			"instruction": {
-				"en": "First reset the device. \nPress and holder the “R” button. After a few seconds the LED will light up. \nWait until the LED switches off and release “R” button. \nTriple press the “R” button within 2 seconds. \n The LED will light up again. Wait until the LED flashes twice. \nNow remove the device. \nRemove the device from the Z-wave network by pressing the “L” button.",
-				"nl": "Reset eerst het apparaat. \nHoud de “R”-knop ingedrukt. Na enkele seconden gaat de LED branden. \nWacht tot de LED uitgaat en laat vervolgens de “R”-knop los. \nDruk vervolgens binnen 2 seconden drie keer op de “R”-knop. \nDe LED gaat weer branden. Wacht totdat de LED twee keer knippert. \nVerwijder nu het apparaat door op “L”-knop te drukken."
+				"en": "First reset the Scene Master, also when it is new:\n1. Hold the “R” button for at least 10 seconds: the LED turns on after 5 seconds and off after 10 seconds.\n2. Release “R” and press it 3 times within 2 seconds.\n3. Wait until the LED flashes twice. If it doesn’t, repeat steps 1 – 3.\nThen press the “L” button once to remove the device from the Z-Wave network.",
+				"nl": "Reset eerst de Scene Master, ook als hij nieuw is:\n1. Houd de “R”-knop minstens 10 seconden ingedrukt: de LED gaat na 5 seconden aan en na 10 seconden uit.\n2. Laat “R” los en druk binnen 2 seconden 3 keer op “R”.\n3. Wacht tot de LED twee keer knippert. Gebeurt dat niet, herhaal dan stap 1 – 3.\nDruk daarna één keer op de “L”-knop om het apparaat uit het Z-Wave-netwerk te verwijderen."
 			}
 		},
 		"associationGroups": [

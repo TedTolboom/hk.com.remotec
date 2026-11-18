@@ -50,7 +50,14 @@
 		"wakeUpInterval": 3600,
 		"learnmode": {
 			"instruction": {
-				"en": "Triple click the button on the ZXT-120"
+				"en": "Choose the listening mode first; it can only be changed while the ZXT-120 is not included.\n- FLiRS (default, for batteries): no action.\n- Always Listening (for USB power): hold PROG for 5 seconds until the LED turns on, release it and press PROG 3 times within 2 seconds. The LED flashes 4 times (2 times = FLiRS).\nThen press PROG once. The LED flashes once.",
+				"nl": "Kies eerst de luistermodus; die kan alleen worden gewijzigd zolang de ZXT-120 niet is toegevoegd.\n- FLiRS (standaard, voor batterijen): niets doen.\n- Always Listening (voor USB-voeding): houd PROG 5 seconden ingedrukt tot de LED aangaat, laat los en druk binnen 2 seconden 3 keer op PROG. De LED knippert 4 keer (2 keer = FLiRS).\nDruk daarna één keer op PROG. De LED knippert één keer."
+			}
+		},
+		"unlearnmode": {
+			"instruction": {
+				"en": "Press PROG once. The LED flashes once.\nFactory reset (only when removing fails): hold PROG for 10 seconds; the LED turns on after 5 seconds and flashes twice when the reset is done. The listening mode stays the same.",
+				"nl": "Druk één keer op PROG. De LED knippert één keer.\nFabrieksreset (alleen als verwijderen mislukt): houd PROG 10 seconden ingedrukt; de LED gaat na 5 seconden aan en knippert twee keer als de reset klaar is. De luistermodus blijft gelijk."
 			}
 		},
 		"zwaveAllianceProductId": 715,

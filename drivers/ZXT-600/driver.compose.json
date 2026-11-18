@@ -50,12 +50,14 @@
 		"wakeUpInterval": 3600,
 		"learnmode": {
 			"instruction": {
-				"en": "note:\t ZXT-600 will detect upon inclusion the applied power source (battery or USB-powered) to decide what Z-Wave device role it will use (battery= sleeping device, USB power = always awake device)\n1.\tRefer to your primary controller to enter into the Inclusion Mode or Exclusion Mode\r\n2.\tWhen it is prompted to enter it, please triple click the “PROG” button within 1 second.\r\n3.\tGreen Indicator flashes TWICE then stay off"
+				"en": "The first power source decides the role, and it can only be changed after removing the ZXT-600: batteries = FLiRS (sleeping), USB = Always Listening.\nPress PROG 3 times within 1 second. The green indicator flashes twice (red twice = failed).",
+				"nl": "De eerste voedingsbron bepaalt de rol, en die kan alleen worden gewijzigd na het verwijderen van de ZXT-600: batterijen = FLiRS (slapend), USB = Always Listening.\nDruk binnen 1 seconde 3 keer op PROG. De groene indicator knippert twee keer (rood twee keer = mislukt)."
 			}
 		},
 		"unlearnmode": {
 			"instruction": {
-				"en": "1.\tRefer to your primary controller to enter into the Inclusion Mode or Exclusion Mode\r\n2.\tWhen it is prompted to enter it, please triple click the “PROG” button within 1 second.\r\n3.\tGreen Indicator flashes TWICE then stay off"
+				"en": "Press PROG 3 times within 1 second. The green indicator flashes twice (red twice = failed).\nFactory reset (only when removing fails): hold PROG for 3 seconds until the green indicator turns on, and keep holding until it flashes twice.",
+				"nl": "Druk binnen 1 seconde 3 keer op PROG. De groene indicator knippert twee keer (rood twee keer = mislukt).\nFabrieksreset (alleen als verwijderen mislukt): houd PROG 3 seconden ingedrukt tot de groene indicator aangaat, en blijf vasthouden tot hij twee keer knippert."
 			}
 		},
 		"productDocumentation": "http://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2553/BW8490_Installation_Guide_201700807.pdf",
