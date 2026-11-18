@@ -99,7 +99,7 @@ class ZXT600 extends ZwaveDevice {
             'No of Manufacturer Data fields': 0,
             Mode: value,
           },
-          'Manufacturer Data': new Buffer([0]),
+          'Manufacturer Data': Buffer.from([0]),
         };
       },
       report: 'THERMOSTAT_MODE_REPORT',
@@ -145,15 +145,18 @@ class ZXT600 extends ZwaveDevice {
       },
       set: 'THERMOSTAT_SETPOINT_SET',
       setParser(value) {
-        // Create value buffer
-        const bufferValue = new Buffer(2);
-        bufferValue.writeUInt16BE((Math.round(value * 2) / 2 * 10).toFixed(0));
         const setPointType = this.getStoreValue('thermostatSetpointType') || 'Heating 1';
-
-        // Store the reported setpointValue if supported
-        if (mapMode2Setpoint.setPointType !== 'not supported') {
-          this.setStoreValue(`thermostatSetpointValue.${setPointType}`, value).catch(this.error);
+        // Off, Resume, Fan only and Away have no setpoint: don't send an invalid setpoint type
+        if (setPointType === 'not supported') {
+          throw new Error('The temperature cannot be set in this thermostat mode');
         }
+
+        // Round to 0.5 °C and send with precision 1 (value in 0.1 °C)
+        const roundedValue = Math.round(value * 2) / 2;
+        const bufferValue = Buffer.alloc(2);
+        bufferValue.writeUInt16BE(Math.round(roundedValue * 10));
+
+        this.setStoreValue(`thermostatSetpointValue.${setPointType}`, roundedValue).catch(this.error);
 
         return {
           Level: {
@@ -187,10 +190,8 @@ class ZXT600 extends ZwaveDevice {
 
             this.log('Setpoint Report received: Setpoint type', setPointType, ' Setpoint value', setPointValue);
 
-            // Store the reported setpointValue if supported
-            if (mapMode2Setpoint.setPointType !== 'not supported') {
-              this.setStoreValue(`thermostatSetpointValue.${setPointType}`, setPointValue).catch(this.error);
-            }
+            // Store the reported setpoint of this setpoint type
+            this.setStoreValue(`thermostatSetpointValue.${setPointType}`, setPointValue).catch(this.error);
             // If setPointType === this.thermostatSetpointType, return the setPointValue to update the UI, else return nul
             if (setPointType === this.getStoreValue('thermostatSetpointType')) {
               this.log('Thermostat setpoint updated on UI to', setPointValue);
