@@ -824,7 +824,7 @@
                 "en": "Set IR transmission power level"
               },
               "hint": {
-                "en": "Range 0 (normal power mode) to 255 (high power mode (default))"
+                "en": "External IR emitter: 0 = normal power, 255 = high power (default). Other values are not supported."
               },
               "zwave": {
                 "index": 28,
@@ -1094,7 +1094,7 @@
                 "en": "Temperature"
               },
               "hint": {
-                "en": "Set polling interval Temperature measurements (minutes), 0 = disabled, default = 0 minutes (disabled)"
+                "en": "Polling interval of the temperature, in minutes; 0 = off (default). The ZXT-120 has no report interval: it only reports the temperature with a command. Polling uses battery in FLiRS mode."
               },
               "attr": {
                 "min": 0,
@@ -1246,10 +1246,10 @@
               "id": "Report_threshold",
               "value": "0",
               "label": {
-                "en": "Temperature reporting threshold"
+                "en": "Report on temperature change"
               },
               "hint": {
-                "en": "0(0x00) = Disable (Default)\r\n(for saving battery life)\r\nAuto report if room temperature is different from last report.\r\n1(0x01) = 1°F (0.5°C)\r\n2(0x02) = 2°F (1°C) \r\n3(0x03) = 3°F (1.5°C)\r\n4(0x04) = 4°F (2°C)\r\n5(0x05) = 5°F (2.5°C)\r\n6(0x06) = 6°F (3°C)\r\n7(0x07) = 7°F (3.5°C)\r\n8(0x08) = 8°F (4°C)\r\n"
+                "en": "Parameter 30. The ZXT-600 reports the room temperature when it differs this much from the last report. Off by default to save battery: without it (or the report interval below) the temperature only updates with a command."
               },
               "zwave": {
                 "index": 30,
@@ -1317,10 +1317,10 @@
               "id": "Report_interval",
               "value": "8",
               "label": {
-                "en": "Condition report Temperature interval"
+                "en": "Report interval"
               },
               "hint": {
-                "en": "Auto report by the following time interval.\r\n1(0x01) = 1 Hr\r\n2(0x02) = 2 Hrs\r\n3(0x03) = 3 Hrs\r\n4(0x04) = 4 Hrs\r\n5(0x05) = 5 Hrs\r\n6(0x06) = 6 Hrs\r\n7(0x07) = 7 Hrs\r\n8(0x08) = 8 Hrs   (Default)\r\n"
+                "en": "Parameter 34. The ZXT-600 reports the room temperature at this interval, in hours. For faster updates use \"Report on temperature change\"."
               },
               "zwave": {
                 "index": 34,
@@ -1328,6 +1328,12 @@
               },
               "type": "dropdown",
               "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
                 {
                   "id": "1",
                   "label": {

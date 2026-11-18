@@ -155,7 +155,7 @@
 					"en": "Set IR transmission power level"
 				},
 				"hint": {
-					"en": "Range 0 (normal power mode) to 255 (high power mode (default))"
+					"en": "External IR emitter: 0 = normal power, 255 = high power (default). Other values are not supported."
 				},
 				"zwave": {
 					"index": 28,
@@ -423,7 +423,7 @@
 					"en": "Temperature"
 				},
 				"hint": {
-					"en": "Set polling interval Temperature measurements (minutes), 0 = disabled, default = 0 minutes (disabled)"
+					"en": "Polling interval of the temperature, in minutes; 0 = off (default). The ZXT-120 has no report interval: it only reports the temperature with a command. Polling uses battery in FLiRS mode."
 				},
 				"attr": {
 					"min": 0,
