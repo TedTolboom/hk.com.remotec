@@ -1,6 +1,6 @@
 {
 	"name": "hk.com.remotec",
-	"version": "2.4.3",
+	"version": "2.5.0",
 	"description": "This app adds support for Z-Wave devices made by Remotec Technology Ltd.",
 	"main": "app.js",
 	"devDependencies": {
@@ -20,7 +20,7 @@
 		"node": ">=22"
 	},
 	"author": "Ted Tolboom",
-	"license": "ISC",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/TedTolboom/hk.com.remotec/issues"
 	},
