@@ -2,7 +2,6 @@
 
 // Add previous mode for RESUME Mode
 
-const Homey = require('homey');
 const { ZwaveDevice } = require('homey-zwavedriver');
 
 // Documentation: http://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2553/BW8490_Installation_Guide_201700807.pdf
@@ -56,8 +55,6 @@ class ZXT600 extends ZwaveDevice {
 
     // print the node's info to the console
     // this.printNode();
-
-    this.setStoreValue('thermostatSetpointValue.fixed', 25).catch(this.error);
 
     this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL', {
       getOpts: {
