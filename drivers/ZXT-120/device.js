@@ -110,7 +110,7 @@ class ZXT120 extends ZwaveDevice {
 
           // Update thermostat setpoint based on matching thermostat mode
           const setPointType = mapMode2Setpoint[report.Level.Mode];
-          this.setStoreValue('thermostatSetpointType', setPointType);
+          this.setStoreValue('thermostatSetpointType', setPointType).catch(this.error);
           // Update setPoint Value or trigger get command to retrieve setpoint
           if (setPointType !== 'not supported') {
             this.setCapabilityValue('target_temperature', this.getStoreValue(`thermostatSetpointValue.${setPointType}`) || null).catch(this.error);
@@ -120,7 +120,7 @@ class ZXT120 extends ZwaveDevice {
           this.log('Updated Thermostat setpoint Type', setPointType);
 
           // Update AC_onoff capability
-          this.setCapabilityValue('AC_onoff', report.Level.Mode !== 'Off');
+          this.setCapabilityValue('AC_onoff', report.Level.Mode !== 'Off').catch(this.error);
 
           // Update thermostat mode
           return report.Level.Mode;

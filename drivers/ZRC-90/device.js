@@ -42,9 +42,9 @@ class SceneMaster_ZRC90 extends ZwaveDevice {
         };
         this.log('Triggering sequence:', rawReport['Sequence Number'], 'remoteValue', remoteValue);
         // Trigger the trigger card with 2 dropdown options
-        triggerZRC90_scene.trigger(this, null, remoteValue);
+        triggerZRC90_scene.trigger(this, null, remoteValue).catch(this.error);
         // Trigger the trigger card with tokens
-        triggerZRC90_button.trigger(this, remoteValue, null);
+        triggerZRC90_button.trigger(this, remoteValue, null).catch(this.error);
       }
     });
   }
