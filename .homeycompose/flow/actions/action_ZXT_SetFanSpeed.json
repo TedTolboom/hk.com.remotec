@@ -1,12 +1,37 @@
 {
 	"id": "action_ZXT_SetFanSpeed",
-	"platforms": [ "local"],
+	"platforms": [
+		"local"
+	],
 	"title": {
-		"en": "Set the fan mode"
+		"en": "Set the fan mode",
+		"nl": "Stel de ventilatormodus in",
+		"de": "Lüftermodus einstellen",
+		"fr": "Régler le mode de ventilation",
+		"it": "Imposta la modalità ventola",
+		"sv": "Ställ in fläktläget",
+		"no": "Still inn viftemodus",
+		"es": "Ajustar el modo del ventilador",
+		"da": "Indstil ventilatortilstand",
+		"ru": "Установить режим вентилятора",
+		"pl": "Ustaw tryb wentylatora",
+		"ko": "팬 모드 설정",
+		"ar": "ضبط وضع المروحة"
 	},
 	"titleFormatted": {
 		"en": "Set the fan mode to [[fanspeed]]",
-		"nl": "Stel de ventilatormodus in op [[fanspeed]]"
+		"nl": "Stel de ventilatormodus in op [[fanspeed]]",
+		"de": "Lüftermodus auf [[fanspeed]] einstellen",
+		"fr": "Régler le mode de ventilation sur [[fanspeed]]",
+		"it": "Imposta la modalità ventola su [[fanspeed]]",
+		"sv": "Ställ in fläktläget på [[fanspeed]]",
+		"no": "Still inn viftemodus til [[fanspeed]]",
+		"es": "Ajustar el modo del ventilador a [[fanspeed]]",
+		"da": "Indstil ventilatortilstand til [[fanspeed]]",
+		"ru": "Установить режим вентилятора [[fanspeed]]",
+		"pl": "Ustaw tryb wentylatora na [[fanspeed]]",
+		"ko": "팬 모드를 [[fanspeed]](으)로 설정",
+		"ar": "ضبط وضع المروحة على [[fanspeed]]"
 	},
 	"args": [
 		{
@@ -19,53 +44,129 @@
 			"type": "dropdown",
 			"title": {
 				"en": "Fan mode",
-				"nl": "Ventilatormodus"
+				"nl": "Ventilatormodus",
+				"de": "Lüftermodus",
+				"fr": "Mode de ventilation",
+				"it": "Modalità ventola",
+				"sv": "Fläktläge",
+				"no": "Viftemodus",
+				"es": "Modo del ventilador",
+				"da": "Ventilatortilstand",
+				"ru": "Режим вентилятора",
+				"pl": "Tryb wentylatora",
+				"ko": "팬 모드",
+				"ar": "وضع المروحة"
 			},
 			"values": [
 				{
 					"id": "Auto Low",
 					"label": {
 						"en": "Auto (Low)",
-						"nl": "Auto (Laag)"
+						"nl": "Auto (laag)",
+						"de": "Auto (niedrig)",
+						"fr": "Auto (faible)",
+						"it": "Auto (bassa)",
+						"sv": "Auto (låg)",
+						"no": "Auto (lav)",
+						"es": "Auto (baja)",
+						"da": "Auto (lav)",
+						"ru": "Авто (низкая)",
+						"pl": "Auto (niski)",
+						"ko": "자동 (약)",
+						"ar": "تلقائي (منخفض)"
 					}
-        },
+				},
 				{
 					"id": "Auto Medium",
 					"label": {
 						"en": "Auto (Medium)",
-						"nl": "Auto (Gemiddeld)"
+						"nl": "Auto (gemiddeld)",
+						"de": "Auto (mittel)",
+						"fr": "Auto (moyenne)",
+						"it": "Auto (media)",
+						"sv": "Auto (medel)",
+						"no": "Auto (middels)",
+						"es": "Auto (media)",
+						"da": "Auto (middel)",
+						"ru": "Авто (средняя)",
+						"pl": "Auto (średni)",
+						"ko": "자동 (중)",
+						"ar": "تلقائي (متوسط)"
 					}
-        },
+				},
 				{
 					"id": "Auto High",
 					"label": {
 						"en": "Auto (High)",
-						"nl": "Auto (Hoog)"
+						"nl": "Auto (hoog)",
+						"de": "Auto (hoch)",
+						"fr": "Auto (élevée)",
+						"it": "Auto (alta)",
+						"sv": "Auto (hög)",
+						"no": "Auto (høy)",
+						"es": "Auto (alta)",
+						"da": "Auto (høj)",
+						"ru": "Авто (высокая)",
+						"pl": "Auto (wysoki)",
+						"ko": "자동 (강)",
+						"ar": "تلقائي (مرتفع)"
 					}
-        },
+				},
 				{
 					"id": "Low",
 					"label": {
 						"en": "Low",
-						"nl": "Laag"
+						"nl": "Laag",
+						"de": "Niedrig",
+						"fr": "Faible",
+						"it": "Bassa",
+						"sv": "Låg",
+						"no": "Lav",
+						"es": "Baja",
+						"da": "Lav",
+						"ru": "Низкая",
+						"pl": "Niski",
+						"ko": "약",
+						"ar": "منخفض"
 					}
-        },
+				},
 				{
 					"id": "Medium",
 					"label": {
 						"en": "Medium",
-						"nl": "Gemiddeld"
+						"nl": "Gemiddeld",
+						"de": "Mittel",
+						"fr": "Moyenne",
+						"it": "Media",
+						"sv": "Medel",
+						"no": "Middels",
+						"es": "Media",
+						"da": "Middel",
+						"ru": "Средняя",
+						"pl": "Średni",
+						"ko": "중",
+						"ar": "متوسط"
 					}
-        },
+				},
 				{
 					"id": "High",
 					"label": {
 						"en": "High",
-						"nl": "Hoog"
+						"nl": "Hoog",
+						"de": "Hoch",
+						"fr": "Élevée",
+						"it": "Alta",
+						"sv": "Hög",
+						"no": "Høy",
+						"es": "Alta",
+						"da": "Høj",
+						"ru": "Высокая",
+						"pl": "Wysoki",
+						"ko": "강",
+						"ar": "مرتفع"
 					}
-        }
+				}
 			]
-
 		}
 	]
 }

@@ -1,12 +1,37 @@
 {
 	"id": "action_ZXT_SetMode",
-	"platforms": [ "local"],
+	"platforms": [
+		"local"
+	],
 	"title": {
-		"en": "Set the thermostat mode"
+		"en": "Set the thermostat mode",
+		"nl": "Stel de thermostaatmodus in",
+		"de": "Thermostat-Modus einstellen",
+		"fr": "Régler le mode du thermostat",
+		"it": "Imposta la modalità del termostato",
+		"sv": "Ställ in termostatläget",
+		"no": "Still inn termostatmodus",
+		"es": "Ajustar el modo del termostato",
+		"da": "Indstil termostattilstand",
+		"ru": "Установить режим термостата",
+		"pl": "Ustaw tryb termostatu",
+		"ko": "온도조절기 모드 설정",
+		"ar": "ضبط وضع الثرموستات"
 	},
 	"titleFormatted": {
 		"en": "Set the thermostat mode to [[mode]]",
-		"nl": "Stel de thermostaatmodus in op [[mode]]"
+		"nl": "Stel de thermostaatmodus in op [[mode]]",
+		"de": "Thermostat-Modus auf [[mode]] einstellen",
+		"fr": "Régler le mode du thermostat sur [[mode]]",
+		"it": "Imposta la modalità del termostato su [[mode]]",
+		"sv": "Ställ in termostatläget på [[mode]]",
+		"no": "Still inn termostatmodus til [[mode]]",
+		"es": "Ajustar el modo del termostato a [[mode]]",
+		"da": "Indstil termostattilstand til [[mode]]",
+		"ru": "Установить режим термостата [[mode]]",
+		"pl": "Ustaw tryb termostatu na [[mode]]",
+		"ko": "온도조절기 모드를 [[mode]](으)로 설정",
+		"ar": "ضبط وضع الثرموستات على [[mode]]"
 	},
 	"args": [
 		{
@@ -19,67 +44,165 @@
 			"type": "dropdown",
 			"title": {
 				"en": "Mode",
-				"nl": "Modus"
+				"nl": "Modus",
+				"de": "Modus",
+				"fr": "Mode",
+				"it": "Modalità",
+				"sv": "Läge",
+				"no": "Modus",
+				"es": "Modo",
+				"da": "Tilstand",
+				"ru": "Режим",
+				"pl": "Tryb",
+				"ko": "모드",
+				"ar": "الوضع"
 			},
 			"values": [
 				{
 					"id": "Off",
 					"label": {
 						"en": "Off",
-						"nl": "Uit"
+						"nl": "Uit",
+						"de": "Aus",
+						"fr": "Arrêt",
+						"it": "Spento",
+						"sv": "Av",
+						"no": "Av",
+						"es": "Apagado",
+						"da": "Fra",
+						"ru": "Выкл.",
+						"pl": "Wyłączony",
+						"ko": "끄기",
+						"ar": "إيقاف"
 					}
 				},
 				{
 					"id": "Heat",
 					"label": {
 						"en": "Heat",
-						"nl": "Verwarm"
+						"nl": "Verwarmen",
+						"de": "Heizen",
+						"fr": "Chauffage",
+						"it": "Riscaldamento",
+						"sv": "Värme",
+						"no": "Varme",
+						"es": "Calor",
+						"da": "Varme",
+						"ru": "Обогрев",
+						"pl": "Grzanie",
+						"ko": "난방",
+						"ar": "تدفئة"
 					}
 				},
 				{
 					"id": "Cool",
 					"label": {
 						"en": "Cool",
-						"nl": "Koel"
+						"nl": "Koelen",
+						"de": "Kühlen",
+						"fr": "Refroidissement",
+						"it": "Raffreddamento",
+						"sv": "Kyla",
+						"no": "Kjøling",
+						"es": "Frío",
+						"da": "Køl",
+						"ru": "Охлаждение",
+						"pl": "Chłodzenie",
+						"ko": "냉방",
+						"ar": "تبريد"
 					}
 				},
 				{
 					"id": "Auto Changeover",
 					"label": {
 						"en": "Auto",
-						"nl": "Auto"
+						"nl": "Auto",
+						"de": "Auto",
+						"fr": "Auto",
+						"it": "Auto",
+						"sv": "Auto",
+						"no": "Auto",
+						"es": "Auto",
+						"da": "Auto",
+						"ru": "Авто",
+						"pl": "Auto",
+						"ko": "자동",
+						"ar": "تلقائي"
 					}
 				},
 				{
 					"id": "Resume",
 					"label": {
 						"en": "Resume",
-						"nl": "Hervatten"
+						"nl": "Hervatten",
+						"de": "Fortsetzen",
+						"fr": "Reprendre",
+						"it": "Riprendi",
+						"sv": "Återuppta",
+						"no": "Gjenoppta",
+						"es": "Reanudar",
+						"da": "Genoptag",
+						"ru": "Возобновить",
+						"pl": "Wznów",
+						"ko": "재개",
+						"ar": "استئناف"
 					}
 				},
 				{
 					"id": "Fan Only",
 					"label": {
 						"en": "Fan only",
-						"nl": "Ventilator"
+						"nl": "Alleen ventilator",
+						"de": "Nur Lüfter",
+						"fr": "Ventilation seule",
+						"it": "Solo ventilazione",
+						"sv": "Endast fläkt",
+						"no": "Kun vifte",
+						"es": "Solo ventilador",
+						"da": "Kun ventilator",
+						"ru": "Только вентилятор",
+						"pl": "Tylko wentylator",
+						"ko": "송풍",
+						"ar": "مروحة فقط"
 					}
 				},
 				{
 					"id": "Dry Air",
 					"label": {
 						"en": "Dry air",
-						"nl": "Droge lucht"
+						"nl": "Drogen",
+						"de": "Entfeuchten",
+						"fr": "Déshumidification",
+						"it": "Deumidificazione",
+						"sv": "Avfuktning",
+						"no": "Avfukting",
+						"es": "Deshumidificar",
+						"da": "Affugtning",
+						"ru": "Осушение",
+						"pl": "Osuszanie",
+						"ko": "제습",
+						"ar": "تجفيف"
 					}
 				},
 				{
 					"id": "AWAY",
 					"label": {
 						"en": "Away",
-						"nl": "Afwezig"
+						"nl": "Afwezig",
+						"de": "Abwesend",
+						"fr": "Absent",
+						"it": "Assente",
+						"sv": "Borta",
+						"no": "Borte",
+						"es": "Ausente",
+						"da": "Ude",
+						"ru": "Нет дома",
+						"pl": "Nieobecny",
+						"ko": "외출",
+						"ar": "خارج المنزل"
 					}
 				}
 			]
-
 		}
 	]
 }

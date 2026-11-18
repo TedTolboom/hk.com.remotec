@@ -1,10 +1,25 @@
 {
 	"id": "ZRC-90",
-	"platforms": ["local"],
-	"connectivity": [ "zwave" ],
+	"platforms": [
+		"local"
+	],
+	"connectivity": [
+		"zwave"
+	],
 	"name": {
 		"en": "Remotec Scene Master",
-		"nl": "Remotec Scene Master"
+		"nl": "Remotec Scene Master",
+		"de": "Remotec Scene Master",
+		"fr": "Remotec Scene Master",
+		"it": "Remotec Scene Master",
+		"sv": "Remotec Scene Master",
+		"no": "Remotec Scene Master",
+		"es": "Remotec Scene Master",
+		"da": "Remotec Scene Master",
+		"ru": "Remotec Scene Master",
+		"pl": "Remotec Scene Master",
+		"ko": "Remotec Scene Master",
+		"ar": "Remotec Scene Master"
 	},
 	"icon": "{{driverAssetsPath}}/icon.svg",
 	"images": {
@@ -17,11 +32,21 @@
 		"alarm_battery"
 	],
 	"energy": {
-    "batteries": [ "AAA", "AAA"]
-  },
+		"batteries": [
+			"AAA",
+			"AAA"
+		]
+	},
 	"zwave": {
 		"manufacturerId": 21076,
-		"productTypeId": [0, 1, 2, 7, 9, 11],
+		"productTypeId": [
+			0,
+			1,
+			2,
+			7,
+			9,
+			11
+		],
 		"productId": 34064,
 		"includeSecure": false,
 		"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1584/F-BW8510xx (ZRC-90xx) User Manual_V1.01_20151030.pdf",
@@ -31,24 +56,57 @@
 			"image": "{{driverAssetsPath}}/learnmode.svg",
 			"instruction": {
 				"en": "Press the “L” button at the rear side of the Scene Master to add the device into the Z-Wave network.",
-				"nl": "Druk de “L” knop aan de achterzijde van de Scene Master in om het apparaat toe te voegen aan het Z-wave netwerk."
+				"nl": "Druk op de “L”-knop aan de achterkant van de Scene Master om het apparaat aan het Z-Wave-netwerk toe te voegen.",
+				"de": "Drücke die “L”-Taste auf der Rückseite des Scene Master, um das Gerät dem Z-Wave-Netzwerk hinzuzufügen.",
+				"fr": "Appuyez sur le bouton “L” à l'arrière du Scene Master pour ajouter l'appareil au réseau Z-Wave.",
+				"it": "Premi il pulsante “L” sul retro dello Scene Master per aggiungere il dispositivo alla rete Z-Wave.",
+				"sv": "Tryck på “L”-knappen på baksidan av Scene Master för att lägga till enheten i Z-Wave-nätverket.",
+				"no": "Trykk på “L”-knappen på baksiden av Scene Master for å legge enheten til Z-Wave-nettverket.",
+				"es": "Pulsa el botón “L” de la parte trasera del Scene Master para añadir el dispositivo a la red Z-Wave.",
+				"da": "Tryk på “L”-knappen på bagsiden af Scene Master for at tilføje enheden til Z-Wave-netværket.",
+				"ru": "Нажмите кнопку “L” на задней стороне Scene Master, чтобы добавить устройство в сеть Z-Wave.",
+				"pl": "Naciśnij przycisk “L” z tyłu Scene Master, aby dodać urządzenie do sieci Z-Wave.",
+				"ko": "Scene Master 뒷면의 “L” 버튼을 눌러 기기를 Z-Wave 네트워크에 추가하세요.",
+				"ar": "اضغط على الزر “L” في الجهة الخلفية من Scene Master لإضافة الجهاز إلى شبكة Z-Wave."
 			}
 		},
 		"unlearnmode": {
 			"image": "{{driverAssetsPath}}/learnmode.svg",
 			"instruction": {
 				"en": "First reset the Scene Master, also when it is new:\n1. Hold the “R” button for at least 10 seconds: the LED turns on after 5 seconds and off after 10 seconds.\n2. Release “R” and press it 3 times within 2 seconds.\n3. Wait until the LED flashes twice. If it doesn’t, repeat steps 1 – 3.\nThen press the “L” button once to remove the device from the Z-Wave network.",
-				"nl": "Reset eerst de Scene Master, ook als hij nieuw is:\n1. Houd de “R”-knop minstens 10 seconden ingedrukt: de LED gaat na 5 seconden aan en na 10 seconden uit.\n2. Laat “R” los en druk binnen 2 seconden 3 keer op “R”.\n3. Wacht tot de LED twee keer knippert. Gebeurt dat niet, herhaal dan stap 1 – 3.\nDruk daarna één keer op de “L”-knop om het apparaat uit het Z-Wave-netwerk te verwijderen."
+				"nl": "Reset eerst de Scene Master, ook als hij nieuw is:\n1. Houd de “R”-knop minstens 10 seconden ingedrukt: de LED gaat na 5 seconden aan en na 10 seconden uit.\n2. Laat “R” los en druk binnen 2 seconden 3 keer op “R”.\n3. Wacht tot de LED twee keer knippert. Gebeurt dat niet, herhaal dan stap 1 – 3.\nDruk daarna één keer op de “L”-knop om het apparaat uit het Z-Wave-netwerk te verwijderen.",
+				"de": "Setze den Scene Master zuerst zurück, auch wenn er neu ist:\n1. Halte die “R”-Taste mindestens 10 Sekunden gedrückt: Die LED geht nach 5 Sekunden an und nach 10 Sekunden aus.\n2. Lass “R” los und drücke sie innerhalb von 2 Sekunden 3-mal.\n3. Warte, bis die LED zweimal blinkt. Wenn nicht, wiederhole die Schritte 1 – 3.\nDrücke dann einmal die “L”-Taste, um das Gerät aus dem Z-Wave-Netzwerk zu entfernen.",
+				"fr": "Réinitialisez d'abord le Scene Master, même s'il est neuf :\n1. Maintenez le bouton “R” enfoncé au moins 10 secondes : la LED s'allume après 5 secondes et s'éteint après 10 secondes.\n2. Relâchez “R” et appuyez dessus 3 fois en 2 secondes.\n3. Attendez que la LED clignote deux fois. Sinon, répétez les étapes 1 – 3.\nAppuyez ensuite une fois sur le bouton “L” pour retirer l'appareil du réseau Z-Wave.",
+				"it": "Ripristina prima lo Scene Master, anche se è nuovo:\n1. Tieni premuto il pulsante “R” per almeno 10 secondi: il LED si accende dopo 5 secondi e si spegne dopo 10.\n2. Rilascia “R” e premilo 3 volte entro 2 secondi.\n3. Attendi che il LED lampeggi due volte. Altrimenti ripeti i passaggi 1 – 3.\nPoi premi una volta il pulsante “L” per rimuovere il dispositivo dalla rete Z-Wave.",
+				"sv": "Återställ först Scene Master, även när den är ny:\n1. Håll “R”-knappen intryckt i minst 10 sekunder: lysdioden tänds efter 5 sekunder och släcks efter 10 sekunder.\n2. Släpp “R” och tryck på den 3 gånger inom 2 sekunder.\n3. Vänta tills lysdioden blinkar två gånger. Om inte, upprepa steg 1 – 3.\nTryck sedan en gång på “L”-knappen för att ta bort enheten från Z-Wave-nätverket.",
+				"no": "Tilbakestill først Scene Master, også når den er ny:\n1. Hold “R”-knappen inne i minst 10 sekunder: LED-en tennes etter 5 sekunder og slukkes etter 10 sekunder.\n2. Slipp “R” og trykk på den 3 ganger innen 2 sekunder.\n3. Vent til LED-en blinker to ganger. Hvis ikke, gjenta trinn 1 – 3.\nTrykk deretter én gang på “L”-knappen for å fjerne enheten fra Z-Wave-nettverket.",
+				"es": "Restablece primero el Scene Master, también si es nuevo:\n1. Mantén pulsado el botón “R” al menos 10 segundos: el LED se enciende a los 5 segundos y se apaga a los 10.\n2. Suelta “R” y púlsalo 3 veces en 2 segundos.\n3. Espera a que el LED parpadee dos veces. Si no lo hace, repite los pasos 1 – 3.\nDespués pulsa una vez el botón “L” para eliminar el dispositivo de la red Z-Wave.",
+				"da": "Nulstil først Scene Master, også når den er ny:\n1. Hold “R”-knappen inde i mindst 10 sekunder: LED'en tænder efter 5 sekunder og slukker efter 10 sekunder.\n2. Slip “R”, og tryk på den 3 gange inden for 2 sekunder.\n3. Vent, til LED'en blinker to gange. Hvis ikke, så gentag trin 1 – 3.\nTryk derefter én gang på “L”-knappen for at fjerne enheden fra Z-Wave-netværket.",
+				"ru": "Сначала сбросьте Scene Master, даже если он новый:\n1. Удерживайте кнопку “R” не менее 10 секунд: светодиод загорается через 5 секунд и гаснет через 10.\n2. Отпустите “R” и нажмите её 3 раза в течение 2 секунд.\n3. Дождитесь, пока светодиод мигнёт дважды. Если нет, повторите шаги 1 – 3.\nЗатем один раз нажмите кнопку “L”, чтобы удалить устройство из сети Z-Wave.",
+				"pl": "Najpierw zresetuj Scene Master, także jeśli jest nowy:\n1. Przytrzymaj przycisk “R” co najmniej 10 sekund: dioda LED zapala się po 5 sekundach i gaśnie po 10.\n2. Puść “R” i naciśnij go 3 razy w ciągu 2 sekund.\n3. Poczekaj, aż dioda LED mignie dwa razy. Jeśli nie, powtórz kroki 1 – 3.\nNastępnie naciśnij raz przycisk “L”, aby usunąć urządzenie z sieci Z-Wave.",
+				"ko": "새 제품이라도 먼저 Scene Master를 초기화하세요:\n1. “R” 버튼을 10초 이상 누르고 있으세요. LED가 5초 후 켜지고 10초 후 꺼집니다.\n2. “R”에서 손을 뗀 후 2초 안에 3번 누르세요.\n3. LED가 두 번 깜박일 때까지 기다리세요. 깜박이지 않으면 1 – 3단계를 반복하세요.\n그런 다음 “L” 버튼을 한 번 눌러 기기를 Z-Wave 네트워크에서 제거하세요.",
+				"ar": "أعد ضبط Scene Master أولاً، حتى لو كان جديدًا:\n1. اضغط مطولاً على الزر “R” لمدة 10 ثوانٍ على الأقل: يضيء LED بعد 5 ثوانٍ وينطفئ بعد 10 ثوانٍ.\n2. حرر “R” واضغط عليه 3 مرات خلال ثانيتين.\n3. انتظر حتى يومض LED مرتين. إذا لم يحدث ذلك، كرر الخطوات 1 – 3.\nثم اضغط على الزر “L” مرة واحدة لإزالة الجهاز من شبكة Z-Wave."
 			}
 		},
 		"associationGroups": [
-					1
-				],
+			1
+		],
 		"associationGroupsOptions": {
 			"1": {
 				"hint": {
 					"en": "Lifeline: the Scene Master sends its scene reports to this group. Only one node: Homey (1).",
-					"nl": "Lifeline: de Scene Master stuurt zijn scènemeldingen naar deze groep. Slechts één node: Homey (1)."
+					"nl": "Lifeline: de Scene Master stuurt zijn scènemeldingen naar deze groep. Slechts één node: Homey (1).",
+					"de": "Lifeline: Der Scene Master sendet seine Szenenmeldungen an diese Gruppe. Nur ein Knoten: Homey (1).",
+					"fr": "Lifeline : le Scene Master envoie ses rapports de scène à ce groupe. Un seul nœud : Homey (1).",
+					"it": "Lifeline: lo Scene Master invia le sue notifiche di scena a questo gruppo. Un solo nodo: Homey (1).",
+					"sv": "Lifeline: Scene Master skickar sina scenmeddelanden till den här gruppen. Endast en nod: Homey (1).",
+					"no": "Lifeline: Scene Master sender scenemeldingene sine til denne gruppen. Bare én node: Homey (1).",
+					"es": "Lifeline: el Scene Master envía sus avisos de escena a este grupo. Solo un nodo: Homey (1).",
+					"da": "Lifeline: Scene Master sender sine scenemeldinger til denne gruppe. Kun én node: Homey (1).",
+					"ru": "Lifeline: Scene Master отправляет сообщения о сценах в эту группу. Только один узел: Homey (1).",
+					"pl": "Lifeline: Scene Master wysyła swoje komunikaty o scenach do tej grupy. Tylko jeden węzeł: Homey (1).",
+					"ko": "Lifeline: Scene Master가 장면 보고를 이 그룹으로 보냅니다. 노드는 하나만: Homey (1).",
+					"ar": "Lifeline: يرسل Scene Master تقارير المشاهد إلى هذه المجموعة. عقدة واحدة فقط: Homey (1)."
 				}
 			}
 		}

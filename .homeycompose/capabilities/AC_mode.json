@@ -3,70 +3,180 @@
 	"uiComponent": "picker",
 	"title": {
 		"en": "Thermostat mode",
-		"nl": "Thermostaat modus"
+		"nl": "Thermostaatmodus",
+		"de": "Thermostat-Modus",
+		"fr": "Mode du thermostat",
+		"it": "Modalità termostato",
+		"sv": "Termostatläge",
+		"no": "Termostatmodus",
+		"es": "Modo del termostato",
+		"da": "Termostattilstand",
+		"ru": "Режим термостата",
+		"pl": "Tryb termostatu",
+		"ko": "온도조절기 모드",
+		"ar": "وضع الثرموستات"
 	},
 	"desc": {
 		"en": "Mode of the thermostat",
-		"nl": "Modus van de thermostaat"
+		"nl": "Modus van de thermostaat",
+		"de": "Modus des Thermostats",
+		"fr": "Mode du thermostat",
+		"it": "Modalità del termostato",
+		"sv": "Termostatens läge",
+		"no": "Termostatens modus",
+		"es": "Modo del termostato",
+		"da": "Termostatens tilstand",
+		"ru": "Режим термостата",
+		"pl": "Tryb termostatu",
+		"ko": "온도조절기의 모드",
+		"ar": "وضع الثرموستات"
 	},
 	"values": [
 		{
 			"id": "Off",
 			"title": {
 				"en": "Off",
-				"nl": "Uit"
+				"nl": "Uit",
+				"de": "Aus",
+				"fr": "Arrêt",
+				"it": "Spento",
+				"sv": "Av",
+				"no": "Av",
+				"es": "Apagado",
+				"da": "Fra",
+				"ru": "Выкл.",
+				"pl": "Wyłączony",
+				"ko": "끄기",
+				"ar": "إيقاف"
 			}
-    },
+		},
 		{
 			"id": "Heat",
 			"title": {
 				"en": "Heat",
-				"nl": "Verwarm"
+				"nl": "Verwarmen",
+				"de": "Heizen",
+				"fr": "Chauffage",
+				"it": "Riscaldamento",
+				"sv": "Värme",
+				"no": "Varme",
+				"es": "Calor",
+				"da": "Varme",
+				"ru": "Обогрев",
+				"pl": "Grzanie",
+				"ko": "난방",
+				"ar": "تدفئة"
 			}
-    },
+		},
 		{
 			"id": "Cool",
 			"title": {
 				"en": "Cool",
-				"nl": "Koel"
+				"nl": "Koelen",
+				"de": "Kühlen",
+				"fr": "Refroidissement",
+				"it": "Raffreddamento",
+				"sv": "Kyla",
+				"no": "Kjøling",
+				"es": "Frío",
+				"da": "Køl",
+				"ru": "Охлаждение",
+				"pl": "Chłodzenie",
+				"ko": "냉방",
+				"ar": "تبريد"
 			}
-    },
+		},
 		{
 			"id": "Auto Changeover",
 			"title": {
 				"en": "Auto",
-				"nl": "Auto"
+				"nl": "Auto",
+				"de": "Auto",
+				"fr": "Auto",
+				"it": "Auto",
+				"sv": "Auto",
+				"no": "Auto",
+				"es": "Auto",
+				"da": "Auto",
+				"ru": "Авто",
+				"pl": "Auto",
+				"ko": "자동",
+				"ar": "تلقائي"
 			}
-    },
+		},
 		{
 			"id": "Resume",
 			"title": {
 				"en": "Resume",
-				"nl": "Hervatten"
+				"nl": "Hervatten",
+				"de": "Fortsetzen",
+				"fr": "Reprendre",
+				"it": "Riprendi",
+				"sv": "Återuppta",
+				"no": "Gjenoppta",
+				"es": "Reanudar",
+				"da": "Genoptag",
+				"ru": "Возобновить",
+				"pl": "Wznów",
+				"ko": "재개",
+				"ar": "استئناف"
 			}
-    },
+		},
 		{
 			"id": "Fan Only",
 			"title": {
 				"en": "Fan only",
-				"nl": "Ventilator"
+				"nl": "Alleen ventilator",
+				"de": "Nur Lüfter",
+				"fr": "Ventilation seule",
+				"it": "Solo ventilazione",
+				"sv": "Endast fläkt",
+				"no": "Kun vifte",
+				"es": "Solo ventilador",
+				"da": "Kun ventilator",
+				"ru": "Только вентилятор",
+				"pl": "Tylko wentylator",
+				"ko": "송풍",
+				"ar": "مروحة فقط"
 			}
-    },
+		},
 		{
 			"id": "Dry Air",
 			"title": {
 				"en": "Dry air",
-				"nl": "Droge lucht"
+				"nl": "Drogen",
+				"de": "Entfeuchten",
+				"fr": "Déshumidification",
+				"it": "Deumidificazione",
+				"sv": "Avfuktning",
+				"no": "Avfukting",
+				"es": "Deshumidificar",
+				"da": "Affugtning",
+				"ru": "Осушение",
+				"pl": "Osuszanie",
+				"ko": "제습",
+				"ar": "تجفيف"
 			}
-    },
+		},
 		{
 			"id": "AWAY",
 			"title": {
 				"en": "Away",
-				"nl": "Afwezig"
+				"nl": "Afwezig",
+				"de": "Abwesend",
+				"fr": "Absent",
+				"it": "Assente",
+				"sv": "Borta",
+				"no": "Borte",
+				"es": "Ausente",
+				"da": "Ude",
+				"ru": "Нет дома",
+				"pl": "Nieobecny",
+				"ko": "외출",
+				"ar": "خارج المنزل"
 			}
-    }
-  ],
+		}
+	],
 	"getable": true,
 	"setable": true
 }

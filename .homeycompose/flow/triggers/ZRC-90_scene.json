@@ -1,17 +1,52 @@
 {
 	"id": "ZRC-90_scene",
-	"platforms": [ "local"],
+	"platforms": [
+		"local"
+	],
 	"title": {
 		"en": "Scene is activated",
-		"nl": "Scene is geactiveerd"
+		"nl": "Scène is geactiveerd",
+		"de": "Szene wurde aktiviert",
+		"fr": "Une scène est activée",
+		"it": "Una scena è attivata",
+		"sv": "Scen har aktiverats",
+		"no": "Scene er aktivert",
+		"es": "Se ha activado una escena",
+		"da": "Scene er aktiveret",
+		"ru": "Сцена активирована",
+		"pl": "Scena została aktywowana",
+		"ko": "장면이 실행되었습니다",
+		"ar": "تم تفعيل مشهد"
 	},
 	"titleFormatted": {
 		"en": "A scene ([[scene]]) has been activated with [[button]]",
-		"nl": "Een scene ([[scene]]) is geactiveerd met [[button]]"
+		"nl": "Een scène ([[scene]]) is geactiveerd met [[button]]",
+		"de": "Eine Szene ([[scene]]) wurde mit [[button]] aktiviert",
+		"fr": "Une scène ([[scene]]) a été activée avec [[button]]",
+		"it": "Una scena ([[scene]]) è stata attivata con [[button]]",
+		"sv": "En scen ([[scene]]) har aktiverats med [[button]]",
+		"no": "En scene ([[scene]]) er aktivert med [[button]]",
+		"es": "Se ha activado una escena ([[scene]]) con [[button]]",
+		"da": "En scene ([[scene]]) er aktiveret med [[button]]",
+		"ru": "Сцена ([[scene]]) активирована кнопкой [[button]]",
+		"pl": "Scena ([[scene]]) została aktywowana przyciskiem [[button]]",
+		"ko": "[[button]](으)로 장면([[scene]])이 실행되었습니다",
+		"ar": "تم تفعيل مشهد ([[scene]]) بواسطة [[button]]"
 	},
 	"hint": {
 		"en": "This card will only get triggered if the button and scene match the state of the dropdown fields.",
-		"nl": "Deze kaart wordt alleen geactiveerd wanneer de knop en scene overeenkomen met de toestand van de gekozen opties."
+		"nl": "Deze kaart start alleen als de knop en de scène overeenkomen met de gekozen waarden.",
+		"de": "Diese Karte startet nur, wenn Taste und Szene mit den gewählten Werten übereinstimmen.",
+		"fr": "Cette carte se déclenche uniquement si le bouton et la scène correspondent aux valeurs choisies.",
+		"it": "Questa scheda si attiva solo se il pulsante e la scena corrispondono ai valori scelti.",
+		"sv": "Det här kortet startar bara när knappen och scenen matchar de valda värdena.",
+		"no": "Dette kortet starter bare når knappen og scenen samsvarer med de valgte verdiene.",
+		"es": "Esta tarjeta solo se activa si el botón y la escena coinciden con los valores elegidos.",
+		"da": "Dette kort starter kun, når knappen og scenen svarer til de valgte værdier.",
+		"ru": "Эта карточка срабатывает, только если кнопка и сцена совпадают с выбранными значениями.",
+		"pl": "Ta karta uruchamia się tylko, gdy przycisk i scena odpowiadają wybranym wartościom.",
+		"ko": "이 카드는 버튼과 장면이 선택한 값과 일치할 때만 실행됩니다.",
+		"ar": "تعمل هذه البطاقة فقط عندما يطابق الزر والمشهد القيم المختارة."
 	},
 	"args": [
 		{
@@ -24,104 +59,258 @@
 			"type": "dropdown",
 			"title": {
 				"en": "button",
-				"nl": "knop"
+				"nl": "knop",
+				"de": "Taste",
+				"fr": "bouton",
+				"it": "pulsante",
+				"sv": "knapp",
+				"no": "knapp",
+				"es": "botón",
+				"da": "knap",
+				"ru": "кнопка",
+				"pl": "przycisk",
+				"ko": "버튼",
+				"ar": "الزر"
 			},
 			"values": [
 				{
 					"id": "1",
 					"label": {
 						"en": "Button 1",
-						"nl": "Knop 1"
+						"nl": "Knop 1",
+						"de": "Taste 1",
+						"fr": "Bouton 1",
+						"it": "Pulsante 1",
+						"sv": "Knapp 1",
+						"no": "Knapp 1",
+						"es": "Botón 1",
+						"da": "Knap 1",
+						"ru": "Кнопка 1",
+						"pl": "Przycisk 1",
+						"ko": "버튼 1",
+						"ar": "الزر 1"
 					}
-	      },
+				},
 				{
 					"id": "2",
 					"label": {
 						"en": "Button 2",
-						"nl": "Knop 2"
+						"nl": "Knop 2",
+						"de": "Taste 2",
+						"fr": "Bouton 2",
+						"it": "Pulsante 2",
+						"sv": "Knapp 2",
+						"no": "Knapp 2",
+						"es": "Botón 2",
+						"da": "Knap 2",
+						"ru": "Кнопка 2",
+						"pl": "Przycisk 2",
+						"ko": "버튼 2",
+						"ar": "الزر 2"
 					}
-	      },
+				},
 				{
 					"id": "3",
 					"label": {
 						"en": "Button 3",
-						"nl": "Knop 3"
+						"nl": "Knop 3",
+						"de": "Taste 3",
+						"fr": "Bouton 3",
+						"it": "Pulsante 3",
+						"sv": "Knapp 3",
+						"no": "Knapp 3",
+						"es": "Botón 3",
+						"da": "Knap 3",
+						"ru": "Кнопка 3",
+						"pl": "Przycisk 3",
+						"ko": "버튼 3",
+						"ar": "الزر 3"
 					}
-	      },
+				},
 				{
 					"id": "4",
 					"label": {
 						"en": "Button 4",
-						"nl": "Knop 4"
+						"nl": "Knop 4",
+						"de": "Taste 4",
+						"fr": "Bouton 4",
+						"it": "Pulsante 4",
+						"sv": "Knapp 4",
+						"no": "Knapp 4",
+						"es": "Botón 4",
+						"da": "Knap 4",
+						"ru": "Кнопка 4",
+						"pl": "Przycisk 4",
+						"ko": "버튼 4",
+						"ar": "الزر 4"
 					}
-	      },
+				},
 				{
 					"id": "5",
 					"label": {
 						"en": "Button 5",
-						"nl": "Knop 5"
+						"nl": "Knop 5",
+						"de": "Taste 5",
+						"fr": "Bouton 5",
+						"it": "Pulsante 5",
+						"sv": "Knapp 5",
+						"no": "Knapp 5",
+						"es": "Botón 5",
+						"da": "Knap 5",
+						"ru": "Кнопка 5",
+						"pl": "Przycisk 5",
+						"ko": "버튼 5",
+						"ar": "الزر 5"
 					}
 				},
 				{
 					"id": "6",
 					"label": {
 						"en": "Button 6",
-						"nl": "Knop 6"
+						"nl": "Knop 6",
+						"de": "Taste 6",
+						"fr": "Bouton 6",
+						"it": "Pulsante 6",
+						"sv": "Knapp 6",
+						"no": "Knapp 6",
+						"es": "Botón 6",
+						"da": "Knap 6",
+						"ru": "Кнопка 6",
+						"pl": "Przycisk 6",
+						"ko": "버튼 6",
+						"ar": "الزر 6"
 					}
 				},
 				{
 					"id": "7",
 					"label": {
 						"en": "Button 7",
-						"nl": "Knop 7"
+						"nl": "Knop 7",
+						"de": "Taste 7",
+						"fr": "Bouton 7",
+						"it": "Pulsante 7",
+						"sv": "Knapp 7",
+						"no": "Knapp 7",
+						"es": "Botón 7",
+						"da": "Knap 7",
+						"ru": "Кнопка 7",
+						"pl": "Przycisk 7",
+						"ko": "버튼 7",
+						"ar": "الزر 7"
 					}
 				},
 				{
 					"id": "8",
 					"label": {
 						"en": "Button 8",
-						"nl": "Knop 8"
+						"nl": "Knop 8",
+						"de": "Taste 8",
+						"fr": "Bouton 8",
+						"it": "Pulsante 8",
+						"sv": "Knapp 8",
+						"no": "Knapp 8",
+						"es": "Botón 8",
+						"da": "Knap 8",
+						"ru": "Кнопка 8",
+						"pl": "Przycisk 8",
+						"ko": "버튼 8",
+						"ar": "الزر 8"
 					}
 				}
 			]
-	  },
+		},
 		{
 			"name": "scene",
 			"type": "dropdown",
 			"title": {
 				"en": "scene",
-				"nl": "scene"
+				"nl": "scène",
+				"de": "Szene",
+				"fr": "scène",
+				"it": "scena",
+				"sv": "scen",
+				"no": "scene",
+				"es": "escena",
+				"da": "scene",
+				"ru": "сцена",
+				"pl": "scena",
+				"ko": "장면",
+				"ar": "المشهد"
 			},
 			"values": [
 				{
 					"id": "Key Pressed 1 time",
 					"label": {
 						"en": "Pressed 1x",
-						"nl": "1x ingedrukt"
+						"nl": "1x ingedrukt",
+						"de": "1x gedrückt",
+						"fr": "Pressé 1x",
+						"it": "Premuto 1x",
+						"sv": "Tryckt 1x",
+						"no": "Trykket 1x",
+						"es": "Pulsado 1x",
+						"da": "Trykket 1x",
+						"ru": "Нажата 1 раз",
+						"pl": "Naciśnięty 1x",
+						"ko": "1회 누름",
+						"ar": "ضغطة واحدة"
 					}
-	      },
+				},
 				{
 					"id": "Key Pressed 2 times",
 					"label": {
 						"en": "Pressed 2x",
-						"nl": "2x ingedrukt"
+						"nl": "2x ingedrukt",
+						"de": "2x gedrückt",
+						"fr": "Pressé 2x",
+						"it": "Premuto 2x",
+						"sv": "Tryckt 2x",
+						"no": "Trykket 2x",
+						"es": "Pulsado 2x",
+						"da": "Trykket 2x",
+						"ru": "Нажата 2 раза",
+						"pl": "Naciśnięty 2x",
+						"ko": "2회 누름",
+						"ar": "ضغطتان"
 					}
-	      },
+				},
 				{
 					"id": "Key Held Down",
 					"label": {
 						"en": "Held down (repeats while held)",
-						"nl": "Ingedrukt gehouden (herhaalt zolang ingedrukt)"
+						"nl": "Ingedrukt gehouden (herhaalt zolang ingedrukt)",
+						"de": "Gedrückt gehalten (wiederholt sich beim Halten)",
+						"fr": "Maintenu (se répète tant qu'il est maintenu)",
+						"it": "Tenuto premuto (si ripete finché è premuto)",
+						"sv": "Nedhållen (upprepas medan den hålls)",
+						"no": "Holdt inne (gjentas mens den holdes)",
+						"es": "Mantenido (se repite mientras se mantiene)",
+						"da": "Holdt nede (gentages, mens den holdes)",
+						"ru": "Удерживается (повторяется при удержании)",
+						"pl": "Przytrzymany (powtarza się podczas trzymania)",
+						"ko": "길게 누름 (누르는 동안 반복)",
+						"ar": "ضغط مطوّل (يتكرر أثناء الضغط)"
 					}
-	      },
+				},
 				{
 					"id": "Key Released",
 					"label": {
 						"en": "Released",
-						"nl": "Losgelaten"
+						"nl": "Losgelaten",
+						"de": "Losgelassen",
+						"fr": "Relâché",
+						"it": "Rilasciato",
+						"sv": "Släppt",
+						"no": "Sluppet",
+						"es": "Soltado",
+						"da": "Sluppet",
+						"ru": "Отпущена",
+						"pl": "Zwolniony",
+						"ko": "뗌",
+						"ar": "تم التحرير"
 					}
-	      }
-	     ]
-		 }
-	 ]
+				}
+			]
+		}
+	]
 }

@@ -4,19 +4,65 @@
 	"icon": "/assets/AC_onoff.svg",
 	"label": {
 		"true": {
-			"en": "Active"
+			"en": "Active",
+			"nl": "Actief",
+			"de": "Aktiv",
+			"fr": "Actif",
+			"it": "Attivo",
+			"sv": "Aktiv",
+			"no": "Aktiv",
+			"es": "Activo",
+			"da": "Aktiv",
+			"ru": "Активен",
+			"pl": "Aktywny",
+			"ko": "작동 중",
+			"ar": "نشط"
 		},
 		"false": {
-			"en": "Idle"
+			"en": "Idle",
+			"nl": "Inactief",
+			"de": "Inaktiv",
+			"fr": "Inactif",
+			"it": "Inattivo",
+			"sv": "Inaktiv",
+			"no": "Inaktiv",
+			"es": "Inactivo",
+			"da": "Inaktiv",
+			"ru": "Неактивен",
+			"pl": "Bezczynny",
+			"ko": "대기",
+			"ar": "خامل"
 		}
 	},
 	"title": {
 		"en": "State",
-		"nl": "Status"
+		"nl": "Status",
+		"de": "Status",
+		"fr": "État",
+		"it": "Stato",
+		"sv": "Status",
+		"no": "Status",
+		"es": "Estado",
+		"da": "Status",
+		"ru": "Состояние",
+		"pl": "Stan",
+		"ko": "상태",
+		"ar": "الحالة"
 	},
 	"desc": {
 		"en": "State of the thermostat",
-		"nl": "Status van de thermostaat"
+		"nl": "Status van de thermostaat",
+		"de": "Status des Thermostats",
+		"fr": "État du thermostat",
+		"it": "Stato del termostato",
+		"sv": "Termostatens status",
+		"no": "Termostatens status",
+		"es": "Estado del termostato",
+		"da": "Termostatens status",
+		"ru": "Состояние термостата",
+		"pl": "Stan termostatu",
+		"ko": "온도조절기의 상태",
+		"ar": "حالة الثرموستات"
 	},
 	"getable": true,
 	"setable": false,

@@ -1,10 +1,26 @@
 {
 	"id": "ZXT-600",
-	"platforms": ["local"],
-	"connectivity": [ "zwave" ],
+	"platforms": [
+		"local"
+	],
+	"connectivity": [
+		"zwave"
+	],
 	"class": "thermostat",
 	"name": {
-		"en": "ZXT-600 AC Master"
+		"en": "ZXT-600 AC Master",
+		"nl": "ZXT-600 AC Master",
+		"de": "ZXT-600 AC Master",
+		"fr": "ZXT-600 AC Master",
+		"it": "ZXT-600 AC Master",
+		"sv": "ZXT-600 AC Master",
+		"no": "ZXT-600 AC Master",
+		"es": "ZXT-600 AC Master",
+		"da": "ZXT-600 AC Master",
+		"ru": "ZXT-600 AC Master",
+		"pl": "ZXT-600 AC Master",
+		"ko": "ZXT-600 AC Master",
+		"ar": "ZXT-600 AC Master"
 	},
 	"capabilities": [
 		"measure_temperature",
@@ -23,16 +39,43 @@
 		"AC_onoff": {
 			"greyout": true,
 			"titleTrue": {
-				"en": "Active"
+				"en": "Active",
+				"nl": "Actief",
+				"de": "Aktiv",
+				"fr": "Actif",
+				"it": "Attivo",
+				"sv": "Aktiv",
+				"no": "Aktiv",
+				"es": "Activo",
+				"da": "Aktiv",
+				"ru": "Активен",
+				"pl": "Aktywny",
+				"ko": "작동 중",
+				"ar": "نشط"
 			},
 			"titleFalse": {
-				"en": "Idle"
+				"en": "Idle",
+				"nl": "Inactief",
+				"de": "Inaktiv",
+				"fr": "Inactif",
+				"it": "Inattivo",
+				"sv": "Inaktiv",
+				"no": "Inaktiv",
+				"es": "Inactivo",
+				"da": "Inaktiv",
+				"ru": "Неактивен",
+				"pl": "Bezczynny",
+				"ko": "대기",
+				"ar": "خامل"
 			}
 		}
 	},
 	"energy": {
-    "batteries": [ "AA", "AA"]
-  },
+		"batteries": [
+			"AA",
+			"AA"
+		]
+	},
 	"images": {
 		"large": "{{driverAssetsPath}}/images/large.jpg",
 		"small": "{{driverAssetsPath}}/images/small.jpg"
@@ -42,7 +85,12 @@
 			21076
 		],
 		"productTypeId": [
-			256, 257, 258, 263, 265, 267
+			256,
+			257,
+			258,
+			263,
+			265,
+			267
 		],
 		"productId": [
 			33936
@@ -51,13 +99,35 @@
 		"learnmode": {
 			"instruction": {
 				"en": "The first power source decides the role, and it can only be changed after removing the ZXT-600: batteries = FLiRS (sleeping), USB = Always Listening.\nPress PROG 3 times within 1 second. The green indicator flashes twice (red twice = failed).",
-				"nl": "De eerste voedingsbron bepaalt de rol, en die kan alleen worden gewijzigd na het verwijderen van de ZXT-600: batterijen = FLiRS (slapend), USB = Always Listening.\nDruk binnen 1 seconde 3 keer op PROG. De groene indicator knippert twee keer (rood twee keer = mislukt)."
+				"nl": "De eerste voedingsbron bepaalt de rol, en die kan alleen worden gewijzigd na het verwijderen van de ZXT-600: batterijen = FLiRS (slapend), USB = Always Listening.\nDruk binnen 1 seconde 3 keer op PROG. De groene indicator knippert twee keer (rood twee keer = mislukt).",
+				"de": "Die erste Stromquelle bestimmt die Rolle, die nur nach dem Entfernen des ZXT-600 geändert werden kann: Batterien = FLiRS (schlafend), USB = Always Listening.\nDrücke PROG innerhalb von 1 Sekunde 3-mal. Die grüne Anzeige blinkt zweimal (rot zweimal = fehlgeschlagen).",
+				"fr": "La première source d'alimentation détermine le rôle, qui ne peut être changé qu'après avoir retiré le ZXT-600 : piles = FLiRS (en veille), USB = Always Listening.\nAppuyez 3 fois sur PROG en 1 seconde. Le voyant vert clignote deux fois (rouge deux fois = échec).",
+				"it": "La prima fonte di alimentazione decide il ruolo, che si può cambiare solo dopo aver rimosso lo ZXT-600: batterie = FLiRS (dormiente), USB = Always Listening.\nPremi PROG 3 volte entro 1 secondo. L'indicatore verde lampeggia due volte (rosso due volte = non riuscito).",
+				"sv": "Den första strömkällan avgör rollen, och den kan bara ändras efter att ZXT-600 har tagits bort: batterier = FLiRS (sovande), USB = Always Listening.\nTryck på PROG 3 gånger inom 1 sekund. Den gröna indikatorn blinkar två gånger (röd två gånger = misslyckades).",
+				"no": "Den første strømkilden bestemmer rollen, og den kan bare endres etter at ZXT-600 er fjernet: batterier = FLiRS (sovende), USB = Always Listening.\nTrykk på PROG 3 ganger innen 1 sekund. Den grønne indikatoren blinker to ganger (rød to ganger = mislyktes).",
+				"es": "La primera fuente de alimentación decide el rol, que solo se puede cambiar tras eliminar el ZXT-600: pilas = FLiRS (en reposo), USB = Always Listening.\nPulsa PROG 3 veces en 1 segundo. El indicador verde parpadea dos veces (rojo dos veces = error).",
+				"da": "Den første strømkilde bestemmer rollen, og den kan kun ændres, efter at ZXT-600 er fjernet: batterier = FLiRS (sovende), USB = Always Listening.\nTryk på PROG 3 gange inden for 1 sekund. Den grønne indikator blinker to gange (rød to gange = mislykkedes).",
+				"ru": "Первый источник питания определяет роль, и её можно изменить только после удаления ZXT-600: батарейки = FLiRS (спящий), USB = Always Listening.\nНажмите PROG 3 раза в течение 1 секунды. Зелёный индикатор мигнёт дважды (красный дважды = ошибка).",
+				"pl": "Pierwsze źródło zasilania decyduje o roli, którą można zmienić dopiero po usunięciu ZXT-600: baterie = FLiRS (uśpiony), USB = Always Listening.\nNaciśnij PROG 3 razy w ciągu 1 sekundy. Zielony wskaźnik mignie dwa razy (czerwony dwa razy = błąd).",
+				"ko": "처음 연결한 전원이 역할을 정하며, ZXT-600을 제거한 후에만 바꿀 수 있습니다: 배터리 = FLiRS (절전), USB = Always Listening.\n1초 안에 PROG를 3번 누르세요. 녹색 표시등이 두 번 깜박입니다 (빨간색 두 번 = 실패).",
+				"ar": "مصدر الطاقة الأول يحدد الدور، ولا يمكن تغييره إلا بعد إزالة ZXT-600: البطاريات = FLiRS (نائم)، USB = Always Listening.\nاضغط على PROG 3 مرات خلال ثانية واحدة. يومض المؤشر الأخضر مرتين (الأحمر مرتين = فشل)."
 			}
 		},
 		"unlearnmode": {
 			"instruction": {
 				"en": "Press PROG 3 times within 1 second. The green indicator flashes twice (red twice = failed).\nFactory reset (only when removing fails): hold PROG for 3 seconds until the green indicator turns on, and keep holding until it flashes twice.",
-				"nl": "Druk binnen 1 seconde 3 keer op PROG. De groene indicator knippert twee keer (rood twee keer = mislukt).\nFabrieksreset (alleen als verwijderen mislukt): houd PROG 3 seconden ingedrukt tot de groene indicator aangaat, en blijf vasthouden tot hij twee keer knippert."
+				"nl": "Druk binnen 1 seconde 3 keer op PROG. De groene indicator knippert twee keer (rood twee keer = mislukt).\nFabrieksreset (alleen als verwijderen mislukt): houd PROG 3 seconden ingedrukt tot de groene indicator aangaat, en blijf vasthouden tot hij twee keer knippert.",
+				"de": "Drücke PROG innerhalb von 1 Sekunde 3-mal. Die grüne Anzeige blinkt zweimal (rot zweimal = fehlgeschlagen).\nWerksreset (nur wenn das Entfernen fehlschlägt): Halte PROG 3 Sekunden gedrückt, bis die grüne Anzeige angeht, und halte weiter, bis sie zweimal blinkt.",
+				"fr": "Appuyez 3 fois sur PROG en 1 seconde. Le voyant vert clignote deux fois (rouge deux fois = échec).\nRéinitialisation d'usine (uniquement si le retrait échoue) : maintenez PROG 3 secondes jusqu'à ce que le voyant vert s'allume, et continuez jusqu'à ce qu'il clignote deux fois.",
+				"it": "Premi PROG 3 volte entro 1 secondo. L'indicatore verde lampeggia due volte (rosso due volte = non riuscito).\nRipristino di fabbrica (solo se la rimozione non riesce): tieni premuto PROG per 3 secondi finché l'indicatore verde si accende, e continua finché lampeggia due volte.",
+				"sv": "Tryck på PROG 3 gånger inom 1 sekund. Den gröna indikatorn blinkar två gånger (röd två gånger = misslyckades).\nFabriksåterställning (bara om borttagningen misslyckas): håll PROG intryckt i 3 sekunder tills den gröna indikatorn tänds, och fortsätt hålla tills den blinkar två gånger.",
+				"no": "Trykk på PROG 3 ganger innen 1 sekund. Den grønne indikatoren blinker to ganger (rød to ganger = mislyktes).\nTilbakestilling til fabrikkinnstillinger (bare hvis fjerning mislykkes): hold PROG inne i 3 sekunder til den grønne indikatoren tennes, og fortsett å holde til den blinker to ganger.",
+				"es": "Pulsa PROG 3 veces en 1 segundo. El indicador verde parpadea dos veces (rojo dos veces = error).\nRestablecimiento de fábrica (solo si falla la eliminación): mantén pulsado PROG 3 segundos hasta que se encienda el indicador verde y sigue hasta que parpadee dos veces.",
+				"da": "Tryk på PROG 3 gange inden for 1 sekund. Den grønne indikator blinker to gange (rød to gange = mislykkedes).\nFabriksnulstilling (kun hvis fjernelse mislykkes): hold PROG inde i 3 sekunder, til den grønne indikator tænder, og bliv ved, til den blinker to gange.",
+				"ru": "Нажмите PROG 3 раза в течение 1 секунды. Зелёный индикатор мигнёт дважды (красный дважды = ошибка).\nСброс к заводским настройкам (только если удаление не удалось): удерживайте PROG 3 секунды, пока не загорится зелёный индикатор, и держите дальше, пока он не мигнёт дважды.",
+				"pl": "Naciśnij PROG 3 razy w ciągu 1 sekundy. Zielony wskaźnik mignie dwa razy (czerwony dwa razy = błąd).\nReset fabryczny (tylko gdy usunięcie się nie powiedzie): przytrzymaj PROG 3 sekundy, aż zapali się zielony wskaźnik, i trzymaj dalej, aż mignie dwa razy.",
+				"ko": "1초 안에 PROG를 3번 누르세요. 녹색 표시등이 두 번 깜박입니다 (빨간색 두 번 = 실패).\n공장 초기화 (제거가 실패할 때만): 녹색 표시등이 켜질 때까지 PROG를 3초간 누르고, 두 번 깜박일 때까지 계속 누르고 있으세요.",
+				"ar": "اضغط على PROG 3 مرات خلال ثانية واحدة. يومض المؤشر الأخضر مرتين (الأحمر مرتين = فشل).\nإعادة ضبط المصنع (فقط إذا فشلت الإزالة): اضغط مطولاً على PROG لمدة 3 ثوانٍ حتى يضيء المؤشر الأخضر، واستمر حتى يومض مرتين."
 			}
 		},
 		"productDocumentation": "http://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2553/BW8490_Installation_Guide_201700807.pdf",
@@ -69,7 +139,19 @@
 		"associationGroupsOptions": {
 			"1": {
 				"hint": {
-					"en": "Lifeline: the ZXT-600 sends its status reports (temperature, low battery) to this group. Only one node: Homey (1)."
+					"en": "Lifeline: the ZXT-600 sends its status reports (temperature, low battery) to this group. Only one node: Homey (1).",
+					"nl": "Lifeline: de ZXT-600 stuurt zijn statusmeldingen (temperatuur, lage batterij) naar deze groep. Slechts één node: Homey (1).",
+					"de": "Lifeline: Der ZXT-600 sendet seine Statusmeldungen (Temperatur, schwache Batterie) an diese Gruppe. Nur ein Knoten: Homey (1).",
+					"fr": "Lifeline : le ZXT-600 envoie ses rapports d'état (température, pile faible) à ce groupe. Un seul nœud : Homey (1).",
+					"it": "Lifeline: lo ZXT-600 invia le sue notifiche di stato (temperatura, batteria scarica) a questo gruppo. Un solo nodo: Homey (1).",
+					"sv": "Lifeline: ZXT-600 skickar sina statusmeddelanden (temperatur, lågt batteri) till den här gruppen. Endast en nod: Homey (1).",
+					"no": "Lifeline: ZXT-600 sender statusmeldingene sine (temperatur, lavt batteri) til denne gruppen. Bare én node: Homey (1).",
+					"es": "Lifeline: el ZXT-600 envía sus avisos de estado (temperatura, batería baja) a este grupo. Solo un nodo: Homey (1).",
+					"da": "Lifeline: ZXT-600 sender sine statusmeldinger (temperatur, lavt batteri) til denne gruppe. Kun én node: Homey (1).",
+					"ru": "Lifeline: ZXT-600 отправляет сообщения о состоянии (температура, низкий заряд) в эту группу. Только один узел: Homey (1).",
+					"pl": "Lifeline: ZXT-600 wysyła swoje komunikaty o stanie (temperatura, słaba bateria) do tej grupy. Tylko jeden węzeł: Homey (1).",
+					"ko": "Lifeline: ZXT-600이 상태 보고(온도, 배터리 부족)를 이 그룹으로 보냅니다. 노드는 하나만: Homey (1).",
+					"ar": "Lifeline: يرسل ZXT-600 تقارير الحالة (درجة الحرارة، البطارية المنخفضة) إلى هذه المجموعة. عقدة واحدة فقط: Homey (1)."
 				}
 			}
 		}
