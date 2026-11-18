@@ -2,11 +2,11 @@
 	"id": "action_ZXT_SetFanSwing",
 	"platforms": [ "local"],
 	"title": {
-		"en": "Set Fan “SWING” mode"
+		"en": "Set the swing mode"
 	},
 	"titleFormatted": {
-		"en": "Set Fan swing mode to [[mode]]",
-		"nl": "Stel de ventilator kantel modus in op [[mode]]"
+		"en": "Set the swing mode to [[mode]]",
+		"nl": "Stel de swingmodus in op [[mode]]"
 	},
 	"args": [
 		{
@@ -25,13 +25,13 @@
 				{
 					"id": "1",
 					"label": {
-						"en": "Swing AUTO (default)"
+						"en": "Swing auto (default)"
 					}
 					},
 				{
 					"id": "0",
 					"label": {
-						"en": "Swing OFF"
+						"en": "Swing off"
 					}
 					}
 				]

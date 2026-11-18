@@ -2,8 +2,8 @@
 	"id": "action_ZXT_SetSetpoint",
 	"platforms": [ "local"],
 	"title": {
-		"en": "Set a setpoint of a thermostat mode",
-		"nl": "Stel de temperatuur in van een thermostaat modus"
+		"en": "Set the setpoint of a thermostat mode",
+		"nl": "Stel de temperatuur van een thermostaatmodus in"
 	},
 	"titleFormatted": {
 		"en": "Set the setpoint of thermostat mode [[setPointType]] to [[setPointValue]]°C",

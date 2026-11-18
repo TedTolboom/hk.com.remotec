@@ -7,7 +7,7 @@
   },
   "brandColor": "#cc3333",
   "description": {
-    "en": "Adds support for Remotec Technologies Z-wave devices"
+    "en": "Adds support for Remotec Technologies Z-Wave devices"
   },
   "category": [
     "lights",

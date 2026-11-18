@@ -110,8 +110,8 @@
 				{
 					"id": "Key Held Down",
 					"label": {
-						"en": "Held Down (5x a second)",
-						"nl": "Lang ingedrukt (5x per seconde)"
+						"en": "Held down (repeats while held)",
+						"nl": "Ingedrukt gehouden (herhaalt zolang ingedrukt)"
 					}
 	      },
 				{

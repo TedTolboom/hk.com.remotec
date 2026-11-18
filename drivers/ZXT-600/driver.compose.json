@@ -69,7 +69,7 @@
 		"associationGroupsOptions": {
 			"1": {
 				"hint": {
-					"en": "Association Group #1 (max. 1 node) is default Z-wave lifeline group to associate with Homey for AC Master Status change report"
+					"en": "Lifeline: the ZXT-600 sends its status reports (temperature, low battery) to this group. Only one node: Homey (1)."
 				}
 			}
 		}

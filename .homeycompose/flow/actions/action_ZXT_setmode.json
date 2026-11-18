@@ -2,11 +2,11 @@
 	"id": "action_ZXT_SetMode",
 	"platforms": [ "local"],
 	"title": {
-		"en": "Set Mode"
+		"en": "Set the thermostat mode"
 	},
 	"titleFormatted": {
-		"en": "Set mode to [[mode]]",
-		"nl": "Stel de modus in op [[mode]]"
+		"en": "Set the thermostat mode to [[mode]]",
+		"nl": "Stel de thermostaatmodus in op [[mode]]"
 	},
 	"args": [
 		{

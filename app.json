@@ -10,7 +10,7 @@
   },
   "brandColor": "#cc3333",
   "description": {
-    "en": "Adds support for Remotec Technologies Z-wave devices"
+    "en": "Adds support for Remotec Technologies Z-Wave devices"
   },
   "category": [
     "lights",
@@ -221,8 +221,8 @@
               {
                 "id": "Key Held Down",
                 "label": {
-                  "en": "Held Down (5x a second)",
-                  "nl": "Lang ingedrukt (5x per seconde)"
+                  "en": "Held down (repeats while held)",
+                  "nl": "Ingedrukt gehouden (herhaalt zolang ingedrukt)"
                 }
               },
               {
@@ -244,11 +244,11 @@
           "local"
         ],
         "title": {
-          "en": "Set Fan Speed mode"
+          "en": "Set the fan mode"
         },
         "titleFormatted": {
-          "en": "Set Fan Speed mode to [[fanspeed]]",
-          "nl": "Stel de ventilator snelheid in op [[fanspeed]]"
+          "en": "Set the fan mode to [[fanspeed]]",
+          "nl": "Stel de ventilatormodus in op [[fanspeed]]"
         },
         "args": [
           {
@@ -260,8 +260,8 @@
             "name": "fanspeed",
             "type": "dropdown",
             "title": {
-              "en": "Fanspeed",
-              "nl": "Ventilatorsnelheid"
+              "en": "Fan mode",
+              "nl": "Ventilatormodus"
             },
             "values": [
               {
@@ -316,11 +316,11 @@
           "local"
         ],
         "title": {
-          "en": "Set Fan “SWING” mode"
+          "en": "Set the swing mode"
         },
         "titleFormatted": {
-          "en": "Set Fan swing mode to [[mode]]",
-          "nl": "Stel de ventilator kantel modus in op [[mode]]"
+          "en": "Set the swing mode to [[mode]]",
+          "nl": "Stel de swingmodus in op [[mode]]"
         },
         "args": [
           {
@@ -339,13 +339,13 @@
               {
                 "id": "1",
                 "label": {
-                  "en": "Swing AUTO (default)"
+                  "en": "Swing auto (default)"
                 }
               },
               {
                 "id": "0",
                 "label": {
-                  "en": "Swing OFF"
+                  "en": "Swing off"
                 }
               }
             ]
@@ -358,11 +358,11 @@
           "local"
         ],
         "title": {
-          "en": "Set Mode"
+          "en": "Set the thermostat mode"
         },
         "titleFormatted": {
-          "en": "Set mode to [[mode]]",
-          "nl": "Stel de modus in op [[mode]]"
+          "en": "Set the thermostat mode to [[mode]]",
+          "nl": "Stel de thermostaatmodus in op [[mode]]"
         },
         "args": [
           {
@@ -444,8 +444,8 @@
           "local"
         ],
         "title": {
-          "en": "Set a setpoint of a thermostat mode",
-          "nl": "Stel de temperatuur in van een thermostaat modus"
+          "en": "Set the setpoint of a thermostat mode",
+          "nl": "Stel de temperatuur van een thermostaatmodus in"
         },
         "titleFormatted": {
           "en": "Set the setpoint of thermostat mode [[setPointType]] to [[setPointValue]]°C",
@@ -580,8 +580,8 @@
         "associationGroupsOptions": {
           "1": {
             "hint": {
-              "en": "Z-Wave Plus Lifeline: Association Group 1 will be a default scene report channel. Only one node can be assigned to this association group. \nDefault: 1 (Homey's ID)",
-              "nl": "Z-Wave Plus Lifeline: Association Groep 1 wordt gebruikt om scene rapportages door te geven. Slechts een node kan toegevoegd worden aan deze associatie groep. \nStandaard: 1 (Homey's ID)"
+              "en": "Lifeline: the Scene Master sends its scene reports to this group. Only one node: Homey (1).",
+              "nl": "Lifeline: de Scene Master stuurt zijn scènemeldingen naar deze groep. Slechts één node: Homey (1)."
             }
           }
         }
@@ -673,10 +673,10 @@
           "value": "1",
           "type": "dropdown",
           "label": {
-            "en": "Air conditioner “SWING” control"
+            "en": "Swing"
           },
           "hint": {
-            "en": "Define if air conditioner fan “SWING” mode should be enabled or not"
+            "en": "Swing of the air conditioner (parameter 33)."
           },
           "zwave": {
             "index": 33,
@@ -686,13 +686,13 @@
             {
               "id": "1",
               "label": {
-                "en": "Swing AUTO (default)"
+                "en": "Swing auto (default)"
               }
             },
             {
               "id": "0",
               "label": {
-                "en": "Swing OFF"
+                "en": "Swing off"
               }
             }
           ]
@@ -709,10 +709,10 @@
               "value": "0",
               "type": "dropdown",
               "label": {
-                "en": "Calibrate Temperature reading"
+                "en": "Temperature offset"
               },
               "hint": {
-                "en": "This parameter is used to compensate the temperature error at temperature sensor"
+                "en": "Offset added to the measured temperature (parameter 37)."
               },
               "zwave": {
                 "index": 37,
@@ -793,7 +793,7 @@
         {
           "type": "group",
           "label": {
-            "en": "IR function"
+            "en": "IR codes"
           },
           "collapsed": true,
           "children": [
@@ -801,10 +801,10 @@
               "id": "IR_code_number",
               "value": 857,
               "label": {
-                "en": "Set IR Code Number from built-in code library"
+                "en": "IR code from the built-in library"
               },
               "hint": {
-                "en": "Refer to Code Finder Webpage"
+                "en": "Parameter 27. Look up the code of your air conditioner on the Remotec code finder page. 0 = use the learnt codes."
               },
               "zwave": {
                 "index": 27,
@@ -821,7 +821,7 @@
               "id": "IR_power_level",
               "value": 255,
               "label": {
-                "en": "Set IR transmission power level"
+                "en": "External IR emitter power"
               },
               "hint": {
                 "en": "External IR emitter: 0 = normal power, 255 = high power (default). Other values are not supported."
@@ -842,10 +842,10 @@
               "value": "255",
               "type": "dropdown",
               "label": {
-                "en": "Use built-in IR emitter"
+                "en": "Built-in IR emitter"
               },
               "hint": {
-                "en": "Note: If more than one air conditioners with the same code set are used in the same room, user can disable the built-in IR emitter and use the external IR emitter cable to control each air conditioner individually"
+                "en": "Parameter 32. Turn the built-in emitter off to control one of several identical air conditioners in a room with the external IR emitter cable."
               },
               "zwave": {
                 "index": 32,
@@ -856,13 +856,13 @@
                 {
                   "id": "255",
                   "label": {
-                    "en": "Built-in IR emitter enabled (default)."
+                    "en": "Enabled (default)"
                   }
                 },
                 {
                   "id": "0",
                   "label": {
-                    "en": "Built-in IR emitter disabled"
+                    "en": "Disabled"
                   }
                 }
               ]
@@ -872,10 +872,10 @@
               "value": "0",
               "type": "dropdown",
               "label": {
-                "en": "IR code learning - command ID"
+                "en": "Learn IR code"
               },
               "hint": {
-                "en": "This parameter (25) is during the process to learning non-standard IR codes. Follow the steps as mentioned in the manual. If you need to learn another command, select the command from the dropdown list, press save and learn the command (press the button on the remote)"
+                "en": "Parameter 25. Select the command to learn and save; then aim the original remote at the unit (1 – 3 cm) and press the matching button. Repeat for every command. See the manual."
               },
               "zwave": {
                 "index": 25,
@@ -1030,7 +1030,7 @@
                 "en": "IR code learning status"
               },
               "hint": {
-                "en": "IR code learning status of manually learned codes."
+                "en": "Result of the last IR code learning."
               }
             }
           ]
@@ -1038,7 +1038,7 @@
         {
           "type": "group",
           "label": {
-            "en": "Set polling interval (minutes)"
+            "en": "Polling intervals (minutes)"
           },
           "collapsed": true,
           "children": [
@@ -1046,10 +1046,10 @@
               "id": "poll_interval_THERMOSTAT_MODE",
               "value": 120,
               "label": {
-                "en": "Thermostat Mode"
+                "en": "Thermostat mode"
               },
               "hint": {
-                "en": "Set polling interval Thermostat Mode (minutes), 0 = disabled, default = 120 minutes"
+                "en": "Polling interval of the thermostat mode, in minutes; 0 = off. Default: 120."
               },
               "attr": {
                 "min": 0,
@@ -1061,10 +1061,10 @@
               "id": "poll_interval_THERMOSTAT_SETPOINT",
               "value": 180,
               "label": {
-                "en": "Thermostat Setpoint"
+                "en": "Thermostat setpoint"
               },
               "hint": {
-                "en": "Set polling interval Thermostat Setpoint (minutes), 0 = disabled, default = 180 minutes"
+                "en": "Polling interval of the setpoint, in minutes; 0 = off. Default: 180."
               },
               "attr": {
                 "min": 0,
@@ -1076,10 +1076,10 @@
               "id": "poll_interval_THERMOSTAT_FAN_MODE",
               "value": 0,
               "label": {
-                "en": "Thermostat Fan Mode"
+                "en": "Fan mode"
               },
               "hint": {
-                "en": "Set polling interval Thermostat Fan Mode (minutes), 0 = disabled, default = 0"
+                "en": "Polling interval of the fan mode, in minutes; 0 = off (default)."
               },
               "attr": {
                 "min": 0,
@@ -1108,10 +1108,10 @@
           "id": "Library_version",
           "value": "not provided",
           "label": {
-            "en": "Library and Firmware version"
+            "en": "Firmware version"
           },
           "hint": {
-            "en": "Byte 1, Model suffix, Byte 2, Reserved, Byte 3 & 4 : Library Version"
+            "en": "Firmware version of the device (read only)."
           },
           "type": "label"
         }
@@ -1200,7 +1200,7 @@
         "associationGroupsOptions": {
           "1": {
             "hint": {
-              "en": "Association Group #1 (max. 1 node) is default Z-wave lifeline group to associate with Homey for AC Master Status change report"
+              "en": "Lifeline: the ZXT-600 sends its status reports (temperature, low battery) to this group. Only one node: Homey (1)."
             }
           }
         }
@@ -1211,10 +1211,10 @@
           "value": "1",
           "type": "dropdown",
           "label": {
-            "en": "Air conditioner “SWING” control"
+            "en": "Swing"
           },
           "hint": {
-            "en": "Define if air conditioner fan “SWING” mode should be enabled or not"
+            "en": "Swing of the air conditioner (parameter 33)."
           },
           "zwave": {
             "index": 33,
@@ -1224,13 +1224,13 @@
             {
               "id": "1",
               "label": {
-                "en": "Swing AUTO (default)"
+                "en": "Swing auto (default)"
               }
             },
             {
               "id": "0",
               "label": {
-                "en": "Swing OFF"
+                "en": "Swing off"
               }
             }
           ]
@@ -1260,7 +1260,7 @@
                 {
                   "id": "0",
                   "label": {
-                    "en": "Reporting disabled (Default)"
+                    "en": "Off (default)"
                   }
                 },
                 {
@@ -1388,10 +1388,10 @@
               "id": "Temperature_calibration",
               "value": "0",
               "label": {
-                "en": "Calibrate Temperature reading"
+                "en": "Temperature offset"
               },
               "hint": {
-                "en": "Temperature offset value.\r\n0(0x00) = 0°C (Default)\r\n1(0x01) = 1°C\r\n2(0x02) = 2°C\r\n3(0x03) = 3°C\r\n4(0x04) = 4°C\r\n5(0x05) = 5°C\r\n255(0xFF) = -1°C\r\n254(0xFE) = -2°C\r\n253(0xFD) = -3°C\r\n252(0xFC) = -4°C\r\n251(0xFB) = -5°C\r\n"
+                "en": "Offset added to the measured temperature (parameter 37)."
               },
               "zwave": {
                 "index": 37,
@@ -1473,7 +1473,7 @@
         {
           "type": "group",
           "label": {
-            "en": "IR function"
+            "en": "IR codes"
           },
           "collapsed": true,
           "children": [
@@ -1481,10 +1481,10 @@
               "id": "IR_code_number",
               "value": 857,
               "label": {
-                "en": "Set IR Code Number from built-in code library"
+                "en": "IR code from the built-in library"
               },
               "hint": {
-                "en": "Refer to Code Finder Webpage"
+                "en": "Parameter 27. Look up the code of your air conditioner on the Remotec code finder page. 0 = use the learnt codes."
               },
               "zwave": {
                 "index": 27,
@@ -1502,10 +1502,10 @@
               "value": "255",
               "type": "dropdown",
               "label": {
-                "en": "Use built-in IR emitter"
+                "en": "Built-in IR emitter"
               },
               "hint": {
-                "en": "Note: If more than one air conditioners with the same code set are used in the same room, user can disable the built-in IR emitter and use the external IR emitter cable to control each air conditioner individually"
+                "en": "Parameter 32. Turn the built-in emitter off to control one of several identical air conditioners in a room with the external IR emitter cable."
               },
               "zwave": {
                 "index": 32,
@@ -1516,13 +1516,13 @@
                 {
                   "id": "255",
                   "label": {
-                    "en": "Built-in IR emitter enabled (default)."
+                    "en": "Enabled (default)"
                   }
                 },
                 {
                   "id": "0",
                   "label": {
-                    "en": "Built-in IR emitter disabled"
+                    "en": "Disabled"
                   }
                 }
               ]
@@ -1532,10 +1532,10 @@
               "value": "0",
               "type": "dropdown",
               "label": {
-                "en": "IR code learning - command ID"
+                "en": "Learn IR code"
               },
               "hint": {
-                "en": "This parameter (25) is during the process to learning non-standard IR codes. Follow the steps as mentioned in the manual. If you need to learn another command, select the command from the dropdown list, press save and learn the command (press the button on the remote)"
+                "en": "Parameter 25. Select the command to learn and save; then aim the original remote at the unit (1 – 3 cm) and press the matching button. Repeat for every command. See the manual."
               },
               "zwave": {
                 "index": 25,
@@ -1750,7 +1750,7 @@
                 "en": "IR code learning status"
               },
               "hint": {
-                "en": "IR code learning status of manually learned codes."
+                "en": "Result of the last IR code learning."
               }
             }
           ]
@@ -1758,7 +1758,7 @@
         {
           "type": "group",
           "label": {
-            "en": "Polling intervals"
+            "en": "Polling intervals (minutes)"
           },
           "collapsed": true,
           "children": [
@@ -1766,10 +1766,10 @@
               "id": "poll_interval_THERMOSTAT_MODE",
               "value": 120,
               "label": {
-                "en": "Thermostat Mode"
+                "en": "Thermostat mode"
               },
               "hint": {
-                "en": "Set polling interval Thermostat Mode (minutes), 0 = disabled, default = 120 minutes"
+                "en": "Polling interval of the thermostat mode, in minutes; 0 = off. Default: 120."
               },
               "attr": {
                 "min": 0,
@@ -1781,10 +1781,10 @@
               "id": "poll_interval_THERMOSTAT_SETPOINT",
               "value": 180,
               "label": {
-                "en": "Thermostat Setpoint"
+                "en": "Thermostat setpoint"
               },
               "hint": {
-                "en": "Set polling interval Thermostat Setpoint (minutes), 0 = disabled, default = 180 minutes"
+                "en": "Polling interval of the setpoint, in minutes; 0 = off. Default: 180."
               },
               "attr": {
                 "min": 0,
@@ -1796,10 +1796,10 @@
               "id": "poll_interval_THERMOSTAT_FAN_MODE",
               "value": 0,
               "label": {
-                "en": "Thermostat Fan Mode"
+                "en": "Fan mode"
               },
               "hint": {
-                "en": "Set polling interval Thermostat Fan Mode (minutes), 0 = disabled, default = 0"
+                "en": "Polling interval of the fan mode, in minutes; 0 = off (default)."
               },
               "attr": {
                 "min": 0,
@@ -1813,10 +1813,10 @@
           "id": "Library_version",
           "value": "not provided",
           "label": {
-            "en": "Library and Firmware version"
+            "en": "Firmware version"
           },
           "hint": {
-            "en": "Byte 1, Model suffix, Byte 2, Reserved, Byte 3 & 4 : Library Version (read only)"
+            "en": "Firmware version of the device (read only)."
           },
           "type": "label"
         }

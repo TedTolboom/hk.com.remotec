@@ -47,8 +47,8 @@
 		"associationGroupsOptions": {
 			"1": {
 				"hint": {
-					"en": "Z-Wave Plus Lifeline: Association Group 1 will be a default scene report channel. Only one node can be assigned to this association group. \nDefault: 1 (Homey's ID)",
-					"nl": "Z-Wave Plus Lifeline: Association Groep 1 wordt gebruikt om scene rapportages door te geven. Slechts een node kan toegevoegd worden aan deze associatie groep. \nStandaard: 1 (Homey's ID)"
+					"en": "Lifeline: the Scene Master sends its scene reports to this group. Only one node: Homey (1).",
+					"nl": "Lifeline: de Scene Master stuurt zijn scènemeldingen naar deze groep. Slechts één node: Homey (1)."
 				}
 			}
 		}
