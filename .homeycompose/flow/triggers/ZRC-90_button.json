@@ -1,39 +1,85 @@
 {
 	"id": "ZRC-90_button",
-	"platforms": [ "local"],
+	"platforms": [
+		"local"
+	],
 	"title": {
 		"en": "A button has been pressed",
-		"nl": "Een knop is ingedrukt"
+		"nl": "Een knop is ingedrukt",
+		"de": "Eine Taste wurde gedrückt",
+		"fr": "Un bouton a été pressé",
+		"it": "È stato premuto un pulsante",
+		"sv": "En knapp har tryckts",
+		"no": "En knapp er trykket",
+		"es": "Se ha pulsado un botón",
+		"da": "Der er trykket på en knap",
+		"ru": "Нажата кнопка",
+		"pl": "Naciśnięto przycisk",
+		"ko": "버튼이 눌렸습니다",
+		"ar": "تم الضغط على زر"
 	},
 	"hint": {
 		"en": "This card will trigger on any button pressed and provides the button and scene tokens.",
-		"nl": "Deze kaart wordt geactiveerd bij iedere knop die ingedrukt wordt en biedt de knop en scene tokens aan."
+		"nl": "Deze kaart start bij elke knop die wordt ingedrukt en geeft de knop en de scène als tags.",
+		"de": "Diese Karte startet bei jedem Tastendruck und liefert die Taste und die Szene als Tags.",
+		"fr": "Cette carte se déclenche à chaque pression et fournit le bouton et la scène comme tags.",
+		"it": "Questa scheda si attiva a ogni pressione e fornisce il pulsante e la scena come tag.",
+		"sv": "Det här kortet startar vid varje knapptryckning och ger knappen och scenen som taggar.",
+		"no": "Dette kortet starter ved hvert knappetrykk og gir knappen og scenen som tagger.",
+		"es": "Esta tarjeta se activa con cada pulsación y ofrece el botón y la escena como etiquetas.",
+		"da": "Dette kort starter ved hvert knaptryk og giver knappen og scenen som tags.",
+		"ru": "Эта карточка срабатывает при каждом нажатии и передаёт кнопку и сцену как теги.",
+		"pl": "Ta karta uruchamia się przy każdym naciśnięciu i podaje przycisk i scenę jako tagi.",
+		"ko": "이 카드는 버튼을 누를 때마다 실행되며 버튼과 장면을 태그로 제공합니다.",
+		"ar": "تعمل هذه البطاقة عند كل ضغطة زر وتوفر الزر والمشهد كعلامات."
 	},
 	"args": [
 		{
 			"name": "device",
 			"type": "device",
 			"filter": "driver_id=ZRC-90"
-          }
-        ],
+		}
+	],
 	"tokens": [
 		{
 			"name": "button",
 			"type": "string",
 			"title": {
 				"en": "button",
-				"nl": "knop"
+				"nl": "knop",
+				"de": "Taste",
+				"fr": "bouton",
+				"it": "pulsante",
+				"sv": "knapp",
+				"no": "knapp",
+				"es": "botón",
+				"da": "knap",
+				"ru": "кнопка",
+				"pl": "przycisk",
+				"ko": "버튼",
+				"ar": "الزر"
 			},
 			"example": "0"
-    },
+		},
 		{
 			"name": "scene",
 			"type": "string",
 			"title": {
 				"en": "scene",
-				"nl": "scene"
+				"nl": "scène",
+				"de": "Szene",
+				"fr": "scène",
+				"it": "scena",
+				"sv": "scen",
+				"no": "scene",
+				"es": "escena",
+				"da": "scene",
+				"ru": "сцена",
+				"pl": "scena",
+				"ko": "장면",
+				"ar": "المشهد"
 			},
 			"example": "Button pressed (test)"
-    }
-  ]
+		}
+	]
 }

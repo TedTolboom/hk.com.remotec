@@ -16,5 +16,9 @@
   },
   "2.4.3": {
     "en": "Updated inclusion instructions for the Scene Master (ZRC-90)"
+  },
+  "2.5.0": {
+    "en": "Requires Homey 12.9.0. Fixed: the flow card that sets the setpoint of a thermostat mode always failed (ZXT-120, ZXT-600). Setting the temperature in Off, Resume, Fan only or Away now shows a message instead of sending an invalid command. Corrected pairing instructions for the ZXT-120 (press PROG once; choose the listening mode first) and the Scene Master ZRC-90 (reset first). Clearer settings and flow cards, now in 13 languages.",
+    "nl": "Vereist Homey 12.9.0. Opgelost: de flowkaart die de temperatuur van een thermostaatmodus instelt, faalde altijd (ZXT-120, ZXT-600). De temperatuur instellen in Uit, Hervatten, Alleen ventilator of Afwezig geeft nu een melding in plaats van een ongeldige opdracht. Gecorrigeerde koppelinstructies voor de ZXT-120 (één keer op PROG drukken; eerst de luistermodus kiezen) en de Scene Master ZRC-90 (eerst resetten). Duidelijkere instellingen en flowkaarten, nu in 13 talen."
   }
 }

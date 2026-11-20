@@ -1,12 +1,37 @@
 {
 	"id": "action_ZXT_SetFanSwing",
-	"platforms": [ "local"],
+	"platforms": [
+		"local"
+	],
 	"title": {
-		"en": "Set Fan “SWING” mode"
+		"en": "Set the swing mode",
+		"nl": "Stel de swingmodus in",
+		"de": "Swing-Modus einstellen",
+		"fr": "Régler le mode swing",
+		"it": "Imposta la modalità swing",
+		"sv": "Ställ in swingläget",
+		"no": "Still inn swingmodus",
+		"es": "Ajustar el modo swing",
+		"da": "Indstil swing-tilstand",
+		"ru": "Установить режим качания",
+		"pl": "Ustaw tryb swing",
+		"ko": "스윙 모드 설정",
+		"ar": "ضبط وضع التأرجح"
 	},
 	"titleFormatted": {
-		"en": "Set Fan swing mode to [[mode]]",
-		"nl": "Stel de ventilator kantel modus in op [[mode]]"
+		"en": "Set the swing mode to [[mode]]",
+		"nl": "Stel de swingmodus in op [[mode]]",
+		"de": "Swing-Modus auf [[mode]] einstellen",
+		"fr": "Régler le mode swing sur [[mode]]",
+		"it": "Imposta la modalità swing su [[mode]]",
+		"sv": "Ställ in swingläget på [[mode]]",
+		"no": "Still inn swingmodus til [[mode]]",
+		"es": "Ajustar el modo swing a [[mode]]",
+		"da": "Indstil swing-tilstand til [[mode]]",
+		"ru": "Установить режим качания [[mode]]",
+		"pl": "Ustaw tryb swing na [[mode]]",
+		"ko": "스윙 모드를 [[mode]](으)로 설정",
+		"ar": "ضبط وضع التأرجح على [[mode]]"
 	},
 	"args": [
 		{
@@ -19,22 +44,57 @@
 			"type": "dropdown",
 			"title": {
 				"en": "Mode",
-				"nl": "Modus"
+				"nl": "Modus",
+				"de": "Modus",
+				"fr": "Mode",
+				"it": "Modalità",
+				"sv": "Läge",
+				"no": "Modus",
+				"es": "Modo",
+				"da": "Tilstand",
+				"ru": "Режим",
+				"pl": "Tryb",
+				"ko": "모드",
+				"ar": "الوضع"
 			},
 			"values": [
 				{
 					"id": "1",
 					"label": {
-						"en": "Swing AUTO (default)"
+						"en": "Swing auto (default)",
+						"nl": "Swing automatisch (standaard)",
+						"de": "Swing automatisch (Standard)",
+						"fr": "Swing automatique (par défaut)",
+						"it": "Swing automatico (predefinito)",
+						"sv": "Swing automatisk (standard)",
+						"no": "Swing automatisk (standard)",
+						"es": "Swing automático (predeterminado)",
+						"da": "Swing automatisk (standard)",
+						"ru": "Качание авто (по умолчанию)",
+						"pl": "Swing automatyczny (domyślnie)",
+						"ko": "스윙 자동 (기본값)",
+						"ar": "تأرجح تلقائي (افتراضي)"
 					}
-					},
+				},
 				{
 					"id": "0",
 					"label": {
-						"en": "Swing OFF"
+						"en": "Swing off",
+						"nl": "Swing uit",
+						"de": "Swing aus",
+						"fr": "Swing désactivé",
+						"it": "Swing spento",
+						"sv": "Swing av",
+						"no": "Swing av",
+						"es": "Swing apagado",
+						"da": "Swing fra",
+						"ru": "Качание выкл.",
+						"pl": "Swing wyłączony",
+						"ko": "스윙 끄기",
+						"ar": "إيقاف التأرجح"
 					}
-					}
-				]
+				}
+			]
 		}
 	]
 }

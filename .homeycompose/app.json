@@ -1,21 +1,47 @@
 {
   "id": "hk.com.remotec",
   "sdk": 3,
-  "platforms": ["local"],
+  "platforms": [
+    "local"
+  ],
   "name": {
-    "en": "Remotec Technologies"
+    "en": "Remotec Technologies",
+    "nl": "Remotec Technologies",
+    "de": "Remotec Technologies",
+    "fr": "Remotec Technologies",
+    "it": "Remotec Technologies",
+    "sv": "Remotec Technologies",
+    "no": "Remotec Technologies",
+    "es": "Remotec Technologies",
+    "da": "Remotec Technologies",
+    "ru": "Remotec Technologies",
+    "pl": "Remotec Technologies",
+    "ko": "Remotec Technologies",
+    "ar": "Remotec Technologies"
   },
   "brandColor": "#cc3333",
   "description": {
-    "en": "Adds support for Remotec Technologies Z-wave devices"
+    "en": "Adds support for Remotec Technologies Z-Wave devices",
+    "nl": "Voegt ondersteuning toe voor Z-Wave-apparaten van Remotec Technologies",
+    "de": "Fügt Unterstützung für Z-Wave-Geräte von Remotec Technologies hinzu",
+    "fr": "Ajoute la prise en charge des appareils Z-Wave de Remotec Technologies",
+    "it": "Aggiunge il supporto per i dispositivi Z-Wave di Remotec Technologies",
+    "sv": "Lägger till stöd för Z-Wave-enheter från Remotec Technologies",
+    "no": "Legger til støtte for Z-Wave-enheter fra Remotec Technologies",
+    "es": "Añade compatibilidad con los dispositivos Z-Wave de Remotec Technologies",
+    "da": "Tilføjer understøttelse af Z-Wave-enheder fra Remotec Technologies",
+    "ru": "Добавляет поддержку Z-Wave-устройств Remotec Technologies",
+    "pl": "Dodaje obsługę urządzeń Z-Wave firmy Remotec Technologies",
+    "ko": "Remotec Technologies의 Z-Wave 기기를 지원합니다",
+    "ar": "يضيف دعم أجهزة Z-Wave من Remotec Technologies"
   },
   "category": [
     "lights",
     "security",
     "appliances"
   ],
-  "version": "2.4.3",
-  "compatibility": ">=10.0.0",
+  "version": "2.5.0",
+  "compatibility": ">=12.9.0",
   "athomForumDiscussionId": 3113,
   "homeyCommunityTopicId": 155,
   "support": "https://homey.app/a/hk.com.remotec/",

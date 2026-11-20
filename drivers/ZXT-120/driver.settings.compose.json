@@ -4,10 +4,34 @@
 		"value": "1",
 		"type": "dropdown",
 		"label": {
-			"en": "Air conditioner “SWING” control"
+			"en": "Swing",
+			"nl": "Swing",
+			"de": "Swing",
+			"fr": "Swing",
+			"it": "Swing",
+			"sv": "Swing",
+			"no": "Swing",
+			"es": "Swing",
+			"da": "Swing",
+			"ru": "Качание",
+			"pl": "Swing",
+			"ko": "스윙",
+			"ar": "التأرجح"
 		},
 		"hint": {
-			"en": "Define if air conditioner fan “SWING” mode should be enabled or not"
+			"en": "Swing of the air conditioner (parameter 33).",
+			"nl": "Swing van de airco (parameter 33).",
+			"de": "Swing des Klimageräts (Parameter 33).",
+			"fr": "Swing du climatiseur (paramètre 33).",
+			"it": "Swing del condizionatore (parametro 33).",
+			"sv": "Luftkonditioneringens swing (parameter 33).",
+			"no": "Klimaanleggets swing (parameter 33).",
+			"es": "Swing del aire acondicionado (parámetro 33).",
+			"da": "Klimaanlæggets swing (parameter 33).",
+			"ru": "Качание кондиционера (параметр 33).",
+			"pl": "Swing klimatyzatora (parametr 33).",
+			"ko": "에어컨 스윙 (파라미터 33).",
+			"ar": "تأرجح المكيف (المعلمة 33)."
 		},
 		"zwave": {
 			"index": 33,
@@ -17,21 +41,57 @@
 			{
 				"id": "1",
 				"label": {
-					"en": "Swing AUTO (default)"
+					"en": "Swing auto (default)",
+					"nl": "Swing automatisch (standaard)",
+					"de": "Swing automatisch (Standard)",
+					"fr": "Swing automatique (par défaut)",
+					"it": "Swing automatico (predefinito)",
+					"sv": "Swing automatisk (standard)",
+					"no": "Swing automatisk (standard)",
+					"es": "Swing automático (predeterminado)",
+					"da": "Swing automatisk (standard)",
+					"ru": "Качание авто (по умолчанию)",
+					"pl": "Swing automatyczny (domyślnie)",
+					"ko": "스윙 자동 (기본값)",
+					"ar": "تأرجح تلقائي (افتراضي)"
 				}
-      },
+			},
 			{
 				"id": "0",
 				"label": {
-					"en": "Swing OFF"
+					"en": "Swing off",
+					"nl": "Swing uit",
+					"de": "Swing aus",
+					"fr": "Swing désactivé",
+					"it": "Swing spento",
+					"sv": "Swing av",
+					"no": "Swing av",
+					"es": "Swing apagado",
+					"da": "Swing fra",
+					"ru": "Качание выкл.",
+					"pl": "Swing wyłączony",
+					"ko": "스윙 끄기",
+					"ar": "إيقاف التأرجح"
 				}
-      }
-    ]
-  },
+			}
+		]
+	},
 	{
 		"type": "group",
 		"label": {
-			"en": "Temperature"
+			"en": "Temperature",
+			"nl": "Temperatuur",
+			"de": "Temperatur",
+			"fr": "Température",
+			"it": "Temperatura",
+			"sv": "Temperatur",
+			"no": "Temperatur",
+			"es": "Temperatura",
+			"da": "Temperatur",
+			"ru": "Температура",
+			"pl": "Temperatura",
+			"ko": "온도",
+			"ar": "درجة الحرارة"
 		},
 		"collapsed": false,
 		"children": [
@@ -40,10 +100,34 @@
 				"value": "0",
 				"type": "dropdown",
 				"label": {
-					"en": "Calibrate Temperature reading"
+					"en": "Temperature offset",
+					"nl": "Temperatuurcorrectie",
+					"de": "Temperaturkorrektur",
+					"fr": "Correction de température",
+					"it": "Correzione della temperatura",
+					"sv": "Temperaturkorrigering",
+					"no": "Temperaturkorrigering",
+					"es": "Corrección de temperatura",
+					"da": "Temperaturkorrektion",
+					"ru": "Коррекция температуры",
+					"pl": "Korekta temperatury",
+					"ko": "온도 보정",
+					"ar": "تصحيح درجة الحرارة"
 				},
 				"hint": {
-					"en": "This parameter is used to compensate the temperature error at temperature sensor"
+					"en": "Offset added to the measured temperature (parameter 37).",
+					"nl": "Correctie die bij de gemeten temperatuur wordt opgeteld (parameter 37).",
+					"de": "Korrektur, die zur gemessenen Temperatur addiert wird (Parameter 37).",
+					"fr": "Correction ajoutée à la température mesurée (paramètre 37).",
+					"it": "Correzione sommata alla temperatura misurata (parametro 37).",
+					"sv": "Korrigering som läggs till den uppmätta temperaturen (parameter 37).",
+					"no": "Korrigering som legges til den målte temperaturen (parameter 37).",
+					"es": "Corrección que se suma a la temperatura medida (parámetro 37).",
+					"da": "Korrektion, der lægges til den målte temperatur (parameter 37).",
+					"ru": "Поправка, прибавляемая к измеренной температуре (параметр 37).",
+					"pl": "Korekta dodawana do zmierzonej temperatury (parametr 37).",
+					"ko": "측정 온도에 더해지는 보정값 (파라미터 37).",
+					"ar": "تصحيح يُضاف إلى درجة الحرارة المقاسة (المعلمة 37)."
 				},
 				"zwave": {
 					"index": 37,
@@ -54,77 +138,221 @@
 					{
 						"id": "0",
 						"label": {
-							"en": "Measured temperature (default)"
+							"en": "Measured temperature (default)",
+							"nl": "Gemeten temperatuur (standaard)",
+							"de": "Gemessene Temperatur (Standard)",
+							"fr": "Température mesurée (par défaut)",
+							"it": "Temperatura misurata (predefinito)",
+							"sv": "Uppmätt temperatur (standard)",
+							"no": "Målt temperatur (standard)",
+							"es": "Temperatura medida (predeterminado)",
+							"da": "Målt temperatur (standard)",
+							"ru": "Измеренная температура (по умолчанию)",
+							"pl": "Zmierzona temperatura (domyślnie)",
+							"ko": "측정 온도 (기본값)",
+							"ar": "درجة الحرارة المقاسة (افتراضي)"
 						}
-          },
+					},
 					{
 						"id": "1",
 						"label": {
-							"en": "Measured temperature + 1.0°C"
+							"en": "Measured temperature + 1.0°C",
+							"nl": "Gemeten temperatuur + 1,0 °C",
+							"de": "Gemessene Temperatur + 1,0 °C",
+							"fr": "Température mesurée + 1,0 °C",
+							"it": "Temperatura misurata + 1,0 °C",
+							"sv": "Uppmätt temperatur + 1,0 °C",
+							"no": "Målt temperatur + 1,0 °C",
+							"es": "Temperatura medida + 1,0 °C",
+							"da": "Målt temperatur + 1,0 °C",
+							"ru": "Измеренная температура + 1,0 °C",
+							"pl": "Zmierzona temperatura + 1,0 °C",
+							"ko": "측정 온도 + 1.0 °C",
+							"ar": "درجة الحرارة المقاسة + 1.0 °C"
 						}
-          },
+					},
 					{
 						"id": "2",
 						"label": {
-							"en": "Measured temperature + 2.0°C"
+							"en": "Measured temperature + 2.0°C",
+							"nl": "Gemeten temperatuur + 2,0 °C",
+							"de": "Gemessene Temperatur + 2,0 °C",
+							"fr": "Température mesurée + 2,0 °C",
+							"it": "Temperatura misurata + 2,0 °C",
+							"sv": "Uppmätt temperatur + 2,0 °C",
+							"no": "Målt temperatur + 2,0 °C",
+							"es": "Temperatura medida + 2,0 °C",
+							"da": "Målt temperatur + 2,0 °C",
+							"ru": "Измеренная температура + 2,0 °C",
+							"pl": "Zmierzona temperatura + 2,0 °C",
+							"ko": "측정 온도 + 2.0 °C",
+							"ar": "درجة الحرارة المقاسة + 2.0 °C"
 						}
-          },
+					},
 					{
 						"id": "3",
 						"label": {
-							"en": "Measured temperature + 3.0°C"
+							"en": "Measured temperature + 3.0°C",
+							"nl": "Gemeten temperatuur + 3,0 °C",
+							"de": "Gemessene Temperatur + 3,0 °C",
+							"fr": "Température mesurée + 3,0 °C",
+							"it": "Temperatura misurata + 3,0 °C",
+							"sv": "Uppmätt temperatur + 3,0 °C",
+							"no": "Målt temperatur + 3,0 °C",
+							"es": "Temperatura medida + 3,0 °C",
+							"da": "Målt temperatur + 3,0 °C",
+							"ru": "Измеренная температура + 3,0 °C",
+							"pl": "Zmierzona temperatura + 3,0 °C",
+							"ko": "측정 온도 + 3.0 °C",
+							"ar": "درجة الحرارة المقاسة + 3.0 °C"
 						}
-          },
+					},
 					{
 						"id": "4",
 						"label": {
-							"en": "Measured temperature + 4.0°C"
+							"en": "Measured temperature + 4.0°C",
+							"nl": "Gemeten temperatuur + 4,0 °C",
+							"de": "Gemessene Temperatur + 4,0 °C",
+							"fr": "Température mesurée + 4,0 °C",
+							"it": "Temperatura misurata + 4,0 °C",
+							"sv": "Uppmätt temperatur + 4,0 °C",
+							"no": "Målt temperatur + 4,0 °C",
+							"es": "Temperatura medida + 4,0 °C",
+							"da": "Målt temperatur + 4,0 °C",
+							"ru": "Измеренная температура + 4,0 °C",
+							"pl": "Zmierzona temperatura + 4,0 °C",
+							"ko": "측정 온도 + 4.0 °C",
+							"ar": "درجة الحرارة المقاسة + 4.0 °C"
 						}
-          },
+					},
 					{
 						"id": "5",
 						"label": {
-							"en": "Measured temperature + 5.0°C"
+							"en": "Measured temperature + 5.0°C",
+							"nl": "Gemeten temperatuur + 5,0 °C",
+							"de": "Gemessene Temperatur + 5,0 °C",
+							"fr": "Température mesurée + 5,0 °C",
+							"it": "Temperatura misurata + 5,0 °C",
+							"sv": "Uppmätt temperatur + 5,0 °C",
+							"no": "Målt temperatur + 5,0 °C",
+							"es": "Temperatura medida + 5,0 °C",
+							"da": "Målt temperatur + 5,0 °C",
+							"ru": "Измеренная температура + 5,0 °C",
+							"pl": "Zmierzona temperatura + 5,0 °C",
+							"ko": "측정 온도 + 5.0 °C",
+							"ar": "درجة الحرارة المقاسة + 5.0 °C"
 						}
-          },
+					},
 					{
 						"id": "255",
 						"label": {
-							"en": "Measured temperature - 1.0°C"
+							"en": "Measured temperature - 1.0°C",
+							"nl": "Gemeten temperatuur - 1,0 °C",
+							"de": "Gemessene Temperatur - 1,0 °C",
+							"fr": "Température mesurée - 1,0 °C",
+							"it": "Temperatura misurata - 1,0 °C",
+							"sv": "Uppmätt temperatur - 1,0 °C",
+							"no": "Målt temperatur - 1,0 °C",
+							"es": "Temperatura medida - 1,0 °C",
+							"da": "Målt temperatur - 1,0 °C",
+							"ru": "Измеренная температура - 1,0 °C",
+							"pl": "Zmierzona temperatura - 1,0 °C",
+							"ko": "측정 온도 - 1.0 °C",
+							"ar": "درجة الحرارة المقاسة - 1.0 °C"
 						}
-          },
+					},
 					{
 						"id": "254",
 						"label": {
-							"en": "Measured temperature - 2.0°C"
+							"en": "Measured temperature - 2.0°C",
+							"nl": "Gemeten temperatuur - 2,0 °C",
+							"de": "Gemessene Temperatur - 2,0 °C",
+							"fr": "Température mesurée - 2,0 °C",
+							"it": "Temperatura misurata - 2,0 °C",
+							"sv": "Uppmätt temperatur - 2,0 °C",
+							"no": "Målt temperatur - 2,0 °C",
+							"es": "Temperatura medida - 2,0 °C",
+							"da": "Målt temperatur - 2,0 °C",
+							"ru": "Измеренная температура - 2,0 °C",
+							"pl": "Zmierzona temperatura - 2,0 °C",
+							"ko": "측정 온도 - 2.0 °C",
+							"ar": "درجة الحرارة المقاسة - 2.0 °C"
 						}
-          },
+					},
 					{
 						"id": "253",
 						"label": {
-							"en": "Measured temperature - 3.0°C"
+							"en": "Measured temperature - 3.0°C",
+							"nl": "Gemeten temperatuur - 3,0 °C",
+							"de": "Gemessene Temperatur - 3,0 °C",
+							"fr": "Température mesurée - 3,0 °C",
+							"it": "Temperatura misurata - 3,0 °C",
+							"sv": "Uppmätt temperatur - 3,0 °C",
+							"no": "Målt temperatur - 3,0 °C",
+							"es": "Temperatura medida - 3,0 °C",
+							"da": "Målt temperatur - 3,0 °C",
+							"ru": "Измеренная температура - 3,0 °C",
+							"pl": "Zmierzona temperatura - 3,0 °C",
+							"ko": "측정 온도 - 3.0 °C",
+							"ar": "درجة الحرارة المقاسة - 3.0 °C"
 						}
-          },
+					},
 					{
 						"id": "252",
 						"label": {
-							"en": "Measured temperature - 4.0°C"
+							"en": "Measured temperature - 4.0°C",
+							"nl": "Gemeten temperatuur - 4,0 °C",
+							"de": "Gemessene Temperatur - 4,0 °C",
+							"fr": "Température mesurée - 4,0 °C",
+							"it": "Temperatura misurata - 4,0 °C",
+							"sv": "Uppmätt temperatur - 4,0 °C",
+							"no": "Målt temperatur - 4,0 °C",
+							"es": "Temperatura medida - 4,0 °C",
+							"da": "Målt temperatur - 4,0 °C",
+							"ru": "Измеренная температура - 4,0 °C",
+							"pl": "Zmierzona temperatura - 4,0 °C",
+							"ko": "측정 온도 - 4.0 °C",
+							"ar": "درجة الحرارة المقاسة - 4.0 °C"
 						}
-          },
+					},
 					{
 						"id": "251",
 						"label": {
-							"en": "Measured temperature - 5.0°C"
+							"en": "Measured temperature - 5.0°C",
+							"nl": "Gemeten temperatuur - 5,0 °C",
+							"de": "Gemessene Temperatur - 5,0 °C",
+							"fr": "Température mesurée - 5,0 °C",
+							"it": "Temperatura misurata - 5,0 °C",
+							"sv": "Uppmätt temperatur - 5,0 °C",
+							"no": "Målt temperatur - 5,0 °C",
+							"es": "Temperatura medida - 5,0 °C",
+							"da": "Målt temperatur - 5,0 °C",
+							"ru": "Измеренная температура - 5,0 °C",
+							"pl": "Zmierzona temperatura - 5,0 °C",
+							"ko": "측정 온도 - 5.0 °C",
+							"ar": "درجة الحرارة المقاسة - 5.0 °C"
 						}
-          }
-        ]
-      }
-      ]
-  },
+					}
+				]
+			}
+		]
+	},
 	{
 		"type": "group",
 		"label": {
-			"en": "IR function"
+			"en": "IR codes",
+			"nl": "IR-codes",
+			"de": "IR-Codes",
+			"fr": "Codes IR",
+			"it": "Codici IR",
+			"sv": "IR-koder",
+			"no": "IR-koder",
+			"es": "Códigos IR",
+			"da": "IR-koder",
+			"ru": "ИК-коды",
+			"pl": "Kody IR",
+			"ko": "IR 코드",
+			"ar": "رموز IR"
 		},
 		"collapsed": true,
 		"children": [
@@ -132,10 +360,34 @@
 				"id": "IR_code_number",
 				"value": 857,
 				"label": {
-					"en": "Set IR Code Number from built-in code library"
+					"en": "IR code from the built-in library",
+					"nl": "IR-code uit de ingebouwde bibliotheek",
+					"de": "IR-Code aus der integrierten Bibliothek",
+					"fr": "Code IR de la bibliothèque intégrée",
+					"it": "Codice IR dalla libreria integrata",
+					"sv": "IR-kod från det inbyggda biblioteket",
+					"no": "IR-kode fra det innebygde biblioteket",
+					"es": "Código IR de la biblioteca integrada",
+					"da": "IR-kode fra det indbyggede bibliotek",
+					"ru": "ИК-код из встроенной библиотеки",
+					"pl": "Kod IR z wbudowanej biblioteki",
+					"ko": "내장 라이브러리의 IR 코드",
+					"ar": "رمز IR من المكتبة المدمجة"
 				},
 				"hint": {
-					"en": "Refer to Code Finder Webpage"
+					"en": "Parameter 27. Look up the code of your air conditioner on the Remotec code finder page. 0 = use the learnt codes.",
+					"nl": "Parameter 27. Zoek de code van je airco op de code finder-pagina van Remotec. 0 = de geleerde codes gebruiken.",
+					"de": "Parameter 27. Suche den Code deines Klimageräts auf der Code-Finder-Seite von Remotec. 0 = gelernte Codes verwenden.",
+					"fr": "Paramètre 27. Cherchez le code de votre climatiseur sur la page de recherche de codes de Remotec. 0 = utiliser les codes appris.",
+					"it": "Parametro 27. Cerca il codice del tuo condizionatore nella pagina di ricerca codici di Remotec. 0 = usa i codici appresi.",
+					"sv": "Parameter 27. Leta upp koden för din luftkonditionering på Remotecs kodsökningssida. 0 = använd de inlärda koderna.",
+					"no": "Parameter 27. Finn koden for klimaanlegget ditt på Remotecs kodesøkside. 0 = bruk de innlærte kodene.",
+					"es": "Parámetro 27. Busca el código de tu aire acondicionado en la página de búsqueda de códigos de Remotec. 0 = usar los códigos aprendidos.",
+					"da": "Parameter 27. Find koden til dit klimaanlæg på Remotecs kodefinder-side. 0 = brug de lærte koder.",
+					"ru": "Параметр 27. Найдите код вашего кондиционера на странице поиска кодов Remotec. 0 = использовать выученные коды.",
+					"pl": "Parametr 27. Znajdź kod swojego klimatyzatora na stronie wyszukiwarki kodów Remotec. 0 = użyj nauczonych kodów.",
+					"ko": "파라미터 27. Remotec 코드 찾기 페이지에서 에어컨 코드를 찾으세요. 0 = 학습한 코드 사용.",
+					"ar": "المعلمة 27. ابحث عن رمز مكيفك في صفحة البحث عن الرموز لدى Remotec. 0 = استخدام الرموز المُتعلَّمة."
 				},
 				"zwave": {
 					"index": 27,
@@ -147,15 +399,39 @@
 					"max": 65535
 				},
 				"type": "number"
-      },
+			},
 			{
 				"id": "IR_power_level",
 				"value": 255,
 				"label": {
-					"en": "Set IR transmission power level"
+					"en": "External IR emitter power",
+					"nl": "Vermogen externe IR-zender",
+					"de": "Leistung des externen IR-Senders",
+					"fr": "Puissance de l'émetteur IR externe",
+					"it": "Potenza dell'emettitore IR esterno",
+					"sv": "Effekt för extern IR-sändare",
+					"no": "Effekt for ekstern IR-sender",
+					"es": "Potencia del emisor IR externo",
+					"da": "Effekt for ekstern IR-sender",
+					"ru": "Мощность внешнего ИК-излучателя",
+					"pl": "Moc zewnętrznego nadajnika IR",
+					"ko": "외부 IR 송신기 출력",
+					"ar": "قدرة مرسل IR الخارجي"
 				},
 				"hint": {
-					"en": "Range 0 (normal power mode) to 255 (high power mode (default))"
+					"en": "External IR emitter: 0 = normal power, 255 = high power (default). Other values are not supported.",
+					"nl": "Externe IR-zender: 0 = normaal vermogen, 255 = hoog vermogen (standaard). Andere waarden worden niet ondersteund.",
+					"de": "Externer IR-Sender: 0 = normale Leistung, 255 = hohe Leistung (Standard). Andere Werte werden nicht unterstützt.",
+					"fr": "Émetteur IR externe : 0 = puissance normale, 255 = puissance élevée (par défaut). Les autres valeurs ne sont pas prises en charge.",
+					"it": "Emettitore IR esterno: 0 = potenza normale, 255 = potenza alta (predefinito). Altri valori non sono supportati.",
+					"sv": "Extern IR-sändare: 0 = normal effekt, 255 = hög effekt (standard). Andra värden stöds inte.",
+					"no": "Ekstern IR-sender: 0 = normal effekt, 255 = høy effekt (standard). Andre verdier støttes ikke.",
+					"es": "Emisor IR externo: 0 = potencia normal, 255 = potencia alta (predeterminado). No se admiten otros valores.",
+					"da": "Ekstern IR-sender: 0 = normal effekt, 255 = høj effekt (standard). Andre værdier understøttes ikke.",
+					"ru": "Внешний ИК-излучатель: 0 = обычная мощность, 255 = высокая мощность (по умолчанию). Другие значения не поддерживаются.",
+					"pl": "Zewnętrzny nadajnik IR: 0 = moc normalna, 255 = moc wysoka (domyślnie). Inne wartości nie są obsługiwane.",
+					"ko": "외부 IR 송신기: 0 = 일반 출력, 255 = 고출력 (기본값). 다른 값은 지원되지 않습니다.",
+					"ar": "مرسل IR الخارجي: 0 = قدرة عادية، 255 = قدرة عالية (افتراضي). القيم الأخرى غير مدعومة."
 				},
 				"zwave": {
 					"index": 28,
@@ -167,16 +443,40 @@
 					"max": 255
 				},
 				"type": "number"
-      },
+			},
 			{
 				"id": "IR_emitter_control",
 				"value": "255",
 				"type": "dropdown",
 				"label": {
-					"en": "Use built-in IR emitter"
+					"en": "Built-in IR emitter",
+					"nl": "Ingebouwde IR-zender",
+					"de": "Integrierter IR-Sender",
+					"fr": "Émetteur IR intégré",
+					"it": "Emettitore IR integrato",
+					"sv": "Inbyggd IR-sändare",
+					"no": "Innebygd IR-sender",
+					"es": "Emisor IR integrado",
+					"da": "Indbygget IR-sender",
+					"ru": "Встроенный ИК-излучатель",
+					"pl": "Wbudowany nadajnik IR",
+					"ko": "내장 IR 송신기",
+					"ar": "مرسل IR المدمج"
 				},
 				"hint": {
-					"en": "Note: If more than one air conditioners with the same code set are used in the same room, user can disable the built-in IR emitter and use the external IR emitter cable to control each air conditioner individually"
+					"en": "Parameter 32. Turn the built-in emitter off to control one of several identical air conditioners in a room with the external IR emitter cable.",
+					"nl": "Parameter 32. Zet de ingebouwde zender uit om één van meerdere gelijke airco's in een ruimte te bedienen met de kabel van de externe IR-zender.",
+					"de": "Parameter 32. Schalte den integrierten Sender aus, um eines von mehreren gleichen Klimageräten in einem Raum über das Kabel des externen IR-Senders zu steuern.",
+					"fr": "Paramètre 32. Désactivez l'émetteur intégré pour commander un de plusieurs climatiseurs identiques d'une pièce avec le câble de l'émetteur IR externe.",
+					"it": "Parametro 32. Disattiva l'emettitore integrato per comandare uno di più condizionatori uguali in una stanza con il cavo dell'emettitore IR esterno.",
+					"sv": "Parameter 32. Stäng av den inbyggda sändaren för att styra en av flera likadana luftkonditioneringar i ett rum med kabeln till den externa IR-sändaren.",
+					"no": "Parameter 32. Slå av den innebygde senderen for å styre ett av flere like klimaanlegg i et rom med kabelen til den eksterne IR-senderen.",
+					"es": "Parámetro 32. Apaga el emisor integrado para controlar uno de varios aires acondicionados iguales en una habitación con el cable del emisor IR externo.",
+					"da": "Parameter 32. Slå den indbyggede sender fra for at styre et af flere ens klimaanlæg i et rum med kablet til den eksterne IR-sender.",
+					"ru": "Параметр 32. Отключите встроенный излучатель, чтобы управлять одним из нескольких одинаковых кондиционеров в комнате через кабель внешнего ИК-излучателя.",
+					"pl": "Parametr 32. Wyłącz wbudowany nadajnik, aby sterować jednym z kilku jednakowych klimatyzatorów w pomieszczeniu za pomocą kabla zewnętrznego nadajnika IR.",
+					"ko": "파라미터 32. 한 방에 같은 에어컨이 여러 대 있을 때 내장 송신기를 끄고 외부 IR 송신기 케이블로 한 대를 제어하세요.",
+					"ar": "المعلمة 32. أوقف المرسل المدمج للتحكم في أحد عدة مكيفات متطابقة في غرفة واحدة بواسطة كابل مرسل IR الخارجي."
 				},
 				"zwave": {
 					"index": 32,
@@ -187,25 +487,74 @@
 					{
 						"id": "255",
 						"label": {
-							"en": "Built-in IR emitter enabled (default)."
+							"en": "Enabled (default)",
+							"nl": "Aan (standaard)",
+							"de": "Ein (Standard)",
+							"fr": "Activé (par défaut)",
+							"it": "Attivo (predefinito)",
+							"sv": "På (standard)",
+							"no": "På (standard)",
+							"es": "Activado (predeterminado)",
+							"da": "Til (standard)",
+							"ru": "Вкл. (по умолчанию)",
+							"pl": "Włączony (domyślnie)",
+							"ko": "켜짐 (기본값)",
+							"ar": "مفعّل (افتراضي)"
 						}
-      },
+					},
 					{
 						"id": "0",
 						"label": {
-							"en": "Built-in IR emitter disabled"
+							"en": "Disabled",
+							"nl": "Uit",
+							"de": "Aus",
+							"fr": "Désactivé",
+							"it": "Disattivo",
+							"sv": "Av",
+							"no": "Av",
+							"es": "Desactivado",
+							"da": "Fra",
+							"ru": "Выкл.",
+							"pl": "Wyłączony",
+							"ko": "꺼짐",
+							"ar": "معطّل"
 						}
-      }]
-      },
+					}
+				]
+			},
 			{
 				"id": "IR_code_learning",
 				"value": "0",
 				"type": "dropdown",
 				"label": {
-					"en": "IR code learning - command ID"
+					"en": "Learn IR code",
+					"nl": "IR-code leren",
+					"de": "IR-Code lernen",
+					"fr": "Apprendre un code IR",
+					"it": "Apprendi codice IR",
+					"sv": "Lär in IR-kod",
+					"no": "Lær IR-kode",
+					"es": "Aprender código IR",
+					"da": "Lær IR-kode",
+					"ru": "Обучить ИК-код",
+					"pl": "Naucz kod IR",
+					"ko": "IR 코드 학습",
+					"ar": "تعلّم رمز IR"
 				},
 				"hint": {
-					"en": "This parameter (25) is during the process to learning non-standard IR codes. Follow the steps as mentioned in the manual. If you need to learn another command, select the command from the dropdown list, press save and learn the command (press the button on the remote)"
+					"en": "Parameter 25. Select the command to learn and save; then aim the original remote at the unit (1 – 3 cm) and press the matching button. Repeat for every command. See the manual.",
+					"nl": "Parameter 25. Kies de opdracht die je wilt leren en sla op; richt daarna de originele afstandsbediening op het apparaat (1 – 3 cm) en druk op de bijbehorende knop. Herhaal dit voor elke opdracht. Zie de handleiding.",
+					"de": "Parameter 25. Wähle den zu lernenden Befehl und speichere; richte dann die Original-Fernbedienung auf das Gerät (1 – 3 cm) und drücke die passende Taste. Für jeden Befehl wiederholen. Siehe Anleitung.",
+					"fr": "Paramètre 25. Choisissez la commande à apprendre et enregistrez ; pointez ensuite la télécommande d'origine vers l'appareil (1 – 3 cm) et appuyez sur le bouton correspondant. Répétez pour chaque commande. Voir le manuel.",
+					"it": "Parametro 25. Scegli il comando da apprendere e salva; poi punta il telecomando originale verso il dispositivo (1 – 3 cm) e premi il pulsante corrispondente. Ripeti per ogni comando. Vedi il manuale.",
+					"sv": "Parameter 25. Välj kommandot som ska läras in och spara; rikta sedan originalfjärrkontrollen mot enheten (1 – 3 cm) och tryck på motsvarande knapp. Upprepa för varje kommando. Se manualen.",
+					"no": "Parameter 25. Velg kommandoen som skal læres, og lagre; rett deretter den originale fjernkontrollen mot enheten (1 – 3 cm) og trykk på tilsvarende knapp. Gjenta for hver kommando. Se bruksanvisningen.",
+					"es": "Parámetro 25. Elige el comando que quieres aprender y guarda; después apunta el mando original al dispositivo (1 – 3 cm) y pulsa el botón correspondiente. Repite para cada comando. Consulta el manual.",
+					"da": "Parameter 25. Vælg den kommando, der skal læres, og gem; ret derefter den originale fjernbetjening mod enheden (1 – 3 cm), og tryk på den tilsvarende knap. Gentag for hver kommando. Se manualen.",
+					"ru": "Параметр 25. Выберите команду для обучения и сохраните; затем направьте оригинальный пульт на устройство (1 – 3 см) и нажмите соответствующую кнопку. Повторите для каждой команды. См. руководство.",
+					"pl": "Parametr 25. Wybierz polecenie do nauczenia i zapisz; następnie skieruj oryginalny pilot na urządzenie (1 – 3 cm) i naciśnij odpowiedni przycisk. Powtórz dla każdego polecenia. Zobacz instrukcję.",
+					"ko": "파라미터 25. 학습할 명령을 선택하고 저장한 다음, 원래 리모컨을 기기에 1 – 3 cm 거리로 향하게 하고 해당 버튼을 누르세요. 명령마다 반복하세요. 설명서를 참조하세요.",
+					"ar": "المعلمة 25. اختر الأمر المراد تعلّمه واحفظ؛ ثم وجّه جهاز التحكم الأصلي نحو الجهاز (1 – 3 سم) واضغط على الزر المطابق. كرر ذلك لكل أمر. راجع الدليل."
 				},
 				"zwave": {
 					"index": 25,
@@ -215,159 +564,472 @@
 					{
 						"id": "0",
 						"label": {
-							"en": "OFF"
+							"en": "OFF",
+							"nl": "UIT",
+							"de": "AUS",
+							"fr": "ARRÊT",
+							"it": "SPENTO",
+							"sv": "AV",
+							"no": "AV",
+							"es": "APAGADO",
+							"da": "FRA",
+							"ru": "ВЫКЛ.",
+							"pl": "WYŁ.",
+							"ko": "끄기",
+							"ar": "إيقاف"
 						}
-          },
+					},
 					{
 						"id": "1",
 						"label": {
-							"en": "ON (RESUME)"
+							"en": "ON (RESUME)",
+							"nl": "AAN (HERVATTEN)",
+							"de": "EIN (FORTSETZEN)",
+							"fr": "MARCHE (REPRENDRE)",
+							"it": "ACCESO (RIPRENDI)",
+							"sv": "PÅ (ÅTERUPPTA)",
+							"no": "PÅ (GJENOPPTA)",
+							"es": "ENCENDIDO (REANUDAR)",
+							"da": "TIL (GENOPTAG)",
+							"ru": "ВКЛ. (ВОЗОБНОВИТЬ)",
+							"pl": "WŁ. (WZNÓW)",
+							"ko": "켜기 (재개)",
+							"ar": "تشغيل (استئناف)"
 						}
-          },
+					},
 					{
 						"id": "2",
 						"label": {
-							"en": "19°C / 67°F COOL"
+							"en": "19°C / 67°F COOL",
+							"nl": "19°C / 67°F KOELEN",
+							"de": "19°C / 67°F KÜHLEN",
+							"fr": "19°C / 67°F FROID",
+							"it": "19°C / 67°F FREDDO",
+							"sv": "19°C / 67°F KYLA",
+							"no": "19°C / 67°F KJØLING",
+							"es": "19°C / 67°F FRÍO",
+							"da": "19°C / 67°F KØL",
+							"ru": "19°C / 67°F ОХЛАЖДЕНИЕ",
+							"pl": "19°C / 67°F CHŁODZENIE",
+							"ko": "19°C / 67°F 냉방",
+							"ar": "19°C / 67°F تبريد"
 						}
-          },
+					},
 					{
 						"id": "3",
 						"label": {
-							"en": "20°C / 68°F or 69°F COOL"
+							"en": "20°C / 68°F or 69°F COOL",
+							"nl": "20°C / 68°F of 69°F KOELEN",
+							"de": "20°C / 68°F oder 69°F KÜHLEN",
+							"fr": "20°C / 68°F ou 69°F FROID",
+							"it": "20°C / 68°F o 69°F FREDDO",
+							"sv": "20°C / 68°F eller 69°F KYLA",
+							"no": "20°C / 68°F eller 69°F KJØLING",
+							"es": "20°C / 68°F o 69°F FRÍO",
+							"da": "20°C / 68°F eller 69°F KØL",
+							"ru": "20°C / 68°F или 69°F ОХЛАЖДЕНИЕ",
+							"pl": "20°C / 68°F lub 69°F CHŁODZENIE",
+							"ko": "20°C / 68°F 또는 69°F 냉방",
+							"ar": "20°C / 68°F أو 69°F تبريد"
 						}
-          },
+					},
 					{
 						"id": "4",
 						"label": {
-							"en": "21°C / 70°F or 71°F COOL"
+							"en": "21°C / 70°F or 71°F COOL",
+							"nl": "21°C / 70°F of 71°F KOELEN",
+							"de": "21°C / 70°F oder 71°F KÜHLEN",
+							"fr": "21°C / 70°F ou 71°F FROID",
+							"it": "21°C / 70°F o 71°F FREDDO",
+							"sv": "21°C / 70°F eller 71°F KYLA",
+							"no": "21°C / 70°F eller 71°F KJØLING",
+							"es": "21°C / 70°F o 71°F FRÍO",
+							"da": "21°C / 70°F eller 71°F KØL",
+							"ru": "21°C / 70°F или 71°F ОХЛАЖДЕНИЕ",
+							"pl": "21°C / 70°F lub 71°F CHŁODZENIE",
+							"ko": "21°C / 70°F 또는 71°F 냉방",
+							"ar": "21°C / 70°F أو 71°F تبريد"
 						}
-          },
+					},
 					{
 						"id": "5",
 						"label": {
-							"en": "22°C / 72°F or 73°F COOL"
+							"en": "22°C / 72°F or 73°F COOL",
+							"nl": "22°C / 72°F of 73°F KOELEN",
+							"de": "22°C / 72°F oder 73°F KÜHLEN",
+							"fr": "22°C / 72°F ou 73°F FROID",
+							"it": "22°C / 72°F o 73°F FREDDO",
+							"sv": "22°C / 72°F eller 73°F KYLA",
+							"no": "22°C / 72°F eller 73°F KJØLING",
+							"es": "22°C / 72°F o 73°F FRÍO",
+							"da": "22°C / 72°F eller 73°F KØL",
+							"ru": "22°C / 72°F или 73°F ОХЛАЖДЕНИЕ",
+							"pl": "22°C / 72°F lub 73°F CHŁODZENIE",
+							"ko": "22°C / 72°F 또는 73°F 냉방",
+							"ar": "22°C / 72°F أو 73°F تبريد"
 						}
-          },
+					},
 					{
 						"id": "6",
 						"label": {
-							"en": "23°C / 74°F or 75°F COOL"
+							"en": "23°C / 74°F or 75°F COOL",
+							"nl": "23°C / 74°F of 75°F KOELEN",
+							"de": "23°C / 74°F oder 75°F KÜHLEN",
+							"fr": "23°C / 74°F ou 75°F FROID",
+							"it": "23°C / 74°F o 75°F FREDDO",
+							"sv": "23°C / 74°F eller 75°F KYLA",
+							"no": "23°C / 74°F eller 75°F KJØLING",
+							"es": "23°C / 74°F o 75°F FRÍO",
+							"da": "23°C / 74°F eller 75°F KØL",
+							"ru": "23°C / 74°F или 75°F ОХЛАЖДЕНИЕ",
+							"pl": "23°C / 74°F lub 75°F CHŁODZENIE",
+							"ko": "23°C / 74°F 또는 75°F 냉방",
+							"ar": "23°C / 74°F أو 75°F تبريد"
 						}
-          },
+					},
 					{
 						"id": "7",
 						"label": {
-							"en": "24°C / 76°F COOL"
+							"en": "24°C / 76°F COOL",
+							"nl": "24°C / 76°F KOELEN",
+							"de": "24°C / 76°F KÜHLEN",
+							"fr": "24°C / 76°F FROID",
+							"it": "24°C / 76°F FREDDO",
+							"sv": "24°C / 76°F KYLA",
+							"no": "24°C / 76°F KJØLING",
+							"es": "24°C / 76°F FRÍO",
+							"da": "24°C / 76°F KØL",
+							"ru": "24°C / 76°F ОХЛАЖДЕНИЕ",
+							"pl": "24°C / 76°F CHŁODZENIE",
+							"ko": "24°C / 76°F 냉방",
+							"ar": "24°C / 76°F تبريد"
 						}
-          },
+					},
 					{
 						"id": "8",
 						"label": {
-							"en": "25°C / 77°F or 78°F COOL"
+							"en": "25°C / 77°F or 78°F COOL",
+							"nl": "25°C / 77°F of 78°F KOELEN",
+							"de": "25°C / 77°F oder 78°F KÜHLEN",
+							"fr": "25°C / 77°F ou 78°F FROID",
+							"it": "25°C / 77°F o 78°F FREDDO",
+							"sv": "25°C / 77°F eller 78°F KYLA",
+							"no": "25°C / 77°F eller 78°F KJØLING",
+							"es": "25°C / 77°F o 78°F FRÍO",
+							"da": "25°C / 77°F eller 78°F KØL",
+							"ru": "25°C / 77°F или 78°F ОХЛАЖДЕНИЕ",
+							"pl": "25°C / 77°F lub 78°F CHŁODZENIE",
+							"ko": "25°C / 77°F 또는 78°F 냉방",
+							"ar": "25°C / 77°F أو 78°F تبريد"
 						}
-          },
+					},
 					{
 						"id": "9",
 						"label": {
-							"en": "26°C / 79°F or 80°F COOL"
+							"en": "26°C / 79°F or 80°F COOL",
+							"nl": "26°C / 79°F of 80°F KOELEN",
+							"de": "26°C / 79°F oder 80°F KÜHLEN",
+							"fr": "26°C / 79°F ou 80°F FROID",
+							"it": "26°C / 79°F o 80°F FREDDO",
+							"sv": "26°C / 79°F eller 80°F KYLA",
+							"no": "26°C / 79°F eller 80°F KJØLING",
+							"es": "26°C / 79°F o 80°F FRÍO",
+							"da": "26°C / 79°F eller 80°F KØL",
+							"ru": "26°C / 79°F или 80°F ОХЛАЖДЕНИЕ",
+							"pl": "26°C / 79°F lub 80°F CHŁODZENIE",
+							"ko": "26°C / 79°F 또는 80°F 냉방",
+							"ar": "26°C / 79°F أو 80°F تبريد"
 						}
-          },
+					},
 					{
 						"id": "10",
 						"label": {
-							"en": "27°C / 81°F or 82°F COOL"
+							"en": "27°C / 81°F or 82°F COOL",
+							"nl": "27°C / 81°F of 82°F KOELEN",
+							"de": "27°C / 81°F oder 82°F KÜHLEN",
+							"fr": "27°C / 81°F ou 82°F FROID",
+							"it": "27°C / 81°F o 82°F FREDDO",
+							"sv": "27°C / 81°F eller 82°F KYLA",
+							"no": "27°C / 81°F eller 82°F KJØLING",
+							"es": "27°C / 81°F o 82°F FRÍO",
+							"da": "27°C / 81°F eller 82°F KØL",
+							"ru": "27°C / 81°F или 82°F ОХЛАЖДЕНИЕ",
+							"pl": "27°C / 81°F lub 82°F CHŁODZENIE",
+							"ko": "27°C / 81°F 또는 82°F 냉방",
+							"ar": "27°C / 81°F أو 82°F تبريد"
 						}
-          },
+					},
 					{
 						"id": "11",
 						"label": {
-							"en": "28°C / 83°F or 84°F COOL"
+							"en": "28°C / 83°F or 84°F COOL",
+							"nl": "28°C / 83°F of 84°F KOELEN",
+							"de": "28°C / 83°F oder 84°F KÜHLEN",
+							"fr": "28°C / 83°F ou 84°F FROID",
+							"it": "28°C / 83°F o 84°F FREDDO",
+							"sv": "28°C / 83°F eller 84°F KYLA",
+							"no": "28°C / 83°F eller 84°F KJØLING",
+							"es": "28°C / 83°F o 84°F FRÍO",
+							"da": "28°C / 83°F eller 84°F KØL",
+							"ru": "28°C / 83°F или 84°F ОХЛАЖДЕНИЕ",
+							"pl": "28°C / 83°F lub 84°F CHŁODZENIE",
+							"ko": "28°C / 83°F 또는 84°F 냉방",
+							"ar": "28°C / 83°F أو 84°F تبريد"
 						}
-          },
+					},
 					{
 						"id": "12",
 						"label": {
-							"en": "19°C / 66°F or 67°F HEAT"
+							"en": "19°C / 66°F or 67°F HEAT",
+							"nl": "19°C / 66°F of 67°F VERWARMEN",
+							"de": "19°C / 66°F oder 67°F HEIZEN",
+							"fr": "19°C / 66°F ou 67°F CHAUD",
+							"it": "19°C / 66°F o 67°F CALDO",
+							"sv": "19°C / 66°F eller 67°F VÄRME",
+							"no": "19°C / 66°F eller 67°F VARME",
+							"es": "19°C / 66°F o 67°F CALOR",
+							"da": "19°C / 66°F eller 67°F VARME",
+							"ru": "19°C / 66°F или 67°F ОБОГРЕВ",
+							"pl": "19°C / 66°F lub 67°F GRZANIE",
+							"ko": "19°C / 66°F 또는 67°F 난방",
+							"ar": "19°C / 66°F أو 67°F تدفئة"
 						}
-          },
+					},
 					{
 						"id": "13",
 						"label": {
-							"en": "20°C / 68°F or 69°F HEAT"
+							"en": "20°C / 68°F or 69°F HEAT",
+							"nl": "20°C / 68°F of 69°F VERWARMEN",
+							"de": "20°C / 68°F oder 69°F HEIZEN",
+							"fr": "20°C / 68°F ou 69°F CHAUD",
+							"it": "20°C / 68°F o 69°F CALDO",
+							"sv": "20°C / 68°F eller 69°F VÄRME",
+							"no": "20°C / 68°F eller 69°F VARME",
+							"es": "20°C / 68°F o 69°F CALOR",
+							"da": "20°C / 68°F eller 69°F VARME",
+							"ru": "20°C / 68°F или 69°F ОБОГРЕВ",
+							"pl": "20°C / 68°F lub 69°F GRZANIE",
+							"ko": "20°C / 68°F 또는 69°F 난방",
+							"ar": "20°C / 68°F أو 69°F تدفئة"
 						}
-          },
+					},
 					{
 						"id": "14",
 						"label": {
-							"en": "21°C / 70°F or 71°F HEAT"
+							"en": "21°C / 70°F or 71°F HEAT",
+							"nl": "21°C / 70°F of 71°F VERWARMEN",
+							"de": "21°C / 70°F oder 71°F HEIZEN",
+							"fr": "21°C / 70°F ou 71°F CHAUD",
+							"it": "21°C / 70°F o 71°F CALDO",
+							"sv": "21°C / 70°F eller 71°F VÄRME",
+							"no": "21°C / 70°F eller 71°F VARME",
+							"es": "21°C / 70°F o 71°F CALOR",
+							"da": "21°C / 70°F eller 71°F VARME",
+							"ru": "21°C / 70°F или 71°F ОБОГРЕВ",
+							"pl": "21°C / 70°F lub 71°F GRZANIE",
+							"ko": "21°C / 70°F 또는 71°F 난방",
+							"ar": "21°C / 70°F أو 71°F تدفئة"
 						}
-          },
+					},
 					{
 						"id": "15",
 						"label": {
-							"en": "22°C HEAT / 72°F or 73°F HEAT"
+							"en": "22°C HEAT / 72°F or 73°F HEAT",
+							"nl": "22°C / 72°F of 73°F VERWARMEN",
+							"de": "22°C / 72°F oder 73°F HEIZEN",
+							"fr": "22°C / 72°F ou 73°F CHAUD",
+							"it": "22°C / 72°F o 73°F CALDO",
+							"sv": "22°C / 72°F eller 73°F VÄRME",
+							"no": "22°C / 72°F eller 73°F VARME",
+							"es": "22°C / 72°F o 73°F CALOR",
+							"da": "22°C / 72°F eller 73°F VARME",
+							"ru": "22°C / 72°F или 73°F ОБОГРЕВ",
+							"pl": "22°C / 72°F lub 73°F GRZANIE",
+							"ko": "22°C / 72°F 또는 73°F 난방",
+							"ar": "22°C / 72°F أو 73°F تدفئة"
 						}
-          },
+					},
 					{
 						"id": "16",
 						"label": {
-							"en": "23°C / 74°F or 75°F HEAT"
+							"en": "23°C / 74°F or 75°F HEAT",
+							"nl": "23°C / 74°F of 75°F VERWARMEN",
+							"de": "23°C / 74°F oder 75°F HEIZEN",
+							"fr": "23°C / 74°F ou 75°F CHAUD",
+							"it": "23°C / 74°F o 75°F CALDO",
+							"sv": "23°C / 74°F eller 75°F VÄRME",
+							"no": "23°C / 74°F eller 75°F VARME",
+							"es": "23°C / 74°F o 75°F CALOR",
+							"da": "23°C / 74°F eller 75°F VARME",
+							"ru": "23°C / 74°F или 75°F ОБОГРЕВ",
+							"pl": "23°C / 74°F lub 75°F GRZANIE",
+							"ko": "23°C / 74°F 또는 75°F 난방",
+							"ar": "23°C / 74°F أو 75°F تدفئة"
 						}
-          },
+					},
 					{
 						"id": "17",
 						"label": {
-							"en": "24°C / 76°F HEAT"
+							"en": "24°C / 76°F HEAT",
+							"nl": "24°C / 76°F VERWARMEN",
+							"de": "24°C / 76°F HEIZEN",
+							"fr": "24°C / 76°F CHAUD",
+							"it": "24°C / 76°F CALDO",
+							"sv": "24°C / 76°F VÄRME",
+							"no": "24°C / 76°F VARME",
+							"es": "24°C / 76°F CALOR",
+							"da": "24°C / 76°F VARME",
+							"ru": "24°C / 76°F ОБОГРЕВ",
+							"pl": "24°C / 76°F GRZANIE",
+							"ko": "24°C / 76°F 난방",
+							"ar": "24°C / 76°F تدفئة"
 						}
-          },
+					},
 					{
 						"id": "18",
 						"label": {
-							"en": "25°C / 77°F or 78°F HEAT"
+							"en": "25°C / 77°F or 78°F HEAT",
+							"nl": "25°C / 77°F of 78°F VERWARMEN",
+							"de": "25°C / 77°F oder 78°F HEIZEN",
+							"fr": "25°C / 77°F ou 78°F CHAUD",
+							"it": "25°C / 77°F o 78°F CALDO",
+							"sv": "25°C / 77°F eller 78°F VÄRME",
+							"no": "25°C / 77°F eller 78°F VARME",
+							"es": "25°C / 77°F o 78°F CALOR",
+							"da": "25°C / 77°F eller 78°F VARME",
+							"ru": "25°C / 77°F или 78°F ОБОГРЕВ",
+							"pl": "25°C / 77°F lub 78°F GRZANIE",
+							"ko": "25°C / 77°F 또는 78°F 난방",
+							"ar": "25°C / 77°F أو 78°F تدفئة"
 						}
-          },
+					},
 					{
 						"id": "19",
 						"label": {
-							"en": "26°C / 79°F or 80°F HEAT"
+							"en": "26°C / 79°F or 80°F HEAT",
+							"nl": "26°C / 79°F of 80°F VERWARMEN",
+							"de": "26°C / 79°F oder 80°F HEIZEN",
+							"fr": "26°C / 79°F ou 80°F CHAUD",
+							"it": "26°C / 79°F o 80°F CALDO",
+							"sv": "26°C / 79°F eller 80°F VÄRME",
+							"no": "26°C / 79°F eller 80°F VARME",
+							"es": "26°C / 79°F o 80°F CALOR",
+							"da": "26°C / 79°F eller 80°F VARME",
+							"ru": "26°C / 79°F или 80°F ОБОГРЕВ",
+							"pl": "26°C / 79°F lub 80°F GRZANIE",
+							"ko": "26°C / 79°F 또는 80°F 난방",
+							"ar": "26°C / 79°F أو 80°F تدفئة"
 						}
-          },
+					},
 					{
 						"id": "20",
 						"label": {
-							"en": "27°C / 81°F or 82°F HEAT"
+							"en": "27°C / 81°F or 82°F HEAT",
+							"nl": "27°C / 81°F of 82°F VERWARMEN",
+							"de": "27°C / 81°F oder 82°F HEIZEN",
+							"fr": "27°C / 81°F ou 82°F CHAUD",
+							"it": "27°C / 81°F o 82°F CALDO",
+							"sv": "27°C / 81°F eller 82°F VÄRME",
+							"no": "27°C / 81°F eller 82°F VARME",
+							"es": "27°C / 81°F o 82°F CALOR",
+							"da": "27°C / 81°F eller 82°F VARME",
+							"ru": "27°C / 81°F или 82°F ОБОГРЕВ",
+							"pl": "27°C / 81°F lub 82°F GRZANIE",
+							"ko": "27°C / 81°F 또는 82°F 난방",
+							"ar": "27°C / 81°F أو 82°F تدفئة"
 						}
-          },
+					},
 					{
 						"id": "21",
 						"label": {
-							"en": "28°C / 83°F or 84°F HEAT"
+							"en": "28°C / 83°F or 84°F HEAT",
+							"nl": "28°C / 83°F of 84°F VERWARMEN",
+							"de": "28°C / 83°F oder 84°F HEIZEN",
+							"fr": "28°C / 83°F ou 84°F CHAUD",
+							"it": "28°C / 83°F o 84°F CALDO",
+							"sv": "28°C / 83°F eller 84°F VÄRME",
+							"no": "28°C / 83°F eller 84°F VARME",
+							"es": "28°C / 83°F o 84°F CALOR",
+							"da": "28°C / 83°F eller 84°F VARME",
+							"ru": "28°C / 83°F или 84°F ОБОГРЕВ",
+							"pl": "28°C / 83°F lub 84°F GRZANIE",
+							"ko": "28°C / 83°F 또는 84°F 난방",
+							"ar": "28°C / 83°F أو 84°F تدفئة"
 						}
-          },
+					},
 					{
 						"id": "22",
 						"label": {
-							"en": "DRY MODE"
+							"en": "DRY MODE",
+							"nl": "DROGEN",
+							"de": "ENTFEUCHTEN",
+							"fr": "DÉSHUMIDIFICATION",
+							"it": "DEUMIDIFICAZIONE",
+							"sv": "AVFUKTNING",
+							"no": "AVFUKTING",
+							"es": "DESHUMIDIFICAR",
+							"da": "AFFUGTNING",
+							"ru": "ОСУШЕНИЕ",
+							"pl": "OSUSZANIE",
+							"ko": "제습",
+							"ar": "تجفيف"
 						}
-          }
-        ]
-      },
+					}
+				]
+			},
 			{
 				"id": "IR_code_learning_status",
 				"value": "not provided",
 				"type": "label",
 				"label": {
-					"en": "IR code learning status"
+					"en": "IR code learning status",
+					"nl": "Status IR-code leren",
+					"de": "Status IR-Code lernen",
+					"fr": "État de l'apprentissage IR",
+					"it": "Stato apprendimento IR",
+					"sv": "Status för IR-kodinlärning",
+					"no": "Status for IR-kodeinnlæring",
+					"es": "Estado del aprendizaje IR",
+					"da": "Status for IR-kodeindlæring",
+					"ru": "Состояние обучения ИК",
+					"pl": "Stan nauki kodu IR",
+					"ko": "IR 코드 학습 상태",
+					"ar": "حالة تعلّم رمز IR"
 				},
 				"hint": {
-					"en": "IR code learning status of manually learned codes."
+					"en": "Result of the last IR code learning.",
+					"nl": "Resultaat van het laatste leren van een IR-code.",
+					"de": "Ergebnis des letzten Lernens eines IR-Codes.",
+					"fr": "Résultat du dernier apprentissage d'un code IR.",
+					"it": "Risultato dell'ultimo apprendimento di un codice IR.",
+					"sv": "Resultatet av den senaste IR-kodinlärningen.",
+					"no": "Resultatet av den siste IR-kodeinnlæringen.",
+					"es": "Resultado del último aprendizaje de un código IR.",
+					"da": "Resultatet af den seneste IR-kodeindlæring.",
+					"ru": "Результат последнего обучения ИК-кода.",
+					"pl": "Wynik ostatniej nauki kodu IR.",
+					"ko": "마지막 IR 코드 학습 결과.",
+					"ar": "نتيجة آخر عملية تعلّم لرمز IR."
 				}
-}]
-      },
+			}
+		]
+	},
 	{
 		"type": "group",
 		"label": {
-			"en": "Set polling interval (minutes)"
+			"en": "Polling intervals (minutes)",
+			"nl": "Pollingintervallen (minuten)",
+			"de": "Abfrageintervalle (Minuten)",
+			"fr": "Intervalles d'interrogation (minutes)",
+			"it": "Intervalli di interrogazione (minuti)",
+			"sv": "Pollningsintervall (minuter)",
+			"no": "Pollingintervaller (minutter)",
+			"es": "Intervalos de consulta (minutos)",
+			"da": "Pollingintervaller (minutter)",
+			"ru": "Интервалы опроса (минуты)",
+			"pl": "Interwały odpytywania (minuty)",
+			"ko": "폴링 간격 (분)",
+			"ar": "فترات الاستطلاع (دقائق)"
 		},
 		"collapsed": true,
 		"children": [
@@ -375,72 +1037,193 @@
 				"id": "poll_interval_THERMOSTAT_MODE",
 				"value": 120,
 				"label": {
-					"en": "Thermostat Mode"
+					"en": "Thermostat mode",
+					"nl": "Thermostaatmodus",
+					"de": "Thermostat-Modus",
+					"fr": "Mode du thermostat",
+					"it": "Modalità termostato",
+					"sv": "Termostatläge",
+					"no": "Termostatmodus",
+					"es": "Modo del termostato",
+					"da": "Termostattilstand",
+					"ru": "Режим термостата",
+					"pl": "Tryb termostatu",
+					"ko": "온도조절기 모드",
+					"ar": "وضع الثرموستات"
 				},
 				"hint": {
-					"en": "Set polling interval Thermostat Mode (minutes), 0 = disabled, default = 120 minutes"
+					"en": "Polling interval of the thermostat mode, in minutes; 0 = off. Default: 120.",
+					"nl": "Pollinginterval van de thermostaatmodus, in minuten; 0 = uit. Standaard: 120.",
+					"de": "Abfrageintervall des Thermostat-Modus in Minuten; 0 = aus. Standard: 120.",
+					"fr": "Intervalle d'interrogation du mode du thermostat, en minutes ; 0 = désactivé. Par défaut : 120.",
+					"it": "Intervallo di interrogazione della modalità del termostato, in minuti; 0 = spento. Predefinito: 120.",
+					"sv": "Pollningsintervall för termostatläget i minuter; 0 = av. Standard: 120.",
+					"no": "Pollingintervall for termostatmodusen i minutter; 0 = av. Standard: 120.",
+					"es": "Intervalo de consulta del modo del termostato, en minutos; 0 = desactivado. Predeterminado: 120.",
+					"da": "Pollinginterval for termostattilstanden i minutter; 0 = fra. Standard: 120.",
+					"ru": "Интервал опроса режима термостата в минутах; 0 = выкл. По умолчанию: 120.",
+					"pl": "Interwał odpytywania trybu termostatu w minutach; 0 = wyłączony. Domyślnie: 120.",
+					"ko": "온도조절기 모드 폴링 간격(분), 0 = 끄기. 기본값: 120.",
+					"ar": "فترة استطلاع وضع الثرموستات بالدقائق؛ 0 = إيقاف. الافتراضي: 120."
 				},
 				"attr": {
 					"min": 0,
 					"max": 1440
 				},
 				"type": "number"
-          },
+			},
 			{
 				"id": "poll_interval_THERMOSTAT_SETPOINT",
 				"value": 180,
 				"label": {
-					"en": "Thermostat Setpoint"
+					"en": "Thermostat setpoint",
+					"nl": "Ingestelde temperatuur",
+					"de": "Sollwert",
+					"fr": "Consigne",
+					"it": "Setpoint",
+					"sv": "Börvärde",
+					"no": "Settpunkt",
+					"es": "Consigna",
+					"da": "Setpunkt",
+					"ru": "Уставка",
+					"pl": "Temperatura zadana",
+					"ko": "설정 온도",
+					"ar": "درجة الحرارة المحددة"
 				},
 				"hint": {
-					"en": "Set polling interval Thermostat Setpoint (minutes), 0 = disabled, default = 180 minutes"
+					"en": "Polling interval of the setpoint, in minutes; 0 = off. Default: 180.",
+					"nl": "Pollinginterval van de ingestelde temperatuur, in minuten; 0 = uit. Standaard: 180.",
+					"de": "Abfrageintervall des Sollwerts in Minuten; 0 = aus. Standard: 180.",
+					"fr": "Intervalle d'interrogation de la consigne, en minutes ; 0 = désactivé. Par défaut : 180.",
+					"it": "Intervallo di interrogazione del setpoint, in minuti; 0 = spento. Predefinito: 180.",
+					"sv": "Pollningsintervall för börvärdet i minuter; 0 = av. Standard: 180.",
+					"no": "Pollingintervall for settpunktet i minutter; 0 = av. Standard: 180.",
+					"es": "Intervalo de consulta de la consigna, en minutos; 0 = desactivado. Predeterminado: 180.",
+					"da": "Pollinginterval for setpunktet i minutter; 0 = fra. Standard: 180.",
+					"ru": "Интервал опроса уставки в минутах; 0 = выкл. По умолчанию: 180.",
+					"pl": "Interwał odpytywania temperatury zadanej w minutach; 0 = wyłączony. Domyślnie: 180.",
+					"ko": "설정 온도 폴링 간격(분), 0 = 끄기. 기본값: 180.",
+					"ar": "فترة استطلاع درجة الحرارة المحددة بالدقائق؛ 0 = إيقاف. الافتراضي: 180."
 				},
 				"attr": {
 					"min": 0,
 					"max": 1440
 				},
 				"type": "number"
-          },
+			},
 			{
 				"id": "poll_interval_THERMOSTAT_FAN_MODE",
 				"value": 0,
 				"label": {
-					"en": "Thermostat Fan Mode"
+					"en": "Fan mode",
+					"nl": "Ventilatormodus",
+					"de": "Lüftermodus",
+					"fr": "Mode de ventilation",
+					"it": "Modalità ventola",
+					"sv": "Fläktläge",
+					"no": "Viftemodus",
+					"es": "Modo del ventilador",
+					"da": "Ventilatortilstand",
+					"ru": "Режим вентилятора",
+					"pl": "Tryb wentylatora",
+					"ko": "팬 모드",
+					"ar": "وضع المروحة"
 				},
 				"hint": {
-					"en": "Set polling interval Thermostat Fan Mode (minutes), 0 = disabled, default = 0"
+					"en": "Polling interval of the fan mode, in minutes; 0 = off (default).",
+					"nl": "Pollinginterval van de ventilatormodus, in minuten; 0 = uit (standaard).",
+					"de": "Abfrageintervall des Lüftermodus in Minuten; 0 = aus (Standard).",
+					"fr": "Intervalle d'interrogation du mode de ventilation, en minutes ; 0 = désactivé (par défaut).",
+					"it": "Intervallo di interrogazione della modalità ventola, in minuti; 0 = spento (predefinito).",
+					"sv": "Pollningsintervall för fläktläget i minuter; 0 = av (standard).",
+					"no": "Pollingintervall for viftemodusen i minutter; 0 = av (standard).",
+					"es": "Intervalo de consulta del modo del ventilador, en minutos; 0 = desactivado (predeterminado).",
+					"da": "Pollinginterval for ventilatortilstanden i minutter; 0 = fra (standard).",
+					"ru": "Интервал опроса режима вентилятора в минутах; 0 = выкл. (по умолчанию).",
+					"pl": "Interwał odpytywania trybu wentylatora w minutach; 0 = wyłączony (domyślnie).",
+					"ko": "팬 모드 폴링 간격(분), 0 = 끄기 (기본값).",
+					"ar": "فترة استطلاع وضع المروحة بالدقائق؛ 0 = إيقاف (افتراضي)."
 				},
 				"attr": {
 					"min": 0,
 					"max": 1440
 				},
 				"type": "number"
-      },
+			},
 			{
 				"id": "poll_interval_TEMPERATURE",
 				"value": 0,
 				"label": {
-					"en": "Temperature"
+					"en": "Temperature",
+					"nl": "Temperatuur",
+					"de": "Temperatur",
+					"fr": "Température",
+					"it": "Temperatura",
+					"sv": "Temperatur",
+					"no": "Temperatur",
+					"es": "Temperatura",
+					"da": "Temperatur",
+					"ru": "Температура",
+					"pl": "Temperatura",
+					"ko": "온도",
+					"ar": "درجة الحرارة"
 				},
 				"hint": {
-					"en": "Set polling interval Temperature measurements (minutes), 0 = disabled, default = 0 minutes (disabled)"
+					"en": "Polling interval of the temperature, in minutes; 0 = off (default). The ZXT-120 has no report interval: it only reports the temperature with a command. Polling uses battery in FLiRS mode.",
+					"nl": "Pollinginterval van de temperatuur, in minuten; 0 = uit (standaard). De ZXT-120 heeft geen rapportage-interval: hij meldt de temperatuur alleen bij een opdracht. Pollen kost batterij in FLiRS-modus.",
+					"de": "Abfrageintervall der Temperatur in Minuten; 0 = aus (Standard). Der ZXT-120 hat kein Meldeintervall: Er meldet die Temperatur nur bei einem Befehl. Abfragen verbraucht im FLiRS-Modus Batterie.",
+					"fr": "Intervalle d'interrogation de la température, en minutes ; 0 = désactivé (par défaut). Le ZXT-120 n'a pas d'intervalle de rapport : il ne signale la température qu'avec une commande. L'interrogation consomme la pile en mode FLiRS.",
+					"it": "Intervallo di interrogazione della temperatura, in minuti; 0 = spento (predefinito). Lo ZXT-120 non ha un intervallo di notifica: comunica la temperatura solo con un comando. L'interrogazione consuma batteria in modalità FLiRS.",
+					"sv": "Pollningsintervall för temperaturen i minuter; 0 = av (standard). ZXT-120 har inget rapporteringsintervall: den rapporterar bara temperaturen vid ett kommando. Pollning drar batteri i FLiRS-läge.",
+					"no": "Pollingintervall for temperaturen i minutter; 0 = av (standard). ZXT-120 har ikke noe rapporteringsintervall: den rapporterer bare temperaturen ved en kommando. Polling bruker batteri i FLiRS-modus.",
+					"es": "Intervalo de consulta de la temperatura, en minutos; 0 = desactivado (predeterminado). El ZXT-120 no tiene intervalo de aviso: solo informa la temperatura con un comando. Consultar gasta pila en modo FLiRS.",
+					"da": "Pollinginterval for temperaturen i minutter; 0 = fra (standard). ZXT-120 har intet rapporteringsinterval: den rapporterer kun temperaturen ved en kommando. Polling bruger batteri i FLiRS-tilstand.",
+					"ru": "Интервал опроса температуры в минутах; 0 = выкл. (по умолчанию). У ZXT-120 нет интервала отчётов: он сообщает температуру только при команде. Опрос расходует батарейки в режиме FLiRS.",
+					"pl": "Interwał odpytywania temperatury w minutach; 0 = wyłączony (domyślnie). ZXT-120 nie ma interwału raportowania: podaje temperaturę tylko przy poleceniu. Odpytywanie zużywa baterię w trybie FLiRS.",
+					"ko": "온도 폴링 간격(분), 0 = 끄기 (기본값). ZXT-120에는 보고 간격이 없어 명령이 있을 때만 온도를 보고합니다. FLiRS 모드에서는 폴링이 배터리를 소모합니다.",
+					"ar": "فترة استطلاع درجة الحرارة بالدقائق؛ 0 = إيقاف (افتراضي). لا يملك ZXT-120 فترة إبلاغ: فهو يبلّغ عن درجة الحرارة مع الأوامر فقط. يستهلك الاستطلاع البطارية في وضع FLiRS."
 				},
 				"attr": {
 					"min": 0,
 					"max": 1440
 				},
 				"type": "number"
-          }
-        ]
-      },
+			}
+		]
+	},
 	{
 		"id": "Library_version",
 		"value": "not provided",
 		"label": {
-			"en": "Library and Firmware version"
+			"en": "Firmware version",
+			"nl": "Firmwareversie",
+			"de": "Firmware-Version",
+			"fr": "Version du firmware",
+			"it": "Versione firmware",
+			"sv": "Firmwareversion",
+			"no": "Fastvareversjon",
+			"es": "Versión de firmware",
+			"da": "Firmwareversion",
+			"ru": "Версия прошивки",
+			"pl": "Wersja oprogramowania",
+			"ko": "펌웨어 버전",
+			"ar": "إصدار البرنامج الثابت"
 		},
 		"hint": {
-			"en": "Byte 1, Model suffix, Byte 2, Reserved, Byte 3 & 4 : Library Version"
+			"en": "Firmware version of the device (read only).",
+			"nl": "Firmwareversie van het apparaat (alleen lezen).",
+			"de": "Firmware-Version des Geräts (nur lesen).",
+			"fr": "Version du firmware de l'appareil (lecture seule).",
+			"it": "Versione firmware del dispositivo (sola lettura).",
+			"sv": "Enhetens firmwareversion (skrivskyddad).",
+			"no": "Enhetens fastvareversjon (skrivebeskyttet).",
+			"es": "Versión de firmware del dispositivo (solo lectura).",
+			"da": "Enhedens firmwareversion (skrivebeskyttet).",
+			"ru": "Версия прошивки устройства (только чтение).",
+			"pl": "Wersja oprogramowania urządzenia (tylko do odczytu).",
+			"ko": "기기의 펌웨어 버전 (읽기 전용).",
+			"ar": "إصدار البرنامج الثابت للجهاز (للقراءة فقط)."
 		},
 		"type": "label"
-}]
+	}
+]

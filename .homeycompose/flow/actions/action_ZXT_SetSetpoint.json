@@ -1,67 +1,168 @@
 {
 	"id": "action_ZXT_SetSetpoint",
-	"platforms": [ "local"],
+	"platforms": [
+		"local"
+	],
 	"title": {
-		"en": "Set a setpoint of a thermostat mode",
-		"nl": "Stel de temperatuur in van een thermostaat modus"
+		"en": "Set the setpoint of a thermostat mode",
+		"nl": "Stel de temperatuur van een thermostaatmodus in",
+		"de": "Sollwert eines Thermostat-Modus einstellen",
+		"fr": "Régler la consigne d'un mode du thermostat",
+		"it": "Imposta il setpoint di una modalità del termostato",
+		"sv": "Ställ in börvärdet för ett termostatläge",
+		"no": "Still inn settpunktet for en termostatmodus",
+		"es": "Ajustar la consigna de un modo del termostato",
+		"da": "Indstil setpunktet for en termostattilstand",
+		"ru": "Установить уставку режима термостата",
+		"pl": "Ustaw temperaturę zadaną trybu termostatu",
+		"ko": "온도조절기 모드의 설정 온도 설정",
+		"ar": "ضبط درجة الحرارة المحددة لوضع الثرموستات"
 	},
 	"titleFormatted": {
 		"en": "Set the setpoint of thermostat mode [[setPointType]] to [[setPointValue]]°C",
-		"nl": "Stel de temperatuur van thermostaat modus [[setPointType]] in op [[setPointValue]]°C"
+		"nl": "Stel de temperatuur van thermostaatmodus [[setPointType]] in op [[setPointValue]]°C",
+		"de": "Sollwert des Thermostat-Modus [[setPointType]] auf [[setPointValue]]°C einstellen",
+		"fr": "Régler la consigne du mode [[setPointType]] du thermostat sur [[setPointValue]]°C",
+		"it": "Imposta il setpoint della modalità [[setPointType]] del termostato su [[setPointValue]]°C",
+		"sv": "Ställ in börvärdet för termostatläge [[setPointType]] på [[setPointValue]]°C",
+		"no": "Still inn settpunktet for termostatmodus [[setPointType]] til [[setPointValue]]°C",
+		"es": "Ajustar la consigna del modo del termostato [[setPointType]] a [[setPointValue]]°C",
+		"da": "Indstil setpunktet for termostattilstand [[setPointType]] til [[setPointValue]]°C",
+		"ru": "Установить уставку режима термостата [[setPointType]] на [[setPointValue]]°C",
+		"pl": "Ustaw temperaturę zadaną trybu termostatu [[setPointType]] na [[setPointValue]]°C",
+		"ko": "온도조절기 모드 [[setPointType]]의 설정 온도를 [[setPointValue]]°C로 설정",
+		"ar": "ضبط درجة الحرارة المحددة لوضع الثرموستات [[setPointType]] على [[setPointValue]]°C"
 	},
 	"hint": {
-		"en": "Change the setpoint of a specific thermostat mode. Note: does NOT activate this mode",
-		"nl": "Stel de temperatuur in van een thermostaat modus. Let op: activeert deze modus niet"
+		"en": "Stores the setpoint of a thermostat mode in the AC unit, without activating that mode. It is used the next time the mode is selected. To change the temperature of the current mode, use \"Set the temperature\".",
+		"nl": "Slaat de temperatuur van een thermostaatmodus op in de airco, zonder die modus te activeren. Die wordt gebruikt zodra de modus wordt gekozen. Gebruik \"Stel de temperatuur in\" om de temperatuur van de huidige modus te wijzigen.",
+		"de": "Speichert den Sollwert eines Thermostat-Modus im Klimagerät, ohne diesen Modus zu aktivieren. Er wird verwendet, sobald der Modus gewählt wird. Um die Temperatur des aktuellen Modus zu ändern, nutze \"Die Temperatur setzen\".",
+		"fr": "Enregistre la consigne d'un mode du thermostat dans le climatiseur, sans activer ce mode. Elle est utilisée la prochaine fois que le mode est choisi. Pour changer la température du mode actuel, utilisez \"Définir la température\".",
+		"it": "Memorizza il setpoint di una modalità del termostato nel condizionatore, senza attivare quella modalità. Viene usato la prossima volta che la modalità viene scelta. Per cambiare la temperatura della modalità attuale, usa \"Imposta la temperatura\".",
+		"sv": "Sparar börvärdet för ett termostatläge i luftkonditioneringen utan att aktivera läget. Det används nästa gång läget väljs. Använd \"Ställ in temperaturen\" för att ändra temperaturen i det aktuella läget.",
+		"no": "Lagrer settpunktet for en termostatmodus i klimaanlegget uten å aktivere modusen. Det brukes neste gang modusen velges. Bruk \"Innstill temperaturen\" for å endre temperaturen i gjeldende modus.",
+		"es": "Guarda la consigna de un modo del termostato en el aire acondicionado sin activar ese modo. Se usa la próxima vez que se elija el modo. Para cambiar la temperatura del modo actual, usa \"Ajustar la temperatura\".",
+		"da": "Gemmer setpunktet for en termostattilstand i klimaanlægget uden at aktivere tilstanden. Det bruges, næste gang tilstanden vælges. Brug \"Indstil temperaturen\" for at ændre temperaturen i den aktuelle tilstand.",
+		"ru": "Сохраняет уставку режима термостата в кондиционере, не включая этот режим. Она используется при следующем выборе режима. Чтобы изменить температуру текущего режима, используйте \"Установить температуру\".",
+		"pl": "Zapisuje temperaturę zadaną trybu termostatu w klimatyzatorze, bez włączania tego trybu. Jest używana przy następnym wyborze trybu. Aby zmienić temperaturę bieżącego trybu, użyj \"Ustaw temperaturę\".",
+		"ko": "온도조절기 모드의 설정 온도를 에어컨에 저장하며, 해당 모드를 켜지는 않습니다. 다음에 그 모드를 선택하면 사용됩니다. 현재 모드의 온도를 바꾸려면 \"희망 온도 설정\"을 사용하세요.",
+		"ar": "يحفظ درجة الحرارة المحددة لوضع الثرموستات في المكيف دون تفعيل هذا الوضع. تُستخدم عند اختيار الوضع في المرة القادمة. لتغيير درجة حرارة الوضع الحالي، استخدم \"ضبط درجة الحرارة\"."
 	},
 	"args": [
 		{
 			"name": "device",
 			"type": "device",
 			"filter": "driver_id=ZXT-120|ZXT-600"
-  },
+		},
 		{
 			"name": "setPointType",
 			"type": "dropdown",
 			"title": {
 				"en": "Thermostat mode",
-				"nl": "Thermostaat modus"
+				"nl": "Thermostaatmodus",
+				"de": "Thermostat-Modus",
+				"fr": "Mode du thermostat",
+				"it": "Modalità termostato",
+				"sv": "Termostatläge",
+				"no": "Termostatmodus",
+				"es": "Modo del termostato",
+				"da": "Termostattilstand",
+				"ru": "Режим термостата",
+				"pl": "Tryb termostatu",
+				"ko": "온도조절기 모드",
+				"ar": "وضع الثرموستات"
 			},
 			"values": [
 				{
 					"id": "Heating 1",
 					"label": {
 						"en": "Heat",
-						"nl": "Verwarm"
+						"nl": "Verwarmen",
+						"de": "Heizen",
+						"fr": "Chauffage",
+						"it": "Riscaldamento",
+						"sv": "Värme",
+						"no": "Varme",
+						"es": "Calor",
+						"da": "Varme",
+						"ru": "Обогрев",
+						"pl": "Grzanie",
+						"ko": "난방",
+						"ar": "تدفئة"
 					}
-      },
+				},
 				{
 					"id": "Cooling 1",
 					"label": {
 						"en": "Cool",
-						"nl": "Koel"
+						"nl": "Koelen",
+						"de": "Kühlen",
+						"fr": "Refroidissement",
+						"it": "Raffreddamento",
+						"sv": "Kyla",
+						"no": "Kjøling",
+						"es": "Frío",
+						"da": "Køl",
+						"ru": "Охлаждение",
+						"pl": "Chłodzenie",
+						"ko": "냉방",
+						"ar": "تبريد"
 					}
-      },
+				},
 				{
 					"id": "Auto changeover",
 					"label": {
 						"en": "Auto",
-						"nl": "Auto"
+						"nl": "Auto",
+						"de": "Auto",
+						"fr": "Auto",
+						"it": "Auto",
+						"sv": "Auto",
+						"no": "Auto",
+						"es": "Auto",
+						"da": "Auto",
+						"ru": "Авто",
+						"pl": "Auto",
+						"ko": "자동",
+						"ar": "تلقائي"
 					}
-      },
+				},
 				{
 					"id": "Dry Air",
 					"label": {
 						"en": "Dry air",
-						"nl": "Droge lucht"
+						"nl": "Drogen",
+						"de": "Entfeuchten",
+						"fr": "Déshumidification",
+						"it": "Deumidificazione",
+						"sv": "Avfuktning",
+						"no": "Avfukting",
+						"es": "Deshumidificar",
+						"da": "Affugtning",
+						"ru": "Осушение",
+						"pl": "Osuszanie",
+						"ko": "제습",
+						"ar": "تجفيف"
 					}
-      }
-    ]
-  },
+				}
+			]
+		},
 		{
 			"name": "setPointValue",
 			"title": {
 				"en": "Temperature",
-				"nl": "Temperatuur"
+				"nl": "Temperatuur",
+				"de": "Temperatur",
+				"fr": "Température",
+				"it": "Temperatura",
+				"sv": "Temperatur",
+				"no": "Temperatur",
+				"es": "Temperatura",
+				"da": "Temperatur",
+				"ru": "Температура",
+				"pl": "Temperatura",
+				"ko": "온도",
+				"ar": "درجة الحرارة"
 			},
 			"type": "range",
 			"min": 16,
@@ -69,6 +170,6 @@
 			"step": 0.5,
 			"label": "°C",
 			"labelDecimals": 1
-  }
-]
+		}
+	]
 }

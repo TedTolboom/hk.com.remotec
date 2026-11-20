@@ -1,11 +1,26 @@
 {
 	"id": "ZXT-120",
-	"platforms": ["local"],
-	"connectivity": [ "zwave" ],
-	"branch": "master",
+	"platforms": [
+		"local"
+	],
+	"connectivity": [
+		"zwave"
+	],
 	"class": "thermostat",
 	"name": {
-		"en": "ZXT-120 AC Extender"
+		"en": "ZXT-120 AC Extender",
+		"nl": "ZXT-120 AC Extender",
+		"de": "ZXT-120 AC Extender",
+		"fr": "ZXT-120 AC Extender",
+		"it": "ZXT-120 AC Extender",
+		"sv": "ZXT-120 AC Extender",
+		"no": "ZXT-120 AC Extender",
+		"es": "ZXT-120 AC Extender",
+		"da": "ZXT-120 AC Extender",
+		"ru": "ZXT-120 AC Extender",
+		"pl": "ZXT-120 AC Extender",
+		"ko": "ZXT-120 AC Extender",
+		"ar": "ZXT-120 AC Extender"
 	},
 	"capabilities": [
 		"measure_temperature",
@@ -24,16 +39,44 @@
 		"AC_onoff": {
 			"greyout": true,
 			"titleTrue": {
-				"en": "Active"
+				"en": "Active",
+				"nl": "Actief",
+				"de": "Aktiv",
+				"fr": "Actif",
+				"it": "Attivo",
+				"sv": "Aktiv",
+				"no": "Aktiv",
+				"es": "Activo",
+				"da": "Aktiv",
+				"ru": "Активен",
+				"pl": "Aktywny",
+				"ko": "작동 중",
+				"ar": "نشط"
 			},
 			"titleFalse": {
-				"en": "Idle"
+				"en": "Idle",
+				"nl": "Inactief",
+				"de": "Inaktiv",
+				"fr": "Inactif",
+				"it": "Inattivo",
+				"sv": "Inaktiv",
+				"no": "Inaktiv",
+				"es": "Inactivo",
+				"da": "Inaktiv",
+				"ru": "Неактивен",
+				"pl": "Bezczynny",
+				"ko": "대기",
+				"ar": "خامل"
 			}
 		}
 	},
 	"energy": {
-    "batteries": [ "AAA", "AAA", "AAA"]
-  },
+		"batteries": [
+			"AAA",
+			"AAA",
+			"AAA"
+		]
+	},
 	"images": {
 		"large": "{{driverAssetsPath}}/images/large.jpg",
 		"small": "{{driverAssetsPath}}/images/small.jpg"
@@ -43,7 +86,12 @@
 			21076
 		],
 		"productTypeId": [
-			256, 257, 258, 263, 265, 267
+			256,
+			257,
+			258,
+			263,
+			265,
+			267
 		],
 		"productId": [
 			33655
@@ -51,7 +99,36 @@
 		"wakeUpInterval": 3600,
 		"learnmode": {
 			"instruction": {
-				"en": "Triple click the button on the ZXT-120"
+				"en": "Choose the listening mode first; it can only be changed while the ZXT-120 is not included.\n- FLiRS (default, for batteries): no action.\n- Always Listening (for USB power): hold PROG for 5 seconds until the LED turns on, release it and press PROG 3 times within 2 seconds. The LED flashes 4 times (2 times = FLiRS).\nThen press PROG once. The LED flashes once.",
+				"nl": "Kies eerst de luistermodus; die kan alleen worden gewijzigd zolang de ZXT-120 niet is toegevoegd.\n- FLiRS (standaard, voor batterijen): niets doen.\n- Always Listening (voor USB-voeding): houd PROG 5 seconden ingedrukt tot de LED aangaat, laat los en druk binnen 2 seconden 3 keer op PROG. De LED knippert 4 keer (2 keer = FLiRS).\nDruk daarna één keer op PROG. De LED knippert één keer.",
+				"de": "Wähle zuerst den Empfangsmodus; er kann nur geändert werden, solange der ZXT-120 nicht eingebunden ist.\n- FLiRS (Standard, für Batterien): nichts tun.\n- Always Listening (für USB-Stromversorgung): Halte PROG 5 Sekunden gedrückt, bis die LED angeht, lass los und drücke PROG innerhalb von 2 Sekunden 3-mal. Die LED blinkt 4-mal (2-mal = FLiRS).\nDrücke dann einmal PROG. Die LED blinkt einmal.",
+				"fr": "Choisissez d'abord le mode d'écoute ; il ne peut être changé que lorsque le ZXT-120 n'est pas inclus.\n- FLiRS (par défaut, pour les piles) : rien à faire.\n- Always Listening (pour l'alimentation USB) : maintenez PROG 5 secondes jusqu'à ce que la LED s'allume, relâchez et appuyez 3 fois sur PROG en 2 secondes. La LED clignote 4 fois (2 fois = FLiRS).\nAppuyez ensuite une fois sur PROG. La LED clignote une fois.",
+				"it": "Scegli prima la modalità di ascolto; si può cambiare solo quando lo ZXT-120 non è incluso.\n- FLiRS (predefinita, per le batterie): nessuna azione.\n- Always Listening (per l'alimentazione USB): tieni premuto PROG per 5 secondi finché il LED si accende, rilascia e premi PROG 3 volte entro 2 secondi. Il LED lampeggia 4 volte (2 volte = FLiRS).\nPoi premi PROG una volta. Il LED lampeggia una volta.",
+				"sv": "Välj först lyssningsläget; det kan bara ändras medan ZXT-120 inte är tillagd.\n- FLiRS (standard, för batterier): gör ingenting.\n- Always Listening (för USB-ström): håll PROG intryckt i 5 sekunder tills lysdioden tänds, släpp och tryck på PROG 3 gånger inom 2 sekunder. Lysdioden blinkar 4 gånger (2 gånger = FLiRS).\nTryck sedan en gång på PROG. Lysdioden blinkar en gång.",
+				"no": "Velg først lyttemodus; den kan bare endres mens ZXT-120 ikke er lagt til.\n- FLiRS (standard, for batterier): ikke gjør noe.\n- Always Listening (for USB-strøm): hold PROG inne i 5 sekunder til LED-en tennes, slipp og trykk på PROG 3 ganger innen 2 sekunder. LED-en blinker 4 ganger (2 ganger = FLiRS).\nTrykk deretter én gang på PROG. LED-en blinker én gang.",
+				"es": "Elige primero el modo de escucha; solo se puede cambiar mientras el ZXT-120 no esté añadido.\n- FLiRS (predeterminado, para pilas): no hagas nada.\n- Always Listening (para alimentación USB): mantén pulsado PROG 5 segundos hasta que se encienda el LED, suéltalo y pulsa PROG 3 veces en 2 segundos. El LED parpadea 4 veces (2 veces = FLiRS).\nDespués pulsa PROG una vez. El LED parpadea una vez.",
+				"da": "Vælg først lyttetilstanden; den kan kun ændres, mens ZXT-120 ikke er tilføjet.\n- FLiRS (standard, til batterier): gør ingenting.\n- Always Listening (til USB-strøm): hold PROG inde i 5 sekunder, til LED'en tænder, slip og tryk på PROG 3 gange inden for 2 sekunder. LED'en blinker 4 gange (2 gange = FLiRS).\nTryk derefter én gang på PROG. LED'en blinker én gang.",
+				"ru": "Сначала выберите режим приёма; его можно изменить, только пока ZXT-120 не добавлен.\n- FLiRS (по умолчанию, для батареек): ничего не делать.\n- Always Listening (для питания по USB): удерживайте PROG 5 секунд, пока не загорится светодиод, отпустите и нажмите PROG 3 раза в течение 2 секунд. Светодиод мигнёт 4 раза (2 раза = FLiRS).\nЗатем один раз нажмите PROG. Светодиод мигнёт один раз.",
+				"pl": "Najpierw wybierz tryb nasłuchu; można go zmienić tylko, gdy ZXT-120 nie jest dodany.\n- FLiRS (domyślny, dla baterii): nic nie rób.\n- Always Listening (dla zasilania USB): przytrzymaj PROG 5 sekund, aż zapali się dioda LED, puść i naciśnij PROG 3 razy w ciągu 2 sekund. Dioda LED mignie 4 razy (2 razy = FLiRS).\nNastępnie naciśnij raz PROG. Dioda LED mignie raz.",
+				"ko": "먼저 수신 모드를 선택하세요. ZXT-120이 추가되지 않은 상태에서만 바꿀 수 있습니다.\n- FLiRS (기본값, 배터리용): 아무것도 하지 않습니다.\n- Always Listening (USB 전원용): LED가 켜질 때까지 PROG를 5초간 누른 후 떼고, 2초 안에 PROG를 3번 누르세요. LED가 4번 깜박입니다 (2번 = FLiRS).\n그런 다음 PROG를 한 번 누르세요. LED가 한 번 깜박입니다.",
+				"ar": "اختر وضع الاستماع أولاً؛ لا يمكن تغييره إلا عندما لا يكون ZXT-120 مضافًا.\n- FLiRS (افتراضي، للبطاريات): لا تفعل شيئًا.\n- Always Listening (لطاقة USB): اضغط مطولاً على PROG لمدة 5 ثوانٍ حتى يضيء LED، ثم حرره واضغط على PROG 3 مرات خلال ثانيتين. يومض LED 4 مرات (مرتان = FLiRS).\nثم اضغط على PROG مرة واحدة. يومض LED مرة واحدة."
+			}
+		},
+		"unlearnmode": {
+			"instruction": {
+				"en": "Press PROG once. The LED flashes once.\nFactory reset (only when removing fails): hold PROG for 10 seconds; the LED turns on after 5 seconds and flashes twice when the reset is done. The listening mode stays the same.",
+				"nl": "Druk één keer op PROG. De LED knippert één keer.\nFabrieksreset (alleen als verwijderen mislukt): houd PROG 10 seconden ingedrukt; de LED gaat na 5 seconden aan en knippert twee keer als de reset klaar is. De luistermodus blijft gelijk.",
+				"de": "Drücke einmal PROG. Die LED blinkt einmal.\nWerksreset (nur wenn das Entfernen fehlschlägt): Halte PROG 10 Sekunden gedrückt; die LED geht nach 5 Sekunden an und blinkt zweimal, wenn der Reset abgeschlossen ist. Der Empfangsmodus bleibt erhalten.",
+				"fr": "Appuyez une fois sur PROG. La LED clignote une fois.\nRéinitialisation d'usine (uniquement si le retrait échoue) : maintenez PROG 10 secondes ; la LED s'allume après 5 secondes et clignote deux fois quand c'est terminé. Le mode d'écoute est conservé.",
+				"it": "Premi PROG una volta. Il LED lampeggia una volta.\nRipristino di fabbrica (solo se la rimozione non riesce): tieni premuto PROG per 10 secondi; il LED si accende dopo 5 secondi e lampeggia due volte al termine. La modalità di ascolto resta invariata.",
+				"sv": "Tryck en gång på PROG. Lysdioden blinkar en gång.\nFabriksåterställning (bara om borttagningen misslyckas): håll PROG intryckt i 10 sekunder; lysdioden tänds efter 5 sekunder och blinkar två gånger när återställningen är klar. Lyssningsläget behålls.",
+				"no": "Trykk én gang på PROG. LED-en blinker én gang.\nTilbakestilling til fabrikkinnstillinger (bare hvis fjerning mislykkes): hold PROG inne i 10 sekunder; LED-en tennes etter 5 sekunder og blinker to ganger når tilbakestillingen er ferdig. Lyttemodusen beholdes.",
+				"es": "Pulsa PROG una vez. El LED parpadea una vez.\nRestablecimiento de fábrica (solo si falla la eliminación): mantén pulsado PROG 10 segundos; el LED se enciende a los 5 segundos y parpadea dos veces al terminar. El modo de escucha se mantiene.",
+				"da": "Tryk én gang på PROG. LED'en blinker én gang.\nFabriksnulstilling (kun hvis fjernelse mislykkes): hold PROG inde i 10 sekunder; LED'en tænder efter 5 sekunder og blinker to gange, når nulstillingen er færdig. Lyttetilstanden bevares.",
+				"ru": "Один раз нажмите PROG. Светодиод мигнёт один раз.\nСброс к заводским настройкам (только если удаление не удалось): удерживайте PROG 10 секунд; светодиод загорается через 5 секунд и мигает дважды по завершении. Режим приёма сохраняется.",
+				"pl": "Naciśnij raz PROG. Dioda LED mignie raz.\nReset fabryczny (tylko gdy usunięcie się nie powiedzie): przytrzymaj PROG 10 sekund; dioda LED zapala się po 5 sekundach i miga dwa razy po zakończeniu. Tryb nasłuchu pozostaje bez zmian.",
+				"ko": "PROG를 한 번 누르세요. LED가 한 번 깜박입니다.\n공장 초기화 (제거가 실패할 때만): PROG를 10초간 누르세요. LED가 5초 후 켜지고 초기화가 끝나면 두 번 깜박입니다. 수신 모드는 유지됩니다.",
+				"ar": "اضغط على PROG مرة واحدة. يومض LED مرة واحدة.\nإعادة ضبط المصنع (فقط إذا فشلت الإزالة): اضغط مطولاً على PROG لمدة 10 ثوانٍ؛ يضيء LED بعد 5 ثوانٍ ويومض مرتين عند الانتهاء. يبقى وضع الاستماع كما هو."
 			}
 		},
 		"zwaveAllianceProductId": 715,

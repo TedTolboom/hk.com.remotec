@@ -1,133 +1,49 @@
-# Remotec Technology
-This app adds support for devices made by [Remotec Technology](http://www.remotec.com.hk).  
-<a href="https://github.com/TedTolboom/hk.com.remotec">
-  <img src="https://raw.githubusercontent.com/TedTolboom/hk.com.remotec/master/assets/images/small.jpg">
-</a>  
+# Remotec Technologies
 
-## Links:
-[Remotec Technology Athom apps](https://apps.athom.com/app/hk.com.remotec)                    
-[Remotec Technology Github repository](https://github.com/TedTolboom/hk.com.remotec)   
+Homey app for Z-Wave devices made by [Remotec Technology](https://www.remotec.com.hk).
 
-## Supported devices:
-### Remotec Scene Master ZRC-90 (BW8510) (Homey ≥ 1.3.0 required)   
-<a href="https://github.com/TedTolboom/hk.com.remotec">
-  <img src="https://rawgit.com/TedTolboom/hk.com.remotec/master/drivers/ZRC-90/assets/icon.svg" width="25%" height="25%">
-</a>  
+- Homey App Store: [Remotec Technologies](https://homey.app/a/hk.com.remotec/)
+- Community topic: [[APP][Pro] Remotec Technology App](https://community.homey.app/t/155)
+- Issues: [GitHub issues](https://github.com/TedTolboom/hk.com.remotec/issues)
 
-With the Remotec Scene Master ZRC-90 it is possible control any other devices (including non-Zwave) or set states / variables via Homey's flows.
+Requires Homey 12.9.0 or newer (Homey Pro, Early 2019 and newer).
 
-The following triggers are supported:  
+## Supported devices
 
-* Button Pressed 1x   
-* Button Pressed 2x     
-* Button held down (5x per second report)     
-* Button released    
-* Any button pressed (including tokens)   
+| Device | Model | Functions |
+| --- | --- | --- |
+| Scene Master ZRC-90 | BW8510 | 8 buttons: pressed 1x, pressed 2x, held down, released; battery |
+| ZXT-120 AC Extender | BW8377 | room temperature, thermostat mode, target temperature, fan mode, swing, IR code library and learning; battery |
+| ZXT-600 AC Master | BW8490 | as the ZXT-120, plus temperature reporting on change or interval |
 
-The following conditions are supported:
+### Pairing
 
-* Battery alarm activated | Battery in healthy condition    
+- **ZRC-90:** reset the Scene Master first, also when it is new (hold R for 10 s, release, press R 3 times within 2 s,
+  wait until the LED flashes twice), then press L once.
+- **ZXT-120:** choose the listening mode **before** pairing: FLiRS (default, batteries) or Always Listening (USB power:
+  hold PROG 5 s, release, press PROG 3 times within 2 s, the LED flashes 4 times). Then press PROG once.
+- **ZXT-600:** the first power source decides the role (batteries = FLiRS, USB = Always Listening). Press PROG 3 times
+  within 1 second.
 
-**Note:** All commands will be send to Homey. With this device it's not possible to associate buttons to other devices to control them directly (without Homey).   
+The role of the ZXT-120 and ZXT-600 can only be changed after removing the device from Homey.
 
-### Remotec ZXT-120 Z-Wave-to-AC IR Extender (BW8366)   
-<a href="https://github.com/TedTolboom/hk.com.remotec">
-  <img src="https://rawgit.com/TedTolboom/hk.com.remotec/master/drivers/ZXT-120/assets/icon.svg" width="25%" height="25%">
-</a>  
+### Known limitations
 
-The following capabilities are supported:
+- The AC units cannot know the state of the air conditioner when the original remote is used.
+- The ZXT-120 reports the temperature in whole degrees and only with a command; use the polling setting.
+- Fan speed and swing cannot be learnt: the learning table of the devices has no locations for them.
 
-* Temperature measurement    
-* Thermostat Mode   
-* Thermostat Target Temperature (setpoint)   
-* Thermostat Fan Speed Mode   
-* Thermostat Fan Swing Mode   
-* Thermostat On-Off   
-* Battery capabilities (measure and alarm)  
+## Development
 
-### Remotec ZXT-600 AC Master (BW8490)   
-<a href="https://github.com/TedTolboom/hk.com.remotec">
-  <img src="https://rawgit.com/TedTolboom/hk.com.remotec/master/drivers/ZXT-600/assets/icon.svg" width="25%" height="25%">
-</a>  
+- Node.js 22, `npm ci`, `npm run lint`, `npm run validate`, `npm start` (runs the app on a Homey).
+- Plan and status: [docs/developmentRoadmap.md](docs/developmentRoadmap.md); review against the device manuals:
+  [docs/manual_review.md](docs/manual_review.md).
+- Changelog: [.homeychangelog.json](.homeychangelog.json).
 
-The following capabilities are supported:
+## Languages
 
-* Temperature measurement    
-* Thermostat Mode   
-* Thermostat Target Temperature (setpoint)   
-* Thermostat Fan Speed Mode   
-* Thermostat Fan Swing Mode   
-* Thermostat On-Off   
-* Battery capabilities (measure and alarm)
+English, Dutch, Danish, German, Spanish, French, Italian, Korean, Norwegian, Polish, Russian, Swedish and Arabic.
 
+## License
 
-## Supported Languages:
-* English   
-* Dutch    
-
-## Feedback:
-Any requests please post them in the [Remotec app topic on the Athom Community Forum](https://community.athom.com/t/155) or contact me on [Slack](https://athomcommunity.slack.com/team/tedtolboom)    
-If possible, please report issues at the [issues section on Github](https://github.com/TedTolboom/hk.com.remotec/issues) otherwise in the above mentioned topic.     
-
-## Changelog:
-
-### v2.2.4   
-**fix**
-* Fix issue app crashing while using the 'Set Fan “SWING” mode' action card   
-* Update Homey meshdriver to 1.2.30   
-
-### v2.2.3   
-**fix**
-* Fix issue where custom icons are not shown in Homey v2.0.0   
-* Migrated to Homeycompose funtion (DEV only)      
-**update:**   
-* Update Homey meshdriver to 1.2.28   
-**open issues:**   
-* Only 1 picker (Thermostat mode) is shown in Homey v2.0.0, Fan mode is not shown      
-
-### v2.2.2   
-**fix**
-* Fix issue with ZXT-120 and ZXT-600 blocking settings to be updated   
-
-### v2.2.1
-* Add support (productTypeID's) for all devices for the following regions: US, EU, AU, IL, JP, CN   
-* Add link to [Remotec app topic](https://community.athom.com/t/155) on community.athoms.com   
-* Add polling interval setting for temperature measurements for ZXT-120   
-* Restructure device settings ZXT-120 and ZXT-600   
-**fix**
-* Fix issue with ZXT-120 temperature correction parameter number   
-* Improve inclusion instructions for ZRC-90   
-**update:**   
-* Update Homey meshdriver to 1.2.25    
-
-### v2.2.0
-* Add full support for ZXT-600    
-* Extended ZXT-120 implementation to full support (all options, including fan mode)    
-* Major update for ZXT-120 driver / settings / polling intervals: **re-inclusion of ZXT-120 is advised**
-* Add flow action cards supporting to set the Thermostat Mode, specific (mode based) Thermostat setpoints, Fan Speed Mode and Fan Swing mode         
-**fix**
-* Unable to set setpoint in cooling mode    
-**update:**   
-* Update Homey meshdriver to 1.2.23    
-
-### v2.1.2
-**fix**
-* Fix temperature commands not responding on certain AC models   
-
-### v2.1.1
-**fix**
-* Fix issue with non-registered flow card of ZXT-120         
-
-### v2.1.0
-* Add initial support for the ZXT-120 Z-Wave-to-AC IR Extender (temperature and mode control)   
-**fix**
-* Fix issue where the battery alarm condition card cause the app to crash (flow rebuilding required)      
-**update:**   
-* Update Homey meshdriver to 1.2.8   
-* Add link to Homey community forum topic   
-
-## Future work:
-* <del>Add generic trigger card for 'A button has been pressed' together with tokens</del>     
-* ZRC-90 add option to disable re-triggering when a button is held    
-* ~ add ZXT-120 Z-Wave-to-AC IR Extender ~  
-* ~ add ZXT-600 Z-Wave-to-AC IR Extender ~  
+[MIT](LICENSE)
