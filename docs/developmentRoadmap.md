@@ -75,7 +75,7 @@ No device needed: every item follows from the code or the manuals.
 | Node.js 22 | ✅ | `compatibility >=12.9.0`, `engines.node >=22` (as DoorBird 3.4.0); excludes Homey below 12.9.0 |
 | `package.json` | ✅ | version in sync, `lint` and `start` scripts as the Aqara app, `homey-apps-sdk-v3-types` for types. **Done:** `homey-apps-sdk-v3-types` not added (no type checking yet); license MIT as the LICENSE file |
 | Lint clean | ✅ | `.eslintrc.json` rules as the Aqara app, then fix the rest |
-| Dependabot PRs | 🚧 | `npm audit fix` done (app: 0 vulnerabilities; 7 left in eslint 6). Close #40 – #52 when 2.5.0 is pushed |
+| Dependabot PRs | ✅ | `npm audit fix` done (app: 0 vulnerabilities; 7 left in eslint 6); #40 – #52 closed with 2.5.0 (#56) |
 | Translations | ✅ | all Homey languages (da, de, es, fr, it, ko, nl, no, pl, ru, sv); German from PR #55 as a start. **Done:** 12 languages besides English, incl. Arabic as DoorBird; README.txt per language (App Store guideline) |
 | Changelog | ✅ | concise, model numbers BW8510 / BW8377 / BW8490. **Done:** `.homeychangelog.json` and `docs/changelog_v2.5.0_community.md` |
 
